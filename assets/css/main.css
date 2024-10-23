@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container-fluid {
+    @apply container max-w-screen-xl;
+  }
+
+  .title {
+    @apply text-xl font-bold tracking-tight lg:text-4xl;
+  }
+
+  .title-sm {
+    @apply text-lg font-semibold tracking-tight lg:text-2xl;
+  }
+
+  .desc {
+    @apply text-lg font-normal text-gray-500 lg:text-xl;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 bg-clip-text font-semibold text-transparent;
+  }
+  .uppercase {
+    text-transform: uppercase;
+    font-feature-settings: "case" on;
+  }
+
+  .editor-style h2 {
+    @apply h3;
+  }
+}
+
+.hero-bg {
+  z-index: -1;
+  background: radial-gradient(
+    100% 100% at 0% 0%,
+    rgba(36, 237, 170, 0.633) 0%,
+    rgba(49, 250, 240, 0.151) 55.21%,
+    rgba(217, 217, 217, 0) 100%
+  );
+}
+
+/* animations */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.4s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fadeUp-enter-active {
+  transition: 0.4s ease-in-out;
+}
+.fadeUp-leave-active {
+  transition: none;
+}
+.fadeUp-enter-from,
+.fadeUp-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-in-out-enter-from,
+.fade-in-out-leave-to {
+  opacity: 0;
+}
+.fade-in-out-enter-active,
+.fade-in-out-leave-active {
+  transition: 0.4s ease-in-out;
+}
+.fade-in-out-enter-to,
+.fade-in-out-leave-from {
+  opacity: 1;
+}
