@@ -19,7 +19,7 @@ const menu = [
           v-for="item in menu"
           :key="item.title"
           :to="item.link"
-          class="cursor-pointer hover:text-blue-700"
+          class="cursor-pointer hover:text-red-700"
         >
           {{ item.title }}
         </nuxt-link>

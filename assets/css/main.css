@@ -24,7 +24,7 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 bg-clip-text font-semibold text-transparent;
+    @apply bg-gradient-to-r from-rose-400 via-rose-500 to-orange-400 bg-clip-text font-semibold text-transparent;
   }
   .uppercase {
     text-transform: uppercase;
@@ -43,9 +43,9 @@ html {
 .hero-bg {
   z-index: -1;
   background: radial-gradient(
-    100% 100% at 0% 0%,
-    rgba(36, 237, 170, 0.633) 0%,
-    rgba(49, 250, 240, 0.151) 55.21%,
+    80% 80% at 0% 0%,
+    hsla(343, 81%, 60%, 0.051) 0%,
+    hsla(0, 80%, 60%, 0.1) 55.21%,
     rgba(217, 217, 217, 0) 100%
   );
 }

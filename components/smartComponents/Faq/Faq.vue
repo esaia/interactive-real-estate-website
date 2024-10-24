@@ -33,6 +33,7 @@ const handleQusetionClick = (index: number) => {
       >
         <div
           class="duration-400 flex cursor-pointer items-center justify-between rounded-lg bg-gray-50 p-4 transition-all hover:bg-gray-100"
+          :class="{ 'ring-1 ring-red-500': slideUpDownModel[i] }"
         >
           <p :class="{ 'font-semibold': slideUpDownModel[i] }">
             {{ item.question }}
