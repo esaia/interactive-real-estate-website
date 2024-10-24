@@ -21,7 +21,9 @@ const handleQusetionClick = (index: number) => {
 
 <template>
   <div class="container-fluid padding-top">
-    <h2 class="title mb-5">FAQ</h2>
+    <h2 class="title">FAQ</h2>
+
+    <p class="desc mb-5 mt-2">Have Questions? We've Got Answers!</p>
 
     <div>
       <div
@@ -43,7 +45,7 @@ const handleQusetionClick = (index: number) => {
         </div>
 
         <vue3-slide-up-down v-model="slideUpDownModel[i]" :duration="300">
-          <p class="p-4">
+          <p class="px-8 py-2">
             {{ item.answer }}
           </p>
         </vue3-slide-up-down>

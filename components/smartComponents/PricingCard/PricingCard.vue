@@ -24,42 +24,44 @@ const pricePlanData = [
       >
         <p class="title-sm">{{ item.title }}</p>
         <p class="desc py-2">{{ item.desc }}</p>
-        <p class="title text-center">{{ item.price }}</p>
+        <p class="text-center text-3xl font-bold tracking-tight lg:text-4xl">
+          {{ item.price }}
+        </p>
 
         <div class="my-4">
           <base-button title="Buy now" />
         </div>
 
         <div v-if="i === 0" class="my-5 flex flex-col gap-3">
-          <div class="flex items-center gap-2">
-            <correct-icon class="h-6 w-6" />
+          <div class="flex items-center gap-2 text-left">
+            <correct-icon class="!h-6 !w-6" />
             <p>Free 24/7 Support for <b>6 Months</b></p>
           </div>
 
-          <div class="flex items-center gap-2">
-            <correct-icon class="h-6 w-6" />
+          <div class="flex items-center gap-2 text-left">
+            <correct-icon class="!h-6 !w-6" />
             <p>Lifetime Access to <b>Updates</b></p>
           </div>
 
-          <div class="flex items-center gap-2">
-            <correct-icon class="h-6 w-6" />
+          <div class="flex items-center gap-2 text-left">
+            <correct-icon class="!h-6 !w-6" />
             <p>Create Unlimited <b> Projects </b></p>
           </div>
 
-          <div class="flex items-center gap-2">
-            <correct-icon class="h-6 w-6" />
+          <div class="flex items-center gap-2 text-left">
+            <correct-icon class="!h-6 !w-6" />
             <p>License For a <b> Single Project</b></p>
           </div>
         </div>
 
         <div v-else class="my-5 flex flex-col gap-3">
-          <div class="flex items-center gap-2">
-            <correct-icon class="h-6 w-6" />
+          <div class="flex items-center gap-2 text-left">
+            <correct-icon class="!h-6 !w-6" />
             <p class="text-gray-500">Everything from Regular License</p>
           </div>
 
-          <div class="flex items-center gap-2">
-            <correct-icon class="h-6 w-6" />
+          <div class="flex items-center gap-2 text-left">
+            <correct-icon class="!h-6 !w-6" />
             <p>License For <b>Unlimited Projects</b></p>
           </div>
         </div>

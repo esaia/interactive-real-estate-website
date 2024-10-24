@@ -19,7 +19,7 @@ defineProps<{
       <h2 class="title mb-4">
         {{ title }}
       </h2>
-      <p class="text-gray-500">{{ description }}</p>
+      <p class="desc">{{ description }}</p>
       <p class="number" :data-number="index">{{ index }}</p>
     </div>
 

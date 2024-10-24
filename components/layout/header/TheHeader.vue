@@ -1,26 +1,33 @@
 <script setup>
 const openDropdown = ref(false);
+
+const menu = [
+  { title: "Home", link: "" },
+  { title: "Demos", link: "" },
+  { title: "Tutorial", link: "" },
+  { title: "Documentation", link: "/documentation" },
+  { title: "FAQ", link: "/faq" },
+];
 </script>
 
 <template>
   <div class="container-fluid relative flex justify-between py-4">
-    <div class="flex items-center">
-      <p class="mr-5">LOGO</p>
+    <div class="z-[3] flex items-center">
+      <nuxt-link to="/" class="mr-5">LOGO</nuxt-link>
       <div class="hidden items-center gap-6 text-gray-600 lg:flex">
-        <nuxt-link class="cursor-pointer hover:text-blue-700">Home</nuxt-link>
-        <nuxt-link class="cursor-pointer hover:text-blue-700">Demos</nuxt-link>
-        <nuxt-link class="cursor-pointer hover:text-blue-700">
-          Tutorial
+        <nuxt-link
+          v-for="item in menu"
+          :key="item.title"
+          :to="item.link"
+          class="cursor-pointer hover:text-blue-700"
+        >
+          {{ item.title }}
         </nuxt-link>
-        <nuxt-link class="cursor-pointer hover:text-blue-700">
-          Documentation
-        </nuxt-link>
-        <nuxt-link class="cursor-pointer hover:text-blue-700">menu 5</nuxt-link>
       </div>
     </div>
 
-    <div class="flex items-center gap-5">
-      <nuxt-link to="#pricing">
+    <div class="z-[3] flex items-center gap-5">
+      <nuxt-link to="/#pricing">
         <base-button title="Buy now" class="shadow-lg" />
       </nuxt-link>
 
@@ -29,16 +36,12 @@ const openDropdown = ref(false);
         class="h-8 w-8 lg:hidden"
         @click="openDropdown = !openDropdown"
       />
-
-      <!-- <burger-icon
-        class="h-8 w-8 cursor-pointer lg:hidden"
-        @click="openDropdown = !openDropdown"
-      /> -->
     </div>
 
     <header-dropdown
-      class="absolute left-0 top-full w-full origin-top scale-y-0 bg-white p-4 transition-all"
-      :class="{ 'scale-y-100': openDropdown }"
+      class="pointer-events-none absolute left-0 top-0 z-[2] w-full origin-top bg-white p-4 pt-16 opacity-0 transition-all duration-500"
+      :class="{ 'pointer-events-auto opacity-100': openDropdown }"
+      :menu="menu"
     />
   </div>
 </template>
