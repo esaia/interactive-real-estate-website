@@ -4,13 +4,17 @@ const openVideoModal = ref(false);
 
 <template>
   <div class="container-fluid">
-    <div class="mx-auto max-w-screen-xl px-4 pb-16 pt-32 text-center lg:px-12">
-      <img src="" alt="Logo" class="mx-auto mb-8 w-24" />
-      <h1
-        class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-black md:text-5xl lg:text-6xl"
+    <div
+      class="mx-auto max-w-screen-xl px-4 pb-16 pt-8 text-center lg:px-2 lg:pt-32"
+    >
+      <div class="mb-8 flex items-center justify-center gap-3">
+        <lightning-icon class="h-10 w-10" />
+      </div>
+      <h2
+        class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-black md:text-5xl lg:text-7xl"
       >
         Elevate <br /><span class="gradient-text">Interactive Real Estate</span>
-      </h1>
+      </h2>
       <p class="desc m-auto max-w-[700px]">
         Quickly make your property images interactive with pins, polygon!
         Elevate Interactive Real Estate lets you create dynamic visuals in just

@@ -6,7 +6,7 @@ const pricePlanData = [
 </script>
 
 <template>
-  <div class="container-fluid margin-top">
+  <div id="pricing" class="container-fluid padding-top">
     <h2 class="title text-center">Get Interactive Real Estate</h2>
 
     <div class="m-auto max-w-[700px]">
@@ -19,7 +19,7 @@ const pricePlanData = [
 
     <div class="mt-10 flex flex-col items-start gap-4 lg:flex-row">
       <div
-        v-for="item in pricePlanData"
+        v-for="(item, i) in pricePlanData"
         class="w-full flex-1 rounded-lg border border-gray-200 bg-gray-50/80 p-5 text-center lg:p-7"
       >
         <p class="title-sm">{{ item.title }}</p>
@@ -30,7 +30,7 @@ const pricePlanData = [
           <base-button title="Buy now" />
         </div>
 
-        <div class="my-5 flex flex-col gap-3">
+        <div v-if="i === 0" class="my-5 flex flex-col gap-3">
           <div class="flex items-center gap-2">
             <correct-icon class="h-6 w-6" />
             <p>Free 24/7 Support for <b>6 Months</b></p>
@@ -43,12 +43,24 @@ const pricePlanData = [
 
           <div class="flex items-center gap-2">
             <correct-icon class="h-6 w-6" />
-            <p>License: For a <b> Single Project</b></p>
+            <p>Create Unlimited <b> Projects </b></p>
           </div>
 
           <div class="flex items-center gap-2">
             <correct-icon class="h-6 w-6" />
-            <p>Create Unlimited <b> Projects </b></p>
+            <p>License For a <b> Single Project</b></p>
+          </div>
+        </div>
+
+        <div v-else class="my-5 flex flex-col gap-3">
+          <div class="flex items-center gap-2">
+            <correct-icon class="h-6 w-6" />
+            <p class="text-gray-500">Everything from Regular License</p>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <correct-icon class="h-6 w-6" />
+            <p>License For <b>Unlimited Projects</b></p>
           </div>
         </div>
 

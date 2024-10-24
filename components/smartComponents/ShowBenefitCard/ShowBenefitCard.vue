@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <div
-    class="container-fluid margin-top flex flex-col items-start gap-4 lg:flex-row lg:gap-28"
+    class="container-fluid padding-top flex flex-col items-start gap-4 lg:flex-row lg:gap-28"
   >
     <div class="relative flex-1">
       <p class="gradient-text inline-block">

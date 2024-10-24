@@ -12,6 +12,12 @@ const benefitData = [
       "Use the Control + '+' keyboard shortcut to zoom in on your SVG and create detailed polygons. When you're zoomed in, simply press the spacebar to pan around and explore your design easily.",
     badge: "Try it now",
   },
+  {
+    title: "Easy Zoom and Pan for Precise Creation",
+    description:
+      "Use the Control + '+' keyboard shortcut to zoom in on your SVG and create detailed polygons. When you're zoomed in, simply press the spacebar to pan around and explore your design easily.",
+    badge: "Try it now",
+  },
 ];
 </script>
 

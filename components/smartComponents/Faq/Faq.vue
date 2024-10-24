@@ -20,7 +20,7 @@ const handleQusetionClick = (index: number) => {
 </script>
 
 <template>
-  <div class="container-fluid margin-top">
+  <div class="container-fluid padding-top">
     <h2 class="title mb-5">FAQ</h2>
 
     <div>

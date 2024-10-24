@@ -1,6 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
+  devServer: {
+    port: 4040,
+    host: "0.0.0.0",
+  },
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
   postcss: {
@@ -10,8 +14,4 @@ export default defineNuxtConfig({
     },
   },
   components: [{ path: "./components", pathPrefix: false }],
-
-  devServer: {
-    port: 4040,
-  },
 });
