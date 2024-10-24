@@ -20,12 +20,13 @@ const benefitData = [
     <main-banner />
 
     <show-benefit-card
-      v-for="item in benefitData"
+      v-for="(item, i) in benefitData"
       :key="item.title"
       class="[&:nth-child(even)]:lg:flex-row [&:nth-child(odd)]:lg:flex-row-reverse [&_.glow]:odd:hidden"
       :badge="item.badge"
       :title="item.title"
       :description="item.description"
+      :index="i + 1"
     />
 
     <pricing-card />

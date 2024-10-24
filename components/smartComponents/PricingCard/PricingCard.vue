@@ -53,8 +53,9 @@ const pricePlanData = [
         </div>
 
         <p class="m-auto text-center text-sm text-gray-400">
-          You will be redirected to CodeCanyon to complete your order. Check the
-          complete license terms
+          After Click <span class="underline"> Buy Now</span>, You will be
+          redirected to CodeCanyon to complete your order. Check the complete
+          license terms
           <a
             class="text-blue-600 hover:underline"
             href="https://codecanyon.net/licenses/standard"

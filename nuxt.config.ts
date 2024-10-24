@@ -10,4 +10,8 @@ export default defineNuxtConfig({
     },
   },
   components: [{ path: "./components", pathPrefix: false }],
+
+  devServer: {
+    port: 4040,
+  },
 });
