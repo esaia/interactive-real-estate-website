@@ -1,5 +1,5 @@
 <script setup></script>
 
 <template>
-  <div>footer</div>
+  <div class="margin-top">footer</div>
 </template>

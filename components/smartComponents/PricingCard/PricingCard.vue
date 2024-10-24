@@ -6,7 +6,7 @@ const pricePlanData = [
 </script>
 
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid margin-top">
     <h2 class="title text-center">Get Interactive Real Estate</h2>
 
     <div class="m-auto max-w-[700px]">
@@ -17,10 +17,10 @@ const pricePlanData = [
       </p>
     </div>
 
-    <div class="mt-10 flex items-start gap-4">
+    <div class="mt-10 flex flex-col items-start gap-4 lg:flex-row">
       <div
         v-for="item in pricePlanData"
-        class="flex-1 rounded-lg border border-gray-200 bg-gray-50/80 p-7 text-center"
+        class="w-full flex-1 rounded-lg border border-gray-200 bg-gray-50/80 p-5 text-center lg:p-7"
       >
         <p class="title-sm">{{ item.title }}</p>
         <p class="desc py-2">{{ item.desc }}</p>

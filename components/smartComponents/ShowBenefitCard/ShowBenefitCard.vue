@@ -3,13 +3,13 @@ defineProps<{
   title: string;
   description: string;
   badge?: string;
-  index?: string;
+  index?: number;
 }>();
 </script>
 
 <template>
   <div
-    class="container-fluid my-52 flex flex-col items-start gap-28 lg:flex-row"
+    class="container-fluid margin-top flex flex-col items-start gap-4 lg:flex-row lg:gap-28"
   >
     <div class="relative flex-1">
       <p class="gradient-text inline-block">
@@ -20,16 +20,11 @@ defineProps<{
         {{ title }}
       </h2>
       <p class="text-gray-500">{{ description }}</p>
-      <img
-        class="glow pointer-events-none absolute -left-72 -top-72 w-full"
-        src="/assets/images/Glow-1.png"
-        alt=""
-      />
       <p class="number" :data-number="index">{{ index }}</p>
     </div>
 
     <img
-      class="flex-1"
+      class="w-full flex-1"
       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSndSKnbPY00VnpzMkkfLSOm5xJgMmLCoPwOQ&s"
       alt=""
     />

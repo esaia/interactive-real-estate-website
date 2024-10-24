@@ -22,7 +22,7 @@ const benefitData = [
     <show-benefit-card
       v-for="(item, i) in benefitData"
       :key="item.title"
-      class="[&:nth-child(even)]:lg:flex-row [&:nth-child(odd)]:lg:flex-row-reverse [&_.glow]:odd:hidden"
+      class="[&:nth-child(odd)]:lg:flex-row-reverse [&_.glow]:odd:hidden"
       :badge="item.badge"
       :title="item.title"
       :description="item.description"
@@ -30,6 +30,8 @@ const benefitData = [
     />
 
     <pricing-card />
+
+    <faq />
 
     <div
       class="hero-bg pointer-events-none absolute left-0 top-0 z-0 h-[100vh] w-full"
