@@ -24,6 +24,7 @@ const benefitData = [
 <template>
   <div>
     <main-banner />
+    <demo />
 
     <show-benefit-card
       v-for="(item, i) in benefitData"
