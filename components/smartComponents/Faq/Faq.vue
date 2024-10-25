@@ -20,33 +20,36 @@ const handleQusetionClick = (index: number) => {
 </script>
 
 <template>
-  <div class="container-fluid padding-top">
-    <h2 class="title">FAQ</h2>
+  <div class="container-fluid padding-top max-w-[800px] text-center">
+    <h2 class="title">Frequently asked questions</h2>
 
     <p class="desc mb-5 mt-2">Have Questions? We've Got Answers!</p>
 
-    <div>
+    <div
+      class="flex w-full flex-col gap-6 rounded-2xl border border-gray-200 p-8 text-left"
+    >
       <div
         v-for="(item, i) in faqData"
         @click="handleQusetionClick(i)"
-        class="mb-2"
+        class="group"
       >
         <div
-          class="duration-400 flex cursor-pointer items-center justify-between rounded-lg bg-gray-50 p-4 transition-all hover:bg-gray-100"
-          :class="{ 'ring-1 ring-red-500': slideUpDownModel[i] }"
+          class="duration-400 flex cursor-pointer items-center justify-between rounded-lg transition-all"
         >
-          <p :class="{ 'font-semibold': slideUpDownModel[i] }">
+          <p
+            class="group-hover:text-primary font-semibold"
+            :class="{ '': slideUpDownModel[i] }"
+          >
             {{ item.question }}
           </p>
 
           <arrow-up-icon
-            class="h-4 w-4 rotate-180 transition-all"
-            :class="{ '!rotate-0': slideUpDownModel[i] }"
+            class="group-hover:[&_path]:fill-primary h-4 w-4 rotate-180 transition-all"
           />
         </div>
 
         <vue3-slide-up-down v-model="slideUpDownModel[i]" :duration="300">
-          <p class="px-8 py-2">
+          <p class="mt-2 text-sm text-gray-600 md:text-base">
             {{ item.answer }}
           </p>
         </vue3-slide-up-down>

@@ -32,6 +32,9 @@ module.exports = {
           "2xl": "24px",
         },
       },
+      colors: {
+        primary: "rgb(239 68 68)",
+      },
     },
   },
   plugins: [],

@@ -45,7 +45,7 @@ const pricePlanData = [
 
           <div class="flex items-center gap-2 text-left">
             <correct-icon class="!h-6 !w-6" />
-            <p>Create Unlimited <b> Projects </b></p>
+            <p>Create Unlimited <b> Interactive Buildings </b></p>
           </div>
 
           <div class="flex items-center gap-2 text-left">
