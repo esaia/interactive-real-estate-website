@@ -1,4 +1,7 @@
 <script setup lang="ts">
+// import { MyButton, MyDiv } from "irePreview";
+// "irePreview": "/Users/esaia/Desktop/my projects/ire/ire-preview-library",
+import "ire-preview/dist/styles.css";
 const constants = useState("constants");
 
 constants.value = {

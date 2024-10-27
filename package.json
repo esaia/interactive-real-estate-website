@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "ire-preview": "/Users/esaia/Desktop/my projects/ire/ire-preview-library",
     "nuxt": "^3.13.2",
     "vue": "latest",
     "vue-router": "latest",
@@ -20,6 +21,8 @@
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
-    "tailwindcss": "^3.4.14"
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3",
+    "vue-tsc": "^2.1.6"
   }
 }
