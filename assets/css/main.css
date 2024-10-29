@@ -50,28 +50,6 @@ html {
   );
 }
 
-/* animations */
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.4s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-
-.fadeUp-enter-active {
-  transition: 0.4s ease-in-out;
-}
-.fadeUp-leave-active {
-  transition: none;
-}
-.fadeUp-enter-from,
-.fadeUp-leave-to {
-  opacity: 0;
-  transform: translateY(10px);
-}
-
 .fade-in-out-enter-from,
 .fade-in-out-leave-to {
   opacity: 0;

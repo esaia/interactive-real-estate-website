@@ -3973,6 +3973,8 @@ const shortcodeData = {
 
 <template>
   <div>
+    <!-- <ClientOnly> -->
     <Project :data="shortcodeData" />
+    <!-- </ClientOnly> -->
   </div>
 </template>

@@ -5,7 +5,7 @@ const menu = [
   { title: "Home", link: "" },
   { title: "Demos", link: "" },
   { title: "Tutorial", link: "" },
-  { title: "Documentation", link: "/documentation" },
+  { title: "Documentation", link: "/doc" },
   { title: "FAQ", link: "" },
 ];
 </script>
@@ -14,7 +14,7 @@ const menu = [
   <div class="container-fluid relative flex justify-between py-4">
     <div class="z-[3] flex items-center">
       <nuxt-link to="/" class="mr-5">LOGO</nuxt-link>
-      <div class="hidden items-center gap-6 text-gray-600 lg:!flex">
+      <div class="hidden items-center gap-6 text-gray-800 lg:flex">
         <nuxt-link
           v-for="item in menu"
           :key="item.title"
