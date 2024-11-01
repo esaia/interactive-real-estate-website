@@ -69,3 +69,20 @@ html {
 .fade-in-out-leave-from {
   opacity: 1;
 }
+
+.custom-scroll ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scroll ::-webkit-scrollbar-track {
+  border-radius: 99px;
+  width: 6px;
+  background-color: rgb(244, 244, 244);
+  opacity: 0.1;
+}
+
+.custom-scroll ::-webkit-scrollbar-thumb {
+  background: rgb(164, 163, 163);
+  border-radius: 10px;
+}

@@ -535,16 +535,10 @@ defineExpose({
 
 <template>
   <div v-if="!svg" ref="svgCanvas" class="svg-canvas-container">
-    <svg ref="svgCanvas" viewBox="0 0 1720 860"></svg>
+    <svg viewBox="0 0 1720 860"></svg>
   </div>
 
-  <div
-    v-else
-    v-html="svg"
-    ref="svgCanvas"
-    :key="projectStore.svg"
-    class="svg-canvas-container"
-  ></div>
+  <div v-else v-html="svg" ref="svgCanvas" class="svg-canvas-container"></div>
 
   <div
     v-if="zoomLevel > 1"
