@@ -38,6 +38,9 @@
   .editor {
     @apply [&_li]:py-1 [&_li]:text-lg [&_li]:text-gray-600 [&_p]:text-lg [&_p]:text-gray-600 [&_ul]:list-disc [&_ul]:pl-4 [&_ul]:lg:pl-0;
   }
+  .svg-canvas-container {
+    @apply absolute left-0 top-0 h-full w-full cursor-crosshair [&_.first-circle]:cursor-pointer;
+  }
 }
 
 html {

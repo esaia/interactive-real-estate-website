@@ -7,6 +7,7 @@ const menu = [
   { title: "Tutorial", link: "" },
   { title: "Documentation", link: "/doc" },
   { title: "FAQ", link: "" },
+  { title: "Module", link: "/module" },
 ];
 
 watch(
