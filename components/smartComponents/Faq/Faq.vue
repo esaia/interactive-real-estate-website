@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Vue3SlideUpDown } from "vue3-slide-up-down";
 const faqData = [
-  { question: "question", answer: "answer" },
+  { question: "WordPress Plugin vs Standalone Version", answer: "answe" },
   { question: "question", answer: "answer" },
   { question: "question", answer: "answer" },
 ];
@@ -37,14 +37,14 @@ const handleQusetionClick = (index: number) => {
           class="duration-400 flex cursor-pointer items-center justify-between rounded-lg transition-all"
         >
           <p
-            class="group-hover:text-primary font-semibold"
+            class="font-semibold group-hover:text-primary"
             :class="{ '': slideUpDownModel[i] }"
           >
             {{ item.question }}
           </p>
 
           <arrow-up-icon
-            class="group-hover:[&_path]:fill-primary h-4 w-4 rotate-180 transition-all"
+            class="h-4 w-4 rotate-180 transition-all group-hover:[&_path]:fill-primary"
           />
         </div>
 

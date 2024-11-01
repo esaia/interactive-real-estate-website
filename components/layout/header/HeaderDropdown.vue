@@ -10,7 +10,7 @@ defineProps<{
       v-for="item in menu"
       :key="item.title"
       :to="item.link"
-      class="cursor-pointer py-3 hover:text-blue-700"
+      class="cursor-pointer py-3 hover:text-primary"
     >
       {{ item.title }}
     </nuxt-link>

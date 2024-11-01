@@ -1,13 +1,20 @@
 <script setup>
+const route = useRoute();
 const openDropdown = ref(false);
-
 const menu = [
-  { title: "Home", link: "" },
+  { title: "Home", link: "/" },
   { title: "Demos", link: "" },
   { title: "Tutorial", link: "" },
   { title: "Documentation", link: "/doc" },
   { title: "FAQ", link: "" },
 ];
+
+watch(
+  () => route.fullPath,
+  () => {
+    openDropdown.value = false;
+  },
+);
 </script>
 
 <template>

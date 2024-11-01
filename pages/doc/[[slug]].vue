@@ -7,7 +7,7 @@ const route = useRoute();
     class="container-fluid flex flex-col justify-between gap-10 pt-12 lg:flex-row lg:gap-16"
   >
     <div
-      class="flex h-fit flex-col gap-2 rounded-md border border-gray-200 p-3 text-gray-500 lg:w-60"
+      class="sticky top-5 flex h-fit flex-col gap-2 rounded-md border border-gray-200 p-3 text-gray-500 lg:w-60"
     >
       <NuxtLink to="/doc" class="cursor-pointer hover:text-primary">
         Introduction
@@ -21,11 +21,21 @@ const route = useRoute();
       <NuxtLink to="/doc/usage" class="cursor-pointer hover:text-primary">
         Usage
       </NuxtLink>
+      <NuxtLink
+        to="/doc/show-component"
+        class="cursor-pointer hover:text-primary"
+      >
+        Show the component
+      </NuxtLink>
+      <NuxtLink
+        to="/doc/plugin-vs-standalone"
+        class="cursor-pointer hover:text-primary"
+      >
+        WordPress Plugin vs Standalone Version
+      </NuxtLink>
     </div>
 
-    <div
-      class="w-full [&_li]:text-lg [&_li]:text-gray-600 [&_p]:text-lg [&_p]:text-gray-600 [&_ul]:list-disc"
-    >
+    <div class="editor w-full">
       <div v-if="route.params?.slug === ''">
         <h2 class="title">Introduction</h2>
         <br />
@@ -109,14 +119,101 @@ const route = useRoute();
             class="h-full w-full"
           />
           <img src="/assets/images/doc/selectFloor.gif" alt="" />
+
           <img src="/assets/images/doc/zoomingPaning.gif" alt="" />
           <img src="/assets/images/doc/createFloor.gif" alt="" />
           <img src="/assets/images/doc/createType.gif" alt="" />
           <img src="/assets/images/doc/createFlat.gif" alt="" />
           <img src="/assets/images/doc/linkFloorPolygon.gif" alt="" />
-          <img src="/assets/images/doc/preview.gif" alt="" />
           <img src="/assets/images/doc/colorVariables.gif" alt="" />
         </div>
+      </div>
+
+      <div v-else-if="route.params?.slug === 'show-component'">
+        <h3 class="title">Show the component</h3>
+        <br />
+        <h4 class="title-sm mb-2">WordPress Version</h4>
+
+        <p>
+          In the lower left corner you will see the text of the shortcode. Copy
+          it and use it anywhere on your WordPress site.
+        </p>
+        <br />
+        <br />
+
+        <img src="/assets/images/doc/preview.gif" alt="" />
+
+        <br />
+        <br />
+
+        <h4 class="title-sm mb-2">Standalone Version</h4>
+        <p>
+          In the lower left corner you will see the link "Generate data for
+          standalone version". After clicking on it, a modal will open. Because
+          you are using an standalone environment, you need to specify the image
+          addresses as either relative or absolute. Please, fill the inputs with
+          the addresses of the images. Then follow the instructions.
+        </p>
+        <br />
+        <img src="/assets/images/doc/standaloneInstruction.png" alt="" />
+      </div>
+
+      <div v-else-if="route.params?.slug === 'plugin-vs-standalone'">
+        <h2 class="title">WordPress Plugin vs Standalone Version</h2>
+        <br />
+        <br />
+        <h3 class="title-sm">WordPress Plugin:</h3>
+        <br />
+
+        <ul>
+          <li>
+            <strong>Easy Integration:</strong> This version allows you to use a
+            shortcode to quickly add our interactive real estate component
+            directly to your WordPress site.
+          </li>
+          <li>
+            <strong>Real-Time Data:</strong> You can generate and display
+            up-to-date property information seamlessly within your WordPress
+            environment.
+          </li>
+          <li>
+            <strong>User-Friendly:</strong> Perfect for those who want
+            everything managed in one place without additional steps.
+          </li>
+        </ul>
+        <br />
+        <br />
+        <h3 class="title-sm">Standalone Version:</h3>
+        <br />
+
+        <ul>
+          <li>
+            <strong>Data Generation with WP Plugin:</strong>
+            <span class="font-semibold text-red-700">
+              This version still requires the WordPress plugin
+            </span>
+            to generate property data. It’s essential for creating the listings
+            you want to display. In other words, this version has an additional
+            feature that gives you the code: "styles.css" and "lib.es.js" to use
+            this component in any website, for example: React, Vue, Svelte or
+            vanilla js.
+          </li>
+          <li>
+            <strong>Flexibility:</strong> Once the data is generated, you can
+            use the interactive component on any website, not just WordPress.
+            This is great for users who want more freedom in where to showcase
+            their properties.
+          </li>
+          <li>
+            <strong>Versatile Use:</strong> Ideal for businesses looking to
+            integrate our tool across multiple platforms.
+          </li>
+        </ul>
+
+        <p>
+          Choose the version that best fits your needs—whether you prefer the
+          simplicity of WordPress or the flexibility of the standalone option!
+        </p>
       </div>
     </div>
   </div>

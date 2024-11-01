@@ -36,7 +36,7 @@ const benefitData = [
       :index="i + 1"
     />
 
-    <pricing-card />
+    <plan-cards />
 
     <faq />
 

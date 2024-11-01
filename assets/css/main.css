@@ -15,12 +15,16 @@
     @apply text-lg font-semibold tracking-tight lg:text-2xl;
   }
 
-  .padding-top {
-    @apply pt-20 lg:pt-36;
+  .desc {
+    @apply text-base font-normal text-gray-500 lg:text-lg;
   }
 
-  .desc {
-    @apply text-lg font-normal text-gray-500 lg:text-xl;
+  .link {
+    @apply text-blue-600 hover:text-blue-800 hover:underline;
+  }
+
+  .padding-top {
+    @apply pt-20 lg:pt-32;
   }
 
   .gradient-text {
@@ -31,8 +35,8 @@
     font-feature-settings: "case" on;
   }
 
-  .editor-style h2 {
-    @apply h3;
+  .editor {
+    @apply [&_li]:py-1 [&_li]:text-lg [&_li]:text-gray-600 [&_p]:text-lg [&_p]:text-gray-600 [&_ul]:list-disc [&_ul]:pl-4 [&_ul]:lg:pl-0;
   }
 }
 
