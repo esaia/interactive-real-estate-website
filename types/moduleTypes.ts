@@ -242,13 +242,3 @@ export interface ModalObject {
   description: string;
   modalImage: null | imageInterface[];
 }
-
-// export interface PolygonDataCollection {
-//   [key: string]: PolygonData;
-// }
-
-// export interface PolygonData {
-//   id: string;
-//   key: string;
-//   type: string;
-// }

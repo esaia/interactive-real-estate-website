@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { nextTick, ref, watch } from "vue";
-// import Collapse from "../icons/Collapse.vue";
-// import Edit from "../icons/Edit.vue";
-// import Info from "../icons/Info.vue";
-// import Delete from "../icons/Delete.vue";
-// import Unlink from "../icons/Unlink.vue";
-import type { PolygonDataCollection } from "~/types/DemoTypes";
+import type { PolygonDataCollection } from "~/types/moduleTypes";
 import Edit from "../icons/Edit.vue";
 import Unlink from "../icons/Unlink.vue";
 import Delete from "../icons/Delete.vue";
@@ -31,7 +26,6 @@ const props = defineProps<{
 }>();
 
 const sidebarRef = ref<HTMLDivElement>();
-const showEditModal = ref<"tooltip" | "flat" | "floor" | "block" | "">("");
 const showInfo = ref(false);
 
 const setActiveG = (item: PolygonDataCollection) => {
@@ -119,7 +113,6 @@ watch(
           @click="setActiveG(item)"
         >
           <div class="flex items-center gap-1 text-sm">
-            <p>shape |</p>
             <span v-if="item.type"> {{ item.type }} id: {{ item.id }} </span>
             <span v-else>#{{ item.key?.slice(0, 6) }}</span>
           </div>
@@ -144,6 +137,58 @@ watch(
         </div>
       </div>
     </div>
+    <Transition name="fade-in-out">
+      <div
+        v-if="showInfo"
+        class="absolute right-0 top-0 z-[999] flex h-full flex-col gap-8 bg-white/90 px-6 py-4 !text-gray-700 [&_svg]:h-8 [&_svg]:w-8"
+      >
+        <div class="info-item">
+          <left-click />
+          <span>-</span>
+          <p>Start drawing</p>
+        </div>
+
+        <div class="info-item">
+          <right-click />
+          <span>-</span>
+          <p>Select item</p>
+        </div>
+
+        <div class="info-item">
+          <esc class="!h-7 !w-7" />
+          <span>-</span>
+          <p>Cancel drawing</p>
+        </div>
+
+        <div class="info-item">
+          <div class="flex items-center gap-2">
+            <ctrl />
+            <span>+</span>
+            <plus-btn class="!h-7 !w-7" />
+          </div>
+
+          <span>-</span>
+          <p>Zoom in</p>
+        </div>
+
+        <div class="info-item">
+          <div class="flex items-center gap-2">
+            <ctrl />
+            <span>+</span>
+            <minus-btn class="!h-7 !w-7" />
+          </div>
+
+          <span>-</span>
+          <p>Reset zoom</p>
+        </div>
+
+        <div class="info-item">
+          <space class="!h-14 !w-14" />
+          <span>-</span>
+          <p>Panning</p>
+        </div>
+      </div>
+    </Transition>
   </div>
 </template>
 

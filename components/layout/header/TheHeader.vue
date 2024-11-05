@@ -3,10 +3,8 @@ const route = useRoute();
 const openDropdown = ref(false);
 const menu = [
   { title: "Home", link: "/" },
-  { title: "Demos", link: "" },
-  { title: "Tutorial", link: "" },
+  { title: "Demos", link: "/demos" },
   { title: "Documentation", link: "/doc" },
-  { title: "FAQ", link: "" },
   { title: "Module", link: "/module" },
 ];
 

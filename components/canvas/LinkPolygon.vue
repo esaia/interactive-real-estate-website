@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { PolygonDataCollection } from "~/types/DemoTypes";
+import type { PolygonDataCollection } from "~/types/moduleTypes";
 import Close from "../icons/Close.vue";
 import CanvasSelect from "./CanvasSelect.vue";
 

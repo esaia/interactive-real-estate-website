@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // @ts-ignore
 import SvgCanvas from "./SvgCanvas.vue";
-import type { PolygonDataCollection } from "~/types/DemoTypes";
+import type { PolygonDataCollection } from "~/types/moduleTypes";
 import { ref } from "vue";
 import Sidebar from "./Sidebar.vue";
 

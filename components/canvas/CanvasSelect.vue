@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { selectDataItem } from "@/types/DemoTypes";
+import type { selectDataItem } from "~/types/moduleTypes";
 
 withDefaults(
   defineProps<{
