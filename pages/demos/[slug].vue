@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { DemoType } from "~/types/general";
-import Demo from "~/components/smartComponents/Demo/Demo.vue";
 
 const demos = useState<DemoType[]>("demos");
 
@@ -12,8 +11,8 @@ const activeDemo = computed(() => {
 </script>
 
 <template>
-  <div class="mt-10">
-    <Demo
+  <div class="container-fluid mt-10">
+    <demo
       v-if="activeDemo && activeDemo.shortcodeData"
       :shortcode-data="activeDemo.shortcodeData"
     />

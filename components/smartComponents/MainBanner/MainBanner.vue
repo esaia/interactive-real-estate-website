@@ -17,8 +17,8 @@ const openVideoModal = ref(false);
       </h2>
       <p class="desc m-auto max-w-[700px]">
         Quickly make your property images interactive with pins, polygon!
-        Elevate Interactive Real Estate lets you create dynamic visuals in just
-        minutes.
+        Elevate Interactive Real Estate™ lets you create dynamic visuals in
+        just minutes.
       </p>
 
       <div class="mt-10 flex items-center justify-center">

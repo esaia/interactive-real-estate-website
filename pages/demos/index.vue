@@ -5,7 +5,7 @@ const demos = useState<DemoType[]>("demos");
 
 <template>
   <div
-    class="container-fluid mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+    class="container-fluid grid grid-cols-1 gap-4 pt-12 sm:grid-cols-2 lg:grid-cols-3"
   >
     <div v-for="demo in demos" :key="demo.id" class="group cursor-pointer">
       <nuxt-link
@@ -21,7 +21,9 @@ const demos = useState<DemoType[]>("demos");
         <div
           class="absolute bottom-0 left-0 h-full w-full bg-gradient-to-b from-slate-900/0 to-black/40"
         ></div>
-        <h3 class="title-sm absolute bottom-0 left-0 z-10 p-2 text-white">
+        <h3
+          class="title-sm absolute bottom-0 left-0 z-10 p-4 !font-normal text-white"
+        >
           {{ demo.title }}
         </h3>
       </nuxt-link>
