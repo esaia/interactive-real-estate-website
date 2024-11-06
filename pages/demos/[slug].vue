@@ -8,6 +8,8 @@ const route = useRoute();
 const activeDemo = computed(() => {
   return demos.value?.find((demo) => route.params?.slug === demo.id.toString());
 });
+
+
 </script>
 
 <template>
