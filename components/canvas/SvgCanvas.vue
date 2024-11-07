@@ -90,6 +90,11 @@ const getSVGCoordinates = (event, svgElement) => {
 
 // Event handlers
 const onCanvasClick = (event) => {
+  if (event.target.nodeName === "path" && points.value?.length === 0) {
+    onPathContextMenu(event);
+    return;
+  }
+
   if (shapeClosed.value || updateMode.value) return;
 
   const svg = svgCanvas.value.querySelector("svg");
@@ -170,6 +175,12 @@ const circleMouseMove = (event) => {
 };
 
 const onCanvasMouseMove = throttle((event) => {
+  if (event.target.nodeName === "path" && !points.value?.length) {
+    svgCanvas.value.style.cursor = "pointer";
+  } else {
+    svgCanvas.value.style.cursor = "crosshair";
+  }
+
   setCursorValues(event);
 
   if (pan.value) {
