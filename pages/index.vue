@@ -7,16 +7,22 @@ const benefitData = [
     badge: "Easy to use",
   },
   {
-    title: "Easy Zoom and Pan for Precise Creation",
+    title: "Easy Zoom And Pan For Comfortable Creation Of Polygon Shapes",
     description:
-      "Use the Control + '+' keyboard shortcut to zoom in on your SVG and create detailed polygons. When you're zoomed in, simply press the spacebar to pan around and explore your design easily.",
+      "Use the keyboard shortcut to zoom in on your SVG and create detailed polygons. When you're zoomed in, simply press the spacebar to pan around and explore your design easily.",
     badge: "Try it now",
   },
   {
-    title: "Easy Zoom and Pan for Precise Creation",
+    title: "Choose Svg Path Colors",
     description:
-      "Use the Control + '+' keyboard shortcut to zoom in on your SVG and create detailed polygons. When you're zoomed in, simply press the spacebar to pan around and explore your design easily.",
-    badge: "Try it now",
+      "Easily customize the colors of your SVG paths to match your design aesthetic. With just a few clicks, you can select any color and apply it to paths.",
+    badge: "Customizable",
+  },
+  {
+    title: "Run Script On Click Of Path",
+    description:
+      "Easily add interactivity to your designs by running custom scripts when a user clicks on any path. This feature allows you to trigger animations or even interact with other elements, enhancing the functionality and user experience of your designs.",
+    badge: "Interactive",
   },
 ];
 

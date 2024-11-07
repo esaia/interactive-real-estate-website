@@ -7,7 +7,7 @@ const route = useRoute();
     class="container-fluid flex flex-col justify-between gap-10 pt-12 lg:flex-row lg:gap-16"
   >
     <div
-      class="sticky top-5 flex h-fit flex-col gap-2 rounded-md border border-gray-200 p-5 text-gray-500 lg:w-60"
+      class="top-5 flex h-fit flex-col gap-2 rounded-md border border-gray-200 p-5 text-gray-500 lg:sticky lg:w-60"
     >
       <NuxtLink to="/doc" class="cursor-pointer hover:text-primary">
         Introduction
