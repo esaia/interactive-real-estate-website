@@ -7,14 +7,9 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
-  postcss: {
-    plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
-    },
-  },
   components: [{ path: "./components", pathPrefix: false }],
   typescript: {
     typeCheck: true,
   },
+  modules: ["@nuxtjs/tailwindcss"],
 });

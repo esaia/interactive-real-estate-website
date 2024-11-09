@@ -10,6 +10,10 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "@nuxtjs/tailwindcss": "^6.12.2",
+>>>>>>> 270de03c0066ac56c54ff2368cb2b7978d5457ea
     "ire-preview": "^2.0.1",
     "nuxt": "^3.13.2",
     "vue": "latest",
@@ -21,7 +25,6 @@
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
-    "tailwindcss": "^3.4.14",
     "typescript": "^5.6.3",
     "vue-tsc": "^2.1.6"
   }
