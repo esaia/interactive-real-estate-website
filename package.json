@@ -10,10 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-<<<<<<< HEAD
-=======
     "@nuxtjs/tailwindcss": "^6.12.2",
->>>>>>> 270de03c0066ac56c54ff2368cb2b7978d5457ea
     "ire-preview": "^2.0.1",
     "nuxt": "^3.13.2",
     "vue": "latest",
