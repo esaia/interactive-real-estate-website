@@ -1,4 +1,4 @@
-<script setup></script>
+<script setup lang="ts"></script>
 
 <template>
   <footer class="bg-gray-50">
@@ -14,8 +14,8 @@
             </h5>
           </div>
           <p class="mt-2 max-w-[500px] text-gray-500">
-            Create clickable, customizable floor plans and property layouts for
-            a dynamic and engaging website experience.
+            Create clickable, customizable interactive buildings and property
+            layouts for a dynamic and engaging website experience.
           </p>
         </div>
         <div
@@ -37,7 +37,7 @@
             Module
           </nuxt-link>
 
-          <nuxt-link to="/module" class="text-sm hover:underline">
+          <nuxt-link to="/#" class="text-sm hover:underline">
             Change Log
           </nuxt-link>
         </div>

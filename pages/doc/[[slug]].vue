@@ -192,11 +192,11 @@ const route = useRoute();
             <span class="font-semibold text-red-700">
               This version still requires the WordPress plugin
             </span>
-            to generate property data. It’s essential for creating the listings
-            you want to display. In other words, this version has an additional
-            feature that gives you the code: "styles.css" and "lib.es.js" to use
-            this component in any website, for example: React, Vue, Svelte or
-            vanilla js.
+            to generate building project data. It’s essential for creating the
+            listings you want to display. In other words, this version has an
+            additional feature that gives you the code: "styles.css" and
+            "lib.es.js" to use this component in any website, for example:
+            React, Vue, Svelte or vanilla js.
           </li>
           <li>
             <strong>Flexibility:</strong> Once the data is generated, you can

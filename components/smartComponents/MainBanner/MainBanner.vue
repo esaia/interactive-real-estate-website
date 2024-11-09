@@ -26,7 +26,7 @@ const openVideoModal = ref(false);
           @click="openVideoModal = true"
           class="flex cursor-pointer items-center gap-3 transition-all duration-500 ease-out hover:scale-110"
         >
-          <play-icon class="h-16 w-16" />
+          <play-icon class="h-12 w-12 lg:h-16 lg:w-16" />
 
           <p>see how it works</p>
         </div>

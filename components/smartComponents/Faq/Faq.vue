@@ -22,6 +22,11 @@ const faqData = [
     answer:
       "Yes, you can get support for more than 6 months. For further information, read <a href='https://help.market.envato.com/hc/en-us/articles/207886473-Extend-or-renew-Item-Support' target='_blank' class='link'>here</a>.",
   },
+  {
+    question: "WordPress Plugin vs Standalone Version",
+    answer:
+      "It is important to know, Standalone Version requires work in WordPress environment to generate building project data. <a href='/doc/plugin-vs-standalone' class='link'>see more</a>.",
+  },
 ];
 
 const slideUpDownModel = ref(new Array(faqData.length).fill(false));

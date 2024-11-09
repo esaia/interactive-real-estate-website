@@ -21,8 +21,12 @@ watch(
     <div class="container-fluid relative flex justify-between py-4">
       <div class="z-[3] flex items-center">
         <nuxt-link to="/" class="mr-10">
-          <logo class="h-16 w-16" />
+          <!-- <logo class="h-16 w-16" /> -->
+          <logo-animated class="h-16 w-16" />
         </nuxt-link>
+      </div>
+
+      <div class="z-[3] flex items-center gap-5">
         <div class="hidden items-center gap-6 text-gray-800 lg:flex">
           <nuxt-link
             v-for="item in menu"
@@ -33,9 +37,6 @@ watch(
             {{ item.title }}
           </nuxt-link>
         </div>
-      </div>
-
-      <div class="z-[3] flex items-center gap-5">
         <nuxt-link to="/#pricing">
           <base-button title="Buy now" class="shadow-lg" />
         </nuxt-link>
@@ -48,7 +49,7 @@ watch(
       </div>
 
       <header-dropdown
-        class="pointer-events-none absolute left-0 top-0 z-[2] w-full origin-top bg-white p-4 pt-16 opacity-0 transition-all duration-500"
+        class="pointer-events-none absolute left-0 top-0 z-[2] w-full origin-top bg-white p-4 pt-20 opacity-0 transition-all duration-500"
         :class="{ 'pointer-events-auto opacity-100': openDropdown }"
         :menu="menu"
       />

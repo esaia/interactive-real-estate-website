@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "ire-preview": "/Users/esaia/Desktop/my projects/ire/ire-preview-library",
+    "ire-preview": "^2.0.1",
     "nuxt": "^3.13.2",
     "vue": "latest",
     "vue-router": "latest",
