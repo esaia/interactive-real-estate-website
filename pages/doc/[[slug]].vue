@@ -1,4 +1,15 @@
 <script setup lang="ts">
+import type { DemoType } from "~/types/general";
+
+const demos = useState<DemoType[]>("demos");
+const randomIndex = useState("randomIndex", () =>
+  Math.floor(Math.random() * 5),
+);
+
+onUnmounted(() => {
+  randomIndex.value = Math.floor(Math.random() * 5);
+});
+
 const route = useRoute();
 </script>
 
@@ -40,7 +51,7 @@ const route = useRoute();
         <h2 class="title">Introduction</h2>
         <br />
 
-        <p>
+        <p class="mb-4">
           Welcome to the documentation for the Interactive Real Estate Plugin!
           This plugin provides an interactive experience for real estate
           listings, enabling potential buyers or renters to visually explore
@@ -48,6 +59,11 @@ const route = useRoute();
           users can get detailed information about each unit directly from the
           visual interface.
         </p>
+        <demo
+          v-if="randomIndex >= 0"
+          :key="randomIndex"
+          :shortcode-data="demos[randomIndex]?.shortcodeData"
+        />
       </div>
 
       <div v-else-if="route.params?.slug === 'installation'">
@@ -112,19 +128,52 @@ const route = useRoute();
           harum sed?
         </p>
 
-        <div class="flex flex-col gap-20">
+        <div class="flex flex-col gap-5">
           <img
             src="/assets/images/doc/createProject.png"
             alt=""
             class="h-full w-full"
           />
+
+          <p class="title-sm">Creating a polygon.</p>
+
           <img src="/assets/images/doc/selectFloor.gif" alt="" />
 
+          <p class="title-sm">Zooming, panning, editing polygon.</p>
+
           <img src="/assets/images/doc/zoomingPaning.gif" alt="" />
+
+          <p class="title-sm">Floor creating.</p>
+
           <img src="/assets/images/doc/createFloor.gif" alt="" />
+
+          <p class="title-sm">Type creating.</p>
+          <p>
+            For apartments of the same type, (For example, apartments that have
+            the same area M2, number of rooms, arrangement of rooms) you need to
+            add an entry in the types and then select in the list, when you will
+            create flat, Because the same records should not be created many
+            times.
+          </p>
+
           <img src="/assets/images/doc/createType.gif" alt="" />
+
+          <p class="title-sm">Flat creating.</p>
+
           <img src="/assets/images/doc/createFlat.gif" alt="" />
+
+          <p>
+            Link polygon to related data. In this example connect polygon to
+            floor data.
+          </p>
+
           <img src="/assets/images/doc/linkFloorPolygon.gif" alt="" />
+
+          <p>
+            Change polygon paths colors, stroke width and color, Sold or
+            Reserved polygon colors.
+          </p>
+
           <img src="/assets/images/doc/colorVariables.gif" alt="" />
         </div>
       </div>
