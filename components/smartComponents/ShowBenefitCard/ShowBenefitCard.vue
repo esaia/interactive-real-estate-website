@@ -1,8 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  title: string;
-  description: string;
-  badge?: string;
+  item?: any;
   index?: number;
 }>();
 </script>
@@ -13,21 +11,20 @@ defineProps<{
   >
     <div class="relative flex-1">
       <p class="gradient-text inline-block">
-        {{ badge }}
+        {{ item?.badge }}
       </p>
 
       <h2 class="title mb-4">
-        {{ title }}
+        {{ item?.title }}
       </h2>
-      <p class="desc">{{ description }}</p>
+      <p class="desc">{{ item?.description }}</p>
       <p class="number" :data-number="index">{{ index }}</p>
     </div>
-
-    <img
-      class="w-full flex-1"
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSndSKnbPY00VnpzMkkfLSOm5xJgMmLCoPwOQ&s"
-      alt=""
-    />
+    <div class="flex-1 overflow-hidden rounded-xl">
+      <video playsinline autoplay loop muted>
+        <source :src="`/assets/videos/${item?.video}`" type="video/webm" />
+      </video>
+    </div>
   </div>
 </template>
 
