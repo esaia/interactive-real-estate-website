@@ -175,10 +175,12 @@ const circleMouseMove = (event) => {
 };
 
 const onCanvasMouseMove = throttle((event) => {
-  if (event.target.nodeName === "path" && !points.value?.length) {
-    svgCanvas.value.style.cursor = "pointer";
-  } else {
-    svgCanvas.value.style.cursor = "crosshair";
+  if (!pan.value) {
+    if (event.target.nodeName === "path" && !points.value?.length) {
+      svgCanvas.value.style.cursor = "pointer";
+    } else {
+      svgCanvas.value.style.cursor = "crosshair";
+    }
   }
 
   setCursorValues(event);
@@ -459,9 +461,14 @@ const onDocumentKeydown = (event) => {
     }
   }
 
-  if (event.key === " " && document.activeElement.tagName !== "INPUT") {
+  if (
+    event.key === " " &&
+    document.activeElement.tagName !== "INPUT" &&
+    document.activeElement.tagName !== "TEXTAREA"
+  ) {
     event.preventDefault();
     pan.value = true;
+    svgCanvas.value.style.cursor = "all-scroll";
   }
 };
 

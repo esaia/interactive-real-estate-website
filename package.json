@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.12.2",
-    "ire-preview": "^2.0.4",
+    "ire-preview": "/Users/esaia/Desktop/my projects/ire/ire-preview-library",
     "nuxt": "^3.13.2",
     "vue": "latest",
     "vue-router": "latest",
