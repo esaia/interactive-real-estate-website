@@ -16,19 +16,19 @@ const openVideoModal = ref(false);
         Elevate <br /><span class="gradient-text">Interactive Real Estate</span>
       </h2>
       <p class="desc m-auto max-w-[700px]">
-        Quickly make your property images interactive with pins, polygon!
-        Elevate Interactive Real Estate™ lets you create dynamic visuals in
-        just minutes.
+        Quickly make your property images interactive with adding pins, creating
+        polygon! Elevate Interactive Real Estate™ lets you create dynamic
+        visuals in just minutes.
       </p>
 
       <div class="mt-10 flex items-center justify-center">
         <div
           @click="openVideoModal = true"
-          class="flex cursor-pointer items-center gap-3 transition-all duration-500 ease-out hover:scale-110"
+          class="flex cursor-pointer items-center gap-3 transition-all duration-500 ease-out hover:scale-110 active:scale-90 active:duration-150"
         >
           <play-icon class="h-12 w-12 lg:h-16 lg:w-16" />
 
-          <p>see how it works</p>
+          <p>See how it works</p>
         </div>
       </div>
     </div>
@@ -38,9 +38,16 @@ const openVideoModal = ref(false);
     <transition name="fade-in-out">
       <div
         v-if="openVideoModal"
-        class="fixed left-0 top-0 z-10 h-full w-full bg-gray-600"
+        class="fixed left-0 top-0 z-10 flex h-full w-full items-center justify-center bg-gray-700"
       >
-        youtube link
+        <div
+          class="absolute right-12 top-12 cursor-pointer rounded-full bg-white p-5 transition-all duration-500 hover:scale-110 active:scale-90 active:duration-150 [&_svg]:h-5 [&_svg]:w-5"
+          @click="openVideoModal = false"
+        >
+          <x />
+        </div>
+
+        <div class="text-white">Video is in progress...</div>
       </div>
     </transition>
   </teleport>

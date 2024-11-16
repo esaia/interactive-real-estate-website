@@ -5,7 +5,8 @@ const menu = [
   { title: "Home", link: "/" },
   { title: "Documentation", link: "/doc" },
   { title: "Demos", link: "/demos" },
-  { title: "Module", link: "/module" },
+  { title: "Try module", link: "/module" },
+  { title: "Contact us", link: "/contact" },
 ];
 
 watch(

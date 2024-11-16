@@ -51,6 +51,15 @@
           <nuxt-link href="/">Interactive Real Estate™</nuxt-link>. All Rights
           Reserved.
         </p>
+
+        <div>
+          <nuxt-link
+            to="https://www.youtube.com/@interactiverealestate"
+            target="_blank"
+          >
+            <youtube class="h-6 w-6 cursor-pointer" />
+          </nuxt-link>
+        </div>
       </div>
     </div>
   </footer>

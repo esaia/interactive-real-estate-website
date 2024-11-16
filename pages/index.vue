@@ -1,28 +1,28 @@
 <script setup lang="ts">
 const benefitData = [
   {
-    title: "Create Any Kind of Polygon Shapes",
+    title: "Create any kind of polygon shapes",
     description:
       "Easily design and customize a variety of polygon shapes to enhance your projects. Whether you need simple outlines or complex designs, our intuitive tools make it effortless to bring your vision to life. No coding required—start creating stunning visuals today!",
     badge: "Easy to use",
     video: "createPolygon.webm",
   },
   {
-    title: "Easy Zoom And Pan For Comfortable Creation Of Polygon Shapes",
+    title: "Easy zoom and pan for comfortable creation of polygon shapes",
     description:
       "Use the keyboard shortcut to zoom in on your SVG and create detailed polygons. When you're zoomed in, simply press the spacebar to pan around and explore your design easily.",
     badge: "Try it now",
     video: "editPolygon.webm",
   },
   {
-    title: "Choose Svg Path Colors",
+    title: "Choose svg path colors",
     description:
       "Easily customize the colors of your SVG paths to match your design aesthetic. With just a few clicks, you can select any color and apply it to paths.",
     badge: "Customizable",
     video: "colors.webm",
   },
   {
-    title: "Run Script On Click Of Path",
+    title: "Run script on click of path",
     description:
       "Easily add interactivity to your designs by running custom scripts when a user clicks on any path. This feature allows you to trigger animations or even interact with other elements, enhancing the functionality and user experience of your designs.",
     badge: "Interactive",

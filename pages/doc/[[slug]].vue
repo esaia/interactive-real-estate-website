@@ -122,12 +122,6 @@ const route = useRoute();
         <h2 class="title">Usage</h2>
         <br />
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-          recusandae illum enim possimus ipsa quisquam laboriosam ab assumenda
-          harum sed?
-        </p>
-
         <div class="flex flex-col gap-5">
           <img
             src="/assets/images/doc/createProject.png"
@@ -140,6 +134,14 @@ const route = useRoute();
           <img src="/assets/images/doc/selectFloor.gif" alt="" />
 
           <p class="title-sm">Zooming, panning, editing polygon.</p>
+          <p>
+            Simply press
+            <span class="rounded-md bg-gray-100 p-2">ctrl +</span> for zooming
+            in and <span class="rounded-md bg-gray-100 p-2">ctrl -</span> for
+            zooming out. While you are zoomed in press
+            <span class="rounded-md bg-gray-100 p-2">space</span> and move the
+            cursor for panning.
+          </p>
 
           <img src="/assets/images/doc/zoomingPaning.gif" alt="" />
 
@@ -163,8 +165,8 @@ const route = useRoute();
           <img src="/assets/images/doc/createFlat.gif" alt="" />
 
           <p>
-            Link polygon to related data. In this example connect polygon to
-            floor data.
+            Link polygon to related data. In this example we are connecting
+            polygon to floor data.
           </p>
 
           <img src="/assets/images/doc/linkFloorPolygon.gif" alt="" />
