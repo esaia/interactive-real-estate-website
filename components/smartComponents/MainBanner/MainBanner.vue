@@ -13,12 +13,15 @@ const openVideoModal = ref(false);
       <h2
         class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-black md:text-5xl lg:text-7xl"
       >
-        Elevate <br /><span class="gradient-text">Interactive Real Estate</span>
+        The Ultimate <br /><span class="gradient-text"
+          >interactive Building</span
+        >
+        generator
       </h2>
       <p class="desc m-auto max-w-[700px]">
         Quickly make your property images interactive with adding pins, creating
-        polygon! Elevate Interactive Real Estate™ lets you create dynamic
-        visuals in just minutes.
+        polygon! Elevate Building SVG™ lets you create dynamic visuals in just
+        minutes.
       </p>
 
       <div class="mt-10 flex items-center justify-center">

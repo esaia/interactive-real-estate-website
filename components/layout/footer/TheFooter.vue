@@ -9,9 +9,7 @@
         <div>
           <div class="flex items-center gap-3">
             <logo class="h-12 w-12" />
-            <h5 class="text-xl font-semibold text-slate-800">
-              Interactive Real Estate
-            </h5>
+            <h5 class="text-xl font-semibold text-slate-800">Building SVG</h5>
           </div>
           <p class="mt-2 max-w-[500px] text-gray-500">
             Create clickable, customizable interactive buildings and property
@@ -48,8 +46,7 @@
       >
         <p class="mb-4 block text-center text-sm text-slate-500 md:mb-0">
           Copyright © 2024
-          <nuxt-link href="/">Interactive Real Estate™</nuxt-link>. All Rights
-          Reserved.
+          <nuxt-link href="/">Building SVG™</nuxt-link>. All Rights Reserved.
         </p>
 
         <div>

@@ -52,12 +52,11 @@ const route = useRoute();
         <br />
 
         <p class="mb-4">
-          Welcome to the documentation for the Interactive Real Estate Plugin!
-          This plugin provides an interactive experience for real estate
-          listings, enabling potential buyers or renters to visually explore
-          properties. With easy navigation through different building layers,
-          users can get detailed information about each unit directly from the
-          visual interface.
+          Welcome to the documentation for the Building SVG Plugin! This plugin
+          provides an interactive experience for real estate listings, enabling
+          potential buyers or renters to visually explore properties. With easy
+          navigation through different building layers, users can get detailed
+          information about each unit directly from the visual interface.
         </p>
         <demo
           v-if="randomIndex >= 0"
@@ -92,8 +91,8 @@ const route = useRoute();
         <br />
 
         <p>
-          To download the Interactive Real Estate Plugin from CodeCanyon, follow
-          these steps:
+          To download the Building SVG Plugin from CodeCanyon, follow these
+          steps:
         </p>
 
         <br />
@@ -105,9 +104,7 @@ const route = useRoute();
               >CodeCanyon website</a
             >.
           </li>
-          <li>
-            Search for "Interactive Real Estate Plugin" using the search bar.
-          </li>
+          <li>Search for "Building SVG Plugin" using the search bar.</li>
           <li>Click on the plugin title to view its details.</li>
           <li>Click on the <strong>Add to Cart</strong> button.</li>
           <li>Proceed to checkout and complete your purchase.</li>
@@ -219,8 +216,8 @@ const route = useRoute();
         <ul>
           <li>
             <strong>Easy Integration:</strong> This version allows you to use a
-            shortcode to quickly add our interactive real estate component
-            directly to your WordPress site.
+            shortcode to quickly add our Building SVG component directly to your
+            WordPress site.
           </li>
           <li>
             <strong>Real-Time Data:</strong> You can generate and display

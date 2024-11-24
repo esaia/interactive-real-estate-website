@@ -18,7 +18,7 @@ const isStandaloneTab = ref(false);
 
 <template>
   <div id="pricing" class="container-fluid padding-top">
-    <h2 class="title text-center">Get Interactive Real Estate</h2>
+    <h2 class="title text-center">Get Building SVG</h2>
 
     <div
       class="m-auto my-5 flex w-fit items-center justify-center rounded-lg border bg-gray-50/80 p-2 text-gray-600"
