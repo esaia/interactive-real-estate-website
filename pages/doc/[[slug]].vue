@@ -52,11 +52,12 @@ const route = useRoute();
         <br />
 
         <p class="mb-4">
-          Welcome to the documentation for the Building SVG Plugin! This plugin
-          provides an interactive experience for real estate listings, enabling
-          potential buyers or renters to visually explore properties. With easy
-          navigation through different building layers, users can get detailed
-          information about each unit directly from the visual interface.
+          Welcome to the documentation for the Interactive Real Estate Plugin!
+          This plugin provides an interactive experience for real estate
+          listings, enabling potential buyers or renters to visually explore
+          properties. With easy navigation through different building layers,
+          users can get detailed information about each unit directly from the
+          visual interface.
         </p>
         <demo
           v-if="randomIndex >= 0"
@@ -84,7 +85,7 @@ const route = useRoute();
             plugin.
           </li>
         </ul>
-
+        <!--
         <br />
         <br />
         <h2 class="title">How to Download from CodeCanyon</h2>
@@ -112,7 +113,7 @@ const route = useRoute();
             Once the purchase is confirmed, navigate to your downloads page to
             access the plugin file.
           </li>
-        </ul>
+        </ul> -->
       </div>
 
       <div v-else-if="route.params?.slug === 'usage'">

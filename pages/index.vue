@@ -1950,7 +1950,7 @@ const shortcodeData = {
       :index="i + 1"
     />
 
-    <plan-cards />
+    <!-- <plan-cards /> -->
 
     <faq />
 

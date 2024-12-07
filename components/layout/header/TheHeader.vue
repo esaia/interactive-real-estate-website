@@ -38,8 +38,8 @@ watch(
             {{ item.title }}
           </nuxt-link>
         </div>
-        <nuxt-link to="/#pricing">
-          <base-button title="Buy now" class="shadow-lg" />
+        <nuxt-link to="/">
+          <base-button title="Get it now" class="shadow-lg" />
         </nuxt-link>
 
         <burger

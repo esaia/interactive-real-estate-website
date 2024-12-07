@@ -20,8 +20,8 @@ const openVideoModal = ref(false);
       </h2>
       <p class="desc m-auto max-w-[700px]">
         Quickly make your property images interactive with adding pins, creating
-        polygon! Elevate Building SVG™ lets you create dynamic visuals in just
-        minutes.
+        polygon! Elevate Interactive Real Estate™ lets you create dynamic
+        visuals in just minutes.
       </p>
 
       <div class="mt-10 flex items-center justify-center">

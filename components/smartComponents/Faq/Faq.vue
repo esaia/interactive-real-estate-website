@@ -1,27 +1,53 @@
 <script setup lang="ts">
 import { Vue3SlideUpDown } from "vue3-slide-up-down";
 const faqData = [
+  // {
+  //   question:
+  //     "What is the difference between a Regular License and an Extended License?",
+  //   answer:
+  //     "<p>With a <b>Regular License</b>, you are allowed to use the product in one project, either for yourself or a single client. You can create as many interactive buildings as needed within that project. An <i>'project'</i> refers to a website, app or other. <br><br>An <b>Extended License</b> gives you more flexibility and broader usage rights. You can use the item in multiple projects. For example, if you're building multiple client projects, you can use the asset for each project. For a detailed comparison, please refer to the full explanation <a href='https://codecanyon.net/licenses/standard' target='_blank' class='link'>here</a>.</p>",
+  // },
+  // {
+  //   question: "What is CodeCanyon?",
+  //   answer:
+  //     "CodeCanyon is an online marketplace where you can buy and sell various types of code, scripts, plugins, themes, and digital assets. It's part of the Envato Market, offering developers and designers a platform to sell their creations, and allowing users to purchase ready-made solutions for websites, apps, and software projects.",
+  // },
+  // {
+  //   question: "I bought the product by accident. Can I get a refund?",
+  //   answer:
+  //     "No, refunds are generally not provided for mistaken purchases. It's important to check the product details before buying. If the product is broken or not as described, you may be able to get a refund, but before, please contact us and we will try to solve the issue.",
+  // },
+  // {
+  //   question: "Can I get support for more than 6 months?",
+  //   answer:
+  //     "Yes, you can get support for more than 6 months. For further information, read <a href='https://help.market.envato.com/hc/en-us/articles/207886473-Extend-or-renew-Item-Support' target='_blank' class='link'>here</a>.",
+  // },
+
+  {
+    question: "What is this plugin and what does it do?",
+    answer:
+      "This plugin allows you to make property images interactive by adding pins, creating polygons, and enabling users to interact with these elements. It’s especially useful for showcasing real estate listings, floor plans, or architectural designs, where users can click on specific areas (like units or rooms) to view more information.",
+  },
+
   {
     question:
-      "What is the difference between a Regular License and an Extended License?",
+      "Can I display different building layers (e.g., floor plans) in separate images?",
     answer:
-      "<p>With a <b>Regular License</b>, you are allowed to use the product in one project, either for yourself or a single client. You can create as many interactive buildings as needed within that project. An <i>'project'</i> refers to a website, app or other. <br><br>An <b>Extended License</b> gives you more flexibility and broader usage rights. You can use the item in multiple projects. For example, if you're building multiple client projects, you can use the asset for each project. For a detailed comparison, please refer to the full explanation <a href='https://codecanyon.net/licenses/standard' target='_blank' class='link'>here</a>.</p>",
+      "Yes! You can upload multiple floor plans or building layers and display them separately, allowing users to navigate between them. For instance, users could view a 2D floor plan for one floor, and then switch to another for a different level or unit type.",
   },
+
   {
-    question: "What is CodeCanyon?",
+    question: "Can I use this plugin with any theme or page builder?",
     answer:
-      "CodeCanyon is an online marketplace where you can buy and sell various types of code, scripts, plugins, themes, and digital assets. It's part of the Envato Market, offering developers and designers a platform to sell their creations, and allowing users to purchase ready-made solutions for websites, apps, and software projects.",
+      "This plugin is designed to be compatible with most WordPress themes and page builders. You can easily add interactive property images to any page or post using shortcodes.",
   },
+
   {
-    question: "I bought the product by accident. Can I get a refund?",
+    question: "Can I customize the appearance of the pins and polygons?",
     answer:
-      "No, refunds are generally not provided for mistaken purchases. It's important to check the product details before buying. If the product is broken or not as described, you may be able to get a refund, but before, please contact us and we will try to solve the issue.",
+      "Yes! The plugin allows you to customize the color, size, and style of pins and polygons to match your website’s design. You can also adjust the transparency, borders, and hover effects to create a visually appealing and intuitive user interface.",
   },
-  {
-    question: "Can I get support for more than 6 months?",
-    answer:
-      "Yes, you can get support for more than 6 months. For further information, read <a href='https://help.market.envato.com/hc/en-us/articles/207886473-Extend-or-renew-Item-Support' target='_blank' class='link'>here</a>.",
-  },
+
   {
     question: "WordPress Plugin vs Standalone Version",
     answer:
