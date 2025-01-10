@@ -25,14 +25,15 @@ const openVideoModal = ref(false);
       </p>
 
       <div class="mt-10 flex items-center justify-center">
-        <div
-          @click="openVideoModal = true"
+        <nuxt-link
+          to="https://youtu.be/dQmqouszdK0"
+          target="_blank"
           class="flex cursor-pointer items-center gap-3 transition-all duration-500 ease-out hover:scale-110 active:scale-90 active:duration-150"
         >
           <play-icon class="h-12 w-12 lg:h-16 lg:w-16" />
 
           <p>See how it works</p>
-        </div>
+        </nuxt-link>
       </div>
     </div>
   </div>
