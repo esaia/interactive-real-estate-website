@@ -10,8 +10,8 @@ const wpPricePlanData = [
       { title: "Create <b> Unlimited </b> floors " },
       { title: " Create only <b>25 flat</b>" },
       { title: "24/7 Support", hasNotFeature: true },
-      { title: "Access to <b>Updates</b>", hasNotFeature: true },
-      { title: "Choose svg path colors", hasNotFeature: true },
+      { title: "Access to <b>updates</b>", hasNotFeature: true },
+      { title: "Customize svg path colors", hasNotFeature: true },
       { title: "License for: <b>1 website</b>", hasNotFeature: false },
     ],
     subscrption: "",
@@ -27,8 +27,8 @@ const wpPricePlanData = [
       { title: "Create <b> Unlimited </b> floors " },
       { title: "Create <b> Unlimited </b> flats " },
       { title: "24/7 Support" },
-      { title: "Access to <b>Updates</b>" },
-      { title: "Choose svg path colors" },
+      { title: "Access to <b>updates</b>" },
+      { title: "Customize svg path colors" },
     ],
     subscrption: "/ month",
   },
@@ -44,8 +44,8 @@ const wpPricePlanData = [
       { title: "Create <b> Unlimited </b> floors " },
       { title: "Create Unlimited <b> flats </b>" },
       { title: "24/7 Support" },
-      { title: "Access to <b>Updates</b>" },
-      { title: "Choose svg path colors" },
+      { title: "Access to <b>updates</b>" },
+      { title: "Customize svg path colors" },
       { title: "License for: <b>1 website</b>" },
     ],
     subscrption: "/ once",
@@ -56,13 +56,13 @@ const standalonePricePlanData = [
   {
     title: "Customization",
     desc: "Regular License",
-    price: "49$",
+    price: "",
     features: [],
   },
   {
     title: "Custom Website",
     desc: "Extended License",
-    price: "199$",
+    price: "",
     features: [],
   },
 ];
@@ -72,6 +72,39 @@ const isServicesTab = ref(false);
 const planData = computed(() => {
   return isServicesTab.value ? standalonePricePlanData : wpPricePlanData;
 });
+
+const buyPackage = (planName: string, licenses: string) => {
+  const isLifetime = planName === "Lifetime";
+
+  if (!FS) return;
+
+  const handler = new FS.Checkout({
+    product_id: "17710",
+    plan_id: "29444",
+    public_key: "pk_28cee94284e5b1a7fc7fcde632e02",
+  });
+
+  if (!handler) return;
+
+  handler.open({
+    name: "Interactive real estate",
+    licenses,
+    billing_cycle: isLifetime ? "lifetime" : "annual",
+    purchaseCompleted: (response: any) => {
+      // The logic here will be executed immediately after the purchase confirmation
+      console.log("Purchase completed:", response);
+      console.log("User email:", response.user.email);
+      console.log("License key:", response.license.key);
+    },
+    success: (response: any) => {
+      // The logic here will be executed after the customer closes the checkout,
+      // after a successful purchase
+      console.log("Checkout closed after successful purchase:", response);
+      console.log("User email:", response.user.email);
+      console.log("License key:", response.license.key);
+    },
+  });
+};
 </script>
 
 <template>
@@ -124,7 +157,12 @@ const planData = computed(() => {
     </div>
 
     <div class="mt-14 flex flex-col items-start gap-4 lg:flex-row">
-      <pricing-card v-for="(item, i) in planData" :key="i" :item="item" />
+      <pricing-card
+        v-for="(item, i) in planData"
+        :key="i"
+        :item="item"
+        @handle-click-plan="buyPackage"
+      />
     </div>
 
     <div v-if="!isServicesTab" class="m-auto max-w-[700px] pt-10">

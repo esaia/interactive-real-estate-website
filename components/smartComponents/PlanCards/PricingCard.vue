@@ -3,6 +3,10 @@ const props = defineProps<{
   item: any;
 }>();
 
+defineEmits<{
+  (e: "handleClickPlan", planName: string, annualLicense: string): void;
+}>();
+
 const annualLicense = ref("1");
 
 const isFree = computed(() => {
@@ -95,7 +99,12 @@ const priceIndex = computed(() => {
 
     <div class="my-4">
       <base-button v-if="isFree" title="Get it now" type="2" />
-      <base-button v-else title="Buy now" :type="isAnnual ? '1' : '2'" />
+      <base-button
+        v-else
+        title="Buy now"
+        :type="isAnnual ? '1' : '2'"
+        @click="$emit('handleClickPlan', item.title, annualLicense)"
+      />
     </div>
 
     <div class="editor desc m-auto text-center text-sm">

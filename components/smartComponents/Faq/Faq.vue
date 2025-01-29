@@ -55,7 +55,7 @@ const faqData = [
   {
     question: "What happens after my purchase?",
     answer:
-      "You will receive two emails, with your receipt and invoice, a download link for your <b> Interactive Real Estate</b>  version, a personal license key, and installation instructions. <br/> <br/> You can then upload the plugin ZIP file through the  <b>  Plugins > Add New > Upload Plugin </b>  menu in your site's WordPress admin dashboard, and enter your license key. <br/> <br/> If you don't see those emails in your inbox, please also check your spam folder. If you still can't find them, please contact the <a href='/contact'> support team </a> or try logging in to your account, where you'll also find the necessary information.",
+      "You will receive two emails, with your receipt and invoice, a download link for your <b> Interactive Real Estate</b>  version, a personal license key, and installation instructions. <br/> <br/> You can then upload the plugin ZIP file through the  <b>  Plugins > Add New > Upload Plugin </b>  menu in your site's WordPress admin dashboard, and enter your license key. <br/> <br/> If you don't see those emails in your inbox, please also check your spam folder. If you still can't find them, please contact the <a href='/account'> support team </a> or try logging in to your account, where you'll also find the necessary information.",
   },
   {
     question: "Do I get updates?",

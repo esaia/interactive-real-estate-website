@@ -39,11 +39,14 @@ watch(
       </div>
 
       <div class="z-[3] flex items-center gap-5">
-        <nuxt-link to="/pricing" class="cursor-pointer hover:text-red-700">
+        <nuxt-link
+          to="/pricing"
+          class="hidden cursor-pointer hover:text-red-700 lg:block"
+        >
           Pricing
         </nuxt-link>
 
-        <nuxt-link to="/account">
+        <nuxt-link to="/account" class="hidden lg:block">
           <base-button title="Account" type="2" />
         </nuxt-link>
 
