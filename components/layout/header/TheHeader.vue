@@ -43,8 +43,12 @@ watch(
           Pricing
         </nuxt-link>
 
+        <nuxt-link to="/account">
+          <base-button title="Account" type="2" />
+        </nuxt-link>
+
         <nuxt-link to="/">
-          <base-button title="Get it now" class="shadow-lg" />
+          <base-button title="Get it now" />
         </nuxt-link>
 
         <burger

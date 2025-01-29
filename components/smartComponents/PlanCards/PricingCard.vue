@@ -98,17 +98,12 @@ const priceIndex = computed(() => {
       <base-button v-else title="Buy now" :type="isAnnual ? '1' : '2'" />
     </div>
 
-    <p class="m-auto text-center text-sm text-gray-400">
-      After Click <span class="underline"> Buy Now</span>, You will be
-      redirected to CodeCanyon to complete your order. Check the complete
-      license terms
-      <a
-        class="link"
-        href="https://codecanyon.net/licenses/standard"
-        target="_blank"
-      >
-        here.
-      </a>
-    </p>
+    <div class="editor desc m-auto text-center text-sm">
+      All sales are handled by
+      <nuxt-link to="https://freemius.com/" target="_blank">Freemius</nuxt-link>
+      , Inc., as the Merchant of Record (MoR). Try logging in to your
+      <nuxt-link to="/account"> account</nuxt-link>, where you'll also find the
+      necessary information.
+    </div>
   </div>
 </template>
