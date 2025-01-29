@@ -37,9 +37,7 @@
             Module
           </nuxt-link>
 
-          <nuxt-link to="/#" class="text-sm hover:underline">
-            Change Log
-          </nuxt-link>
+          <nuxt-link class="text-sm hover:underline"> Change Log </nuxt-link>
         </div>
       </div>
 
@@ -52,12 +50,23 @@
           Reserved.
         </p>
 
-        <div>
+        <div class="flex items-center gap-2">
           <nuxt-link
             to="https://www.youtube.com/@interactiverealestate"
             target="_blank"
+            class="rounded-full bg-white p-2 transition-all hover:scale-105"
           >
-            <youtube class="h-6 w-6 cursor-pointer" />
+            <youtube class="h-6 w-6 cursor-pointer [&_path]:!fill-black" />
+          </nuxt-link>
+
+          <nuxt-link
+            to="/"
+            target="_blank"
+            class="rounded-full bg-white p-2 transition-all hover:scale-105"
+          >
+            <wordpress-icon
+              class="h-6 w-6 cursor-pointer [&_path]:!fill-black"
+            />
           </nuxt-link>
         </div>
       </div>

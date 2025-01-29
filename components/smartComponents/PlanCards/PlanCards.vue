@@ -1,19 +1,77 @@
 <script setup lang="ts">
 const wpPricePlanData = [
-  { title: "Wordpress plugin", desc: "Regular License", price: "39$" },
-  { title: "Wordpress plugin", desc: "Extended License", price: "169$" },
+  {
+    title: "Free",
+    desc: "A great starting point for individuals or small projects to try out the basic features.",
+    price: "",
+    features: [
+      { title: "Create only <b> 1 project</b>" },
+      { title: "Create <b> Unlimited </b> blocks " },
+      { title: "Create <b> Unlimited </b> floors " },
+      { title: " Create only <b>25 flat</b>" },
+      { title: "24/7 Support", hasNotFeature: true },
+      { title: "Access to <b>Updates</b>", hasNotFeature: true },
+      { title: "Choose svg path colors", hasNotFeature: true },
+      { title: "License for: <b>1 website</b>", hasNotFeature: false },
+    ],
+    subscrption: "",
+  },
+  {
+    title: "Annual",
+    desc: "Perfect for professionals and businesses, offering full access to advanced features and premium support.",
+    price: ["$4", "$8", "$16"],
+    cent: "99",
+    features: [
+      { title: "Create <b> Unlimited </b> projects " },
+      { title: "Create <b> Unlimited </b> blocks " },
+      { title: "Create <b> Unlimited </b> floors " },
+      { title: "Create <b> Unlimited </b> flats " },
+      { title: "24/7 Support" },
+      { title: "Access to <b>Updates</b>" },
+      { title: "Choose svg path colors" },
+    ],
+    subscrption: "/ month",
+  },
+  {
+    title: "Lifetime",
+    desc: "The ultimate plan for long-term users, providing all premium features with a one-time payment.",
+    price: "$299",
+    cent: "99",
+
+    features: [
+      { title: "Create Unlimited <b> projects </b>" },
+      { title: "Create <b> Unlimited </b> blocks " },
+      { title: "Create <b> Unlimited </b> floors " },
+      { title: "Create Unlimited <b> flats </b>" },
+      { title: "24/7 Support" },
+      { title: "Access to <b>Updates</b>" },
+      { title: "Choose svg path colors" },
+      { title: "License for: <b>1 website</b>" },
+    ],
+    subscrption: "/ once",
+  },
 ];
 
 const standalonePricePlanData = [
-  { title: "Wp plugin + Standalone", desc: "Regular License", price: "49$" },
-  { title: "Wp plugin + Standalone", desc: "Extended License", price: "199$" },
+  {
+    title: "Customization",
+    desc: "Regular License",
+    price: "49$",
+    features: [],
+  },
+  {
+    title: "Custom Website",
+    desc: "Extended License",
+    price: "199$",
+    features: [],
+  },
 ];
 
-const planData = computed(() => {
-  return isStandaloneTab.value ? standalonePricePlanData : wpPricePlanData;
-});
+const isServicesTab = ref(false);
 
-const isStandaloneTab = ref(false);
+const planData = computed(() => {
+  return isServicesTab.value ? standalonePricePlanData : wpPricePlanData;
+});
 </script>
 
 <template>
@@ -26,27 +84,27 @@ const isStandaloneTab = ref(false);
       <div
         class="cursor-pointer rounded-md px-5 py-2 transition-all duration-500 md:px-10"
         :class="{
-          'bg-white shadow-lg': !isStandaloneTab,
-          'bg-white/0': isStandaloneTab,
+          'bg-white shadow-lg': !isServicesTab,
+          'bg-white/0': isServicesTab,
         }"
-        @click="isStandaloneTab = false"
+        @click="isServicesTab = false"
       >
         Wp plugin
       </div>
       <div
         class="cursor-pointer rounded-md px-5 py-2 transition-all md:px-10"
         :class="{
-          'bg-white shadow-lg': isStandaloneTab,
-          'bg-white/0': !isStandaloneTab,
+          'bg-white shadow-lg': isServicesTab,
+          'bg-white/0': !isServicesTab,
         }"
-        @click="isStandaloneTab = true"
+        @click="isServicesTab = true"
       >
-        Standalone
+        Services
       </div>
     </div>
 
     <div class="m-auto max-w-[700px] [&_ul]:list-disc">
-      <p v-if="!isStandaloneTab" class="desc mt-3 text-center">
+      <p v-if="!isServicesTab" class="desc mt-3 text-center">
         Save time, reduce costs, and captivate your audience! Transform the way
         properties are showcased, making every listing an engaging experience.
       </p>
@@ -65,42 +123,22 @@ const isStandaloneTab = ref(false);
       </div>
     </div>
 
-    <div class="mt-10 flex flex-col items-start gap-4 lg:flex-row">
-      <pricing-card v-for="(item, i) in planData" :key="i" :item="item">
-        <div v-if="i === 0" class="my-5 flex flex-col gap-3">
-          <div class="flex items-center gap-2 text-left">
-            <correct-icon class="!h-6 !w-6" />
-            <p>Free 24/7 Support for <b>6 Months</b></p>
-          </div>
+    <div class="mt-14 flex flex-col items-start gap-4 lg:flex-row">
+      <pricing-card v-for="(item, i) in planData" :key="i" :item="item" />
+    </div>
 
-          <div class="flex items-center gap-2 text-left">
-            <correct-icon class="!h-6 !w-6" />
-            <p>Lifetime Access to <b>Updates</b></p>
-          </div>
+    <div v-if="!isServicesTab" class="m-auto max-w-[700px] pt-10">
+      <div class="text-center">
+        <p class="title-sm font-bold">Need Custom Licenses?</p>
+        <p class="desc editor">
+          If you need a license for more sites than the options available,
+          please don't hesitate to
+          <nuxt-link to="/contact">contact us</nuxt-link> for a custom solution.
+          We're here to help!
+        </p>
+      </div>
 
-          <div class="flex items-center gap-2 text-left">
-            <correct-icon class="!h-6 !w-6" />
-            <p>Create Unlimited <b> Interactive Buildings </b></p>
-          </div>
-
-          <div class="flex items-center gap-2 text-left">
-            <correct-icon class="!h-6 !w-6" />
-            <p>License For a <b> Single Project</b></p>
-          </div>
-        </div>
-
-        <div v-else class="my-5 flex flex-col gap-3">
-          <div class="flex items-center gap-2 text-left">
-            <correct-icon class="!h-6 !w-6" />
-            <p class="text-gray-500">Everything from Regular License</p>
-          </div>
-
-          <div class="flex items-center gap-2 text-left">
-            <correct-icon class="!h-6 !w-6" />
-            <p>License For <b>Unlimited Projects</b></p>
-          </div>
-        </div>
-      </pricing-card>
+      <money-back />
     </div>
   </div>
 </template>

@@ -1950,9 +1950,11 @@ const shortcodeData = {
       :index="i + 1"
     />
 
-    <!-- <plan-cards /> -->
+    <plan-cards />
 
     <faq />
+
+    <services />
 
     <div
       class="hero-bg pointer-events-none absolute left-0 top-0 z-0 h-[100vh] w-full"

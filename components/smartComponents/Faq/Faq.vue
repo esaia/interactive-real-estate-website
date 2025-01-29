@@ -26,7 +26,7 @@ const faqData = [
   {
     question: "What is this plugin and what does it do?",
     answer:
-      "This plugin allows you to make property images interactive by adding pins, creating polygons, and enabling users to interact with these elements. It’s especially useful for showcasing real estate listings, floor plans, or architectural designs, where users can click on specific areas (like units or rooms) to view more information.",
+      "This plugin allows you to make property images interactive by adding pins, creating polygons, and enabling users to interact with these elements. It's especially useful for showcasing real estate listings, floor plans or architectural designs, where users can click on specific areas (like units or rooms) to view more information.",
   },
 
   {
@@ -45,13 +45,47 @@ const faqData = [
   {
     question: "Can I customize the appearance of the pins and polygons?",
     answer:
-      "Yes! The plugin allows you to customize the color, size, and style of pins and polygons to match your website’s design. You can also adjust the transparency, borders, and hover effects to create a visually appealing and intuitive user interface.",
+      "Yes! The plugin allows you to customize the color, size, and style of pins and polygons to match your website's design. You can also adjust the transparency, borders, and hover effects to create a visually appealing and intuitive user interface. But keep in mind this is a premium feature.",
   },
-
   {
-    question: "WordPress Plugin vs Standalone Version",
+    question: "What payment methods are accepted?",
     answer:
-      "It is important to know, Standalone Version requires work in WordPress environment to generate building project data. <a href='/doc/plugin-vs-standalone' class='link'>see more</a>.",
+      "We accept all major credit cards including Visa, Mastercard, American Express, as well as PayPal payments.",
+  },
+  {
+    question: "What happens after my purchase?",
+    answer:
+      "You will receive two emails, with your receipt and invoice, a download link for your <b> Interactive Real Estate</b>  version, a personal license key, and installation instructions. <br/> <br/> You can then upload the plugin ZIP file through the  <b>  Plugins > Add New > Upload Plugin </b>  menu in your site's WordPress admin dashboard, and enter your license key. <br/> <br/> If you don't see those emails in your inbox, please also check your spam folder. If you still can't find them, please contact the <a href='/contact'> support team </a> or try logging in to your account, where you'll also find the necessary information.",
+  },
+  {
+    question: "Do I get updates?",
+    answer:
+      "Yes! Premium Interactive Real Estate plugin updates are included with all plans. This means that as long as you have a valid and active subscription, you will receive updates, ensuring that <b> Interactive Real Estate</b>  remains up to date, secure, and running reliably.",
+  },
+  {
+    question: "What's the time span for your contracts?",
+    answer:
+      "All plans are year-to-year unless you purchase a lifetime plan. A license renewal is automatically set up upon purchase, which you can cancel whenever you want on your account page. We'll send an email reminder 30 days before your subscription renews.",
+  },
+  {
+    question: "What happens when my license expires?",
+    answer:
+      "You can continue using the installed version of the plugin on your site even after your license expires. However, you will lose access to updates, including important security patches and bug fixes. Additionally, direct email support will no longer be available.",
+  },
+  {
+    question: "Can I cancel my subscription at any time?",
+    answer:
+      "If you decide that <b> Interactive Real Estate</b> isn't the right fit for your project, you can easily cancel your subscription and disable renewals from your account page. While you'll still have access to the plugin, updates and direct email support will no longer be provided.",
+  },
+  {
+    question: "Do you offer refunds?",
+    answer:
+      "You are fully protected by our <b> 100% Money Back Guarantee</b>. If during the next 7 days you experience an issue that makes the plugin unusable and we are unable to resolve it, we'll happily consider offering a full refund of your money. <br /> <br /> <b>IMPORTANT:</b> Refunds are available if the product has a bug or issue that we were unable to resolve.",
+  },
+  {
+    question: "What license do I need for my WordPress multisite installation?",
+    answer:
+      "Every site in a multisite installation needs its own license. You can select discounted license packages for 1, 3, 10 sites. If you need a license for more sites than that, please <a href='/contact'>contact us</a>.",
   },
 ];
 
@@ -97,7 +131,7 @@ const handleQusetionClick = (index: number) => {
         <vue3-slide-up-down v-model="slideUpDownModel[i]" :duration="300">
           <div
             v-html="item.answer"
-            class="text-sm text-gray-500 md:text-base"
+            class="text-sm text-gray-600 md:text-base [&_a]:text-blue-600 hover:[&_a]:underline"
           />
         </vue3-slide-up-down>
       </div>

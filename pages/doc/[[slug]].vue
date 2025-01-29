@@ -38,12 +38,6 @@ const route = useRoute();
       >
         Show the component
       </NuxtLink>
-      <NuxtLink
-        to="/doc/plugin-vs-standalone"
-        class="cursor-pointer hover:text-primary"
-      >
-        WordPress Plugin vs Standalone Version
-      </NuxtLink>
     </div>
 
     <div class="editor w-full">
@@ -205,64 +199,6 @@ const route = useRoute();
         </p>
         <br />
         <img src="/assets/images/doc/standaloneInstruction.png" alt="" />
-      </div>
-
-      <div v-else-if="route.params?.slug === 'plugin-vs-standalone'">
-        <h2 class="title">WordPress Plugin vs Standalone Version</h2>
-        <br />
-        <br />
-        <h3 class="title-sm">WordPress Plugin:</h3>
-        <br />
-
-        <ul>
-          <li>
-            <strong>Easy Integration:</strong> This version allows you to use a
-            shortcode to quickly add our Building SVG component directly to your
-            WordPress site.
-          </li>
-          <li>
-            <strong>Real-Time Data:</strong> You can generate and display
-            up-to-date property information seamlessly within your WordPress
-            environment.
-          </li>
-          <li>
-            <strong>User-Friendly:</strong> Perfect for those who want
-            everything managed in one place without additional steps.
-          </li>
-        </ul>
-        <br />
-        <br />
-        <h3 class="title-sm">Standalone Version:</h3>
-        <br />
-
-        <ul>
-          <li>
-            <strong>Data Generation with WP Plugin:</strong>
-            <span class="font-semibold text-red-700">
-              This version still requires the WordPress plugin
-            </span>
-            to generate building project data. It’s essential for creating the
-            listings you want to display. In other words, this version has an
-            additional feature that gives you the code: "styles.css" and
-            "lib.es.js" to use this component in any website, for example:
-            React, Vue, Svelte or vanilla js.
-          </li>
-          <li>
-            <strong>Flexibility:</strong> Once the data is generated, you can
-            use the interactive component on any website, not just WordPress.
-            This is great for users who want more freedom in where to showcase
-            their properties.
-          </li>
-          <li>
-            <strong>Versatile Use:</strong> Ideal for businesses looking to
-            integrate our tool across multiple platforms.
-          </li>
-        </ul>
-
-        <p>
-          Choose the version that best fits your needs—whether you prefer the
-          simplicity of WordPress or the flexibility of the standalone option!
-        </p>
       </div>
     </div>
   </div>

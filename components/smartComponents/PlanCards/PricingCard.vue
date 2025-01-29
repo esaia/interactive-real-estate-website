@@ -1,38 +1,114 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   item: any;
 }>();
+
+const annualLicense = ref("1");
+
+const isFree = computed(() => {
+  return props.item?.title === "Free";
+});
+
+const isAnnual = computed(() => {
+  return props.item?.title === "Annual";
+});
+
+const priceIndex = computed(() => {
+  switch (annualLicense.value) {
+    case "1":
+      return 0;
+    case "3":
+      return 1;
+
+    case "10":
+      return 2;
+
+    default:
+      return 0;
+  }
+});
 </script>
 
 <template>
-  <div>
+  <div
+    class="relative w-full flex-1 rounded-lg border border-gray-200 bg-gray-50/80 p-5 lg:p-7"
+    :class="{
+      'mt-11 rounded-t-none border-2 border-primary lg:mt-0': isAnnual,
+    }"
+  >
     <div
-      class="w-full flex-1 rounded-lg border border-gray-200 bg-gray-50/80 p-5 text-center lg:p-7"
+      v-if="isAnnual"
+      class="absolute left-0 top-0 w-[calc(100%+4px)] -translate-x-[2px] -translate-y-full rounded-t-lg bg-primary px-3 py-2 text-center text-lg font-bold uppercase tracking-widest text-white"
     >
-      <p class="title-sm">{{ item.title }}</p>
-      <p class="desc py-2">{{ item.desc }}</p>
-      <p class="text-center text-3xl font-bold tracking-tight lg:text-4xl">
-        {{ item.price }}
-      </p>
+      Popular
+    </div>
+    <p class="title text-gray-800">{{ item?.title }}</p>
+    <p class="desc pt-2">{{ item?.desc }}</p>
 
-      <div class="my-4">
-        <base-button title="Buy now" />
+    <div
+      class="my-4 flex items-end justify-start gap-2"
+      :class="{ '!items-center': item.cent }"
+    >
+      <p class="text-5xl font-bold tracking-tight text-gray-800 lg:h-12">
+        <span v-if="isAnnual">{{ item?.price?.[priceIndex] }}</span>
+        <span v-else>
+          {{ item?.price }}
+        </span>
+      </p>
+      <span class="text-xs text-gray-600">
+        <p v-if="item?.cent">.{{ item?.cent }}</p>
+        <p>{{ item?.subscrption }}</p>
+      </span>
+    </div>
+
+    <div class="my-5 flex flex-col gap-3">
+      <div
+        v-for="feature in item?.features"
+        class="flex items-center gap-2 text-left"
+      >
+        <x v-if="feature?.hasNotFeature" class="h-4 w-6 fill-red-500" />
+        <correct-icon v-else class="!h-6 !w-6" />
+        <div v-html="feature?.title"></div>
       </div>
 
-      <slot />
+      <div v-if="isAnnual" class="flex h-6 items-center gap-2 text-left">
+        <correct-icon class="!h-6 !w-6" />
 
-      <p class="m-auto text-center text-sm text-gray-400">
-        After Click <span class="underline"> Buy Now</span>, You will be
-        redirected to CodeCanyon to complete your order. Check the complete
-        license terms
-        <a
-          class="link"
-          href="https://codecanyon.net/licenses/standard"
-          target="_blank"
-        >
-          here.
-        </a>
-      </p>
+        <div class="flex w-full flex-wrap items-center gap-2">
+          <p class="min-w-max">license for:</p>
+
+          <div class="max-w-52 flex-1">
+            <div class="relative">
+              <select
+                v-model="annualLicense"
+                class="ease w-full cursor-pointer appearance-none rounded border border-slate-200 bg-transparent px-2 py-1 text-sm text-slate-700 shadow-sm transition duration-300 placeholder:text-slate-400 hover:border-slate-400 focus:border-slate-400 focus:shadow-md focus:outline-none lg:w-full"
+              >
+                <option value="1" selected>1 Website</option>
+                <option value="3">3 Website</option>
+                <option value="10">10 Website</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="my-4">
+      <base-button v-if="isFree" title="Get it now" type="2" />
+      <base-button v-else title="Buy now" :type="isAnnual ? '1' : '2'" />
+    </div>
+
+    <p class="m-auto text-center text-sm text-gray-400">
+      After Click <span class="underline"> Buy Now</span>, You will be
+      redirected to CodeCanyon to complete your order. Check the complete
+      license terms
+      <a
+        class="link"
+        href="https://codecanyon.net/licenses/standard"
+        target="_blank"
+      >
+        here.
+      </a>
+    </p>
   </div>
 </template>

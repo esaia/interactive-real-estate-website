@@ -25,9 +25,7 @@ watch(
           <!-- <logo class="h-16 w-16" /> -->
           <logo-animated class="h-16 w-16" />
         </nuxt-link>
-      </div>
 
-      <div class="z-[3] flex items-center gap-5">
         <div class="hidden items-center gap-6 text-gray-800 lg:flex">
           <nuxt-link
             v-for="item in menu"
@@ -38,6 +36,13 @@ watch(
             {{ item.title }}
           </nuxt-link>
         </div>
+      </div>
+
+      <div class="z-[3] flex items-center gap-5">
+        <nuxt-link to="/pricing" class="cursor-pointer hover:text-red-700">
+          Pricing
+        </nuxt-link>
+
         <nuxt-link to="/">
           <base-button title="Get it now" class="shadow-lg" />
         </nuxt-link>
