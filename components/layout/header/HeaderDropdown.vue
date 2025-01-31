@@ -15,10 +15,6 @@ defineProps<{
       {{ item.title }}
     </nuxt-link>
 
-    <nuxt-link to="/pricing" class="cursor-pointer py-3 hover:text-red-700">
-      Pricing
-    </nuxt-link>
-
     <nuxt-link to="/account" class="mt-3">
       <base-button title="Account" type="2" />
     </nuxt-link>

@@ -20,6 +20,7 @@ const benefitData = [
       "Easily customize the colors of your SVG paths to match your design aesthetic. With just a few clicks, you can select any color and apply it to paths.",
     badge: "Customizable",
     video: "colors.webm",
+    isPremium: true,
   },
   {
     title: "Run script on click of path",
@@ -27,6 +28,7 @@ const benefitData = [
       "Easily add interactivity to your designs by running custom scripts when a user clicks on any path. This feature allows you to trigger animations or even interact with other elements, enhancing the functionality and user experience of your designs.",
     badge: "Interactive",
     video: "script.webm",
+    isPremium: true,
   },
 ];
 

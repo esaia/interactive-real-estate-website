@@ -2,13 +2,6 @@
 import type { DemoType } from "~/types/general";
 
 const demos = useState<DemoType[]>("demos");
-const randomIndex = useState("randomIndex", () =>
-  Math.floor(Math.random() * 5),
-);
-
-onUnmounted(() => {
-  randomIndex.value = Math.floor(Math.random() * 5);
-});
 
 const route = useRoute();
 </script>
@@ -53,11 +46,7 @@ const route = useRoute();
           users can get detailed information about each unit directly from the
           visual interface.
         </p>
-        <demo
-          v-if="randomIndex >= 0"
-          :key="randomIndex"
-          :shortcode-data="demos[randomIndex]?.shortcodeData"
-        />
+        <demo :shortcode-data="demos[1]?.shortcodeData" />
       </div>
 
       <div v-else-if="route.params?.slug === 'installation'">

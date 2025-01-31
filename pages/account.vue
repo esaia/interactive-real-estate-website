@@ -29,7 +29,7 @@ onMounted(() => {
 
 <template>
   <div class="container-fluid">
-    <div ref="account" class="relative h-[600px]"></div>
+    <div ref="account" class="relative h-[700px]"></div>
     <p class="editor py-10">
       If you can't see the login form or encounter any issues, please visit the
       <a href="https://users.freemius.com/" target="_blank"

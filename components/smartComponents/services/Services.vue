@@ -25,7 +25,9 @@ const data = [
   <div class="container-fluid padding-top text-center">
     <h3 class="title">Need help?</h3>
 
-    <div class="mt-20 flex w-full items-center gap-4">
+    <div
+      class="mt-10 flex w-full flex-col items-center gap-20 lg:flex-row lg:gap-4"
+    >
       <div
         v-for="(item, i) in data"
         class="flex flex-1 flex-col items-center gap-2"

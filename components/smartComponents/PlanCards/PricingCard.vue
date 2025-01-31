@@ -65,7 +65,7 @@ const priceIndex = computed(() => {
       </span>
     </div>
 
-    <div class="my-5 flex flex-col gap-3">
+    <div class="my-5 flex flex-col gap-3 text-gray-800">
       <div
         v-for="feature in item?.features"
         class="flex items-center gap-2 text-left"
@@ -107,12 +107,10 @@ const priceIndex = computed(() => {
       />
     </div>
 
-    <div class="editor desc m-auto text-center text-sm">
-      All sales are handled by
-      <nuxt-link to="https://freemius.com/" target="_blank">Freemius</nuxt-link>
-      , Inc., as the Merchant of Record (MoR). Try logging in to your
-      <nuxt-link to="/account"> account</nuxt-link>, where you'll also find the
-      necessary information.
-    </div>
+    <div
+      v-if="item?.bottomText"
+      v-html="item?.bottomText"
+      class="editor desc m-auto text-center text-sm"
+    ></div>
   </div>
 </template>

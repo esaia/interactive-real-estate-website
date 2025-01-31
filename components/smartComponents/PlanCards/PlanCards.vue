@@ -9,12 +9,17 @@ const wpPricePlanData = [
       { title: "Create <b> Unlimited </b> blocks " },
       { title: "Create <b> Unlimited </b> floors " },
       { title: " Create only <b>25 flat</b>" },
+      { title: "Open <b> modal</b> on click of path" },
+      { title: "Follow <b>link</b> on click of path" },
+      { title: "Run <b>script</b> on click of path", hasNotFeature: true },
       { title: "24/7 Support", hasNotFeature: true },
       { title: "Access to <b>updates</b>", hasNotFeature: true },
       { title: "Customize svg path colors", hasNotFeature: true },
       { title: "License for: <b>1 website</b>", hasNotFeature: false },
     ],
     subscrption: "",
+    bottomText:
+      "All sales are handled by <a href='https://freemius.com/'' target='_blank'>Freemius</a> , Inc., as the Merchant of Record (MoR). Try logging in to your <a href='/account'> account</a>, where you'll also find the necessary information.",
   },
   {
     title: "Annual",
@@ -26,11 +31,16 @@ const wpPricePlanData = [
       { title: "Create <b> Unlimited </b> blocks " },
       { title: "Create <b> Unlimited </b> floors " },
       { title: "Create <b> Unlimited </b> flats " },
+      { title: "Open <b> modal</b> on click of path" },
+      { title: "Follow <b>link</b> on click of path" },
+      { title: "Run <b>script</b> on click of path" },
       { title: "24/7 Support" },
       { title: "Access to <b>updates</b>" },
       { title: "Customize svg path colors" },
     ],
     subscrption: "/ month",
+    bottomText:
+      "All sales are handled by <a href='https://freemius.com/'' target='_blank'>Freemius</a> , Inc., as the Merchant of Record (MoR). Try logging in to your <a href='/account'> account</a>, where you'll also find the necessary information.",
   },
   {
     title: "Lifetime",
@@ -42,13 +52,18 @@ const wpPricePlanData = [
       { title: "Create Unlimited <b> projects </b>" },
       { title: "Create <b> Unlimited </b> blocks " },
       { title: "Create <b> Unlimited </b> floors " },
-      { title: "Create Unlimited <b> flats </b>" },
+      { title: "Create <b> Unlimited </b> flats" },
+      { title: "Open <b> modal</b> on click of path" },
+      { title: "Follow <b>link</b> on click of path" },
+      { title: "Run <b>script</b> on click of path" },
       { title: "24/7 Support" },
       { title: "Access to <b>updates</b>" },
       { title: "Customize svg path colors" },
       { title: "License for: <b>1 website</b>" },
     ],
     subscrption: "/ once",
+    bottomText:
+      "All sales are handled by <a href='https://freemius.com/'' target='_blank'>Freemius</a> , Inc., as the Merchant of Record (MoR). Try logging in to your <a href='/account'> account</a>, where you'll also find the necessary information.",
   },
 ];
 
@@ -137,23 +152,10 @@ const buyPackage = (planName: string, licenses: string) => {
     </div>
 
     <div class="m-auto max-w-[700px] [&_ul]:list-disc">
-      <p v-if="!isServicesTab" class="desc mt-3 text-center">
+      <p class="desc mt-3 text-center">
         Save time, reduce costs, and captivate your audience! Transform the way
         properties are showcased, making every listing an engaging experience.
       </p>
-
-      <div v-else class="desc mt-5 text-center">
-        <span>
-          IMPORTANT: With the standalone version, you will have full access to
-          the WordPress plugin version. Why? Read:
-        </span>
-        <nuxt-link
-          to="/doc/plugin-vs-standalone"
-          class="link w-fit text-center"
-        >
-          WordPress Plugin vs Standalone Version
-        </nuxt-link>
-      </div>
     </div>
 
     <div class="mt-14 flex flex-col items-start gap-4 lg:flex-row">

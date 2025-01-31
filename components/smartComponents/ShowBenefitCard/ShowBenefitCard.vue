@@ -10,15 +10,23 @@ defineProps<{
     class="container-fluid padding-top flex flex-col items-start gap-4 lg:flex-row lg:gap-28"
   >
     <div class="relative flex-1">
-      <p class="gradient-text inline-block">
+      <p class="gradient-text inline-block uppercase">
         {{ item?.badge }}
       </p>
 
       <h2 class="title mb-4">
         {{ item?.title }}
       </h2>
+
       <p class="desc">{{ item?.description }}</p>
       <p class="number" :data-number="index">{{ index }}</p>
+
+      <div
+        v-if="item?.isPremium"
+        class="w-fit rounded-full bg-black p-2 text-xs"
+      >
+        <p class="gradient-text inline-block uppercase">premium feature</p>
+      </div>
     </div>
     <div class="flex-1 overflow-hidden rounded-xl">
       <video playsinline autoplay loop muted>
