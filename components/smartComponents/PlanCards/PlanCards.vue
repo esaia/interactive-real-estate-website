@@ -45,7 +45,7 @@ const wpPricePlanData = [
   {
     title: "Lifetime",
     desc: "The ultimate plan for long-term users, providing all premium features with a one-time payment.",
-    price: "$299",
+    price: "$199",
     cent: "99",
 
     features: [
@@ -67,26 +67,7 @@ const wpPricePlanData = [
   },
 ];
 
-const standalonePricePlanData = [
-  {
-    title: "Customization",
-    desc: "Regular License",
-    price: "",
-    features: [],
-  },
-  {
-    title: "Custom Website",
-    desc: "Extended License",
-    price: "",
-    features: [],
-  },
-];
-
 const isServicesTab = ref(false);
-
-const planData = computed(() => {
-  return isServicesTab.value ? standalonePricePlanData : wpPricePlanData;
-});
 
 const buyPackage = (planName: string, licenses: string) => {
   const isLifetime = planName === "Lifetime";
@@ -124,7 +105,9 @@ const buyPackage = (planName: string, licenses: string) => {
 
 <template>
   <div id="pricing" class="container-fluid padding-top">
-    <h2 class="title text-center">Get Interactive Real Estate</h2>
+    <h2 class="title text-center">
+      Get Interactive Real Estate <span class="gradient-text"> Premium</span>
+    </h2>
 
     <div
       class="m-auto my-5 flex w-fit items-center justify-center rounded-lg border bg-gray-50/80 p-2 text-gray-600"
@@ -151,25 +134,109 @@ const buyPackage = (planName: string, licenses: string) => {
       </div>
     </div>
 
-    <div class="m-auto max-w-[700px] [&_ul]:list-disc">
-      <p class="desc mt-3 text-center">
-        Save time, reduce costs, and captivate your audience! Transform the way
-        properties are showcased, making every listing an engaging experience.
-      </p>
+    <div v-if="!isServicesTab">
+      <div class="m-auto max-w-[700px] [&_ul]:list-disc">
+        <p class="desc mt-3 text-center">
+          Save time, reduce costs, and captivate your audience! Transform the
+          way properties are showcased, making every listing an engaging
+          experience.
+        </p>
+      </div>
+
+      <div class="mt-14 flex flex-col items-start gap-4 lg:flex-row">
+        <pricing-card
+          v-for="(item, i) in wpPricePlanData"
+          :key="i"
+          :item="item"
+          @handle-click-plan="buyPackage"
+        />
+      </div>
     </div>
 
-    <div class="mt-14 flex flex-col items-start gap-4 lg:flex-row">
-      <pricing-card
-        v-for="(item, i) in planData"
-        :key="i"
-        :item="item"
-        @handle-click-plan="buyPackage"
-      />
+    <div
+      v-else
+      class="editor title-sm mt-5 flex w-full flex-1 flex-col gap-5 rounded-lg border border-gray-200 bg-gray-50/80 p-5 lg:p-7"
+    >
+      <h2 class="title">Customization</h2>
+
+      <p>
+        Do you love our plugin but need it to do more? We're here to help! Our
+        Customization Service ensures your plugin works exactly the way you want
+        it to. Whether it's adding new features, modifying existing
+        functionality, or integrating with other tools, we'll tailor the plugin
+        to meet your specific requirements.
+      </p>
+
+      <div>
+        <p class="title-sm mb-1">
+          <span class="font-semibold">
+            Why Choose Our Customization Service?
+          </span>
+        </p>
+
+        <ul>
+          <li>
+            <span class="font-semibold"> Tailored Solutions:</span> We customize
+            the plugin to align with your business goals and workflows.
+          </li>
+          <li>
+            <span class="font-semibold"> Save Time and Effort:</span> Focus on
+            running your business while we handle the technical details.
+          </li>
+          <li>
+            <span class="font-semibold">Seamless Integration:</span> We ensure
+            the customized plugin works perfectly with your existing setup.
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="title-sm mb-1">
+          <span class="font-semibold"> How It Works? </span>
+        </p>
+
+        <ul class="!list-decimal">
+          <li>
+            <nuxt-link to="/contact" class="cursor-pointer">
+              <span class="font-semibold"> Contact Us:</span>
+            </nuxt-link>
+            Share your requirements via email or our contact form.
+          </li>
+
+          <li>
+            <span class="font-semibold"> Get a Quote:</span> We'll provide a
+            detailed estimate based on your needs.
+          </li>
+
+          <li>
+            <span class="font-semibold"> Development: </span> Our team will
+            customize the plugin and keep you updated throughout the process.
+          </li>
+
+          <li>
+            <span class="font-semibold"> Delivery: </span>
+            Receive your customized plugin, fully tested and ready to use.
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="title-sm mb-1">
+          <span class="font-semibold"> Pricing </span>
+        </p>
+        <p>
+          Customization costs vary depending on the complexity of your request.
+          <nuxt-link to="/contact" class="cursor-pointer">
+            Contact us
+          </nuxt-link>
+          for a free consultation and quote!
+        </p>
+      </div>
     </div>
 
     <div v-if="!isServicesTab" class="m-auto max-w-[700px] pt-10">
       <div class="text-center">
-        <p class="title-sm font-bold">Need Custom Licenses?</p>
+        <p class="title-md font-bold">Need Custom Licenses?</p>
         <p class="desc editor">
           If you need a license for more sites than the options available,
           please don't hesitate to

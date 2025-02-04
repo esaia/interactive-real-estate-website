@@ -22,7 +22,7 @@ const demos = useState<DemoType[]>("demos");
           class="absolute bottom-0 left-0 h-full w-full bg-gradient-to-b from-slate-900/0 to-black/40"
         ></div>
         <h3
-          class="title-sm absolute bottom-0 left-0 z-10 p-4 !font-normal text-white"
+          class="title-md absolute bottom-0 left-0 z-10 p-4 !font-normal text-white"
         >
           {{ demo.title }}
         </h3>

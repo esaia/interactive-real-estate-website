@@ -55,7 +55,7 @@ const faqData = [
   {
     question: "What happens after my purchase?",
     answer:
-      "You will receive two emails, with your receipt and invoice, a download link for your <b> Interactive Real Estate</b>  version, a personal license key, and installation instructions. <br/> <br/> You can then upload the plugin ZIP file through the  <b>  Plugins > Add New > Upload Plugin </b>  menu in your site's WordPress admin dashboard, and enter your license key. <br/> <br/> If you don't see those emails in your inbox, please also check your spam folder. If you still can't find them, please contact the <a href='/account'> support team </a> or try logging in to your account, where you'll also find the necessary information.",
+      "You will receive two emails, with your receipt and invoice, a download link for your <b> Interactive Real Estate</b>  version, a personal license key, and installation instructions. <br/> <br/> You can then upload the plugin ZIP file through the  <b>  Plugins > Add New > Upload Plugin </b>  menu in your site's WordPress admin dashboard, and enter your license key. <br/> <br/> If you don't see those emails in your inbox, please also check your spam folder. If you still can't find them, please contact the <a href='/contact'> support team </a> or try logging in to your account, where you'll also find the necessary information.",
   },
   {
     question: "Do I get updates?",
@@ -75,7 +75,7 @@ const faqData = [
   {
     question: "Can I cancel my subscription at any time?",
     answer:
-      "If you decide that <b> Interactive Real Estate</b> isn't the right fit for your project, you can easily cancel your subscription and disable renewals from your account page. While you'll still have access to the plugin, updates and direct email support will no longer be provided.",
+      "If you decide that <b> Interactive Real Estate</b> isn't the right fit for your project, you can easily cancel your subscription and disable renewals from your <a href='/account'>account page</a>. While you'll still have access to the plugin, updates and direct email support will no longer be provided.",
   },
   {
     question: "Do you offer refunds?",
@@ -109,7 +109,7 @@ const handleQusetionClick = (index: number) => {
     <p class="desc mb-5 mt-2">Have Questions? We've Got Answers!</p>
 
     <div
-      class="flex w-full flex-col gap-1 rounded-2xl border border-gray-200 p-8 text-left"
+      class="flex w-full flex-col rounded-2xl border border-gray-200 p-8 text-left"
     >
       <div v-for="(item, i) in faqData">
         <div
@@ -117,7 +117,7 @@ const handleQusetionClick = (index: number) => {
           @click="handleQusetionClick(i)"
         >
           <p
-            class="font-semibold group-hover:text-primary"
+            class="title-sm font-semibold group-hover:text-primary"
             :class="{ '': slideUpDownModel[i] }"
           >
             {{ item.question }}
@@ -131,7 +131,7 @@ const handleQusetionClick = (index: number) => {
         <vue3-slide-up-down v-model="slideUpDownModel[i]" :duration="300">
           <div
             v-html="item.answer"
-            class="text-sm text-gray-600 md:text-base [&_a]:text-blue-600 hover:[&_a]:underline"
+            class="text-gray-600 md:text-base [&_a]:text-blue-600 hover:[&_a]:underline"
           />
         </vue3-slide-up-down>
       </div>

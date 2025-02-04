@@ -36,7 +36,7 @@ const data = [
         <building-icon v-else-if="i === 1" class="h-10 w-10" />
         <doc-icon v-else-if="i === 2" class="h-10 w-10" />
 
-        <h4 class="title-sm">{{ item.title }}</h4>
+        <h4 class="title-md">{{ item.title }}</h4>
         <p class="desc">
           {{ item.desc }}
         </p>

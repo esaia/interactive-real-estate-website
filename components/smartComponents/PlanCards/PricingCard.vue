@@ -72,7 +72,7 @@ const priceIndex = computed(() => {
       >
         <x v-if="feature?.hasNotFeature" class="h-4 w-6 fill-red-500" />
         <correct-icon v-else class="!h-6 !w-6" />
-        <div v-html="feature?.title"></div>
+        <div v-html="feature?.title" class="text-md"></div>
       </div>
 
       <div v-if="isAnnual" class="flex h-6 items-center gap-2 text-left">
@@ -98,7 +98,13 @@ const priceIndex = computed(() => {
     </div>
 
     <div class="my-4">
-      <base-button v-if="isFree" title="Get it now" type="2" />
+      <nuxt-link
+        v-if="isFree"
+        to="https://wordpress.org/plugins/interactive-real-estate"
+        target="_blank"
+      >
+        <base-button title="Get it now" type="2" />
+      </nuxt-link>
       <base-button
         v-else
         title="Buy now"

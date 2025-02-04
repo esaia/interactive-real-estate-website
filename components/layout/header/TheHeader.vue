@@ -44,7 +44,10 @@ watch(
           <base-button title="Account" type="2" />
         </nuxt-link>
 
-        <nuxt-link to="/">
+        <nuxt-link
+          to="https://wordpress.org/plugins/interactive-real-estate/"
+          target="_blank"
+        >
           <base-button title="Get it now" />
         </nuxt-link>
 

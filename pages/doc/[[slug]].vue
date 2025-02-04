@@ -11,7 +11,7 @@ const route = useRoute();
     class="container-fluid flex flex-col justify-between gap-10 pt-12 lg:flex-row lg:gap-16"
   >
     <div
-      class="top-5 flex h-fit flex-col gap-2 rounded-md border border-gray-200 p-5 text-gray-500 lg:sticky lg:w-60"
+      class="top-5 flex h-fit flex-col gap-2 rounded-md border border-gray-200 p-5 text-gray-800 lg:sticky lg:w-60"
     >
       <NuxtLink to="/doc" class="cursor-pointer hover:text-primary">
         Introduction
@@ -110,11 +110,11 @@ const route = useRoute();
             class="h-full w-full"
           />
 
-          <p class="title-sm">Creating a polygon.</p>
+          <p class="title-md">Creating a polygon.</p>
 
           <img src="/assets/images/doc/selectFloor.gif" alt="" />
 
-          <p class="title-sm">Zooming, panning, editing polygon.</p>
+          <p class="title-md">Zooming, panning, editing polygon.</p>
           <p>
             Simply press
             <span class="rounded-md bg-gray-100 p-2">ctrl +</span> for zooming
@@ -126,11 +126,11 @@ const route = useRoute();
 
           <img src="/assets/images/doc/zoomingPaning.gif" alt="" />
 
-          <p class="title-sm">Floor creating.</p>
+          <p class="title-md">Floor creating.</p>
 
           <img src="/assets/images/doc/createFloor.gif" alt="" />
 
-          <p class="title-sm">Type creating.</p>
+          <p class="title-md">Type creating.</p>
           <p>
             For apartments of the same type, (For example, apartments that have
             the same area M2, number of rooms, arrangement of rooms) you need to
@@ -141,7 +141,7 @@ const route = useRoute();
 
           <img src="/assets/images/doc/createType.gif" alt="" />
 
-          <p class="title-sm">Flat creating.</p>
+          <p class="title-md">Flat creating.</p>
 
           <img src="/assets/images/doc/createFlat.gif" alt="" />
 
@@ -164,7 +164,7 @@ const route = useRoute();
       <div v-else-if="route.params?.slug === 'show-component'">
         <h3 class="title">Show the component</h3>
         <br />
-        <h4 class="title-sm mb-2">WordPress Version</h4>
+        <h4 class="title-md mb-2">WordPress Version</h4>
 
         <p>
           In the lower left corner you will see the text of the shortcode. Copy
@@ -178,7 +178,7 @@ const route = useRoute();
         <br />
         <br />
 
-        <h4 class="title-sm mb-2">Standalone Version</h4>
+        <h4 class="title-md mb-2">Standalone Version</h4>
         <p>
           In the lower left corner you will see the link "Generate data for
           standalone version". After clicking on it, a modal will open. Because

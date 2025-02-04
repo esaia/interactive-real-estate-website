@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex flex-col border-b text-gray-600 shadow-lg">
+  <div class="flex flex-col border-b text-gray-800 shadow-lg">
     <nuxt-link
       v-for="item in menu"
       :key="item.title"

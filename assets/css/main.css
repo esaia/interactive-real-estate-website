@@ -8,11 +8,15 @@
   }
 
   .title {
-    @apply text-xl font-bold tracking-tight lg:text-4xl;
+    @apply text-2xl font-bold tracking-tight lg:text-4xl;
+  }
+
+  .title-md {
+    @apply text-lg tracking-tight lg:text-2xl;
   }
 
   .title-sm {
-    @apply text-lg font-semibold tracking-tight lg:text-2xl;
+    @apply text-base tracking-tight lg:text-lg;
   }
 
   .desc {
@@ -36,7 +40,7 @@
   }
 
   .editor {
-    @apply [&_a]:text-blue-600 hover:[&_a]:underline [&_li]:py-1 [&_li]:text-lg [&_li]:text-gray-600 [&_p]:text-lg [&_p]:text-gray-600 [&_ul]:list-disc [&_ul]:pl-4 [&_ul]:lg:pl-0;
+    @apply text-gray-800 [&_a]:text-blue-600 hover:[&_a]:underline [&_li]:py-1 [&_ul]:ml-5 [&_ul]:list-disc [&_ul]:pl-4 [&_ul]:lg:pl-0;
   }
   .svg-canvas-container {
     @apply absolute left-0 top-0 h-full w-full cursor-crosshair [&_.first-circle]:cursor-pointer;
@@ -48,7 +52,7 @@ html {
 }
 
 .router-link-exact-active {
-  color: #b91c1c;
+  color: rgb(239 68 68);
 }
 
 .hero-bg {
