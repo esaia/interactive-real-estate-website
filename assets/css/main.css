@@ -8,7 +8,7 @@
   }
 
   .title {
-    @apply text-2xl font-bold tracking-tight lg:text-4xl;
+    @apply text-2xl font-semibold tracking-tight lg:text-4xl;
   }
 
   .title-md {
@@ -49,6 +49,12 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .router-link-exact-active {

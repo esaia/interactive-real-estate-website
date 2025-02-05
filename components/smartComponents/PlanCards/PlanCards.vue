@@ -18,8 +18,6 @@ const wpPricePlanData = [
       { title: "License for: <b>1 website</b>", hasNotFeature: false },
     ],
     subscrption: "",
-    bottomText:
-      "All sales are handled by <a href='https://freemius.com/'' target='_blank'>Freemius</a> , Inc., as the Merchant of Record (MoR). Try logging in to your <a href='/account'> account</a>, where you'll also find the necessary information.",
   },
   {
     title: "Annual",

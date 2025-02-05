@@ -117,7 +117,7 @@ const handleQusetionClick = (index: number) => {
           @click="handleQusetionClick(i)"
         >
           <p
-            class="title-sm font-semibold group-hover:text-primary"
+            class="title-sm transition-all group-hover:text-primary"
             :class="{ '': slideUpDownModel[i] }"
           >
             {{ item.question }}
