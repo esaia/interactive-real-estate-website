@@ -8,7 +8,8 @@ useHead({
     { src: "  https://users.freemius.com/dashboard.js", defer: true },
   ],
 
-  title: "Interactive Real Estate",
+  title:
+    "Interactive Real Estate - WordPress Plugin for Create Interactive Buildings",
 
   link: [
     {
@@ -52,7 +53,7 @@ useHead({
     {
       property: "og:title",
       content:
-        "Interactive Real Estate - Create Interactive Buildings with SVG & Polygons",
+        "Interactive Real Estate - Wordpress Plugin For Create Interactive Buildings",
     },
     {
       property: "og:description",
@@ -63,7 +64,7 @@ useHead({
     {
       name: "title",
       content:
-        "Interactive Real Estate - WordPress Plugin for Interactive Buildings",
+        "Interactive Real Estate - WordPress Plugin for Create Interactive Buildings",
     },
     {
       name: "description",
@@ -81,7 +82,7 @@ useHead({
     },
     {
       property: "og:image:alt",
-      content: "he #1 WordPress plugin for creating interactive buildings.",
+      content: "The #1 WordPress plugin for creating interactive buildings.",
     },
     {
       property: "og:image:width",

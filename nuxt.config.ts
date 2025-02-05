@@ -11,5 +11,15 @@ export default defineNuxtConfig({
   typescript: {
     typeCheck: true,
   },
-  modules: ["@nuxtjs/tailwindcss"],
+
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/sitemap"],
+
+  sitemap: {
+    // inferStaticPagesAsRoutes: false,
+    sources: ["/api/__sitemap__/urls"],
+    xslColumns: [
+      { label: "URL", width: "75%" },
+      { label: "Last Modified", select: "sitemap:lastmod", width: "25%" },
+    ],
+  },
 });

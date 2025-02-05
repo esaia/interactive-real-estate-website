@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxtjs/sitemap": "^7.2.4",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "ire-preview": "^2.0.7",
     "nuxt": "^3.13.2",
