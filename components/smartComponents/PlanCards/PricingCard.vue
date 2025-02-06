@@ -47,7 +47,7 @@ const priceIndex = computed(() => {
       Popular
     </div>
     <p class="title text-gray-800">{{ item?.title }}</p>
-    <p class="desc pt-2">{{ item?.desc }}</p>
+    <p class="desc pt-2 lg:h-[120px]">{{ item?.desc }}</p>
 
     <div
       class="my-4 flex items-end justify-start gap-2"

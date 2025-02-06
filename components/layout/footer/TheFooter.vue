@@ -60,7 +60,7 @@
           </nuxt-link>
 
           <nuxt-link
-            to="/"
+            to="https://wordpress.org/plugins/interactive-real-estate/"
             target="_blank"
             class="rounded-full bg-white p-2 transition-all hover:scale-105"
           >

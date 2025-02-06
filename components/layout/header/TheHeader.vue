@@ -32,7 +32,7 @@ watch(
             v-for="item in menu"
             :key="item.title"
             :to="item.link"
-            class="cursor-pointer hover:text-red-700"
+            class="cursor-pointer hover:text-primary"
           >
             {{ item.title }}
           </nuxt-link>

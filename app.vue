@@ -8,8 +8,7 @@ useHead({
     { src: "  https://users.freemius.com/dashboard.js", defer: true },
   ],
 
-  title:
-    "Interactive Real Estate - WordPress Plugin for Create Interactive Buildings",
+  title: "Interactive Real Estate - Create Interactive Buildings",
 
   link: [
     {
@@ -21,19 +20,11 @@ useHead({
       href: "https://interactive-real-estate.vercel.app",
       hreflang: "en",
     },
-    {
-      rel: "preconnect",
-      href: "https://fonts.googleapis.com",
-    },
-    {
-      rel: "preconnect",
-      href: "https://fonts.gstatic.com",
-      crossorigin: "use-credentials",
-    },
-    {
-      rel: "stylesheet",
-      href: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
-    },
+
+    // {
+    //   rel: "stylesheet",
+    //   href: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap",
+    // },
   ],
 
   meta: [
@@ -52,8 +43,7 @@ useHead({
     },
     {
       property: "og:title",
-      content:
-        "Interactive Real Estate - Wordpress Plugin For Create Interactive Buildings",
+      content: "Interactive Real Estate - Create Interactive Buildings",
     },
     {
       property: "og:description",
@@ -63,8 +53,7 @@ useHead({
 
     {
       name: "title",
-      content:
-        "Interactive Real Estate - WordPress Plugin for Create Interactive Buildings",
+      content: "Interactive Real Estate - Create Interactive Buildings",
     },
     {
       name: "description",
@@ -96,7 +85,7 @@ useHead({
     {
       name: "keywords",
       content:
-        "interactive real estate, wp plugin , WordPress real estate plugin, floor plan, SVG, property hotspots, 3D property view, building layers, interactive buildings, apartments",
+        "interactive real estate, wp plugin, WordPress real estate plugin, floor plan, SVG, property hotspots, 3D property view, building layers, interactive buildings, apartments",
     },
     {
       name: "pageUrl",

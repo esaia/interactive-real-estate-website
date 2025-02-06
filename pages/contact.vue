@@ -5,9 +5,13 @@
     <h2 class="title">Contact us</h2>
     <p class="mt-3">
       Have questions or need assistance? We're here to help! Reach out to us at
-      <span class="gradient-text font-semibold">
-        interactiverealestateplugin@gmail.com </span
-      >, and we'll get back to you within 24 hours.
+      <a
+        href="mailto:interactiverealestateplugin@gmail.com"
+        class="gradient-text font-semibold"
+      >
+        interactiverealestateplugin@gmail.com
+      </a>
+      and we'll get back to you within 24 hours.
     </p>
   </div>
 </template>

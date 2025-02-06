@@ -67,7 +67,7 @@ defineProps<{
   color: rgb(255, 255, 255);
   position: absolute;
   inset: 0;
-  background: url(https://d2diavcdqru7hy.cloudfront.net/homepage/our-services/numbwea-01.png-1712148724.webp);
+  background: url(/decor.webp);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-background-size: 100%;

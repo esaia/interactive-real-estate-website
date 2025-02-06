@@ -117,10 +117,11 @@ const handleQusetionClick = (index: number) => {
           @click="handleQusetionClick(i)"
         >
           <p
-            class="title-sm transition-all group-hover:text-primary"
-            :class="{ '': slideUpDownModel[i] }"
+            class="title-sm font-semibold text-gray-800 transition-all group-hover:text-primary"
           >
-            {{ item.question }}
+            <span :class="{ 'gradient-text': slideUpDownModel[i] }">
+              {{ item.question }}
+            </span>
           </p>
           <arrow-up-icon
             class="h-4 min-h-4 w-4 min-w-4 rotate-180 transition-all duration-300 group-hover:[&_path]:fill-primary"
@@ -131,7 +132,7 @@ const handleQusetionClick = (index: number) => {
         <vue3-slide-up-down v-model="slideUpDownModel[i]" :duration="300">
           <div
             v-html="item.answer"
-            class="text-gray-600 md:text-base [&_a]:text-blue-600 hover:[&_a]:underline"
+            class="text-gray-800 md:text-base [&_a]:text-blue-600 hover:[&_a]:underline"
           />
         </vue3-slide-up-down>
       </div>
