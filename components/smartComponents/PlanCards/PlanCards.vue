@@ -153,7 +153,7 @@ const buyPackage = (planName: string, licenses: string) => {
 
     <div
       v-else
-      class="editor title-sm mt-5 flex w-full flex-1 flex-col gap-5 rounded-lg border border-gray-200 bg-gray-50/80 p-5 lg:p-7"
+      class="editor title-sm mt-5 flex w-full flex-1 flex-col gap-5 rounded-lg border border-gray-200 bg-gray-50/50 p-5 lg:p-7"
     >
       <h2 class="title">Customization</h2>
 
@@ -198,7 +198,7 @@ const buyPackage = (planName: string, licenses: string) => {
             <nuxt-link to="/contact" class="cursor-pointer">
               <span class="font-medium"> Contact Us:</span>
             </nuxt-link>
-            Share your requirements via email or our contact form.
+            Share your requirements via email.
           </li>
 
           <li>
@@ -223,7 +223,7 @@ const buyPackage = (planName: string, licenses: string) => {
           <span class="font-medium"> Pricing </span>
         </p>
         <p>
-          Customization costs vary depending on the complexity of your request.
+          Customization costs very depending on the complexity of your request.
           <nuxt-link to="/contact" class="cursor-pointer">
             Contact us
           </nuxt-link>

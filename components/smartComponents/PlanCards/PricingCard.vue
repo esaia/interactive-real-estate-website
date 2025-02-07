@@ -35,7 +35,7 @@ const priceIndex = computed(() => {
 
 <template>
   <div
-    class="relative w-full flex-1 rounded-lg border border-gray-200 bg-gray-50/80 p-5 lg:p-7"
+    class="relative w-full flex-1 rounded-lg border border-gray-200 bg-gray-50/50 p-5 lg:p-7"
     :class="{
       'mt-11 rounded-t-none border-2 border-primary lg:mt-0': isAnnual,
     }"
@@ -53,7 +53,7 @@ const priceIndex = computed(() => {
       class="my-4 flex items-end justify-start gap-2"
       :class="{ '!items-center': item.cent }"
     >
-      <p class="text-5xl font-bold tracking-tight text-gray-800 lg:h-12">
+      <p class="text-5xl font-medium tracking-tight text-gray-800 lg:h-12">
         <span v-if="isAnnual">{{ item?.price?.[priceIndex] }}</span>
         <span v-else>
           {{ item?.price }}

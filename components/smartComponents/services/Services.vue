@@ -43,7 +43,7 @@ const data = [
 
         <nuxt-link
           :to="item.url"
-          class="flex items-center gap-1 font-medium text-red-600"
+          class="flex items-center gap-1 font-medium text-primary hover:underline"
         >
           <p class="min-w-max">
             {{ item.link }}

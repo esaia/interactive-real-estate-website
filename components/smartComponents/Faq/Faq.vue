@@ -108,12 +108,10 @@ const handleQusetionClick = (index: number) => {
 
     <p class="desc mb-5 mt-2">Have Questions? We've Got Answers!</p>
 
-    <div
-      class="flex w-full flex-col rounded-2xl border border-gray-200 p-8 text-left"
-    >
+    <div class="flex w-full flex-col rounded-2xl p-8 text-left">
       <div v-for="(item, i) in faqData">
         <div
-          class="duration-400 group flex cursor-pointer items-center justify-between gap-3 rounded-lg py-3 transition-all"
+          class="duration-400 group flex cursor-pointer items-center justify-between gap-3 border-b border-b-gray-300 py-3 transition-all"
           @click="handleQusetionClick(i)"
         >
           <p
@@ -132,7 +130,7 @@ const handleQusetionClick = (index: number) => {
         <vue3-slide-up-down v-model="slideUpDownModel[i]" :duration="300">
           <div
             v-html="item.answer"
-            class="text-gray-800 md:text-base [&_a]:text-blue-600 hover:[&_a]:underline"
+            class="border-b border-b-gray-300 py-3 text-gray-800 md:text-base [&_a]:text-blue-600 hover:[&_a]:underline"
           />
         </vue3-slide-up-down>
       </div>

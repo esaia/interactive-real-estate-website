@@ -5,7 +5,7 @@ defineProps<{ shortcodeData: any }>();
 </script>
 
 <template>
-  <div>
+  <div class="font-sans">
     <!-- <ClientOnly> -->
     <Project :data="shortcodeData" />
     <!-- </ClientOnly> -->
