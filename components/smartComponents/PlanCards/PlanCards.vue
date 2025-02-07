@@ -167,52 +167,52 @@ const buyPackage = (planName: string, licenses: string) => {
 
       <div>
         <p class="title-sm mb-1">
-          <span class="font-semibold">
+          <span class="font-medium">
             Why Choose Our Customization Service?
           </span>
         </p>
 
         <ul>
           <li>
-            <span class="font-semibold"> Tailored Solutions:</span> We customize
+            <span class="font-medium"> Tailored Solutions:</span> We customize
             the plugin to align with your business goals and workflows.
           </li>
           <li>
-            <span class="font-semibold"> Save Time and Effort:</span> Focus on
+            <span class="font-medium"> Save Time and Effort:</span> Focus on
             running your business while we handle the technical details.
           </li>
           <li>
-            <span class="font-semibold">Seamless Integration:</span> We ensure
-            the customized plugin works perfectly with your existing setup.
+            <span class="font-medium">Seamless Integration:</span> We ensure the
+            customized plugin works perfectly with your existing setup.
           </li>
         </ul>
       </div>
 
       <div>
         <p class="title-sm mb-1">
-          <span class="font-semibold"> How It Works? </span>
+          <span class="font-medium"> How It Works? </span>
         </p>
 
         <ul class="!list-decimal">
           <li>
             <nuxt-link to="/contact" class="cursor-pointer">
-              <span class="font-semibold"> Contact Us:</span>
+              <span class="font-medium"> Contact Us:</span>
             </nuxt-link>
             Share your requirements via email or our contact form.
           </li>
 
           <li>
-            <span class="font-semibold"> Get a Quote:</span> We'll provide a
+            <span class="font-medium"> Get a Quote:</span> We'll provide a
             detailed estimate based on your needs.
           </li>
 
           <li>
-            <span class="font-semibold"> Development: </span> Our team will
+            <span class="font-medium"> Development: </span> Our team will
             customize the plugin and keep you updated throughout the process.
           </li>
 
           <li>
-            <span class="font-semibold"> Delivery: </span>
+            <span class="font-medium"> Delivery: </span>
             Receive your customized plugin, fully tested and ready to use.
           </li>
         </ul>
@@ -220,7 +220,7 @@ const buyPackage = (planName: string, licenses: string) => {
 
       <div>
         <p class="title-sm mb-1">
-          <span class="font-semibold"> Pricing </span>
+          <span class="font-medium"> Pricing </span>
         </p>
         <p>
           Customization costs vary depending on the complexity of your request.

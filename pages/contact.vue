@@ -7,7 +7,7 @@
       Have questions or need assistance? We're here to help! Reach out to us at
       <a
         href="mailto:interactiverealestateplugin@gmail.com"
-        class="gradient-text font-semibold"
+        class="gradient-text font-medium"
       >
         interactiverealestateplugin@gmail.com
       </a>

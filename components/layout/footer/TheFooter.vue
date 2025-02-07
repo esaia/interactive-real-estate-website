@@ -9,7 +9,7 @@
         <div>
           <div class="flex items-center gap-3">
             <logo class="h-12 w-12" />
-            <h5 class="text-xl font-semibold text-slate-800">
+            <h5 class="text-xl font-medium text-slate-800">
               Interactive Real Estate
             </h5>
           </div>

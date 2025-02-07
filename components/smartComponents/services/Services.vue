@@ -36,14 +36,14 @@ const data = [
         <building-icon v-else-if="i === 1" class="h-10 w-10" />
         <doc-icon v-else-if="i === 2" class="h-10 w-10" />
 
-        <h4 class="title-md font-semibold">{{ item.title }}</h4>
+        <h4 class="title-md font-medium">{{ item.title }}</h4>
         <p class="desc">
           {{ item.desc }}
         </p>
 
         <nuxt-link
           :to="item.url"
-          class="flex items-center gap-1 font-semibold text-red-600"
+          class="flex items-center gap-1 font-medium text-red-600"
         >
           <p class="min-w-max">
             {{ item.link }}
