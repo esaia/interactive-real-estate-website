@@ -29,6 +29,10 @@ useHead({
 
   meta: [
     {
+      name: "google-site-verification",
+      content: "A_2D8ZsPADq9beTODArYgEDwbXOI17OlN4UJ5bIIneQ",
+    },
+    {
       name: "author",
       property: "og:author",
       content: "website",
