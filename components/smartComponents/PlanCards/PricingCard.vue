@@ -85,6 +85,7 @@ const priceIndex = computed(() => {
             <div class="relative">
               <select
                 v-model="annualLicense"
+                aria-label="Number of Websites"
                 class="ease w-full cursor-pointer appearance-none rounded border border-slate-200 bg-transparent px-2 py-1 text-sm text-slate-700 shadow-sm transition duration-300 placeholder:text-slate-400 hover:border-slate-400 focus:border-slate-400 focus:shadow-md focus:outline-none lg:w-full"
               >
                 <option value="1" selected>1 Website</option>

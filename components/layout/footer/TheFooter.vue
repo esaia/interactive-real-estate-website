@@ -37,7 +37,9 @@
             Module
           </nuxt-link>
 
-          <nuxt-link class="text-sm hover:underline"> Change Log </nuxt-link>
+          <nuxt-link to="/" class="text-sm hover:underline">
+            Change Log
+          </nuxt-link>
         </div>
       </div>
 

@@ -22,8 +22,7 @@ watch(
   <div class="">
     <div class="container-fluid relative flex justify-between py-4">
       <div class="z-[3] flex items-center">
-        <nuxt-link to="/" class="mr-10">
-          <!-- <logo class="h-16 w-16" /> -->
+        <nuxt-link to="/" class="mr-10" aria-current="page">
           <logo-animated class="h-16 w-16" />
         </nuxt-link>
 

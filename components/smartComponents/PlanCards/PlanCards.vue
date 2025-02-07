@@ -38,7 +38,7 @@ const wpPricePlanData = [
     ],
     subscrption: "/ month",
     bottomText:
-      "All sales are handled by <a href='https://freemius.com/'' target='_blank'>Freemius</a> , Inc., as the Merchant of Record (MoR). Try logging in to your <a href='/account'> account</a>, where you'll also find the necessary information.",
+      "<p>All sales are handled by <a href='https://freemius.com/' target='_blank'>Freemius</a> , Inc., as the Merchant of Record (MoR). Try logging in to your <a href='/account'> account</a>, where you'll also find the necessary information.</p>",
   },
   {
     title: "Lifetime",
@@ -61,7 +61,7 @@ const wpPricePlanData = [
     ],
     subscrption: "/ once",
     bottomText:
-      "All sales are handled by <a href='https://freemius.com/'' target='_blank'>Freemius</a> , Inc., as the Merchant of Record (MoR). Try logging in to your <a href='/account'> account</a>, where you'll also find the necessary information.",
+      "<p>All sales are handled by <a href='https://freemius.com/' target='_blank'>Freemius</a> , Inc., as the Merchant of Record (MoR). Try logging in to your <a href='/account'> account</a>, where you'll also find the necessary information.</p>",
   },
 ];
 
