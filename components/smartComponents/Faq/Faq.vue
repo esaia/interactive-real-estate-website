@@ -104,11 +104,13 @@ const handleQusetionClick = (index: number) => {
 
 <template>
   <div class="container-fluid padding-top max-w-[800px] text-center">
-    <h2 class="title">Frequently asked questions</h2>
+    <h2 class="title">
+      Frequently asked <span class="gradient-text"> questions</span>
+    </h2>
 
     <p class="desc mb-5 mt-2">Have Questions? We've Got Answers!</p>
 
-    <div class="flex w-full flex-col rounded-2xl p-8 text-left">
+    <div class="flex w-full flex-col rounded-2xl p-2 text-left lg:p-8">
       <div v-for="(item, i) in faqData">
         <div
           class="duration-400 group flex cursor-pointer items-center justify-between gap-3 border-b border-b-gray-300 py-3 transition-all"

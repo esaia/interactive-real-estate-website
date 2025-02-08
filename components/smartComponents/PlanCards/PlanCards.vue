@@ -234,7 +234,9 @@ const buyPackage = (planName: string, licenses: string) => {
 
     <div v-if="!isServicesTab" class="m-auto max-w-[700px] pt-10">
       <div class="text-center">
-        <p class="title-md font-bold">Need Custom Licenses?</p>
+        <p class="title-md font-bold">
+          Need Custom <span class="gradient-text">Licenses?</span>
+        </p>
         <p class="desc editor">
           If you need a license for more sites than the options available,
           please don't hesitate to

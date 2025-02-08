@@ -23,7 +23,7 @@ const data = [
 
 <template>
   <div class="container-fluid padding-top text-center">
-    <h3 class="title">Need help?</h3>
+    <h3 class="title">Need <span class="gradient-text">help?</span></h3>
 
     <div
       class="mt-10 flex w-full flex-col items-center gap-20 lg:flex-row lg:gap-4"

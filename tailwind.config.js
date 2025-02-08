@@ -36,7 +36,7 @@ module.exports = {
         },
       },
       colors: {
-        primary: "rgb(239 68 68)",
+        primary: "rgb(219, 36, 36)",
       },
     },
   },
