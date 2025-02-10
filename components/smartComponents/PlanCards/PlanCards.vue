@@ -22,7 +22,7 @@ const wpPricePlanData = [
   {
     title: "Annual",
     desc: "Perfect for professionals and businesses, offering full access to advanced features and premium support.",
-    price: ["$4", "$8", "$16"],
+    price: ["$7", "$11", "$19"],
     cent: "99",
     features: [
       { title: "Create <b> Unlimited </b> projects " },
