@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import "ire-preview/dist/styles.css";
 
+const title = "Interactive Real Estate - Create Interactive Buildings";
+const desc =
+  "Create interactive buildings with clickable SVG, hotspots and layers. Display floor plans, property details, and 2D/3D plans—no coding required.";
+
 useHead({
   script: [
     { src: "https://code.jquery.com/jquery-3.7.1.min.js", defer: true },
@@ -8,7 +12,7 @@ useHead({
     { src: "  https://users.freemius.com/dashboard.js", defer: true },
   ],
 
-  title: "Interactive Real Estate - Create Interactive Buildings",
+  title,
 
   htmlAttrs: {
     lang: "en",
@@ -46,22 +50,20 @@ useHead({
     },
     {
       property: "og:title",
-      content: "Interactive Real Estate - Create Interactive Buildings",
+      content: title,
     },
     {
       property: "og:description",
-      content:
-        "Create interactive buildings with clickable SVG, hotspots and layers. Display floor plans, property details, and 2D/3D plans—no coding required.",
+      content: desc,
     },
 
     {
       name: "title",
-      content: "Interactive Real Estate - Create Interactive Buildings",
+      content: title,
     },
     {
       name: "description",
-      content:
-        "Create interactive buildings with clickable SVG, hotspots and layers. Display floor plans, property details, and 2D/3D plans—no coding required.",
+      content: desc,
     },
 
     {
@@ -75,14 +77,6 @@ useHead({
     {
       property: "og:image:alt",
       content: "The #1 WordPress plugin for creating interactive buildings.",
-    },
-    {
-      property: "og:image:width",
-      content: "500",
-    },
-    {
-      property: "og:image:height",
-      content: "261",
     },
 
     {
@@ -102,6 +96,35 @@ useHead({
     {
       name: "robots",
       content: "index,follow",
+    },
+
+    // {
+    //   name: "twitter:card",
+    //   content: "summary_large_image", // Use "summary" for small images or "summary_large_image" for larger images
+    // },
+    // {
+    //   name: "twitter:site",
+    //   content: "@YourTwitterHandle", // Replace with your Twitter handle
+    // },
+    // {
+    //   name: "twitter:creator",
+    //   content: "@YourTwitterHandle", // Replace with the creator's Twitter handle (if different from the site)
+    // },
+    {
+      name: "twitter:title",
+      content: title,
+    },
+    {
+      name: "twitter:description",
+      content: desc,
+    },
+    {
+      name: "twitter:image",
+      content: "http://interactive-real-estate.vercel.app/featured.png",
+    },
+    {
+      name: "twitter:image:alt",
+      content: "The #1 WordPress plugin for creating interactive buildings.",
     },
   ],
 });
