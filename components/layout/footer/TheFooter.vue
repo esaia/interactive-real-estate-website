@@ -37,7 +37,11 @@
             Module
           </nuxt-link>
 
-          <nuxt-link to="/" class="text-sm hover:underline">
+          <nuxt-link
+            to="https://wordpress.org/plugins/interactive-real-estate/#developers"
+            target="_blank"
+            class="text-sm hover:underline"
+          >
             Change Log
           </nuxt-link>
         </div>
