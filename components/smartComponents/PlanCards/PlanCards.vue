@@ -230,6 +230,12 @@ const buyPackage = (planName: string, licenses: string) => {
           for a free consultation and quote!
         </p>
       </div>
+
+      <img
+        src="/assets/images/giphy.gif"
+        alt=""
+        class="aspect-square h-80 w-full max-w-[500px] object-cover"
+      />
     </div>
 
     <div v-if="!isServicesTab" class="m-auto max-w-[700px] pt-10">

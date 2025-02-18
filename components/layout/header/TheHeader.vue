@@ -47,7 +47,7 @@ watch(
           to="https://wordpress.org/plugins/interactive-real-estate/"
           target="_blank"
         >
-          <base-button title="Get it now" />
+          <base-button title="Free Download" />
         </nuxt-link>
 
         <burger
