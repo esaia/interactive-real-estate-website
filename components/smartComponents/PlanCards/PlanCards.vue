@@ -43,7 +43,7 @@ const wpPricePlanData = [
   {
     title: "Lifetime",
     desc: "The ultimate plan for long-term users, providing all premium features with a one-time payment.",
-    price: ["$199", "$399", "$719", "$1,199"],
+    price: ["$199", "$399", "$599", "$999"],
 
     cent: "99",
 
