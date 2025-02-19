@@ -17,15 +17,21 @@ const isAnnual = computed(() => {
   return props.item?.title === "Annual";
 });
 
+const isLifetime = computed(() => {
+  return props.item?.title === "Lifetime";
+});
+
 const priceIndex = computed(() => {
   switch (annualLicense.value) {
     case "1":
       return 0;
-    case "3":
+    case "5":
       return 1;
 
     case "10":
       return 2;
+    case "30":
+      return 3;
 
     default:
       return 0;
@@ -54,7 +60,9 @@ const priceIndex = computed(() => {
       :class="{ '!items-center': item.cent }"
     >
       <p class="text-5xl font-medium tracking-tight text-gray-800 lg:h-12">
-        <span v-if="isAnnual">{{ item?.price?.[priceIndex] }}</span>
+        <span v-if="isAnnual || isLifetime">
+          {{ item?.price?.[priceIndex] }}
+        </span>
         <span v-else>
           {{ item?.price }}
         </span>
@@ -75,7 +83,10 @@ const priceIndex = computed(() => {
         <div v-html="feature?.title" class="text-md"></div>
       </div>
 
-      <div v-if="isAnnual" class="flex h-6 items-center gap-2 text-left">
+      <div
+        v-if="isAnnual || isLifetime"
+        class="flex h-6 items-center gap-2 text-left"
+      >
         <correct-icon class="!h-6 !w-6" />
 
         <div class="flex w-full flex-wrap items-center gap-2">
@@ -89,8 +100,9 @@ const priceIndex = computed(() => {
                 class="ease w-full cursor-pointer appearance-none rounded border border-slate-200 bg-transparent px-2 py-1 text-sm text-slate-700 shadow-sm transition duration-300 placeholder:text-slate-400 hover:border-slate-400 focus:border-slate-400 focus:shadow-md focus:outline-none lg:w-full"
               >
                 <option value="1" selected>1 Website</option>
-                <option value="3">3 Website</option>
+                <option value="5">5 Website</option>
                 <option value="10">10 Website</option>
+                <option value="30">30 Website</option>
               </select>
             </div>
           </div>
