@@ -1852,6 +1852,15 @@ const shortcodeData = {
       created_at: "2024-10-21 12:58:47",
       updated_at: "2024-11-06 16:04:00",
     },
+
+    {
+      id: "110",
+      project_id: "104",
+      meta_key: "border_radius",
+      meta_value: "16",
+      created_at: "2024-10-21 12:58:47",
+      updated_at: "2024-11-06 16:04:00",
+    },
     {
       id: "110",
       project_id: "104",
@@ -1940,14 +1949,14 @@ const shortcodeData = {
   <div>
     <main-banner />
 
-    <div class="container-fluid [&_img]:rounded-2xl">
+    <div class="container-fluid">
       <demo :shortcodeData="shortcodeData" />
     </div>
 
     <feature-card
       v-for="(item, i) in features"
       :key="item.title"
-      class="[&:nth-child(odd)]:lg:flex-row-reverse [&_.glow]:odd:hidden"
+      class="rounded [&:nth-child(odd)]:lg:flex-row-reverse [&_.glow]:odd:hidden"
       :item="item"
       :index="i + 1"
     />

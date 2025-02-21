@@ -57,7 +57,7 @@ onMounted(() => {
   <div class="font-sans">
     <div
       v-if="!isClient"
-      class="ire-relative ire-h-full ire-select-none ire-overflow-hidden"
+      class="interactive-real-estate ire-relative ire-h-full ire-select-none ire-overflow-hidden"
       :style="cssVariables"
     >
       <img
@@ -76,3 +76,10 @@ onMounted(() => {
     </ClientOnly>
   </div>
 </template>
+
+<style>
+.interactive-real-estate img {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+</style>
