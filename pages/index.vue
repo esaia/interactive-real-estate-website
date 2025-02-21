@@ -30,6 +30,15 @@ const features = [
     video: "script.webm",
     isPremium: true,
   },
+
+  {
+    title: "Dynamic Multiple Tooltips",
+    description:
+      "Simply select your preferred style and it will be applied to your design instantly. No need for custom coding—just pick and go!",
+    badge: "Simple and Effective",
+    video: "tooltip.webm",
+    isPremium: false,
+  },
 ];
 
 const shortcodeData = {
