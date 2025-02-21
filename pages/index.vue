@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const benefitData = [
+const features = [
   {
     title: "Create any kind of polygon shapes",
     description:
@@ -1843,6 +1843,14 @@ const shortcodeData = {
       created_at: "2024-10-21 12:58:47",
       updated_at: "2024-11-06 16:04:00",
     },
+    {
+      id: "110",
+      project_id: "104",
+      meta_key: "tooltip",
+      meta_value: "2",
+      created_at: "2024-10-21 12:58:47",
+      updated_at: "2024-11-06 16:04:00",
+    },
   ],
   actions: [
     {
@@ -1927,8 +1935,8 @@ const shortcodeData = {
       <demo :shortcodeData="shortcodeData" />
     </div>
 
-    <show-benefit-card
-      v-for="(item, i) in benefitData"
+    <feature-card
+      v-for="(item, i) in features"
       :key="item.title"
       class="[&:nth-child(odd)]:lg:flex-row-reverse [&_.glow]:odd:hidden"
       :item="item"

@@ -58,7 +58,6 @@ const wpPricePlanData = [
       { title: "24/7 Support" },
       { title: "Access to <b>updates</b>" },
       { title: "Customize svg path colors" },
-      { title: "License for: <b>1 website</b>" },
     ],
     subscrption: "/ once",
     bottomText:
