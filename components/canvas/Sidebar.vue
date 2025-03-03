@@ -128,8 +128,8 @@ watch(
 
             <div
               class="sidebar-item-icon icon-hover-text"
-              @click.stop="deleteG(item)"
               title="delete"
+              @click.stop="deleteG(item)"
             >
               <Delete />
             </div>

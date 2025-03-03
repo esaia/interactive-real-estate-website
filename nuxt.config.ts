@@ -5,11 +5,16 @@ export default defineNuxtConfig({
     port: 4040,
     host: "0.0.0.0",
   },
+
+  routeRules: {
+    "/": { prerender: true },
+  },
+
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
   components: [{ path: "./components", pathPrefix: false }],
   typescript: {
-    typeCheck: true,
+    // typeCheck: true,
   },
 
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/sitemap"],

@@ -21,7 +21,7 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: "https://interactive-real-estate.vercel.app",
+      href: "http://ireplugin.com",
     },
     {
       rel: "alternate",
@@ -42,7 +42,7 @@ useHead({
     },
     {
       property: "og:url",
-      content: "https://interactive-real-estate.vercel.app",
+      content: "http://ireplugin.com",
     },
     {
       property: "og:type",
@@ -68,11 +68,11 @@ useHead({
 
     {
       property: "og:image",
-      content: "http://interactive-real-estate.vercel.app/featured.png",
+      content: "http://ireplugin.com/featured.png",
     },
     {
       property: "og:image:secure",
-      content: "http://interactive-real-estate.vercel.app/featured.png",
+      content: "http://ireplugin.com/featured.png",
     },
     {
       property: "og:image:alt",
@@ -86,11 +86,11 @@ useHead({
     },
     {
       name: "pageUrl",
-      content: "https://interactive-real-estate.vercel.app",
+      content: "http://ireplugin.com",
     },
     {
       name: "url",
-      content: "https://interactive-real-estate.vercel.app",
+      content: "http://ireplugin.com",
     },
 
     {
@@ -120,7 +120,7 @@ useHead({
     },
     {
       name: "twitter:image",
-      content: "http://interactive-real-estate.vercel.app/featured.png",
+      content: "http://ireplugin.com/featured.png",
     },
     {
       name: "twitter:image:alt",
