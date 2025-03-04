@@ -6,9 +6,9 @@ export default defineNuxtConfig({
     host: "0.0.0.0",
   },
 
-  routeRules: {
-    "/": { prerender: true },
-  },
+  // routeRules: {
+  //   "/": { prerender: true },
+  // },
 
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
