@@ -6,11 +6,7 @@ const desc =
   "Create interactive buildings with clickable SVG, hotspots and layers. Display floor plans, property details, and 2D/3D plans—no coding required.";
 
 useHead({
-  script: [
-    { src: "https://code.jquery.com/jquery-3.7.1.min.js", defer: true },
-    { src: "https://checkout.freemius.com/js/v1/", defer: true },
-    { src: "  https://users.freemius.com/dashboard.js", defer: true },
-  ],
+  script: [{ src: "https://checkout.freemius.com/js/v1/", defer: true }],
 
   title,
 
@@ -97,19 +93,6 @@ useHead({
       name: "robots",
       content: "index,follow",
     },
-
-    // {
-    //   name: "twitter:card",
-    //   content: "summary_large_image", // Use "summary" for small images or "summary_large_image" for larger images
-    // },
-    // {
-    //   name: "twitter:site",
-    //   content: "@YourTwitterHandle", // Replace with your Twitter handle
-    // },
-    // {
-    //   name: "twitter:creator",
-    //   content: "@YourTwitterHandle", // Replace with the creator's Twitter handle (if different from the site)
-    // },
     {
       name: "twitter:title",
       content: title,

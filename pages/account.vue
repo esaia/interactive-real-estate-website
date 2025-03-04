@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 
+useHead({
+  script: [
+    { src: "https://code.jquery.com/jquery-3.7.1.min.js", defer: true },
+    { src: "  https://users.freemius.com/dashboard.js", defer: true },
+  ],
+});
+
 const account = ref<HTMLDivElement | null>(null);
 
 onMounted(() => {
