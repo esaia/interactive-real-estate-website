@@ -13,10 +13,10 @@ const openVideoModal = ref(false);
         <lightning-icon class="h-14 w-14" />
       </div>
       <h2
-        class="mb-4 text-3xl font-semibold capitalize leading-none tracking-tight text-black md:text-5xl lg:text-7xl"
+        class="mb-4 text-3xl font-extrabold capitalize leading-none tracking-tight text-black md:text-5xl lg:text-7xl"
       >
         The Ultimate <br />
-        <span class="gradient-text font-semibold"> interactive Building </span>
+        <span class="gradient-text"> interactive Building </span>
         generator
       </h2>
       <p class="desc m-auto max-w-[700px]">
