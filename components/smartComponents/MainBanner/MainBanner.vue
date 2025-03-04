@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { NuxtLink } from "#components";
+
 const openVideoModal = ref(false);
 </script>
 
@@ -13,15 +15,31 @@ const openVideoModal = ref(false);
       <h2
         class="mb-4 text-3xl font-extrabold capitalize leading-none tracking-tight text-black md:text-5xl lg:text-7xl"
       >
-        The Ultimate <br /><span class="gradient-text"
-          >interactive Building</span
-        >
+        The Ultimate <br />
+        <span class="gradient-text"> interactive Building </span>
         generator
       </h2>
       <p class="desc m-auto max-w-[700px]">
         Quickly make your property images interactive with adding pins, creating
         polygon! Elevate Interactive Real Estate™ lets you create dynamic
         visuals in just minutes.
+
+        <span class="break-before-avoid whitespace-nowrap">
+          (
+          <NuxtLink
+            to="https://wordpress.org/plugins/interactive-real-estate/"
+            target="_blank"
+            class="link relative pl-5"
+          >
+            <img
+              src="/assets//images/wordpress.png"
+              class="absolute left-0 top-1 h-4 w-4"
+            />
+
+            WordPress Plugin
+          </NuxtLink>
+          )
+        </span>
       </p>
 
       <div class="mt-10 flex items-center justify-center">

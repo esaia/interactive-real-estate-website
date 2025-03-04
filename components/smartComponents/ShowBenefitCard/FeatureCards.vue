@@ -1,13 +1,20 @@
 <script setup lang="ts">
 defineProps<{
-  item?: any;
-  index?: number;
+  features: {
+    title: string;
+    description: string;
+    badge: string;
+    video: string;
+    isPremium?: boolean;
+  }[];
 }>();
 </script>
 
 <template>
   <div
-    class="container-fluid padding-top flex flex-col items-start gap-4 lg:flex-row lg:gap-28"
+    class="container-fluid padding-top flex flex-col items-start gap-4 rounded lg:flex-row lg:gap-28 [&:nth-child(odd)]:lg:flex-row-reverse [&_.glow]:odd:hidden"
+    v-for="(item, index) in features"
+    :key="index"
   >
     <div class="relative flex-1">
       <p class="gradient-text inline-block uppercase">
@@ -19,7 +26,7 @@ defineProps<{
       </h2>
 
       <p class="desc">{{ item?.description }}</p>
-      <p class="number" :data-number="index">{{ index }}</p>
+      <p class="number" :data-number="index + 1">{{ index + 1 }}</p>
 
       <div
         v-if="item?.isPremium"
@@ -28,10 +35,18 @@ defineProps<{
         <p class="gradient-text inline-block uppercase">premium feature</p>
       </div>
     </div>
-    <div class="flex-1 overflow-hidden rounded-xl">
-      <video playsinline autoplay loop muted>
+    <div class="relative flex-1 overflow-hidden rounded-xl">
+      <video
+        playsinline
+        loop
+        muted
+        :autoplay="$device.isDesktop"
+        :controls="$device.isMobile"
+        :poster="`/assets/videos/poster-${item?.video}.png`"
+      >
         <source :src="`/assets/videos/${item?.video}.webm`" type="video/webm" />
         <source :src="`/assets/videos/${item?.video}.mp4`" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
     </div>
   </div>

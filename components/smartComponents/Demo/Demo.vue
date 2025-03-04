@@ -57,17 +57,17 @@ onMounted(() => {
   <div class="font-sans">
     <div
       v-if="!isClient"
-      class="interactive-real-estate ire-relative ire-h-full ire-select-none ire-overflow-hidden"
+      class="interactive-real-estate ire-relative ire-h-full ire-select-none ire-overflow-hidden pt-1"
       :style="cssVariables"
     >
       <img
-        :src="shortcodeData.project.project_image[0].url"
+        :src="shortcodeData.project.project_image?.[0]?.url"
         alt=""
         class="ire-left-0 ire-top-0 ire-h-full ire-w-full"
       />
       <div
         v-html="shortcodeData.project.svg"
-        class="canvas ire-absolute ire-left-0 ire-top-0 ire-h-full ire-w-full [&_path]:ire-cursor-pointer [&_path]:ire-fill-[var(--path-color)] [&_path]:ire-transition-all [&_svg]:ire-h-full [&_svg]:ire-w-full"
+        class="canvas ire-absolute ire-left-0 ire-top-0 ire-h-full ire-w-full [&_path]:ire-cursor-pointer [&_path]:ire-fill-[var(--path-color)] [&_path]:ire-transition-all [&_svg]:ire-h-full [&_svg]:ire-w-full pt-1"
       ></div>
     </div>
 

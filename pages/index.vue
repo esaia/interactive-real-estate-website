@@ -6,6 +6,7 @@ const features = [
       "Easily design and customize a variety of polygon shapes to enhance your projects. Whether you need simple outlines or complex designs, our intuitive tools make it effortless to bring your vision to life. No coding required—start creating stunning visuals today!",
     badge: "Easy to use",
     video: "createPolygon",
+    poster: "poster-createPolygon",
   },
   {
     title: "Easy zoom and pan for comfortable creation of polygon shapes",
@@ -13,6 +14,7 @@ const features = [
       "Use the keyboard shortcut to zoom in on your SVG and create detailed polygons. When you're zoomed in, simply press the spacebar to pan around and explore your design easily.",
     badge: "Try it now",
     video: "editPolygon",
+    poster: "poster-editPolygon",
   },
   {
     title: "Choose svg path colors",
@@ -20,6 +22,7 @@ const features = [
       "Easily customize the colors of your SVG paths to match your design aesthetic. With just a few clicks, you can select any color and apply it to paths.",
     badge: "Customizable",
     video: "colors",
+    poster: "poster-colors",
     isPremium: true,
   },
   {
@@ -28,6 +31,7 @@ const features = [
       "Easily add interactivity to your designs by running custom scripts when a user clicks on any path. This feature allows you to trigger animations or even interact with other elements, enhancing the functionality and user experience of your designs.",
     badge: "Interactive",
     video: "script",
+    poster: "poster-script",
     isPremium: true,
   },
 
@@ -37,6 +41,7 @@ const features = [
       "Simply select your preferred style and it will be applied to your design instantly. No need for custom coding—just pick and go!",
     badge: "Simple and Effective",
     video: "tooltip",
+    poster: "poster-tooltip",
     isPremium: false,
   },
 ];
@@ -1953,13 +1958,7 @@ const shortcodeData = {
       <demo :shortcodeData="shortcodeData" />
     </div>
 
-    <feature-card
-      v-for="(item, i) in features"
-      :key="item.title"
-      class="rounded [&:nth-child(odd)]:lg:flex-row-reverse [&_.glow]:odd:hidden"
-      :item="item"
-      :index="i + 1"
-    />
+    <feature-cards :features="features" />
 
     <plan-cards />
 

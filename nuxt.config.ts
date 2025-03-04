@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     // typeCheck: true,
   },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/sitemap"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/sitemap", "@nuxtjs/device"],
 
   sitemap: {
     // inferStaticPagesAsRoutes: false,
@@ -26,5 +26,9 @@ export default defineNuxtConfig({
       { label: "URL", width: "75%" },
       { label: "Last Modified", select: "sitemap:lastmod", width: "25%" },
     ],
+  },
+
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
   },
 });
