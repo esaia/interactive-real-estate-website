@@ -40,7 +40,8 @@ defineProps<{
         playsinline
         loop
         muted
-        autoplay
+        :autoplay="$device.isDesktop"
+        :controls="$device.isMobile"
         :poster="`/assets/videos/poster-${item?.video}.png`"
       >
         <source :src="`/assets/videos/${item?.video}.webm`" type="video/webm" />
