@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import "ire-preview/dist/styles.css";
-import { Analytics } from "@vercel/analytics/nuxt";
-import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 
 const title = "Interactive Real Estate - Create Interactive Buildings";
 const desc =
@@ -135,7 +133,5 @@ useHead({
 <template>
   <nuxt-layout>
     <nuxt-page />
-    <Analytics />
-    <SpeedInsights />
   </nuxt-layout>
 </template>

@@ -34,6 +34,7 @@ const openVideoModal = ref(false);
             <img
               src="/assets//images/wordpress.png"
               class="absolute left-0 top-1 h-4 w-4"
+              alt="wordpress logo"
             />
 
             WordPress Plugin

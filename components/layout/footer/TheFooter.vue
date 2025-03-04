@@ -62,7 +62,10 @@
             target="_blank"
             class="rounded-full bg-white p-2 transition-all hover:scale-105"
           >
-            <youtube class="h-6 w-6 cursor-pointer [&_path]:!fill-black" />
+            <youtube
+              class="h-6 w-6 cursor-pointer [&_path]:!fill-black"
+              aria-label="youtube icon"
+            />
           </nuxt-link>
 
           <nuxt-link
@@ -72,6 +75,7 @@
           >
             <wordpress-icon
               class="h-6 w-6 cursor-pointer [&_path]:!fill-black"
+              aria-label="wordpress icon"
             />
           </nuxt-link>
         </div>
