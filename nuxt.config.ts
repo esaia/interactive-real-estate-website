@@ -2,33 +2,33 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
 
-  app: {
-    head: {
-      link: [
-        {
-          rel: "preload",
-          href: "/assets/fonts/Poppins-Regular.ttf",
-          as: "font",
-          type: "font/ttf",
-          crossorigin: "anonymous",
-        },
-        {
-          rel: "preload",
-          href: "/assets/fonts/Poppins-Bold.ttf",
-          as: "font",
-          type: "font/ttf",
-          crossorigin: "anonymous",
-        },
-        {
-          rel: "preload",
-          href: "/assets/fonts/Poppins-SemiBold.ttf",
-          as: "font",
-          type: "font/ttf",
-          crossorigin: "anonymous",
-        },
-      ],
-    },
-  },
+  // app: {
+  //   head: {
+  //     link: [
+  //       {
+  //         rel: "preload",
+  //         href: "/assets/fonts/Poppins-Regular.woff2",
+  //         as: "font",
+  //         type: "font/woff2",
+  //         crossorigin: "anonymous",
+  //       },
+  //       {
+  //         rel: "preload",
+  //         href: "/assets/fonts/Poppins-Bold.woff2",
+  //         as: "font",
+  //         type: "font/woff2",
+  //         crossorigin: "anonymous",
+  //       },
+  //       {
+  //         rel: "preload",
+  //         href: "/assets/fonts/Poppins-SemiBold.woff2",
+  //         as: "font",
+  //         type: "font/woff2",
+  //         crossorigin: "anonymous",
+  //       },
+  //     ],
+  //   },
+  // },
 
   devServer: {
     port: 4040,
