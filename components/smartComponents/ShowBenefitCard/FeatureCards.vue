@@ -42,7 +42,7 @@ defineProps<{
         muted
         :autoplay="!$device.isMobileOrTablet"
         :controls="$device.isMobileOrTablet"
-        :poster="`/assets/videos/poster-${item?.video}.png`"
+        :poster="`/assets/videos/poster-${item?.video}.webp`"
       >
         <source :src="`/assets/videos/${item?.video}.webm`" type="video/webm" />
         <source :src="`/assets/videos/${item?.video}.mp4`" type="video/mp4" />
