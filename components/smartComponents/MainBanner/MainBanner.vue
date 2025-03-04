@@ -31,10 +31,8 @@ const openVideoModal = ref(false);
             target="_blank"
             class="link relative pl-5"
           >
-            <img
-              src="/assets//images/wordpress.png"
-              class="absolute left-0 top-1 h-4 w-4"
-              alt="wordpress logo"
+            <wordpress-icon
+              class="absolute left-0 top-1 h-4 w-4 [&_path]:fill-[#20749a]"
             />
 
             WordPress Plugin

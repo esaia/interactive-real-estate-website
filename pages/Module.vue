@@ -124,7 +124,7 @@ const deleteG = (key: string) => {
   <div>
     <ClientOnly>
       <Canvas
-        projectImage="/assets/demo/hotel_2.jpg"
+        projectImage="/assets/demo/hotel_2.webp"
         :polygon_data="polygonData"
         :svgRef="svgRef"
         :svg="svg"
