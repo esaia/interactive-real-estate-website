@@ -30,7 +30,8 @@ defineProps<{
     </div>
     <div class="flex-1 overflow-hidden rounded-xl">
       <video playsinline autoplay loop muted>
-        <source :src="`/assets/videos/${item?.video}`" type="video/webm" />
+        <source :src="`/assets/videos/${item?.video}.webm`" type="video/webm" />
+        <source :src="`/assets/videos/${item?.video}.mp4`" type="video/mp4" />
       </video>
     </div>
   </div>

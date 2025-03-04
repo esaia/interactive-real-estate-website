@@ -23,7 +23,7 @@ watch(
     <div class="container-fluid relative flex justify-between py-4">
       <div class="z-[3] flex items-center">
         <nuxt-link to="/" class="mr-10" aria-current="page" aria-label="Home">
-          <logo-animated class="h-16 w-16" />
+          <logo class="h-16 w-16" />
         </nuxt-link>
 
         <div class="hidden items-center gap-6 text-gray-800 lg:flex">
