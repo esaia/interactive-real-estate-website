@@ -4,32 +4,6 @@ export default defineNuxtConfig({
 
   app: {
     pageTransition: { name: "page", mode: "out-in" },
-
-    head: {
-      link: [
-        {
-          rel: "preload",
-          href: "/assets/fonts/Poppins-Regular.ttf",
-          as: "font",
-          type: "font/ttf",
-          crossorigin: "anonymous",
-        },
-        {
-          rel: "preload",
-          href: "/assets/fonts/Poppins-Bold.ttf",
-          as: "font",
-          type: "font/ttf",
-          crossorigin: "anonymous",
-        },
-        {
-          rel: "preload",
-          href: "/assets/fonts/Poppins-SemiBold.ttf",
-          as: "font",
-          type: "font/ttf",
-          crossorigin: "anonymous",
-        },
-      ],
-    },
   },
 
   devServer: {
@@ -37,16 +11,9 @@ export default defineNuxtConfig({
     host: "0.0.0.0",
   },
 
-  // routeRules: {
-  //   "/": { prerender: true },
-  // },
-
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
   components: [{ path: "./components", pathPrefix: false }],
-  typescript: {
-    // typeCheck: true,
-  },
 
   modules: [
     "@nuxtjs/tailwindcss",
