@@ -37,6 +37,10 @@
             Module
           </nuxt-link>
 
+          <nuxt-link to="/affiliate" class="text-sm hover:underline">
+            affiliate program
+          </nuxt-link>
+
           <nuxt-link
             to="https://wordpress.org/plugins/interactive-real-estate/#developers"
             target="_blank"

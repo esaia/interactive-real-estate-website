@@ -24,7 +24,7 @@ const model = defineModel();
       :type="type"
       :placeholder="placeholder"
       :required="required"
-      class="text-body-color placeholder:text-body-color/60 w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 focus:border-primary focus:outline-none"
+      class="text-body-color placeholder:text-body-color/60 w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 transition-colors focus:border-primary focus:outline-none"
     />
   </div>
 </template>
