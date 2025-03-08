@@ -10,7 +10,7 @@ const isModalOpen = ref(false);
 
     <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
       <div class="rounded-lg bg-white p-6 shadow-lg">
-        <h2 class="mb-4 text-2xl font-semibold">
+        <h2 class="title-md mb-4 font-semibold">
           Why Join Our Affiliate Program?
         </h2>
         <ul class="list-disc space-y-3 pl-5">
@@ -38,7 +38,7 @@ const isModalOpen = ref(false);
       </div>
 
       <div class="rounded-lg bg-white p-6 shadow-lg">
-        <h2 class="mb-4 text-2xl font-semibold">How It Works</h2>
+        <h2 class="title-md mb-4 font-semibold">How It Works</h2>
         <p class="mb-4 text-gray-700">
           Our affiliate program is designed to help you earn money by promoting
           our products. Here's a quick overview of how it works:

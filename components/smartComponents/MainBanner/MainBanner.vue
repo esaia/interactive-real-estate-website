@@ -44,15 +44,14 @@ const openVideoModal = ref(false);
       </p>
 
       <div class="mt-10 flex items-center justify-center">
-        <nuxt-link
-          to="https://youtu.be/dQmqouszdK0"
-          target="_blank"
+        <div
           class="flex cursor-pointer items-center gap-3 transition-all duration-500 ease-out hover:scale-110 active:scale-90 active:duration-150"
+          @click="openVideoModal = true"
         >
           <play-icon class="h-12 w-12 lg:h-16 lg:w-16" />
 
           <p>See how it works</p>
-        </nuxt-link>
+        </div>
       </div>
     </div>
   </div>
@@ -61,7 +60,7 @@ const openVideoModal = ref(false);
     <transition name="fade-in-out">
       <div
         v-if="openVideoModal"
-        class="fixed left-0 top-0 z-10 flex h-full w-full items-center justify-center bg-gray-700"
+        class="fixed left-0 top-0 z-10 flex h-full w-full items-center justify-center bg-gray-700/50 p-4 lg:p-20"
       >
         <div
           class="absolute right-12 top-12 cursor-pointer rounded-full bg-white p-5 transition-all duration-500 hover:scale-110 active:scale-90 active:duration-150 [&_svg]:h-5 [&_svg]:w-5"
@@ -70,7 +69,19 @@ const openVideoModal = ref(false);
           <x />
         </div>
 
-        <div class="text-white">Video is in progress...</div>
+        <div class="relative w-full max-w-screen-2xl">
+          <iframe
+            class="aspect-[16/9] h-full w-full"
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/uEG06zgbCGE?si=xI5PB_45MFmR2zVq"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
     </transition>
   </teleport>

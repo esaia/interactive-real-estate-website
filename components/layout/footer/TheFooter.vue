@@ -8,15 +8,24 @@
       >
         <div>
           <div class="flex items-center gap-3">
-            <logo class="h-12 w-12" />
             <h5 class="text-xl font-medium text-slate-800">
-              Interactive Real Estate
+              About the developer
             </h5>
           </div>
-          <p class="mt-2 max-w-[500px] text-gray-500">
-            Create clickable, customizable interactive buildings and property
-            layouts for a dynamic and engaging website experience.
-          </p>
+
+          <div class="mt-2 flex flex-col items-start gap-3 md:flex-row">
+            <img
+              src="/assets//images/esaia.png"
+              alt=""
+              class="aspect-square h-[76px] w-[76px] object-cover"
+            />
+
+            <p class="mt-2 max-w-[420px] text-sm text-gray-500">
+              I'm Esaia Gaprindashvili, web developer from Tbilisi, Georgia. I
+              love wordpress. In my free time, I’m either fixing bugs or
+              creating new ones—I'm not sure which one is more fun.
+            </p>
+          </div>
         </div>
         <div
           class="flex flex-col items-start gap-5 lg:flex-row lg:items-center"
@@ -55,7 +64,7 @@
         class="mt-12 flex w-full flex-col items-center justify-center border-t border-slate-200 py-4 md:flex-row md:justify-between"
       >
         <p class="mb-4 block text-center text-sm text-slate-500 md:mb-0">
-          Copyright © 2024
+          Copyright © 2025
           <nuxt-link href="/">Interactive Real Estate™</nuxt-link>. All Rights
           Reserved.
         </p>

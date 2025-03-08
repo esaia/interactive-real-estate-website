@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { DemoType } from "~/types/general";
-// import { Analytics } from "@vercel/analytics/nuxt";
+import { Analytics } from "@vercel/analytics/nuxt";
 import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 
 const demos = useState<DemoType[]>("demos");
@@ -4114,7 +4114,7 @@ demos.value = [
 
 <template>
   <div>
-    <!-- <Analytics /> -->
+    <Analytics />
     <SpeedInsights />
   </div>
 </template>
