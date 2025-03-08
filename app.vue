@@ -24,6 +24,8 @@ useHead({
       href: "https://interactive-real-estate.vercel.app",
       hreflang: "en",
     },
+
+    { rel: "icon", sizes: "512x512", href: "/icon-256x256.png" },
   ],
 
   meta: [
@@ -31,6 +33,7 @@ useHead({
     //   name: "google-site-verification",
     //   content: "A_2D8ZsPADq9beTODArYgEDwbXOI17OlN4UJ5bIIneQ", vercel key
     // },
+
     {
       name: "google-site-verification",
       content: "yzBJmVx5W6EPVBVlFTZqzKpdOABjpbHLAA5ExnwTiE8",
