@@ -27,9 +27,13 @@ useHead({
   ],
 
   meta: [
+    // {
+    //   name: "google-site-verification",
+    //   content: "A_2D8ZsPADq9beTODArYgEDwbXOI17OlN4UJ5bIIneQ", vercel key
+    // },
     {
       name: "google-site-verification",
-      content: "A_2D8ZsPADq9beTODArYgEDwbXOI17OlN4UJ5bIIneQ",
+      content: "yzBJmVx5W6EPVBVlFTZqzKpdOABjpbHLAA5ExnwTiE8",
     },
     {
       name: "author",
