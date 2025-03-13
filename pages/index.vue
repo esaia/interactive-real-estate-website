@@ -1745,7 +1745,7 @@ const shortcodeData = {
       ],
       image_3d: [
         {
-          url: "/assets/demo/floor_3d_2.webp",
+          url: "/assets/demo/flat_3d-1.png",
         },
       ],
       area_m2: "62.50",
@@ -1766,7 +1766,7 @@ const shortcodeData = {
       ],
       image_3d: [
         {
-          url: "/assets/demo/floor_3d_2.webp",
+          url: "/assets/demo/flat_3d-1.png",
         },
       ],
       area_m2: "70.00",
@@ -1790,7 +1790,7 @@ const shortcodeData = {
       ],
       image_3d: [
         {
-          url: "/assets/demo/floor_3d_2.webp",
+          url: "/assets/demo/flat_3d-1.png",
         },
       ],
       area_m2: "72.00",

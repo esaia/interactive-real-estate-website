@@ -1047,7 +1047,7 @@ const hotel = {
       ],
       image_3d: [
         {
-          url: "/assets/demo/floor_3d_3.webp",
+          url: "/assets/demo/flat_3d-1.png",
         },
       ],
       area_m2: "78.30",
