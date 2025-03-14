@@ -54,7 +54,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="font-sans">
+  <div>
     <div
       v-if="!isClient"
       class="interactive-real-estate ire-relative ire-h-full ire-select-none ire-overflow-hidden pt-1"
