@@ -6,7 +6,10 @@ const desc =
   "Create interactive buildings with clickable SVG, hotspots and layers. Display floor plans, property details, and 2D/3D plans—no coding required.";
 
 useHead({
-  script: [{ src: "https://checkout.freemius.com/js/v1/", defer: true }],
+  script: [
+    { src: "https://checkout.freemius.com/js/v1/", defer: true },
+    { src: "  https://player.vimeo.com/api/player.js", defer: true },
+  ],
 
   title,
 

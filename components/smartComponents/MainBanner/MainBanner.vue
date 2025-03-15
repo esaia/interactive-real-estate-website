@@ -70,17 +70,21 @@ const openVideoModal = ref(false);
         </div>
 
         <div class="relative w-full max-w-screen-2xl">
-          <iframe
-            class="aspect-[16/9] h-full w-full"
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/uEG06zgbCGE?si=xI5PB_45MFmR2zVq"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+          <div style="padding: 56.25% 0 0 0; position: relative">
+            <iframe
+              src="https://player.vimeo.com/video/1066104737?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "
+              title="Interactive Real Estate (WordPress plugin)"
+            ></iframe>
+          </div>
         </div>
       </div>
     </transition>
