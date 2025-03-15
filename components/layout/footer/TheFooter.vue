@@ -15,7 +15,7 @@
 
           <div class="mt-2 flex flex-col items-start gap-3 md:flex-row">
             <img
-              src="/assets//images/esaia.png"
+              src="/assets/images/esaia.webp"
               alt=""
               class="aspect-square h-[76px] w-[76px] object-cover"
             />

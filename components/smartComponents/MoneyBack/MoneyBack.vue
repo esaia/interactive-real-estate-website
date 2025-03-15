@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="container-fluid max-w-[800px] pt-10">
+  <div class="max-w-[800px] pt-10 lg:px-8">
     <div
       class="flex flex-col items-center gap-5 rounded-lg bg-green-50 px-8 py-4 lg:flex-row"
     >
