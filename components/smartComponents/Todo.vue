@@ -3,6 +3,7 @@
   <div class="container-fluid padding-top max-w-[800px]">
     <h2 class="title text-center">To <span class="gradient-text"> do</span></h2>
     <div class="flex flex-col gap-2 px-2 pt-10 lg:px-8 lg:text-lg">
+      <p class="list">Project importing/exporting</p>
       <p class="list">Multiple currencies</p>
       <p class="list">Reservation / booking apartment feature</p>
       <p class="list">More tooltip variants</p>
