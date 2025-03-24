@@ -291,6 +291,15 @@ const cotages = {
       created_at: "2024-11-04 15:19:51",
       updated_at: "2024-11-04 15:22:28",
     },
+
+    {
+      id: "1026",
+      project_id: "141",
+      meta_key: "currency",
+      meta_value: "gbp",
+      created_at: "2025-03-19 17:08:25",
+      updated_at: "2025-03-20 16:35:26",
+    },
   ],
   actions: [],
 };
@@ -4076,6 +4085,15 @@ const blocks = {
       meta_value: "2",
       created_at: "2024-10-21 12:58:47",
       updated_at: "2024-11-06 16:04:00",
+    },
+
+    {
+      id: "1026",
+      project_id: "141",
+      meta_key: "currency",
+      meta_value: "eur",
+      created_at: "2025-03-19 17:08:25",
+      updated_at: "2025-03-19 17:08:25",
     },
   ],
   actions: [],
