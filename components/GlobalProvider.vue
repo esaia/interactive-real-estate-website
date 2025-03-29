@@ -221,7 +221,7 @@ const cotages = {
       ],
       image_3d: [
         {
-          url: "/assets/demo/floor_3d_1.webp",
+          url: "/assets/demo/flat_3d-2.webp",
         },
         {
           url: "/assets/demo/floor_3d_2.webp",
@@ -290,6 +290,15 @@ const cotages = {
       meta_value: "2.6",
       created_at: "2024-11-04 15:19:51",
       updated_at: "2024-11-04 15:22:28",
+    },
+
+    {
+      id: "110",
+      project_id: "104",
+      meta_key: "tooltip",
+      meta_value: "4",
+      created_at: "2024-10-21 12:58:47",
+      updated_at: "2024-11-06 16:04:00",
     },
 
     {
@@ -1056,7 +1065,7 @@ const hotel = {
       ],
       image_3d: [
         {
-          url: "/assets/demo/flat_3d-1.png",
+          url: "/assets/demo/flat_3d-1.webp",
         },
       ],
       area_m2: "78.30",
