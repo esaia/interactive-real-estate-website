@@ -9,6 +9,20 @@ useHead({
   script: [
     { src: "https://checkout.freemius.com/js/v1/", defer: true },
     { src: "  https://player.vimeo.com/api/player.js", defer: true },
+
+    {
+      src: "https://www.googletagmanager.com/gtag/js?id=AW-16923193829",
+      async: true,
+    },
+    {
+      innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16923193829');
+          `,
+      type: "text/javascript",
+    },
   ],
 
   title,
