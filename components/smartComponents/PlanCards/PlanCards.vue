@@ -133,17 +133,6 @@ const buyPackage = (planName: string, licenses: string) => {
     plan_id: "29444",
   });
 
-  // @ts-ignore
-  if (window?.gtag) {
-    // @ts-ignore
-    window.gtag("event", "conversion", {
-      send_to: "AW-16923193829/kzgxCPW6vKsaEOXjzYU_",
-      value: 1.0,
-      currency: "USD",
-      transaction_id: "",
-    });
-  }
-
   if (!handler) return;
 
   handler.open({
@@ -152,6 +141,17 @@ const buyPackage = (planName: string, licenses: string) => {
     billing_cycle: isLifetime ? "lifetime" : "annual",
 
     purchaseCompleted: (response: any) => {
+      // @ts-ignore
+      if (window?.gtag) {
+        // @ts-ignore
+        window.gtag("event", "conversion", {
+          send_to: "AW-16923193829/kzgxCPW6vKsaEOXjzYU_",
+          value: response?.purchase?.initial_amount || 1.0,
+          currency: "USD",
+          transaction_id: response?.purchase?.id?.toString() || "",
+        });
+      }
+
       // The logic here will be executed immediately after the purchase confirmation
       console.log("Purchase completed:", response);
       console.log("User email:", response.user.email);
