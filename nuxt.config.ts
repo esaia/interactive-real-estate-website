@@ -22,6 +22,13 @@ export default defineNuxtConfig({
     "@nuxtjs/fontaine",
   ],
 
+  runtimeConfig: {
+    app: {
+      fsPublicKey: process.env.FS_PUBLIC_KEY,
+      fsProductId: process.env.FS_PRODUCT_ID,
+    },
+  },
+
   sitemap: {
     // inferStaticPagesAsRoutes: false,
     sources: ["/api/__sitemap__/urls"],

@@ -26,7 +26,7 @@ const faqData = [
   {
     question: "What is this plugin and what does it do?",
     answer:
-      "This plugin allows you to make property images interactive by adding pins, creating polygons, and enabling users to interact with these elements. It's especially useful for showcasing real estate listings, floor plans or architectural designs, where users can click on specific areas (like units or rooms) to view more information.",
+      "This plugin allows you to make property images interactive by adding pins, creating polygons, and enabling users to interact with these elements. It's especially useful for showcasing real estate listings, floor plans, where users can click on specific areas (like apartments) to view more information.",
   },
 
   {
@@ -45,7 +45,7 @@ const faqData = [
   {
     question: "Can I customize the appearance of the pins and polygons?",
     answer:
-      "Yes! The plugin allows you to customize the color, size, and style of pins and polygons to match your website's design. You can also adjust the transparency, borders, and hover effects to create a visually appealing and intuitive user interface. But keep in mind this is a premium feature.",
+      "Yes! The plugin allows you to customize the color and style of polygons to match your website's design. You can also adjust the transparency, borders, and hover effects to create a visually appealing and intuitive user interface. But keep in mind this is a premium feature.",
   },
   {
     question: "What payment methods are accepted?",

@@ -7,7 +7,7 @@ const desc =
 
 useHead({
   script: [
-    { src: "https://checkout.freemius.com/js/v1/", defer: true },
+    // { src: "https://checkout.freemius.com/js/v1/", defer: true },
     { src: "  https://player.vimeo.com/api/player.js", defer: true },
 
     {

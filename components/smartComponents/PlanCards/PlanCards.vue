@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Checkout } from "@freemius/checkout";
+
 const wpPricePlanData = [
   {
     title: "Free",
@@ -68,17 +70,67 @@ const wpPricePlanData = [
   },
 ];
 
+// {
+//   "user": {
+//       "email": "test@gmail.com",
+//       "first": "Test",
+//       "last": "Test",
+//       "public_key": "pk_95227c53e88a0c479f29fa8e286fa",
+//       "id": "1107120",
+//       "created": "2018-04-16 18:22:14",
+//       "resend_email_endpoint": "https://api.freemius.com/v1/plugins/17710/licenses/1692941/resend.json?authorization=FSLA+17710%3AhTQC-zIc4E0dEpFm4hoeB86Qe1BpXMi2-EitgZxDKGWxAhjjxAGee3HQiuVI3qUc4NMp6f4u_mE1oNEQ8ddEcoSOmlr_-jxcaYlLzrVV5FkpHxiOZnprQVWV3wJ-Hv2mHEWt-LlaFo_vlHCLSaRPaAqnUBVDaRu1veOz1nbFDeWPNH9HKTH_yDD_aYN-vDg3zFkbZOi3wj3GBeqt_1U-JsXqTED1qPWqQyfl_ucdB55tagplh4-nOkHQGFRkiEfzWyAw-VVquLddNIzL_tbujw"
+//   },
+//   "purchase": {
+//       "tax_rate": 0,
+//       "total_gross": 0,
+//       "amount_per_cycle": 95.9,
+//       "initial_amount": 95.9,
+//       "renewal_amount": 95.9,
+//       "renewals_discount": null,
+//       "renewals_discount_type": null,
+//       "billing_cycle": 12,
+//       "outstanding_balance": 0,
+//       "failed_payments": 0,
+//       "trial_ends": null,
+//       "next_payment": "2026-03-30 07:16:13",
+//       "canceled_at": null,
+//       "user_id": "1107120",
+//       "install_id": null,
+//       "plan_id": "29444",
+//       "pricing_id": "36952",
+//       "license_id": "1692941",
+//       "ip": "212.58.102.208",
+//       "country_code": "ge",
+//       "zip_postal_code": 12345,
+//       "vat_id": null,
+//       "coupon_id": null,
+//       "user_card_id": "540824",
+//       "source": 0,
+//       "plugin_id": "17710",
+//       "external_id": "sub_1R8G6LFmXz63vF5vRz0gfPvO",
+//       "gateway": "stripe",
+//       "environment": 1,
+//       "id": "658887",
+//       "created": "2025-03-30 07:16:16",
+//       "updated": null,
+//       "currency": "usd",
+//       "license_key": "sk_gtCz4i=N2=6!XWXI+~m*=_0SC_RJr"
+//   }
+// }
+
 const isServicesTab = ref(false);
 
 const buyPackage = (planName: string, licenses: string) => {
   const isLifetime = planName === "Lifetime";
 
-  if (!FS) return;
+  const conf = useRuntimeConfig();
 
-  const handler = new FS.Checkout({
-    product_id: "17710",
+  const { fsProductId: product_id, fsPublicKey: public_key } = conf.app;
+
+  const handler = new Checkout({
+    public_key,
+    product_id,
     plan_id: "29444",
-    public_key: "pk_28cee94284e5b1a7fc7fcde632e02",
   });
 
   if (!handler) return;
@@ -87,7 +139,19 @@ const buyPackage = (planName: string, licenses: string) => {
     name: "Interactive real estate",
     licenses,
     billing_cycle: isLifetime ? "lifetime" : "annual",
+
     purchaseCompleted: (response: any) => {
+      // @ts-ignore
+      if (window?.gtag) {
+        // @ts-ignore
+        window.gtag("event", "conversion", {
+          send_to: "AW-16923193829/kzgxCPW6vKsaEOXjzYU_",
+          value: response?.purchase?.initial_amount || 1.0,
+          currency: "USD",
+          transaction_id: response?.purchase?.id?.toString() || "",
+        });
+      }
+
       // The logic here will be executed immediately after the purchase confirmation
       console.log("Purchase completed:", response);
       console.log("User email:", response.user.email);
