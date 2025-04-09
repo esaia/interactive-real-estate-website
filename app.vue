@@ -2,9 +2,9 @@
 import "ire-preview/dist/styles.css";
 
 const title =
-  "Interactive Real Estate WordPress Plugin | SVG Floor Plans & Building Visualizations";
+  "Interactive Real Estate | WordPress Plugin for Interactive Images";
 const desc =
-  "Transform static images into interactive experiences. Create clickable SVG overlays for buildings/floor plans with hotspots, 2D/3D views, and property details. No coding needed!";
+  "The #1 WordPress plugin for creating interactive buildings with SVG hotspots. Create clickable SVG overlays for buildings, floor plans, and property details. No coding needed!";
 
 const keywords =
   "interactive real estate, 3d map real estate, wp plugin, WordPress real estate plugin, interactive building visualization, floor plan, SVG, property hotspots, 3D property view, building layers, interactive buildings, apartments, real estate, floor plan, SVG, hotspots, SVG floor plan plugin";
@@ -51,6 +51,24 @@ useHead({
           url: "https://ireplugin.com/featured.png",
           caption: "Interactive floor plan with SVG hotspots",
         },
+      }),
+    },
+
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify({
+        "@type": "Organization",
+        "@id": "https://ireplugin.com/#organization",
+        name: "Interactive Real Estate Plugin",
+        url: "https://ireplugin.com/",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://ireplugin.com/logo.png",
+          width: 300,
+          height: 60,
+          caption: "IRE Plugin Logo",
+        },
+        sameAs: ["https://x.com/ireplugin"],
       }),
     },
   ],
