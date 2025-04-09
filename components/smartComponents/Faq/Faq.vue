@@ -108,7 +108,7 @@ const handleQusetionClick = (index: number) => {
       Frequently asked <span class="gradient-text"> questions</span>
     </h2>
 
-    <p class="desc mb-5 mt-2">Have Questions? We've Got Answers!</p>
+    <h3 class="desc mb-5 mt-2">Have Questions? We've Got Answers!</h3>
 
     <div class="flex w-full flex-col rounded-2xl p-2 text-left lg:p-8">
       <div v-for="(item, i) in faqData">
@@ -116,13 +116,13 @@ const handleQusetionClick = (index: number) => {
           class="duration-400 group flex cursor-pointer items-center justify-between gap-3 border-b border-b-gray-300 py-3 transition-all"
           @click="handleQusetionClick(i)"
         >
-          <p
+          <h4
             class="title-sm font-medium text-gray-800 transition-all group-hover:text-primary"
           >
             <span :class="{ 'gradient-text font-medium': slideUpDownModel[i] }">
               {{ item.question }}
             </span>
-          </p>
+          </h4>
           <arrow-up-icon
             class="h-4 min-h-4 w-4 min-w-4 rotate-180 transition-all duration-300 group-hover:[&_path]:fill-primary"
             :class="{ '!rotate-[360deg]': slideUpDownModel[i] }"

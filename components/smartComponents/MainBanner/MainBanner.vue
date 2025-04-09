@@ -12,7 +12,7 @@ const openVideoModal = ref(false);
       <div class="mb-4 flex items-center justify-center gap-3 lg:mb-8">
         <lightning-icon class="h-14 w-14" />
       </div>
-      <h2
+      <h1
         class="mb-4 font-sans text-3xl font-extrabold capitalize leading-none tracking-tight text-black md:text-5xl lg:text-7xl"
       >
         The Ultimate <br />
@@ -20,7 +20,7 @@ const openVideoModal = ref(false);
           interactive Building
         </span>
         generator
-      </h2>
+      </h1>
       <p class="desc m-auto max-w-[700px]">
         Quickly make your property images interactive with adding pins, creating
         polygon! Elevate Interactive Real Estate™ lets you create dynamic

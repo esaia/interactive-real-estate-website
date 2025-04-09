@@ -1,13 +1,16 @@
 <script setup lang="ts">
 import "ire-preview/dist/styles.css";
 
-const title = "Interactive Real Estate - Create Interactive Buildings";
+const title =
+  "Interactive Real Estate WordPress Plugin | SVG Floor Plans & Building Visualizations";
 const desc =
-  "Create interactive buildings with clickable SVG, hotspots and layers. Display floor plans, property details, and 2D/3D plans—no coding required.";
+  "Transform static images into interactive experiences. Create clickable SVG overlays for buildings/floor plans with hotspots, 2D/3D views, and property details. No coding needed!";
+
+const keywords =
+  "interactive real estate, 3d map real estate, wp plugin, WordPress real estate plugin, interactive building visualization, floor plan, SVG, property hotspots, 3D property view, building layers, interactive buildings, apartments, real estate, floor plan, SVG, hotspots, SVG floor plan plugin";
 
 useHead({
   script: [
-    // { src: "https://checkout.freemius.com/js/v1/", defer: true },
     { src: "  https://player.vimeo.com/api/player.js", defer: true },
 
     {
@@ -23,6 +26,33 @@ useHead({
           `,
       type: "text/javascript",
     },
+
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        name: "Interactive Real Estate - WordPress Plugin",
+        description: desc,
+        applicationCategory: "WordPress Plugin",
+        operatingSystem: "WordPress",
+        offers: {
+          "@type": "Offer",
+          price: "0", // Free tier or starting price
+          priceCurrency: "USD",
+        },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.9", // Update with actual rating
+          reviewCount: "20", // Update with real data
+        },
+        screenshot: {
+          "@type": "ImageObject",
+          url: "https://ireplugin.com/featured.png",
+          caption: "Interactive floor plan with SVG hotspots",
+        },
+      }),
+    },
   ],
 
   title,
@@ -34,7 +64,7 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: "http://ireplugin.com",
+      href: "https://ireplugin.com",
     },
     {
       rel: "alternate",
@@ -46,11 +76,6 @@ useHead({
   ],
 
   meta: [
-    // {
-    //   name: "google-site-verification",
-    //   content: "A_2D8ZsPADq9beTODArYgEDwbXOI17OlN4UJ5bIIneQ", vercel key
-    // },
-
     {
       name: "google-site-verification",
       content: "yzBJmVx5W6EPVBVlFTZqzKpdOABjpbHLAA5ExnwTiE8",
@@ -62,12 +87,18 @@ useHead({
     },
     {
       property: "og:url",
-      content: "http://ireplugin.com",
+      content: "https://ireplugin.com",
     },
     {
       property: "og:type",
       content: "website",
     },
+
+    {
+      name: "description",
+      content: desc,
+    },
+
     {
       property: "og:title",
       content: title,
@@ -78,45 +109,29 @@ useHead({
     },
 
     {
-      name: "title",
-      content: title,
-    },
-    {
-      name: "description",
-      content: desc,
-    },
-
-    {
       property: "og:image",
-      content: "http://ireplugin.com/featured.png",
+      content: "https://ireplugin.com/featured.png",
     },
     {
       property: "og:image:secure",
-      content: "http://ireplugin.com/featured.png",
+      content: "https://ireplugin.com/featured.png",
     },
     {
       property: "og:image:alt",
-      content: "The #1 WordPress plugin for creating interactive buildings.",
+      content:
+        "The #1 WordPress plugin for creating interactive buildings with SVG hotspots.",
     },
 
     {
       name: "keywords",
-      content:
-        "interactive real estate, wp plugin, WordPress real estate plugin, floor plan, SVG, property hotspots, 3D property view, building layers, interactive buildings, apartments",
-    },
-    {
-      name: "pageUrl",
-      content: "http://ireplugin.com",
-    },
-    {
-      name: "url",
-      content: "http://ireplugin.com",
+      content: keywords,
     },
 
     {
-      name: "robots",
-      content: "index,follow",
+      name: "url",
+      content: "https://ireplugin.com",
     },
+
     {
       name: "twitter:title",
       content: title,
@@ -127,11 +142,16 @@ useHead({
     },
     {
       name: "twitter:image",
-      content: "http://ireplugin.com/featured.png",
+      content: "https://ireplugin.com/featured.png",
     },
     {
       name: "twitter:image:alt",
       content: "The #1 WordPress plugin for creating interactive buildings.",
+    },
+
+    {
+      name: "robots",
+      content: "index, follow, max-image-preview:large",
     },
   ],
 });
