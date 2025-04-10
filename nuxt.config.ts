@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxtjs/device",
     "@nuxtjs/fontaine",
+    "@nuxt/content",
   ],
 
   runtimeConfig: {

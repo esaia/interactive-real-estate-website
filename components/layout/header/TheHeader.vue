@@ -1,14 +1,22 @@
 <script setup>
 const route = useRoute();
+
 const openDropdown = ref(false);
+const scrolled = ref(false);
+
 const menu = [
   { title: "Home", link: "/" },
   { title: "Documentation", link: "/doc" },
   { title: "Demos", link: "/demos" },
   { title: "Try module", link: "/module" },
-  { title: "Contact us", link: "/contact" },
+  // { title: "Blog", link: "/blog" },
   { title: "Pricing", link: "/pricing" },
+  { title: "Contact us", link: "/contact" },
 ];
+
+const handleScroll = () => {
+  scrolled.value = window.scrollY > 10;
+};
 
 watch(
   () => route.fullPath,
@@ -16,17 +24,28 @@ watch(
     openDropdown.value = false;
   },
 );
+onMounted(() => {
+  handleScroll();
+  window.addEventListener("scroll", handleScroll);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
+});
 </script>
 
 <template>
-  <header>
-    <div class="container-fluid relative flex justify-between py-4">
+  <header
+    class="fixed left-0 top-0 z-30 w-full transition-colors duration-200"
+    :class="{ 'bg-white shadow-sm': scrolled, 'bg-transparent': !scrolled }"
+  >
+    <div class="container-fluid relative flex justify-between py-2">
       <div class="z-[3] flex items-center">
         <nuxt-link to="/" class="mr-10" aria-current="page" aria-label="Home">
           <logo class="h-16 w-16" />
         </nuxt-link>
 
-        <div class="hidden items-center gap-6 text-gray-800 lg:flex">
+        <div class="hidden items-center gap-4 text-gray-800 lg:flex">
           <nuxt-link
             v-for="item in menu"
             :key="item.title"
