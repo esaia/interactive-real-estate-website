@@ -139,6 +139,7 @@ const buyPackage = (planName: string, licenses: string) => {
     name: "Interactive real estate",
     licenses,
     billing_cycle: isLifetime ? "lifetime" : "annual",
+    show_reviews: true,
 
     purchaseCompleted: (response: any) => {
       // @ts-ignore

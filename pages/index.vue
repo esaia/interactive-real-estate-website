@@ -1960,6 +1960,8 @@ const shortcodeData = {
 
     <feature-cards :features="features" />
 
+    <review />
+
     <plan-cards />
 
     <todo />
