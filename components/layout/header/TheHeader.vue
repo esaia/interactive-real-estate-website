@@ -19,7 +19,7 @@ watch(
 </script>
 
 <template>
-  <div class="">
+  <header>
     <div class="container-fluid relative flex justify-between py-4">
       <div class="z-[3] flex items-center">
         <nuxt-link to="/" class="mr-10" aria-current="page" aria-label="Home">
@@ -63,5 +63,5 @@ watch(
         :menu="menu"
       />
     </div>
-  </div>
+  </header>
 </template>

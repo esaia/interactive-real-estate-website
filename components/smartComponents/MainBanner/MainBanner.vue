@@ -21,7 +21,7 @@ const openVideoModal = ref(false);
         </span>
         generator
       </h1>
-      <p class="desc m-auto max-w-[700px]">
+      <h2 class="desc m-auto max-w-[700px]">
         Quickly make your property images interactive with adding pins, creating
         polygon! Elevate Interactive Real Estate™ lets you create dynamic
         visuals in just minutes.
@@ -41,7 +41,7 @@ const openVideoModal = ref(false);
           </NuxtLink>
           )
         </span>
-      </p>
+      </h2>
 
       <div class="mt-10 flex items-center justify-center">
         <div

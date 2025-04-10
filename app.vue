@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import "ire-preview/dist/styles.css";
 
-const title =
-  "Interactive Real Estate | WordPress Plugin for Interactive Images";
+const title = "Interactive Images | WordPress Plugin";
 const desc =
-  "The #1 WordPress plugin for creating interactive buildings with SVG hotspots. Create clickable SVG overlays for buildings, floor plans, and property details. No coding needed!";
+  "The #1 WordPress plugin for creating interactive building images with SVG hotspots. Create clickable zones on building image or floor plans. No coding needed!";
 
 const keywords =
   "interactive real estate, 3d map real estate, wp plugin, WordPress real estate plugin, interactive building visualization, floor plan, SVG, property hotspots, 3D property view, building layers, interactive buildings, apartments, real estate, floor plan, SVG, hotspots, SVG floor plan plugin";
@@ -48,7 +47,7 @@ useHead({
         },
         screenshot: {
           "@type": "ImageObject",
-          url: "https://ireplugin.com/featured.png",
+          url: "https://www.ireplugin.com/featured.png",
           caption: "Interactive floor plan with SVG hotspots",
         },
       }),
@@ -58,12 +57,12 @@ useHead({
       type: "application/ld+json",
       innerHTML: JSON.stringify({
         "@type": "Organization",
-        "@id": "https://ireplugin.com/#organization",
+        "@id": "https://www.ireplugin.com/#organization",
         name: "Interactive Real Estate Plugin",
-        url: "https://ireplugin.com/",
+        url: "https://www.ireplugin.com/",
         logo: {
           "@type": "ImageObject",
-          url: "https://ireplugin.com/logo.png",
+          url: "https://www.ireplugin.com/logo.png",
           width: 300,
           height: 60,
           caption: "IRE Plugin Logo",
@@ -82,7 +81,7 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: "https://ireplugin.com",
+      href: "https://www.ireplugin.com",
     },
     {
       rel: "alternate",
@@ -105,7 +104,7 @@ useHead({
     },
     {
       property: "og:url",
-      content: "https://ireplugin.com",
+      content: "https://www.ireplugin.com",
     },
     {
       property: "og:type",
@@ -128,11 +127,11 @@ useHead({
 
     {
       property: "og:image",
-      content: "https://ireplugin.com/featured.png",
+      content: "https://www.ireplugin.com/featured.png",
     },
     {
       property: "og:image:secure",
-      content: "https://ireplugin.com/featured.png",
+      content: "https://www.ireplugin.com/featured.png",
     },
     {
       property: "og:image:alt",
@@ -147,7 +146,7 @@ useHead({
 
     {
       name: "url",
-      content: "https://ireplugin.com",
+      content: "https://www.ireplugin.com",
     },
 
     {
@@ -160,7 +159,7 @@ useHead({
     },
     {
       name: "twitter:image",
-      content: "https://ireplugin.com/featured.png",
+      content: "https://www.ireplugin.com/featured.png",
     },
     {
       name: "twitter:image:alt",
