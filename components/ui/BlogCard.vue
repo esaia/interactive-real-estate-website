@@ -18,7 +18,7 @@ const horizontal = computed(() => {
     :to="`/blog${item.path}`"
     class="group"
     :class="{
-      'mx-auto flex max-w-5xl flex-col justify-center gap-10 md:flex-row':
+      'mx-auto flex w-full flex-col justify-center gap-10 md:flex-row':
         horizontal,
     }"
   >

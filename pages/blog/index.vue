@@ -32,7 +32,7 @@ useSeoMeta({
       innovative WordPress solution."
     </h2>
 
-    <div class="mt-10 grid grid-cols-1 gap-10">
+    <div class="m-auto mt-10 grid max-w-5xl grid-cols-1 gap-10">
       <blogCard
         v-for="item in articles"
         :key="item.id"
