@@ -26,7 +26,7 @@ const horizontal = computed(() => {
       <img
         :src="(item.meta as any)?.image?.src"
         :alt="(item.meta as any)?.image?.alt || ''"
-        class="aspect-[4/2] rounded-md object-cover"
+        class="aspect-[4/2] object-cover"
         :class="imageSize ? imageSize : 'w-full'"
       />
     </div>
@@ -50,7 +50,7 @@ const horizontal = computed(() => {
         </div>
       </div>
 
-      <h3 class="mb-3 line-clamp-2 font-semibold group-hover:underline">
+      <h3 class="mb-3 line-clamp-2 text-xl font-semibold group-hover:underline">
         {{ item.title }}
       </h3>
 

@@ -1,5 +1,5 @@
 ---
-title: "About Us - Interactive Real Estate Plugin"
+title: "Interactive Real Estate | WordPress Plugin"
 description: If you’re in the real estate or construction business, you know how important it is to showcase properties in a way that captures attention and provides detailed information to potential buyers. Static images and floor plans just don’t cut it anymore.
 image:
   src: /featured.png
@@ -8,7 +8,7 @@ categories:
   - WordPress
   - WordPress Plugin
   - Real Estate
-publishedAt: 2024-03-12
+publishedAt: 2025-02-11
 ---
 
 If you’re in the real estate or construction business, you know how important it is to showcase properties in a way that captures attention and provides detailed information to potential buyers. Static images and floor plans just don’t cut it anymore. That’s where the <a href="https://wordpress.org/plugins/interactive-real-estate/" target="_blank" rel="noopener">Interactive Real Estate WordPress Plugin</a> comes in. This powerful tool allows you to create interactive buildings with clickable hotspots, detailed floor plans, and property information — all without needing to write a single line of code.

@@ -37,6 +37,7 @@ export default defineNuxtConfig({
       { label: "URL", width: "75%" },
       { label: "Last Modified", select: "sitemap:lastmod", width: "25%" },
     ],
+    exclude: ["/__nuxt_content/**"],
   },
 
   content: {

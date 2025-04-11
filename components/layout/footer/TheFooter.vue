@@ -17,10 +17,10 @@
             <img
               src="/assets/images/esaia.webp"
               alt=""
-              class="aspect-square h-[76px] w-[76px] object-cover"
+              class="aspect-square h-[60px] w-[60px] object-cover"
             />
 
-            <p class="mt-2 max-w-[420px] text-sm text-gray-500">
+            <p class="max-w-[420px] text-sm text-gray-500">
               I'm Esaia Gaprindashvili, web developer from Tbilisi, Georgia. I
               love wordpress. In my free time, I’m either fixing bugs or
               creating new ones—I'm not sure which one is more fun.
@@ -78,6 +78,17 @@
             <youtube
               class="h-6 w-6 cursor-pointer [&_path]:!fill-black"
               aria-label="youtube icon"
+            />
+          </nuxt-link>
+
+          <nuxt-link
+            to="https://x.com/ireplugin"
+            target="_blank"
+            class="rounded-full bg-white p-2 transition-all hover:scale-105"
+          >
+            <TwitterIc
+              class="h-6 w-6 cursor-pointer [&_path]:!fill-black"
+              aria-label="twitter icon"
             />
           </nuxt-link>
 

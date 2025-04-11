@@ -23,8 +23,7 @@ export default defineSitemapEventHandler(async (event) => {
       };
     });
 
-  // const data = [...blogs, ...demos];
-  const data = demos; // temp until I will create blog
+  const data = [...blogs, ...demos];
 
   return data satisfies SitemapUrlInput[];
 });

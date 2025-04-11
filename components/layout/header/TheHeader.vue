@@ -15,8 +15,6 @@ const menu = [
       { title: "Try module", link: "/module" },
     ],
   },
-  // { title: "Demos", link: "/demos" },
-  // { title: "Try module", link: "/module" },
   { title: "Blog", link: "/blog" },
   { title: "Pricing", link: "/pricing" },
   { title: "Contact us", link: "/contact" },
@@ -57,7 +55,7 @@ onBeforeUnmount(() => {
           <logo class="h-16 w-16" />
         </nuxt-link>
 
-        <div class="hidden items-center gap-4 text-gray-800 lg:flex">
+        <div class="hidden items-center gap-6 text-gray-800 lg:flex">
           <div v-for="item in menu" :key="item.title">
             <div
               v-if="item?.children?.length"
