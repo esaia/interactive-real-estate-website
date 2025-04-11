@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { formatBlogDate } from "~/composable/helpers";
+import { formatBlogDate, shareInPopup } from "~/composable/helpers";
 
 const route = useRoute();
 
@@ -32,6 +32,10 @@ const copyToClipboard = async () => {
   } catch (err) {
     console.error("Failed to copy: ", err);
   }
+};
+
+const share = (url: string) => {
+  shareInPopup(url);
 };
 
 onMounted(() => {
@@ -87,35 +91,47 @@ useSeoMeta({
     <div class="mt-12 border-t pt-8">
       <h3 class="mb-4 text-lg font-semibold">Share this post</h3>
       <div class="flex items-center gap-4">
-        <a
-          :href="`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`"
+        <div
           target="_blank"
           rel="noopener noreferrer"
-          class="text-gray-700 transition-colors hover:text-[#1877F2]"
+          class="cursor-pointer text-gray-700 transition-colors hover:text-[#1877F2]"
           aria-label="Share on Facebook"
+          @click="
+            share(
+              `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+            )
+          "
         >
           <FbIc />
-        </a>
+        </div>
 
-        <a
-          :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(item.title)}`"
+        <div
           target="_blank"
           rel="noopener noreferrer"
-          class="text-gray-700 transition-colors hover:text-[#0077B5]"
+          class="cursor-pointer text-gray-700 transition-colors hover:text-[#0077B5]"
           aria-label="Share on LinkedIn"
+          @click="
+            share(
+              `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(item.title)}`,
+            )
+          "
         >
           <LinkedinIc />
-        </a>
+        </div>
 
-        <a
-          :href="`https://twitter.com/intent/tweet?text=${encodeURIComponent(item.title)}&url=${encodeURIComponent(url)}`"
+        <div
           target="_blank"
           rel="noopener noreferrer"
-          class="text-gray-700 transition-colors hover:text-black"
+          class="cursor-pointer text-gray-700 transition-colors hover:text-black"
           aria-label="Share on Twitter"
+          @click="
+            share(
+              `https://twitter.com/intent/tweet?text=${encodeURIComponent(item.title)}&url=${encodeURIComponent(url)}`,
+            )
+          "
         >
           <TwitterIc />
-        </a>
+        </div>
 
         <button
           @click="copyToClipboard"
