@@ -31,7 +31,7 @@ const horizontal = computed(() => {
       />
     </div>
 
-    <div :class="horizontal ? '' : 'mt-5'">
+    <div :class="horizontal ? 'flex-1' : 'mt-5'">
       <div class="flex items-center gap-3 pb-5">
         <p class="text-xs">
           {{ formatBlogDate((item.meta.publishedAt as string) || "") }}
@@ -52,9 +52,9 @@ const horizontal = computed(() => {
         {{ item.title }}
       </h3>
 
-      <p class="text-sm text-gray-600">
+      <h4 class="line-clamp-3 text-sm text-gray-500">
         {{ item.description }}
-      </p>
+      </h4>
     </div>
   </nuxt-link>
 </template>

@@ -38,4 +38,10 @@ export default defineNuxtConfig({
       { label: "Last Modified", select: "sitemap:lastmod", width: "25%" },
     ],
   },
+
+  content: {
+    renderer: {
+      anchorLinks: { h2: false, h3: false, h4: false },
+    },
+  },
 });

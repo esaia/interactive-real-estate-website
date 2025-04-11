@@ -86,7 +86,9 @@ useSeoMeta({
       />
     </div>
 
-    <ContentRenderer :value="item" class="prose" />
+    <div>
+      <ContentRenderer :value="item" class="prose contents" />
+    </div>
 
     <div class="mt-12 border-t pt-8">
       <h3 class="mb-4 text-lg font-semibold">Share this post</h3>
@@ -143,7 +145,7 @@ useSeoMeta({
       </div>
     </div>
 
-    <div class="mt-10 grid grid-cols-2 gap-10">
+    <div v-if="similarArticles?.length" class="mt-10 grid grid-cols-2 gap-10">
       <blogCard
         v-for="item in similarArticles"
         :key="item.id"
@@ -151,5 +153,16 @@ useSeoMeta({
         layout="vertical"
       />
     </div>
+  </div>
+
+  <div
+    v-else
+    class="container-fluid padding-top flex flex-col items-center gap-20"
+  >
+    <p class="title">404 Page not found</p>
+
+    <nuxt-link to="/">
+      <base-button title="Go home" />
+    </nuxt-link>
   </div>
 </template>

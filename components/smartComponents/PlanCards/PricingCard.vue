@@ -129,7 +129,7 @@ const priceIndex = computed(() => {
     <div
       v-if="item?.bottomText"
       v-html="item?.bottomText"
-      class="editor desc m-auto text-center text-sm"
+      class="editor desc m-auto text-center text-xs"
     ></div>
   </div>
 </template>

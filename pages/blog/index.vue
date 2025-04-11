@@ -24,7 +24,7 @@ useSeoMeta({
 <template>
   <div class="container-fluid">
     <h1 class="title pt-10 text-center">Our blog</h1>
-    <h2 class="mx-auto max-w-2xl py-5 text-center text-gray-500">
+    <h2 class="mx-auto max-w-3xl py-5 text-center text-gray-500">
       Discover expert perspectives on property markets alongside powerful tools
       from our Interactive Real Estate plugin. Whether you're an agent, buyer,
       or investor, our blog delivers actionable advice enhanced by interactive
