@@ -11,7 +11,7 @@ authors:
   - name: Estéban Soubiran
     avatar: https://esteban-soubiran.site/esteban.webp
     social: https://x.com/soubiran_
-publishedAt: 2023-12-05
+publishedAt: 2025-12-05
 top: true
 ---
 

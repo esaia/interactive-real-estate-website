@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ContentCollectionItem } from "@nuxt/content";
+import { formatBlogDate } from "~/composable/helpers";
 
 const props = defineProps<{
   item: ContentCollectionItem;
@@ -32,7 +33,9 @@ const horizontal = computed(() => {
 
     <div :class="horizontal ? '' : 'mt-5'">
       <div class="flex items-center gap-3 pb-5">
-        <p class="text-xs">Mar 16, 2020</p>
+        <p class="text-xs">
+          {{ formatBlogDate((item.meta.publishedAt as string) || "") }}
+        </p>
 
         <div class="flex flex-1 flex-wrap items-center gap-2">
           <p

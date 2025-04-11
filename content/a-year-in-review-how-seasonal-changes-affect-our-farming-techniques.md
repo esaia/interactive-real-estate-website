@@ -10,7 +10,7 @@ authors:
   - name: Estéban Soubiran
     avatar: https://esteban-soubiran.site/esteban.webp
     social: https://x.com/soubiran_
-publishedAt: 2024-01-30
+publishedAt: 2023-01-30
 ---
 
 Farming is not a static occupation; it requires adaptation and responsiveness to the changing seasons. This article reviews a year on the farm, showcasing how we adjust our techniques to meet the demands of each season. From spring planting to autumn harvesting, we reveal how seasonal shifts guide our decisions and actions on the farm, ensuring sustainability and success throughout the year.
@@ -50,3 +50,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ## Nisi Ut Aliquip Ex Ea Commodo Consequat
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+```js
+const example = "Code block";
+```

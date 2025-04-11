@@ -35,10 +35,14 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <header
-    class="fixed left-0 top-0 z-30 w-full transition-colors duration-200"
-    :class="{ 'bg-white shadow-sm': scrolled, 'bg-transparent': !scrolled }"
-  >
+  <header class="fixed left-0 top-0 z-30 w-full transition-colors duration-200">
+    <div
+      class="absolute h-full w-full bg-white transition-all duration-300 ease-in-out"
+      :class="{
+        'translate-y-0 shadow-sm': scrolled,
+        '-translate-y-full': !scrolled,
+      }"
+    />
     <div class="container-fluid relative flex justify-between py-2">
       <div class="z-[3] flex items-center">
         <nuxt-link to="/" class="mr-10" aria-current="page" aria-label="Home">

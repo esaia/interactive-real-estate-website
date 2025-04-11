@@ -11,6 +11,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            "--tw-prose-pre-bg": "whiteSmoke",
+          },
+        },
+      }),
+
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
@@ -43,5 +51,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

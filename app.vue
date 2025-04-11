@@ -129,14 +129,16 @@ useHead({
       property: "og:image",
       content: "https://www.ireplugin.com/featured.png",
     },
-    {
-      property: "og:image:secure",
-      content: "https://www.ireplugin.com/featured.png",
-    },
+
     {
       property: "og:image:alt",
       content:
         "The #1 WordPress plugin for creating interactive buildings with SVG hotspots.",
+    },
+
+    {
+      property: "og:image:secure",
+      content: "https://www.ireplugin.com/featured.png",
     },
 
     {
