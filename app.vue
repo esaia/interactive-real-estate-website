@@ -137,11 +137,6 @@ useHead({
     },
 
     {
-      property: "og:image:secure",
-      content: "https://www.ireplugin.com/featured.png",
-    },
-
-    {
       name: "keywords",
       content: keywords,
     },

@@ -9,7 +9,7 @@ const menu = [
   { title: "Documentation", link: "/doc" },
   { title: "Demos", link: "/demos" },
   { title: "Try module", link: "/module" },
-  // { title: "Blog", link: "/blog" },
+  { title: "Blog", link: "/blog" },
   { title: "Pricing", link: "/pricing" },
   { title: "Contact us", link: "/contact" },
 ];

@@ -1,4 +1,8 @@
 <script setup lang="ts">
+const title = "Blog - Interactive Real Estate";
+const description =
+  "Discover how our Interactive Real Estate WordPress plugin revolutionizes property displays with 3D building visualization, SVG floor plans with hotspots, and interactive maps.";
+
 const { data: articles } = await useAsyncData("articles", async () => {
   const all = await queryCollection("content").all();
 
@@ -10,9 +14,10 @@ const { data: articles } = await useAsyncData("articles", async () => {
 });
 
 useSeoMeta({
-  title: "Blog - Interactive Real Estate",
-  description:
-    "Discover how our Interactive Real Estate WordPress plugin revolutionizes property displays with 3D building visualization, SVG floor plans with hotspots, and interactive maps.",
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
 });
 </script>
 
