@@ -60,7 +60,9 @@ useSeoMeta({
 </script>
 <template>
   <div v-if="item" class="container-fluid mx-auto max-w-4xl space-y-10">
-    <div class="mt-10 flex flex-1 items-center gap-3">
+    <div
+      class="mt-5 flex flex-col items-start gap-3 md:flex-row md:items-center"
+    >
       <p class="text-xs">
         {{ formatBlogDate((item.meta.publishedAt as string) || "") }}
       </p>

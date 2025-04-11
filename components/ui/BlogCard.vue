@@ -32,7 +32,9 @@ const horizontal = computed(() => {
     </div>
 
     <div :class="horizontal ? 'flex-1' : 'mt-5'">
-      <div class="flex items-center gap-3 pb-5">
+      <div
+        class="flex flex-col items-start gap-3 pb-5 lg:flex-row lg:items-center"
+      >
         <p class="text-xs">
           {{ formatBlogDate((item.meta.publishedAt as string) || "") }}
         </p>

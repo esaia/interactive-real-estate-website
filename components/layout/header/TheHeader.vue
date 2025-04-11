@@ -7,8 +7,16 @@ const scrolled = ref(false);
 const menu = [
   { title: "Home", link: "/" },
   { title: "Documentation", link: "/doc" },
-  { title: "Demos", link: "/demos" },
-  { title: "Try module", link: "/module" },
+
+  {
+    title: "Demos",
+    children: [
+      { title: "Front appearing", link: "/demos" },
+      { title: "Try module", link: "/module" },
+    ],
+  },
+  // { title: "Demos", link: "/demos" },
+  // { title: "Try module", link: "/module" },
   { title: "Blog", link: "/blog" },
   { title: "Pricing", link: "/pricing" },
   { title: "Contact us", link: "/contact" },
@@ -50,14 +58,35 @@ onBeforeUnmount(() => {
         </nuxt-link>
 
         <div class="hidden items-center gap-4 text-gray-800 lg:flex">
-          <nuxt-link
-            v-for="item in menu"
-            :key="item.title"
-            :to="item.link"
-            class="cursor-pointer hover:text-primary"
-          >
-            {{ item.title }}
-          </nuxt-link>
+          <div v-for="item in menu" :key="item.title">
+            <div
+              v-if="item?.children?.length"
+              class="group relative cursor-pointer"
+            >
+              {{ item.title }}
+
+              <div
+                class="pointer-events-none absolute left-1/2 top-full -translate-x-1/2 gap-2 rounded-md bg-white p-2 opacity-0 shadow-sm group-hover:pointer-events-auto group-hover:opacity-100"
+              >
+                <nuxt-link
+                  v-for="sub in item.children"
+                  :key="sub.title"
+                  :to="sub.link"
+                  class="block w-full min-w-max rounded-lg p-2 hover:text-primary"
+                >
+                  {{ sub.title }}
+                </nuxt-link>
+              </div>
+            </div>
+
+            <nuxt-link
+              v-else
+              :to="item.link"
+              class="cursor-pointer hover:text-primary"
+            >
+              {{ item.title }}
+            </nuxt-link>
+          </div>
         </div>
       </div>
 
