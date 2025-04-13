@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { formatBlogDate, shareInPopup } from "~/composable/helpers";
 
+const config = useRuntimeConfig();
+
+const baseUrl = config.app.siteUrl || "https://ireplugin.com";
+
 const route = useRoute();
 
 const { data: similarArticles } = await useAsyncData("similar-blogs", () => {
@@ -38,8 +42,6 @@ const share = (url: string) => {
 
 const getAbsoluteUrl = (relativePath: string) => {
   if (!relativePath) return undefined;
-  const config = useRuntimeConfig();
-  const baseUrl = config.app.siteUrl || "https://ireplugin.com";
   return relativePath.startsWith("http")
     ? relativePath
     : `${baseUrl}${relativePath.startsWith("/") ? "" : "/"}${relativePath}`;
@@ -47,6 +49,21 @@ const getAbsoluteUrl = (relativePath: string) => {
 
 onMounted(() => {
   url.value = window.location.href;
+});
+
+useHead({
+  meta: [
+    {
+      property: "og:url",
+      content: `${baseUrl}${route.path}`,
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: `${baseUrl}${route.path}`,
+    },
+  ],
 });
 
 useSeoMeta({
