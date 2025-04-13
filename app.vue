@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import "ire-preview/dist/styles.css";
 
-const title = "Interactive Images | WordPress Plugin";
+const title = "Interactive Real Estate | WordPress Plugin";
 const desc =
   "The #1 WordPress plugin for creating interactive building images with SVG hotspots. Create clickable zones on building image or floor plans. No coding needed!";
 

@@ -6,7 +6,7 @@ export default defineSitemapEventHandler(async (event) => {
 
   const blogs = articles.map((item) => {
     return {
-      loc: `/blog${item.path}`,
+      loc: item.path,
       lastmod: new Date(),
       _sitemap: "pages",
     };
