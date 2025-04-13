@@ -31,7 +31,7 @@ With this plugin, you can:
 
 The best part? You don’t need to be a tech expert to use it. The plugin is designed to be user-friendly, so even if you’ve never coded before, you can create stunning interactive displays.
 
-![Cottages demo](/assets/blog/cottages-demo.webp)
+![plugin adminpanel](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2wwMDMyYm5kenUydXZ2bDRrN2pqY2J1eWNqaDZkeHRzejRkdzZ4ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KqDwy7ewpS80fYs9jI/giphy.gif)
 
 ---
 
@@ -126,6 +126,8 @@ Not sure how it works? Check out these resources:
 - [**Live Demo Front:**](/demos) See the plugin in action.
 - **<a href='https://www.youtube.com/watch?v=dQmqouszdK0' target="_blank">Video Tutorial:</a>** A step-by-step guide to using the plugin.
 - [**Documentation:**](/doc) Detailed instructions and FAQs.
+
+![Cottages demo](/assets/blog/cottages-demo.webp)
 
 ---
 

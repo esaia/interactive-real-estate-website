@@ -112,7 +112,7 @@ useSeoMeta({
       />
     </div>
 
-    <div>
+    <div class="[&_img]:w-full">
       <ContentRenderer :value="item" class="prose contents" />
     </div>
 

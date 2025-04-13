@@ -2,7 +2,7 @@ import { defineSitemapEventHandler } from "#imports";
 import type { SitemapUrlInput } from "#sitemap/types";
 
 export default defineSitemapEventHandler(async (event) => {
-  const articles = await queryCollection(event, "content").all();
+  const articles = (await queryCollection(event, "blog").all()) || [];
 
   const blogs = articles.map((item) => {
     return {
