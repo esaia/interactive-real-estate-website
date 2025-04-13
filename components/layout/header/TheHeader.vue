@@ -64,7 +64,7 @@ onBeforeUnmount(() => {
               {{ item.title }}
 
               <div
-                class="pointer-events-none absolute left-1/2 top-full -translate-x-1/2 gap-2 rounded-md bg-white p-2 opacity-0 shadow-sm group-hover:pointer-events-auto group-hover:opacity-100"
+                class="pointer-events-none absolute left-1/2 top-full -translate-x-1/2 gap-2 rounded-md border bg-white p-2 opacity-0 shadow-sm group-hover:pointer-events-auto group-hover:opacity-100"
               >
                 <nuxt-link
                   v-for="sub in item.children"
@@ -110,6 +110,7 @@ onBeforeUnmount(() => {
       <header-dropdown
         class="pointer-events-none absolute left-0 top-0 z-[2] w-full origin-top bg-white p-4 pt-20 opacity-0 transition-all duration-500"
         :class="{ 'pointer-events-auto opacity-100': openDropdown }"
+        :key="openDropdown"
         :menu="menu"
       />
     </div>

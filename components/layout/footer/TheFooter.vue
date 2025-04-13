@@ -87,7 +87,7 @@
             class="rounded-full bg-white p-2 transition-all hover:scale-105"
           >
             <TwitterIc
-              class="h-6 w-6 cursor-pointer [&_path]:!fill-black"
+              class="h-5 w-5 cursor-pointer [&_path]:!fill-black"
               aria-label="twitter icon"
             />
           </nuxt-link>

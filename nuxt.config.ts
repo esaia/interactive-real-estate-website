@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     app: {
       fsPublicKey: process.env.FS_PUBLIC_KEY,
       fsProductId: process.env.FS_PRODUCT_ID,
+      siteUrl: process.env.SITE_URL,
     },
   },
 
@@ -37,7 +38,7 @@ export default defineNuxtConfig({
       { label: "URL", width: "75%" },
       { label: "Last Modified", select: "sitemap:lastmod", width: "25%" },
     ],
-    exclude: ["/__nuxt_content/**"],
+    exclude: ["/__nuxt_content/**", "/404"],
   },
 
   content: {

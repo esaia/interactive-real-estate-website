@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { ContentCollectionItem } from "@nuxt/content";
+import type { BlogCollectionItem } from "@nuxt/content";
 import { formatBlogDate } from "~/composable/helpers";
 
 const props = defineProps<{
-  item: ContentCollectionItem;
+  item: BlogCollectionItem;
   layout?: "horizontal" | "vertical";
   imageSize?: string;
 }>();
@@ -15,7 +15,7 @@ const horizontal = computed(() => {
 
 <template>
   <nuxt-link
-    :to="`/blog${item.path}`"
+    :to="item.path"
     class="group"
     :class="{
       'mx-auto flex w-full flex-col justify-center gap-10 md:flex-row':
@@ -50,7 +50,9 @@ const horizontal = computed(() => {
         </div>
       </div>
 
-      <h3 class="mb-3 line-clamp-2 text-xl font-semibold group-hover:underline">
+      <h3
+        class="mb-3 line-clamp-2 text-lg font-semibold group-hover:underline lg:text-xl"
+      >
         {{ item.title }}
       </h3>
 

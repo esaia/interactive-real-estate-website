@@ -5,10 +5,11 @@ interface MenuItem {
   children?: MenuItem[];
 }
 
-defineProps<{
+const props = defineProps<{
   menu: MenuItem[];
 }>();
 
+const route = useRoute();
 const subItems = ref<string[]>([]);
 
 const checkIfTitleExists = (title: string) => {
@@ -24,6 +25,16 @@ const showSubItem = (title: string) => {
     subItems.value.push(title);
   }
 };
+
+onMounted(() => {
+  setTimeout(() => {
+    props.menu.forEach((item) => {
+      if (item?.children?.some((i) => i.link === route.path)) {
+        subItems.value.push(item.title);
+      }
+    });
+  }, 300);
+});
 </script>
 
 <template>

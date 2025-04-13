@@ -3,7 +3,7 @@ title: "Interactive Real Estate | WordPress Plugin"
 description: If you’re in the real estate or construction business, you know how important it is to showcase properties in a way that captures attention and provides detailed information to potential buyers. Static images and floor plans just don’t cut it anymore.
 image:
   src: /featured.png
-  alt: Image of a field of green crops.
+  alt: Interactive Real Estate - WordPress Plugin.
 categories:
   - WordPress
   - WordPress Plugin

@@ -3,17 +3,15 @@ import { formatBlogDate, shareInPopup } from "~/composable/helpers";
 
 const route = useRoute();
 
-const { data: similarArticles } = await useAsyncData("articles", () => {
-  return queryCollection("content")
-    .where("stem", "NOT LIKE", route.path.split("/")?.[2])
+const { data: similarArticles } = await useAsyncData("similar-blogs", () => {
+  return queryCollection("blog")
+    .where("path", "NOT LIKE", route.path)
     .limit(2)
     .all();
 });
 
 const { data: item } = await useAsyncData(route.path, () =>
-  queryCollection("content")
-    .where("stem", "LIKE", route.path.split("/")?.[2])
-    .first(),
+  queryCollection("blog").where("path", "LIKE", route.path).first(),
 );
 
 const url = ref("");
@@ -38,6 +36,15 @@ const share = (url: string) => {
   shareInPopup(url);
 };
 
+const getAbsoluteUrl = (relativePath: string) => {
+  if (!relativePath) return undefined;
+  const config = useRuntimeConfig();
+  const baseUrl = config.app.siteUrl || "https://ireplugin.com";
+  return relativePath.startsWith("http")
+    ? relativePath
+    : `${baseUrl}${relativePath.startsWith("/") ? "" : "/"}${relativePath}`;
+};
+
 onMounted(() => {
   url.value = window.location.href;
 });
@@ -48,13 +55,13 @@ useSeoMeta({
 
   twitterTitle: title.value,
   twitterDescription: description.value,
-  twitterImage: (item.value?.meta as any).image?.src,
+  twitterImage: getAbsoluteUrl((item.value?.meta as any).image?.src),
   twitterImageAlt: (item.value?.meta as any).image?.alt,
 
   ogTitle: title.value,
   ogDescription: description.value,
 
-  ogImage: (item.value?.meta as any).image?.src,
+  ogImage: getAbsoluteUrl((item.value?.meta as any).image?.src),
   ogImageAlt: (item.value?.meta as any).image?.alt,
 });
 </script>

@@ -4,7 +4,7 @@ const description =
   "Discover how our Interactive Real Estate WordPress plugin revolutionizes property displays with 3D building visualization, SVG floor plans with hotspots, and interactive maps.";
 
 const { data: articles } = await useAsyncData("articles", async () => {
-  const all = await queryCollection("content").all();
+  const all = await queryCollection("blog").all();
 
   return all.sort((a, b) => {
     const dateA = new Date((a.meta as any)?.publishedAt || 0);
