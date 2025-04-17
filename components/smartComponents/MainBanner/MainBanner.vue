@@ -13,13 +13,20 @@ const openVideoModal = ref(false);
         <lightning-icon class="h-14 w-14" />
       </div>
       <h1
-        class="mb-4 font-sans text-3xl font-extrabold capitalize leading-none tracking-tight text-black md:text-5xl lg:text-7xl"
+        class="mb-4 font-sans text-3xl font-extrabold capitalize leading-none tracking-tight text-black md:text-5xl lg:text-6xl"
       >
+        The #1 WordPress Plugin for Creating
+        <!-- <br /> -->
+        <span class="gradient-text font-sans font-extrabold">
+          Interactive Building images
+        </span>
+
+        <!--       
         The Ultimate <br />
         <span class="gradient-text font-sans font-extrabold">
           interactive Building
         </span>
-        generator
+        generator -->
       </h1>
       <h2 class="desc m-auto max-w-[700px]">
         Quickly make your property images interactive with adding pins, creating
@@ -60,7 +67,7 @@ const openVideoModal = ref(false);
     <transition name="fade-in-out">
       <div
         v-if="openVideoModal"
-        class="fixed left-0 top-0 z-10 flex h-full w-full items-center justify-center bg-gray-700/50 p-4 lg:p-20"
+        class="fixed left-0 top-0 z-40 flex h-full w-full items-center justify-center bg-gray-700/50 p-4 lg:p-20"
       >
         <div
           class="absolute right-12 top-12 cursor-pointer rounded-full bg-white p-5 transition-all duration-500 hover:scale-110 active:scale-90 active:duration-150 [&_svg]:h-5 [&_svg]:w-5"

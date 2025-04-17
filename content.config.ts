@@ -6,5 +6,11 @@ export default defineContentConfig({
       source: "blog/*.md",
       type: "page",
     }),
+    
+    doc: defineCollection({
+      source: "doc/*.md",
+      type: "page",
+    }),
+
   },
 });

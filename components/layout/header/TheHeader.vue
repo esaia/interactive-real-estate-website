@@ -6,7 +6,7 @@ const scrolled = ref(false);
 
 const menu = [
   { title: "Home", link: "/" },
-  { title: "Documentation", link: "/doc" },
+  { title: "Documentation", link: "/doc/" },
 
   {
     title: "Demos",

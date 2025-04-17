@@ -30,6 +30,12 @@ const faqData = [
   },
 
   {
+    question: "What is an Interactive Image?",
+    answer:
+      "Interactive images allow users to engage with specific elements by hovering or clicking on them. These polygons activate various responses, such as displaying details, redirecting to a webpage, executing scripts, or opening pop-up.",
+  },
+
+  {
     question:
       "Can I display different building layers (e.g., floor plans) in separate images?",
     answer:

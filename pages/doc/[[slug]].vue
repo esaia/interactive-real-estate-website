@@ -1,19 +1,75 @@
 <script setup lang="ts">
+import { siteBaseUrl } from "~/composable/constants";
 import type { DemoType } from "~/types/general";
 
 const demos = useState<DemoType[]>("demos");
+const config = useRuntimeConfig();
+
+const baseUrl = config.app.siteUrl || siteBaseUrl;
 
 const route = useRoute();
+const router = useRouter();
+
+const { data: item } = await useAsyncData(route.path, async () => {
+  const data = await queryCollection("doc")
+    .where("path", "LIKE", route.path)
+    .first();
+
+  if (data) {
+    return data;
+  } else {
+    router.push("/doc/intro");
+  }
+});
+
+const title = computed(() => {
+  return item.value?.seo.title;
+});
+
+const description = computed(() => {
+  return item.value?.seo.description;
+});
+
+const isIntroPage = computed(() => {
+  return route.path.startsWith("/doc/intro");
+});
+
+onMounted(() => {
+  // @ts-ignore
+  window?.twttr?.widgets.load();
+});
+
+useHead({
+  script: [{ src: "https://platform.x.com/widgets.js" }],
+
+  meta: [
+    {
+      property: "og:url",
+      content: `${baseUrl}${route.path}`,
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: `${baseUrl}${route.path}`,
+    },
+  ],
+});
+
+useSeoMeta({
+  title: title.value,
+  description: description.value,
+});
 </script>
 
 <template>
   <div
-    class="container-fluid flex flex-col justify-between gap-10 pt-12 lg:flex-row lg:gap-16"
+    class="container-fluid flex flex-col justify-between gap-10 pt-12 lg:flex-row lg:gap-12"
   >
     <div
-      class="top-5 flex h-fit flex-col gap-2 rounded-md border border-gray-200 p-5 text-gray-800 lg:sticky lg:w-60"
+      class="top-28 flex h-fit flex-col gap-2 rounded-md border border-gray-200 p-5 text-gray-800 lg:sticky lg:w-96"
     >
-      <NuxtLink to="/doc" class="cursor-pointer hover:text-primary">
+      <NuxtLink to="/doc/intro" class="cursor-pointer hover:text-primary">
         Introduction
       </NuxtLink>
       <NuxtLink
@@ -22,8 +78,11 @@ const route = useRoute();
       >
         Installation
       </NuxtLink>
-      <NuxtLink to="/doc/usage" class="cursor-pointer hover:text-primary">
-        Usage
+      <NuxtLink
+        to="/doc/create-your-first-interactive-building-image"
+        class="cursor-pointer hover:text-primary"
+      >
+        Create Your First Interactive Building Image
       </NuxtLink>
       <NuxtLink
         to="/doc/show-component"
@@ -33,7 +92,14 @@ const route = useRoute();
       </NuxtLink>
     </div>
 
-    <div class="editor w-full">
+    <div v-if="item" class="w-full [&_hr]:mb-8 [&_thead]:border-[#e5e7eb]">
+      <ContentRenderer :value="item" class="prose contents" />
+      <div v-if="isIntroPage">
+        <demo :shortcode-data="demos[1]?.shortcodeData" />
+      </div>
+    </div>
+
+    <!-- <div class="editor w-full">
       <div v-if="route.params?.slug === ''">
         <h2 class="title">Introduction</h2>
         <br />
@@ -68,35 +134,6 @@ const route = useRoute();
             plugin.
           </li>
         </ul>
-        <!--
-        <br />
-        <br />
-        <h2 class="title">How to Download from CodeCanyon</h2>
-        <br />
-
-        <p>
-          To download the Building SVG Plugin from CodeCanyon, follow these
-          steps:
-        </p>
-
-        <br />
-
-        <ul>
-          <li>
-            Visit the
-            <a href="https://codecanyon.net/" target="_blank"
-              >CodeCanyon website</a
-            >.
-          </li>
-          <li>Search for "Building SVG Plugin" using the search bar.</li>
-          <li>Click on the plugin title to view its details.</li>
-          <li>Click on the <strong>Add to Cart</strong> button.</li>
-          <li>Proceed to checkout and complete your purchase.</li>
-          <li>
-            Once the purchase is confirmed, navigate to your downloads page to
-            access the plugin file.
-          </li>
-        </ul> -->
       </div>
 
       <div v-else-if="route.params?.slug === 'usage'">
@@ -189,6 +226,6 @@ const route = useRoute();
         <br />
         <img src="/assets/images/doc/standaloneInstruction.png" alt="" />
       </div>
-    </div>
+    </div> -->
   </div>
 </template>

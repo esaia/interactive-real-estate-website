@@ -309,6 +309,31 @@ const cotages = {
       created_at: "2025-03-19 17:08:25",
       updated_at: "2025-03-20 16:35:26",
     },
+    {
+      id: "1027",
+      project_id: "141",
+      meta_key: "open_reserved_flat",
+      meta_value: "true",
+      created_at: "2025-03-19 17:08:25",
+      updated_at: "2025-03-20 16:35:26",
+    },
+
+    {
+      id: "1028",
+      project_id: "141",
+      meta_key: "open_sold_flat",
+      meta_value: "true",
+      created_at: "2025-03-19 17:08:25",
+      updated_at: "2025-03-20 16:35:26",
+    },
+    {
+      id: "1029",
+      project_id: "141",
+      meta_key: "price_rounded",
+      meta_value: "true",
+      created_at: "2025-03-19 17:08:25",
+      updated_at: "2025-03-20 16:35:26",
+    },
   ],
   actions: [],
 };

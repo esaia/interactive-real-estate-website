@@ -17,6 +17,13 @@ Whether you’re showcasing a single building or an entire complex, this plugin 
 
 ![interactive adminpanel](/assets/blog/adminpanel.webp)
 
+<div class="w-full flex justify-center items-center">
+ <blockquote class="twitter-tweet" >
+  <a href="https://twitter.com/ireplugin/status/1911443624237154500?ref_src=twsrc%5Etfw"></a>
+  </blockquote>
+
+</div>
+
 ---
 
 ## What is the Interactive Real Estate Plugin?

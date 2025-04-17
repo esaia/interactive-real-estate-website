@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import { siteBaseUrl } from "~/composable/constants";
 import { formatBlogDate, shareInPopup } from "~/composable/helpers";
 
 const config = useRuntimeConfig();
 
-const baseUrl = config.app.siteUrl || "https://ireplugin.com";
+const baseUrl = config.app.siteUrl || siteBaseUrl;
 
 const route = useRoute();
 
@@ -49,9 +50,13 @@ const getAbsoluteUrl = (relativePath: string) => {
 
 onMounted(() => {
   url.value = window.location.href;
+  // @ts-ignore
+  window?.twttr?.widgets.load();
 });
 
 useHead({
+  script: [{ src: "https://platform.twitter.com/widgets.js" }],
+
   meta: [
     {
       property: "og:url",
