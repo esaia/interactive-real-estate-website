@@ -96,7 +96,7 @@ useHead({
 
     {
       rel: "icon",
-      sizes: "512x512",
+      sizes: "256x256",
       href: `${baseUrl}/icon-256x256.png`,
     },
   ],
