@@ -106,6 +106,11 @@ useHead({
       name: "google-site-verification",
       content: "yzBJmVx5W6EPVBVlFTZqzKpdOABjpbHLAA5ExnwTiE8",
     },
+
+    {
+      name: "google-site-verification",
+      content: "yzBJmVx5W6EPVBVlFTZqzKpdOABjpbHLAA5ExnwTiE8",
+    },
     {
       name: "author",
       property: "og:author",
