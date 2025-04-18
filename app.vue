@@ -15,7 +15,7 @@ const baseUrl = config.app.siteUrl || siteBaseUrl;
 
 useHead({
   script: [
-    { src: "  https://player.vimeo.com/api/player.js", defer: true },
+    { src: "https://player.vimeo.com/api/player.js", async: true },
 
     {
       src: "https://www.googletagmanager.com/gtag/js?id=AW-16923193829",
