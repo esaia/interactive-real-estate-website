@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import "ire-preview/dist/styles.css";
+import { siteBaseUrl } from "./composable/constants";
 
 const title = "Interactive Real Estate | WordPress Plugin";
 const desc =
@@ -7,6 +8,10 @@ const desc =
 
 const keywords =
   "interactive real estate, 3d map real estate, wp plugin, WordPress real estate plugin, interactive building visualization, floor plan, SVG, property hotspots, 3D property view, building layers, interactive buildings, apartments, real estate, floor plan, SVG, hotspots, SVG floor plan plugin";
+
+const config = useRuntimeConfig();
+
+const baseUrl = config.app.siteUrl || siteBaseUrl;
 
 useHead({
   script: [
@@ -47,7 +52,7 @@ useHead({
         },
         screenshot: {
           "@type": "ImageObject",
-          url: "https://www.ireplugin.com/featured.png",
+          url: `${baseUrl}/featured.png`,
           caption: "Interactive floor plan with SVG hotspots",
         },
       }),
@@ -57,12 +62,12 @@ useHead({
       type: "application/ld+json",
       innerHTML: JSON.stringify({
         "@type": "Organization",
-        "@id": "https://www.ireplugin.com/#organization",
+        "@id": `${baseUrl}/#organization`,
         name: "Interactive Real Estate Plugin",
-        url: "https://www.ireplugin.com/",
+        url: `${baseUrl}/`,
         logo: {
           "@type": "ImageObject",
-          url: "https://www.ireplugin.com/logo.png",
+          url: `${baseUrl}/logo.png`,
           width: 300,
           height: 60,
           caption: "IRE Plugin Logo",
@@ -81,7 +86,7 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: "https://www.ireplugin.com",
+      href: baseUrl,
     },
     {
       rel: "alternate",
@@ -89,7 +94,11 @@ useHead({
       hreflang: "en",
     },
 
-    { rel: "icon", sizes: "512x512", href: "/icon-256x256.png" },
+    {
+      rel: "icon",
+      sizes: "512x512",
+      href: `${baseUrl}/icon-256x256.png`,
+    },
   ],
 
   meta: [
@@ -104,7 +113,7 @@ useHead({
     },
     {
       property: "og:url",
-      content: "https://www.ireplugin.com",
+      content: baseUrl,
     },
     {
       property: "og:type",
@@ -127,7 +136,7 @@ useHead({
 
     {
       property: "og:image",
-      content: "https://www.ireplugin.com/featured.png",
+      content: `${baseUrl}/featured.png`,
     },
 
     {
@@ -143,7 +152,7 @@ useHead({
 
     {
       name: "url",
-      content: "https://www.ireplugin.com",
+      content: `${baseUrl}`,
     },
 
     {
@@ -156,7 +165,7 @@ useHead({
     },
     {
       name: "twitter:image",
-      content: "https://www.ireplugin.com/featured.png",
+      content: `${baseUrl}/featured.png`,
     },
     {
       name: "twitter:image:alt",
