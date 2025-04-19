@@ -8,11 +8,15 @@ const wpPricePlanData = [
     price: "",
     features: [
       {
-        title: "Create only <b class='bg-yellow-400 px-2'> 1 project</b>",
+        title:
+          "Create only <b class='bg-red-500 text-gray-100 px-2'> 1 project</b>",
       },
       { title: "Create <b> Unlimited </b> blocks " },
       { title: "Create <b> Unlimited </b> floors " },
-      { title: " Create only <b class='bg-yellow-400 px-2'>25 flat</b>" },
+      {
+        title:
+          " Create only <b class='bg-red-500 text-gray-100 px-2'>25 flat</b>",
+      },
       { title: "Open <b> modal</b> on click of path" },
       { title: "Follow <b>link</b> on click of path" },
       { title: "Change <b>currency</b> symbol", hasNotFeature: true },

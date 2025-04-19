@@ -9,24 +9,37 @@ const reviews = [
   {
     name: "Emily",
     review:
-      "Interactive Real Estate is the best investment i made in months. It's simple and works, exactly what i was searching to create interactive images.",
+      "Interactive Real Estate is the <span>best investment</span> i made in months. It's simple and works, exactly what i was searching to create interactive images.",
   },
 
   {
     name: "Steven",
     review:
-      "This exceeded all my expectations. The quality is outstanding and it arrived sooner than expected.",
+      "This exceeded all my expectations. The <span>quality is outstanding</span> and it arrived sooner than expected.",
   },
 
+  // {
+  //   name: "Sarah ",
+  //   review:
+  //     "The features are incredibly comprehensive but the interface could be more intuitive. The documentation helped, but there's a learning curve.",
+  // },
+  // {
+  //   name: "Alex",
+  //   review:
+  //     "Completely transformed how I approach my work. The quality is exceptional and it's very intuitive.",
+  // },
+
   {
-    name: "Sarah ",
+    name: "mpanaszek",
     review:
-      "The features are incredibly comprehensive but the interface could be more intuitive. The documentation helped, but there's a learning curve.",
+      "One of the biggest advantages is the <span>professional online help</span> center provided by the author, where you can get quick and comprehensive support on any topic related to the plugin. Whether you need technical assistance, documentation, or advice on advanced features - it's all there.",
+    link: "https://wordpress.org/support/topic/powerful-and-user-friendly-real-estate-plugin-with-excellent-support/",
   },
   {
-    name: "Alex",
+    name: "alexvan22",
     review:
-      "Completely transformed how I approach my work. The quality is exceptional and it's very intuitive.",
+      "The plugin has few installations, even though it's a <span>damn gem</span> for those who just want to create a neat grid for their objects and manage them natively.  <br /> The plugin's author is a  <span>wonderful person</span> who promptly resolves all issues and implements quick updates. I believe this plugin has a great future.",
+    link: "https://wordpress.org/support/topic/%d0%bf%d1%80%d0%be%d1%81%d1%82%d0%be-%d0%bb%d1%83%d1%87%d1%88%d0%b8%d0%b9-%d0%bf%d0%bb%d0%b0%d0%b3%d0%b8%d0%bd-%d0%b4%d0%bb%d1%8f-%d1%88%d0%b0%d1%85%d0%bc%d0%b0%d1%82%d0%be%d0%ba-%d0%ba%d0%b2%d0%b0/",
   },
 ];
 </script>
@@ -37,23 +50,40 @@ const reviews = [
       Customer <span class="gradient-text">Reviews</span>
     </h3>
 
-    <div class="mx-auto flex max-w-5xl flex-wrap justify-center gap-6">
+    <div
+      class="min-w-5xl mx-auto flex max-w-5xl flex-wrap justify-center gap-6"
+    >
       <div
         v-for="(review, index) in reviews"
         :key="index"
-        class="h-fit w-full rounded-md border border-gray-200 p-6 shadow-sm transition-shadow hover:shadow-md md:w-min"
+        class="h-fit w-full rounded-md border border-gray-200 bg-gray-50/50 p-6 shadow-sm transition-shadow hover:shadow-md md:w-min"
       >
         <div class="flex items-center justify-between gap-20">
           <h4 class="w-max text-lg font-semibold">{{ review.name }}</h4>
 
           <div class="flex items-center">
-            <star v-for="i in 5" class="h-6 w-6" />
+            <star v-for="i in 5" class="h-5 w-5 [&_path]:fill-red-500" />
           </div>
         </div>
 
-        <p class="mt-4 text-gray-600">
+        <div
+          v-html="review.review"
+          class="[&_span]:py-[2px ] mt-4 text-gray-600 [&_span]:inline-block [&_span]:bg-red-200 [&_span]:px-1"
+        />
+        <!-- <p class="mt-4 text-gray-600">
           {{ review.review }}
-        </p>
+        </p> -->
+        <nuxt-link
+          v-if="review?.link"
+          :to="review.link"
+          target="_blank"
+          class="mt-2 block w-fit rounded-full bg-white p-2 transition-all"
+        >
+          <wordpress-icon
+            class="h-6 w-6 cursor-pointer [&_path]:!fill-black"
+            aria-label="wordpress icon"
+          />
+        </nuxt-link>
       </div>
     </div>
   </div>
