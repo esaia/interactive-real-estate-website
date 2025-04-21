@@ -10,6 +10,14 @@ const baseUrl = config.app.siteUrl || siteBaseUrl;
 const route = useRoute();
 const router = useRouter();
 
+const { data } = await useAsyncData("all-doc", async () => {
+  const data = await queryCollection("doc").all();
+
+  const ordered = data.sort((a: any, b: any) => a.meta?.order - b.meta?.order);
+
+  return ordered;
+});
+
 const { data: item } = await useAsyncData(route.path, async () => {
   const data = await queryCollection("doc")
     .where("path", "LIKE", route.path)
@@ -48,12 +56,6 @@ useHead({
       content: `${baseUrl}${route.path}`,
     },
   ],
-  link: [
-    {
-      rel: "canonical",
-      href: `${baseUrl}${route.path}`,
-    },
-  ],
 });
 
 useSeoMeta({
@@ -69,26 +71,12 @@ useSeoMeta({
     <div
       class="top-28 mr-4 flex h-fit flex-col gap-2 rounded-md p-3 pl-0 text-gray-800 after:absolute after:right-0 after:top-0 after:h-full after:w-[1px] after:bg-gray-100 lg:sticky lg:w-96"
     >
-      <NuxtLink to="/doc/intro" class="cursor-pointer hover:text-primary">
-        Introduction
-      </NuxtLink>
       <NuxtLink
-        to="/doc/installation"
+        v-for="item in data"
+        :to="item.path"
         class="cursor-pointer hover:text-primary"
       >
-        Installation
-      </NuxtLink>
-      <NuxtLink
-        to="/doc/create-your-first-interactive-building-image"
-        class="cursor-pointer hover:text-primary"
-      >
-        Create Your First Interactive Building Image
-      </NuxtLink>
-      <NuxtLink
-        to="/doc/show-component"
-        class="cursor-pointer hover:text-primary"
-      >
-        Show the component
+        {{ item.title }}
       </NuxtLink>
     </div>
 

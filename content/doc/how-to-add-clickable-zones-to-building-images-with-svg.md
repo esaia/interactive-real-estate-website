@@ -1,4 +1,8 @@
-# Create Your First Interactive Building Image
+---
+order: 3
+---
+
+# How to add clickable zones to building images with SVG
 
 Ready for creating your first interactive image? Then let’s begin.
 

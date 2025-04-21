@@ -1,3 +1,7 @@
+---
+order: 4
+---
+
 # Shortcode Placement
 
 In the lower left corner you will see the text of the shortcode. Copy it and use it anywhere on your WordPress site.

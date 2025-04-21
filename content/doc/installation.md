@@ -1,3 +1,7 @@
+---
+order: 2
+---
+
 # Installation
 
 How to Install this Plugin in WordPress.

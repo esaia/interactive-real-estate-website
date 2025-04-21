@@ -1,3 +1,7 @@
+---
+order: 1
+---
+
 # Introduction
 
 Welcome to the documentation for the Interactive Real Estate Plugin! ⚡

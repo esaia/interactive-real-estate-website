@@ -12,6 +12,7 @@ const keywords =
 const config = useRuntimeConfig();
 
 const baseUrl = config.app.siteUrl || siteBaseUrl;
+const route = useRoute();
 
 useHead({
   script: [
@@ -86,7 +87,8 @@ useHead({
   link: [
     {
       rel: "canonical",
-      href: baseUrl,
+      // href: baseUrl,
+      href: `${baseUrl}${route.path}`,
     },
     {
       rel: "alternate",

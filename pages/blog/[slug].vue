@@ -63,12 +63,6 @@ useHead({
       content: `${baseUrl}${route.path}`,
     },
   ],
-  link: [
-    {
-      rel: "canonical",
-      href: `${baseUrl}${route.path}`,
-    },
-  ],
 });
 
 useSeoMeta({
