@@ -74,7 +74,7 @@ We offer a wide variety of tooltip. Easily choose the one you want.
 
 </div>
 
-### Currency icon
+### How to change currency icon
 
 ---
 
@@ -101,6 +101,6 @@ Simply press `ctrl +` for zooming in and `ctrl -` for zooming out. While you are
 
 ![create project](/assets/doc/usage/zoomingPaning.gif)
 
-### Flat types
+### What is flat types
 
 For apartments of the same type, (For example, apartments that have the same area M2, number of rooms, arrangement of rooms) you need to add an entry in the types and then select from this list, Because the same records should not be created many times.
