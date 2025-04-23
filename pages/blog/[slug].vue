@@ -7,6 +7,21 @@ const config = useRuntimeConfig();
 const baseUrl = config.app.siteUrl || siteBaseUrl;
 
 const route = useRoute();
+const router = useRouter();
+
+const { data: item } = await useAsyncData(route.path, async () => {
+  try {
+    const data = await queryCollection("blog")
+      .where("path", "LIKE", route.path)
+      .first();
+
+    if (!data) router.push("/404");
+
+    return data;
+  } catch (error) {
+    router.push("/404");
+  }
+});
 
 const { data: similarArticles } = await useAsyncData("similar-blogs", () => {
   return queryCollection("blog")
@@ -14,10 +29,6 @@ const { data: similarArticles } = await useAsyncData("similar-blogs", () => {
     .limit(2)
     .all();
 });
-
-const { data: item } = await useAsyncData(route.path, () =>
-  queryCollection("blog").where("path", "LIKE", route.path).first(),
-);
 
 const url = ref("");
 
@@ -71,14 +82,14 @@ useSeoMeta({
 
   twitterTitle: title.value,
   twitterDescription: description.value,
-  twitterImage: getAbsoluteUrl((item.value?.meta as any).image?.src),
-  twitterImageAlt: (item.value?.meta as any).image?.alt,
+  twitterImage: getAbsoluteUrl((item.value?.meta as any)?.image?.src),
+  twitterImageAlt: (item.value?.meta as any)?.image?.alt,
 
   ogTitle: title.value,
   ogDescription: description.value,
 
-  ogImage: getAbsoluteUrl((item.value?.meta as any).image?.src),
-  ogImageAlt: (item.value?.meta as any).image?.alt,
+  ogImage: getAbsoluteUrl((item.value?.meta as any)?.image?.src),
+  ogImageAlt: (item.value?.meta as any)?.image?.alt,
 });
 </script>
 <template>

@@ -36,6 +36,7 @@ onMounted(() => {
 
 <template>
   <div class="container-fluid">
+    <h1 class="title my-10">Account</h1>
     <div ref="account" class="relative h-[700px]"></div>
     <p class="editor py-10">
       If you can't see the login form or encounter any issues, please visit the

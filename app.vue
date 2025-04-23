@@ -7,7 +7,7 @@ const desc =
   "The #1 WordPress plugin for creating interactive building images with SVG hotspots. Create clickable zones on building image or floor plans. No coding needed!";
 
 const keywords =
-  "interactive real estate, 3d map real estate, wp plugin, WordPress real estate plugin, interactive building visualization, floor plan, SVG, property hotspots, 3D property view, building layers, interactive buildings, apartments, real estate, floor plan, SVG, hotspots, SVG floor plan plugin";
+  "interactive image, interactive building, interactive maps, interactive real estate, 3d map real estate, wp plugin, WordPress real estate plugin, interactive building visualization, floor plan, SVG, property hotspots, 3D property view, building layers, interactive buildings, apartments, real estate, floor plan, SVG, hotspots, SVG floor plan plugin";
 
 const config = useRuntimeConfig();
 
