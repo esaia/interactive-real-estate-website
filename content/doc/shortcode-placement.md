@@ -6,6 +6,8 @@ metaDesc: Easily embed interactive property images anywhere on your WordPress si
 
 # Shortcode Placement
 
+A shortcode is a WordPress-specific code that can embed files or create objects that would normally require lots of complicated code.
+
 Easily embed interactive property images anywhere on your WordPress site using our simple shortcode system.
 
 ## How to Find Your Shortcode

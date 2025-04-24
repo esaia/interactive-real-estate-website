@@ -3,13 +3,13 @@ const reviews = [
   {
     name: "Zoe",
     review:
-      "For the price, this is an amazing product. Does exactly what it promises with no issues.",
+      "For the price, this is an amazing wordpress plugin. Does exactly what it promises with no issues.",
   },
 
   {
     name: "Emily",
     review:
-      "It is the <span>best investment</span> i made in months. It's simple and works, exactly what i was searching to create interactive images.",
+      "It is the <span>best investment</span> i made in months. It's simple and works, exactly what i was searching to create interactive images in my wordpress website.",
   },
 
   {

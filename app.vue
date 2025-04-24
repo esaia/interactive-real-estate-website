@@ -4,7 +4,7 @@ import { siteBaseUrl } from "./composable/constants";
 
 const title = "WordPress Plugin for Interactive Images";
 const desc =
-  "The #1 WordPress plugin for creating interactive images with SVG hotspots. Create clickable zones on building image or floor plans. No coding needed!";
+  "The #1 WordPress plugin for creating interactive images with SVG hotspots. Transform WordPress sites with interactive apartment maps, floor plans, and sales tools for construction companies. Easy setup for developers.";
 
 const keywords =
   "interactive image, interactive building, interactive maps, interactive real estate, 3d map real estate, wp plugin, WordPress real estate plugin, interactive building visualization, floor plan, SVG, property hotspots, 3D property view, building layers, interactive buildings, apartments, real estate, floor plan, SVG, hotspots, SVG floor plan plugin";
@@ -39,7 +39,7 @@ faq.value = [
   // },
 
   {
-    question: "What is this plugin and what does it do?",
+    question: "What is this wordpress plugin and what does it do?",
     answer:
       "This plugin allows you to make property images interactive by adding pins, creating polygons, and enabling users to interact with these elements. It's especially useful for showcasing real estate listings, floor plans, where users can click on specific areas (like apartments) to view more information.",
   },
@@ -58,7 +58,7 @@ faq.value = [
   },
 
   {
-    question: "Can I use this plugin with any theme or page builder?",
+    question: "Can I use this wordpress plugin with any theme or page builder?",
     answer:
       "This plugin is designed to be compatible with most WordPress themes and page builders. You can easily add interactive property images to any page or post using shortcodes.",
   },

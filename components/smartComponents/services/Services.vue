@@ -8,13 +8,13 @@ const data = [
   },
   {
     title: "Demos",
-    desc: "Explore plugin full documentation.",
+    desc: "Explore plugin demos.",
     link: "See Demos",
     url: "/demos",
   },
   {
     title: "Docs",
-    desc: "Explore plugin full documentation.",
+    desc: "Explore WordPress plugin full documentation.",
     link: "Read Docs",
     url: "/doc",
   },

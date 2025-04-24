@@ -181,7 +181,7 @@ const buyPackage = (planName: string, licenses: string) => {
 <template>
   <div id="pricing" class="container-fluid padding-top">
     <h2 class="title text-center">
-      Get Interactive Real Estate <span class="gradient-text"> Premium</span>
+      Get wordpress plugin <span class="gradient-text"> Premium</span>
     </h2>
 
     <div
@@ -214,7 +214,7 @@ const buyPackage = (planName: string, licenses: string) => {
         <p class="desc mt-3 text-center">
           Save time, reduce costs, and captivate your audience! Transform the
           way properties are showcased, making every listing an engaging
-          experience.
+          experience. Make your wordpress website Interactive.
         </p>
       </div>
 

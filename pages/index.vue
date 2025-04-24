@@ -3,7 +3,7 @@ const features = [
   {
     title: "Create any kind of polygon shapes",
     description:
-      "Easily design and customize a variety of polygon shapes to enhance your projects. Whether you need simple outlines or complex designs, our intuitive tools make it effortless to bring your vision to life. No coding required—start creating stunning visuals today!",
+      "Easily design and customize a variety of polygon shapes to enhance your wordpress adminpanel. Whether you need simple outlines or complex designs, our intuitive tools make it effortless to bring your vision to life. No coding required. Start creating stunning visuals today in you wordpress website!",
     badge: "Easy to use",
     video: "createPolygon",
     poster: "poster-createPolygon",

@@ -6,7 +6,7 @@ metaDesc: Step-by-step guide to creating interactive building images with clicka
 
 # How to add clickable zones to building images with SVG
 
-Transform static building images into engaging, clickable experiences with our SVG-based interactive tool.
+Transform static building images into engaging, clickable experiences with our SVG-based interactive tool in your WordPress website.
 
 ### Adding project
 
