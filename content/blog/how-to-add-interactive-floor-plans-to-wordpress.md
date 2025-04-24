@@ -2,8 +2,8 @@
 metaTitle: How to Add Interactive Floor Plans to WordPress (Step-by-Step)
 metaDesc: 123123
 image:
-  src: /assets/blog/floor-plan.webp
-  alt: Interactive Real Estate - WordPress Plugin.
+  src: /assets/blog/floor-plan.png
+  alt: Floor plan - wordpress plugin.
 categories:
   - WordPress
   - WordPress Plugin
@@ -38,3 +38,5 @@ If you have everything ready next step is to install the Plugin. For detailed in
 Click floors tab in newly created project and add new floor plan. Here you need to just upload your floor plan image and fill all required field such as title, floor number, block, configuration.
 
 ![create floor](/assets/blog/floor-create.webp)
+
+That’s it! With these few simple steps, your website can now feature interactive floor plans. Whether you’re showcasing apartments, houses, or office spaces, this plugin makes it incredibly easy to create dynamic, informative, and visually appealing floor plans. Happy building!
