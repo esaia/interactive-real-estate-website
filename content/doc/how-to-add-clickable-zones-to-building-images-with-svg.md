@@ -99,7 +99,7 @@ The Project Export/Import feature allows users to easily migrate complete projec
 
 Simply press `ctrl +` for zooming in and `ctrl -` for zooming out. While you are zoomed in press `space` and move the cursor for panning.
 
-![create project](/assets/doc/usage/zoomingPaning.gif)
+<!-- ![create project](/assets/doc/usage/zoomingPaning.gif) -->
 
 ### What is flat types
 

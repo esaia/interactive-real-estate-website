@@ -28,7 +28,7 @@
           </div>
         </div>
         <div
-          class="flex flex-col items-start gap-5 lg:flex-row lg:items-center"
+          class="flex min-w-max flex-col items-start gap-5 lg:flex-row lg:items-center"
         >
           <!-- <nuxt-link to="/#pricing" class="text-sm hover:underline">
             Pricing
