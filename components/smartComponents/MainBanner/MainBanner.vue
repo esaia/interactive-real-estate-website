@@ -18,7 +18,7 @@ const openVideoModal = ref(false);
         The #1 WordPress Plugin for Creating
         <!-- <br /> -->
         <span class="gradient-text font-sans font-extrabold">
-          Interactive Building images
+          Interactive Images
         </span>
 
         <!--       

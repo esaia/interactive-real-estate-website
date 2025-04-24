@@ -8,13 +8,13 @@ const data = [
   },
   {
     title: "Demos",
-    desc: "Explore Interactive Real Estate full documentation.",
+    desc: "Explore plugin full documentation.",
     link: "See Demos",
     url: "/demos",
   },
   {
     title: "Docs",
-    desc: "Explore Interactive Real Estate full documentation.",
+    desc: "Explore plugin full documentation.",
     link: "Read Docs",
     url: "/doc",
   },

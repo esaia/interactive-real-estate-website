@@ -1,5 +1,10 @@
 <script setup lang="ts">
+import { pluginName, siteBaseUrl } from "~/composable/constants";
 import type { PolygonDataCollection } from "~/types/moduleTypes";
+
+const config = useRuntimeConfig();
+
+const baseUrl = config.app.siteUrl || siteBaseUrl;
 
 const data: PolygonDataCollection[] = [
   {
@@ -118,6 +123,18 @@ const deleteG = (key: string) => {
   polygonData.value = polygonData.value.filter((item) => item.key !== key);
   svgRef.value?.querySelector(`#${key}`)?.remove();
 };
+
+useSeoMeta({
+  title: "Module" + " | " + pluginName,
+  description:
+    "Create interactive building images with our powerful module. Try demo now.",
+  ogImage: `${baseUrl}/assets/module.webp`,
+  ogImageAlt: "Interactive modile demo",
+  twitterDescription:
+    "Create interactive building images with our powerful module. Try demo now.",
+  twitterImage: `${baseUrl}/assets/module.webp`,
+  twitterImageAlt: "Interactive modile demo",
+});
 </script>
 
 <template>

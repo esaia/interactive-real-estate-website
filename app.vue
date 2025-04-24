@@ -2,9 +2,9 @@
 import "ire-preview/dist/styles.css";
 import { siteBaseUrl } from "./composable/constants";
 
-const title = "Interactive Real Estate | WordPress Plugin";
+const title = "WordPress Plugin for Interactive Images";
 const desc =
-  "The #1 WordPress plugin for creating interactive building images with SVG hotspots. Create clickable zones on building image or floor plans. No coding needed!";
+  "The #1 WordPress plugin for creating interactive images with SVG hotspots. Create clickable zones on building image or floor plans. No coding needed!";
 
 const keywords =
   "interactive image, interactive building, interactive maps, interactive real estate, 3d map real estate, wp plugin, WordPress real estate plugin, interactive building visualization, floor plan, SVG, property hotspots, 3D property view, building layers, interactive buildings, apartments, real estate, floor plan, SVG, hotspots, SVG floor plan plugin";
@@ -18,7 +18,7 @@ const route = useRoute();
 faq.value = [
   // {
   //   question:
-  //     "What is the difference between a Regular License and an Extended License?",
+  //     "What is the difference between a Regular License and an Extenfd License?",
   //   answer:
   //     "<p>With a <b>Regular License</b>, you are allowed to use the product in one project, either for yourself or a single client. You can create as many interactive buildings as needed within that project. An <i>'project'</i> refers to a website, app or other. <br><br>An <b>Extended License</b> gives you more flexibility and broader usage rights. You can use the item in multiple projects. For example, if you're building multiple client projects, you can use the asset for each project. For a detailed comparison, please refer to the full explanation <a href='https://codecanyon.net/licenses/standard' target='_blank' class='link'>here</a>.</p>",
   // },

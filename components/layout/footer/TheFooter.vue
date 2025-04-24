@@ -102,6 +102,17 @@
               aria-label="wordpress icon"
             />
           </nuxt-link>
+
+          <nuxt-link
+            to="https://www.producthunt.com/products/interactive-real-estate-wordpress-plugin"
+            target="_blank"
+            class="rounded-full bg-white p-2 transition-all hover:scale-105"
+          >
+            <product-hunt-icon
+              class="h-6 w-6 cursor-pointer"
+              aria-label="wordpress icon"
+            />
+          </nuxt-link>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const title = "Blog - Interactive Real Estate";
+const title = "Blog | Interactive Real Estate";
 const description =
   "Discover how our Interactive Real Estate WordPress plugin revolutionizes property displays with 3D building visualization, SVG floor plans with hotspots, and interactive maps.";
 

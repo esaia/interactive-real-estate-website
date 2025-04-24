@@ -9,7 +9,7 @@ const reviews = [
   {
     name: "Emily",
     review:
-      "Interactive Real Estate is the <span>best investment</span> i made in months. It's simple and works, exactly what i was searching to create interactive images.",
+      "It is the <span>best investment</span> i made in months. It's simple and works, exactly what i was searching to create interactive images.",
   },
 
   {
