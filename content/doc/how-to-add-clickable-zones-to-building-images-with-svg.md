@@ -1,10 +1,12 @@
 ---
 order: 3
+metaTitle: How to add clickable zones to building images with SVG
+metaDesc: Step-by-step guide to creating interactive building images with clickable polygons, tooltips, and customization options.
 ---
 
 # How to add clickable zones to building images with SVG
 
-Ready for creating your first interactive image? Then let’s begin.
+Transform static building images into engaging, clickable experiences with our SVG-based interactive tool.
 
 ### Adding project
 

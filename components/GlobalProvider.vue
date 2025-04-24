@@ -4,6 +4,8 @@ import { Analytics } from "@vercel/analytics/nuxt";
 import { SpeedInsights } from "@vercel/speed-insights/nuxt";
 
 const demos = useState<DemoType[]>("demos");
+const desc =
+  "Explore live demos of Interactive Real Estate's powerful WordPress plugin. See clickable floor plans, property showcases, and interactive building maps in action before you buy.";
 
 const cotages = {
   project: {
@@ -4137,35 +4139,40 @@ demos.value = [
   {
     id: 1,
     title: "Cottages",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, tempore!",
+    slug: "cottages",
+    desc,
     img: "/assets/demo/cotages.webp",
     shortcodeData: cotages,
   },
   {
     id: 2,
     title: "Hotel",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, tempore!",
+    slug: "hotel",
+    desc,
     img: "/assets/demo/hotel.webp",
     shortcodeData: hotel,
   },
   {
     id: 3,
     title: "Big hotel",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, tempore!",
+    slug: "big-hotel",
+    desc,
     img: "/assets/demo/hotel_2.webp",
     shortcodeData: bigHotel,
   },
   {
     id: 4,
     title: "Entertainment spaces",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, tempore!",
+    slug: "entertainment-spaces",
+    desc,
     img: "/assets/demo/stadions.webp",
     shortcodeData: entertainmentSpaces,
   },
   {
     id: 5,
     title: "Blocks",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, tempore!",
+    slug: "blocks",
+    desc,
     img: "/assets/demo/blocks.webp",
     shortcodeData: blocks,
   },

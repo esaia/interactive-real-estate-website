@@ -1,6 +1,13 @@
 <script setup lang="ts">
+import { pluginName } from "~/composable/constants";
 import type { DemoType } from "~/types/general";
 const demos = useState<DemoType[]>("demos");
+
+useSeoMeta({
+  title: "Demos" + " | " + pluginName,
+  description:
+    "Explore live demos of Interactive Real Estate's powerful WordPress plugin. See clickable floor plans, property showcases, and interactive building maps in action before you buy.",
+});
 </script>
 
 <template>
@@ -9,7 +16,7 @@ const demos = useState<DemoType[]>("demos");
   >
     <div v-for="demo in demos" :key="demo.id" class="group cursor-pointer">
       <nuxt-link
-        :to="`/demos/${demo.id}`"
+        :to="`/demos/${demo.slug}`"
         class="relative block w-full overflow-hidden rounded-md pt-[60%]"
       >
         <img

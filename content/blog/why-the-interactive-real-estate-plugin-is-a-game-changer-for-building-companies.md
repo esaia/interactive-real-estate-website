@@ -1,6 +1,6 @@
 ---
-title: "Why the Interactive Real Estate Plugin Is a Game Changer for Building Companies"
-description: If you’re in the real estate or construction business, you know how important it is to showcase properties in a way that captures attention and provides detailed information to potential buyers. Static images and floor plans just don’t cut it anymore.
+metaTitle: Why the Interactive Real Estate Plugin Is a Game Changer for Building Companies
+metaDesc: If you’re in the real estate or construction business, you know how important it is to showcase properties in a way that captures attention and provides detailed information to potential buyers. Static images and floor plans just don’t cut it anymore.
 image:
   src: /featured.png
   alt: Interactive Real Estate - WordPress Plugin.

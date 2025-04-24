@@ -1,11 +1,8 @@
 <script setup lang="ts">
-import { siteBaseUrl } from "~/composable/constants";
+import { pluginName } from "~/composable/constants";
 import type { DemoType } from "~/types/general";
 
 const demos = useState<DemoType[]>("demos");
-const config = useRuntimeConfig();
-
-const baseUrl = config.app.siteUrl || siteBaseUrl;
 
 const route = useRoute();
 const router = useRouter();
@@ -31,11 +28,11 @@ const { data: item } = await useAsyncData(route.path, async () => {
 });
 
 const title = computed(() => {
-  return item.value?.seo.title;
+  return item.value?.meta.metaTitle || item.value?.seo.title;
 });
 
 const description = computed(() => {
-  return item.value?.seo.description;
+  return item.value?.meta?.metaDesc?.toString() || item.value?.seo.description;
 });
 
 const isIntroPage = computed(() => {
@@ -47,19 +44,8 @@ onMounted(() => {
   window?.twttr?.widgets.load();
 });
 
-useHead({
-  script: [{ src: "https://platform.x.com/widgets.js" }],
-
-  meta: [
-    {
-      property: "og:url",
-      content: `${baseUrl}${route.path}`,
-    },
-  ],
-});
-
 useSeoMeta({
-  title: title.value,
+  title: title.value + " | " + pluginName,
   description: description.value,
 });
 </script>
