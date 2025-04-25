@@ -26,7 +26,7 @@ Whether you’re showcasing a single building or an entire complex, this plugin 
 
 ---
 
-## What is the wordpress Interactive Plugin?
+## What is the wordpress Interactive Image Plugin?
 
 <a href="https://wordpress.org/plugins/interactive-real-estate/" target="_blank" rel="noopener">Interactive Real Estate</a> is a WordPress plugin designed specifically for building companies. It allows you to create interactive building displays where users can click on different parts of the building (like floors or apartments) to see detailed information. Think of it as a digital, interactive map of your property.
 

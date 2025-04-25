@@ -181,13 +181,17 @@ useSeoMeta({
       </div>
     </div>
 
-    <div v-if="similarArticles?.length" class="mt-10 grid grid-cols-2 gap-10">
-      <blogCard
-        v-for="item in similarArticles"
-        :key="item.id"
-        :item="item"
-        layout="vertical"
-      />
+    <div v-if="similarArticles?.length">
+      <h4 class="w-full text-center text-xl font-semibold">Similar blogs</h4>
+
+      <div class="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-2">
+        <blogCard
+          v-for="item in similarArticles"
+          :key="item.id"
+          :item="item"
+          layout="vertical"
+        />
+      </div>
     </div>
   </div>
 

@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /404
 Disallow: /*.webp$
+Disallow: /*?*
+
 
 Sitemap: http://ireplugin.com/sitemap.xml

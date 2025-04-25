@@ -45,7 +45,7 @@ onMounted(() => {
 });
 
 useSeoMeta({
-  title: title.value + " | " + pluginName,
+  title: title.value,
   description: description.value,
 });
 </script>

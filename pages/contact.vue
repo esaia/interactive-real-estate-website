@@ -17,11 +17,11 @@ import Input from "~/components/ui/Input.vue";
               <span class="text-dark mb-6 block text-base font-medium">
                 CONTACT US
               </span>
-              <h2
+              <h1
                 class="text-dark max-w-[260px] text-[35px] font-semibold leading-[1.14]"
               >
                 Let's talk about your problem.
-              </h2>
+              </h1>
             </div>
             <div class="mb-12 flex flex-wrap justify-between lg:mb-0">
               <div class="mb-8 flex w-[330px] max-w-full">
@@ -57,7 +57,7 @@ import Input from "~/components/ui/Input.vue";
         </div>
         <div class="w-full px-4 lg:w-5/12 xl:w-4/12">
           <div
-            class="shadow-testimonial rounded-lg bg-white px-8 py-10 sm:px-10 sm:py-12 md:p-[60px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[60px]"
+            class="rounded-lg bg-white px-8 py-10 shadow-testimonial sm:px-10 sm:py-12 md:p-[60px] lg:p-10 lg:px-10 lg:py-12 2xl:p-[60px]"
             data-wow-delay=".2s
               "
           >

@@ -16,32 +16,10 @@ const baseUrl = config.app.siteUrl || siteBaseUrl;
 const route = useRoute();
 
 faq.value = [
-  // {
-  //   question:
-  //     "What is the difference between a Regular License and an Extenfd License?",
-  //   answer:
-  //     "<p>With a <b>Regular License</b>, you are allowed to use the product in one project, either for yourself or a single client. You can create as many interactive buildings as needed within that project. An <i>'project'</i> refers to a website, app or other. <br><br>An <b>Extended License</b> gives you more flexibility and broader usage rights. You can use the item in multiple projects. For example, if you're building multiple client projects, you can use the asset for each project. For a detailed comparison, please refer to the full explanation <a href='https://codecanyon.net/licenses/standard' target='_blank' class='link'>here</a>.</p>",
-  // },
-  // {
-  //   question: "What is CodeCanyon?",
-  //   answer:
-  //     "CodeCanyon is an online marketplace where you can buy and sell various types of code, scripts, plugins, themes, and digital assets. It's part of the Envato Market, offering developers and designers a platform to sell their creations, and allowing users to purchase ready-made solutions for websites, apps, and software projects.",
-  // },
-  // {
-  //   question: "I bought the product by accident. Can I get a refund?",
-  //   answer:
-  //     "No, refunds are generally not provided for mistaken purchases. It's important to check the product details before buying. If the product is broken or not as described, you may be able to get a refund, but before, please contact us and we will try to solve the issue.",
-  // },
-  // {
-  //   question: "Can I get support for more than 6 months?",
-  //   answer:
-  //     "Yes, you can get support for more than 6 months. For further information, read <a href='https://help.market.envato.com/hc/en-us/articles/207886473-Extend-or-renew-Item-Support' target='_blank' class='link'>here</a>.",
-  // },
-
   {
-    question: "What is this wordpress plugin and what does it do?",
+    question: "What is this plugin and what does it do?",
     answer:
-      "This plugin allows you to make property images interactive by adding pins, creating polygons, and enabling users to interact with these elements. It's especially useful for showcasing real estate listings, floor plans, where users can click on specific areas (like apartments) to view more information.",
+      "This WordPress plugin allows you to make property images interactive by adding pins, creating polygons, and enabling users to interact with these elements. It's especially useful for showcasing building, floor plans, where users can click on specific areas (like floor, apartments) to view more information.",
   },
 
   {
