@@ -34,7 +34,7 @@
             Pricing
           </nuxt-link> -->
 
-          <nuxt-link to="/doc" class="text-sm hover:underline">
+          <nuxt-link to="/doc/intro" class="text-sm hover:underline">
             Documentation
           </nuxt-link>
 

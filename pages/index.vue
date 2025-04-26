@@ -1962,6 +1962,10 @@ const shortcodeData = {
 
     <review />
 
+    <div class="mx-auto flex max-w-[989px] items-center justify-center pt-20">
+      <video-demo />
+    </div>
+
     <plan-cards />
 
     <todo />

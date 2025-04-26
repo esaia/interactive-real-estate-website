@@ -69,7 +69,11 @@ useSeoMeta({
     <div v-if="item" class="w-full [&_hr]:mb-8 [&_thead]:border-[#e5e7eb]">
       <ContentRenderer :value="item" class="prose contents" />
       <div v-if="isIntroPage">
-        <demo :shortcode-data="demos[1]?.shortcodeData" />
+        <div class="my-20">
+          <video-demo />
+        </div>
+
+        <!-- <demo :shortcode-data="demos[1]?.shortcodeData" /> -->
       </div>
     </div>
   </div>
