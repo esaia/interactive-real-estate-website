@@ -74,6 +74,11 @@
   .gradient-text {
     @apply bg-gradient-to-r from-rose-400 via-rose-500 to-orange-400 bg-clip-text font-medium text-transparent;
   }
+
+  .path-color {
+    @apply [&_g[conf=reserved]_path]:fill-[var(--reserved-color)] [&_g[conf=sold]_path]:fill-[var(--sold-color)] [&_path]:cursor-pointer [&_path]:fill-[var(--path-color)] [&_path]:transition-all hover:[&_path]:fill-[var(--path-hover-color)] [&_svg]:h-full [&_svg]:w-full;
+  }
+
   .uppercase {
     text-transform: uppercase;
     font-feature-settings: "case" on;

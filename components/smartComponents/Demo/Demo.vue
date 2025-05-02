@@ -67,7 +67,7 @@ onMounted(() => {
       />
       <div
         v-html="shortcodeData.project.svg"
-        class="canvas ire-absolute ire-left-0 ire-top-0 ire-h-full ire-w-full [&_path]:ire-cursor-pointer [&_path]:ire-fill-[var(--path-color)] [&_path]:ire-transition-all [&_svg]:ire-h-full [&_svg]:ire-w-full pt-3"
+        class="canvas ire-absolute ire-left-0 ire-top-0 ire-h-full ire-w-full path-color pt-3"
       ></div>
     </div>
 

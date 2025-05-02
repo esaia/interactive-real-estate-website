@@ -16,7 +16,7 @@ const data = [
     title: "Docs",
     desc: "Explore WordPress plugin full documentation.",
     link: "Read Docs",
-    url: "/doc",
+    url: "/doc/intro",
   },
 ];
 </script>

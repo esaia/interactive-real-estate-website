@@ -23,7 +23,7 @@
             <p class="max-w-[420px] text-sm text-gray-500">
               I'm Esaia Gaprindashvili, web developer from Tbilisi, Georgia. I
               love wordpress. In my free time, I’m either fixing bugs or
-              creating new ones—I'm not sure which one is more fun.
+              creating new ones. I'm not sure which one is more fun.
             </p>
           </div>
         </div>
