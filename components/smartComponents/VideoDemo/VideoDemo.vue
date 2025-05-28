@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative m-auto flex h-full w-full items-center justify-center pt-[40%]"
+    class="relative m-auto flex h-full w-full items-center justify-center pt-[56%]"
   >
     <div class="absolute left-0 top-0 h-full w-full">
       <iframe
