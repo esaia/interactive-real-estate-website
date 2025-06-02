@@ -46,4 +46,9 @@ export default defineNuxtConfig({
       anchorLinks: { h2: false, h3: false, h4: false },
     },
   },
+  routeRules: {
+    "/doc": {
+      redirect: "/doc/intro",
+    },
+  },
 });
