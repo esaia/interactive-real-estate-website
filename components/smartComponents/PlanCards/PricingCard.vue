@@ -102,7 +102,7 @@ const priceIndex = computed(() => {
                 <option value="1" selected>1 Website</option>
                 <option value="5">5 Website</option>
                 <option value="10">10 Website</option>
-                <option value="30">30 Website</option>
+                <!-- <option value="30">30 Website</option> -->
               </select>
             </div>
           </div>
