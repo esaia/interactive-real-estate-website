@@ -99,8 +99,8 @@ import Input from "~/components/ui/Input.vue";
                   name="message"
                   rows="1"
                   placeholder="type your message here"
-                  class="text-body-color placeholder:text-body-color/60 w-full resize-none border-0 border-b border-[#f1f1f1] bg-transparent pb-3 focus:border-primary focus:outline-none"
                   required
+                  class="text-body-color placeholder:text-body-color/60 w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 focus:border-primary focus:outline-none"
                 ></textarea>
               </div>
               <BaseButton title="Send" btn-type="submit" />

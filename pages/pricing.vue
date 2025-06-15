@@ -2,7 +2,8 @@
 
 <template>
   <div>
-    <plan-cards />
+    <plan-cards has-h1 />
+
     <faq />
   </div>
 </template>

@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { Checkout } from "@freemius/checkout";
 
+defineProps<{
+  hasH1?: boolean;
+}>();
+
 const wpPricePlanData = [
   {
     title: "Free",
@@ -180,9 +184,13 @@ const buyPackage = (planName: string, licenses: string) => {
 
 <template>
   <div id="pricing" class="container-fluid padding-top">
-    <h2 class="title text-center">
-      Get wordpress plugin <span class="gradient-text"> Premium</span>
-    </h2>
+    <!-- <h2 class="title text-center">
+      Get Interactive Real Estate <span class="gradient-text"> Premium</span>
+    </h2> -->
+
+    <component :is="hasH1 ? 'h1' : 'h2'" class="title text-center">
+      Get Interactive Real Estate <span class="gradient-text">Premium</span>
+    </component>
 
     <div
       class="m-auto my-5 flex w-fit items-center justify-center rounded-lg border bg-gray-50/80 p-2 text-gray-600"
