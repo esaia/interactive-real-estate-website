@@ -32,12 +32,18 @@ import Input from "~/components/ui/Input.vue";
                   <h5 class="text-dark mb-[18px] text-lg font-semibold">
                     How Can We Help?
                   </h5>
+
+                  <p class="mt-5">Mail:</p>
+
                   <a
                     href="mailto:interactiverealestateplugin@gmail.com"
                     class="gradient-text font-medium"
                   >
                     interactiverealestateplugin@gmail.com
                   </a>
+
+                  <p class="mt-5">WhatsApp or Telegram:</p>
+                  <p class="gradient-text font-medium">(+995) 568 07 88 99</p>
                 </div>
               </div>
 
