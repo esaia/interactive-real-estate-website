@@ -91,7 +91,7 @@ const isModalOpen = ref(false);
             <h2 class="mb-4 text-2xl font-semibold">
               Join Our Affiliate Program
             </h2>
-            <form action="https://formspree.io/f/xldjrgww" method="POST">
+            <form action="https://formspree.io/f/mpwrydzn" method="POST">
               <div class="space-y-4">
                 <Input
                   label="Full Name*"

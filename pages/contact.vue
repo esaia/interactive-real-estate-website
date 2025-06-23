@@ -73,7 +73,7 @@ import Input from "~/components/ui/Input.vue";
               Send us a Message
             </h3>
             <form
-              action="https://formspree.io/f/mbldkqnj"
+              action="https://formspree.io/f/mgvynked"
               method="POST"
               class="flex flex-col gap-4"
             >
