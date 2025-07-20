@@ -84,7 +84,7 @@ faq.value = [
   {
     question: "What license do I need for my WordPress multisite installation?",
     answer:
-      "Every site in a multisite installation needs its own license. You can select discounted license packages for 1, 3, 10 sites. If you need a license for more sites than that, please <a href='/contact'>contact us</a>.",
+      "Every site in a multisite installation needs its own license. You can select discounted license packages for 1, 5, 10 sites. If you need a license for more sites than that, please <a href='/contact'>contact us</a>.",
   },
 ];
 
