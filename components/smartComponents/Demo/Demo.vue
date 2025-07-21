@@ -3,6 +3,11 @@ import { Project } from "ire-preview";
 
 const props = defineProps<{ shortcodeData: any }>();
 
+const irePlugin = {
+  is_premium: true,
+  is_gold: true,
+};
+
 const isClient = ref(false);
 
 const getMeta = (metaKey: string) => {
@@ -22,6 +27,7 @@ const constants = ref({
     getMeta("sold_color")?.meta_value || "rgba(219, 64, 64, 0.45)",
   PREVIEW_STROKE_COLOR:
     getMeta("stroke_color")?.meta_value || "rgba(0, 0, 0,  1)",
+  PREVIEW_PRIMARY_COLOR: getMeta("primary_color") || "rgba(45, 45, 46,  1)",
   PREVIEW_STROKE_WIDTH: +getMeta("stroke_width")?.meta_value || 1,
   PREVIEW_BORDER_RADIUS: +getMeta("border_radius")?.meta_value || 0,
 });
@@ -32,6 +38,7 @@ const colors = reactive({
   reserved: constants.value?.PREVIEW_RESERVED_COLOR,
   sold: constants.value?.PREVIEW_SOLD_COLOR,
   stroke_color: constants.value?.PREVIEW_STROKE_COLOR,
+  primary_color: constants.value?.PREVIEW_PRIMARY_COLOR,
   stroke_width: constants.value?.PREVIEW_STROKE_WIDTH,
   border_radius: constants.value?.PREVIEW_BORDER_RADIUS,
 });
@@ -43,6 +50,7 @@ const cssVariables = computed(() => {
     "--path-hover-color": colors.path_hover,
     "--path-color": colors.path,
     "--stroke-color": colors.stroke_color,
+    "--primary-color": colors.primary_color,
     "--stroke-width": colors.stroke_width + "px",
     "--border-radius": colors.border_radius + "px",
   };
@@ -72,7 +80,7 @@ onMounted(() => {
     </div>
 
     <ClientOnly>
-      <Project :data="shortcodeData" />
+      <Project :data="shortcodeData" :irePlugin="irePlugin" />
     </ClientOnly>
   </div>
 </template>

@@ -247,7 +247,7 @@ const buyPackage = (licenseType: string, licenses: string) => {
         <p class="cursor-pointer" @click="isLifetime = true">Lifetime</p>
       </div>
 
-      <div class="flex flex-col items-start gap-10 lg:grid lg:grid-cols-3">
+      <div class="flex flex-col items-start gap-4 lg:grid lg:grid-cols-3">
         <plan-card
           v-for="(item, i) in plansData"
           :key="i"

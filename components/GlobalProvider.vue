@@ -125,13 +125,15 @@ const cotages = {
       flat_number: "Apartment - 4",
       price: "66344.00",
       offer_price: null,
+      click_action: "follow_link",
+      follow_link: { link: "https://www.ireplugin.com/", target: "true" },
       created_at: "2024-11-06 11:09:34",
       updated_at: "2024-11-06 11:09:34",
     },
     {
       id: "117",
       block_id: null,
-      type_id: "52",
+      type_id: "53",
       project_id: "109",
       floor_number: null,
       conf: null,
@@ -157,7 +159,7 @@ const cotages = {
     {
       id: "119",
       block_id: null,
-      type_id: "52",
+      type_id: "53",
       project_id: "109",
       floor_number: null,
       conf: null,
@@ -196,7 +198,7 @@ const cotages = {
     {
       id: "122",
       block_id: null,
-      type_id: "52",
+      type_id: "53",
       project_id: "109",
       floor_number: null,
       conf: "reserved",
@@ -211,7 +213,8 @@ const cotages = {
     {
       id: "52",
       title: "Six-Person Penthouse",
-      teaser: null,
+      teaser:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
       project_id: "109",
       image_2d: [
         {
@@ -231,6 +234,44 @@ const cotages = {
       ],
       area_m2: "120.00",
       rooms_count: "4",
+      other: [
+        { key: "parking space", value: "8m²" },
+        { key: "bathrooms", value: "2" },
+        { key: "Gross Internal Area:", value: "130 sqm / 1400 sqft" },
+      ],
+      created_at: "2024-11-05 12:38:49",
+      updated_at: "2024-11-06 11:05:24",
+      gallery: null,
+    },
+    {
+      id: "53",
+      title: "Three-Person Penthouse",
+      teaser:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+      project_id: "109",
+      image_2d: [
+        {
+          url: "/assets/demo/floor_2d_1.webp",
+        },
+        {
+          url: "/assets/demo/floor_2d_2.webp",
+        },
+      ],
+      image_3d: [
+        {
+          url: "/assets/demo/flat_3d-2.webp",
+        },
+        {
+          url: "/assets/demo/floor_3d_2.webp",
+        },
+      ],
+      area_m2: "80.00",
+      rooms_count: "3",
+      other: [
+        { key: "parking space", value: "8m²" },
+        { key: "bathrooms", value: "1" },
+        { key: "Gross Internal Area:", value: "130 sqm / 1400 sqft" },
+      ],
       created_at: "2024-11-05 12:38:49",
       updated_at: "2024-11-06 11:05:24",
       gallery: null,
@@ -307,7 +348,7 @@ const cotages = {
       id: "1026",
       project_id: "141",
       meta_key: "currency",
-      meta_value: "gbp",
+      meta_value: "usd",
       created_at: "2025-03-19 17:08:25",
       updated_at: "2025-03-20 16:35:26",
     },
@@ -333,6 +374,50 @@ const cotages = {
       project_id: "141",
       meta_key: "price_rounded",
       meta_value: "true",
+      created_at: "2025-03-19 17:08:25",
+      updated_at: "2025-03-20 16:35:26",
+    },
+    {
+      id: "1030",
+      project_id: "141",
+      meta_key: "primary_color",
+      meta_value: "rgba(44, 156, 126, 1)",
+      created_at: "2025-03-19 17:08:25",
+      updated_at: "2025-03-20 16:35:26",
+    },
+
+    {
+      id: "1031",
+      project_id: "141",
+      meta_key: "remove_watermark",
+      meta_value: "true",
+      created_at: "2025-03-19 17:08:25",
+      updated_at: "2025-03-20 16:35:26",
+    },
+
+    {
+      id: "1032",
+      project_id: "141",
+      meta_key: "request_callback",
+      meta_value: "true",
+      created_at: "2025-03-19 17:08:25",
+      updated_at: "2025-03-20 16:35:26",
+    },
+
+    {
+      id: "1033",
+      project_id: "141",
+      meta_key: "shareable_link",
+      meta_value: "true",
+      created_at: "2025-03-19 17:08:25",
+      updated_at: "2025-03-20 16:35:26",
+    },
+
+    {
+      id: "1033",
+      project_id: "141",
+      meta_key: "area_unit",
+      meta_value: "ft",
       created_at: "2025-03-19 17:08:25",
       updated_at: "2025-03-20 16:35:26",
     },
