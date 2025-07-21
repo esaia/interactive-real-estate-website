@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { pluginName, siteBaseUrl } from "~/composable/constants";
+import { PLUGIN_NAME, SITE_BASE_URL } from "~/composable/constants";
 import type { PolygonDataCollection } from "~/types/moduleTypes";
 
 const config = useRuntimeConfig();
 
-const baseUrl = config.app.siteUrl || siteBaseUrl;
+const baseUrl = config.app.siteUrl || SITE_BASE_URL;
 
 const data: PolygonDataCollection[] = [
   {
@@ -125,7 +125,7 @@ const deleteG = (key: string) => {
 };
 
 useSeoMeta({
-  title: "Module" + " | " + pluginName,
+  title: "Module" + " | " + PLUGIN_NAME,
   description:
     "Create interactive building images with our powerful module. Try demo now.",
   ogImage: `${baseUrl}/assets/module.webp`,

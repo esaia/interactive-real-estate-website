@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   ],
 
   runtimeConfig: {
-    app: {
+    public: {
       fsPublicKey: process.env.FS_PUBLIC_KEY,
       fsProductId: process.env.FS_PRODUCT_ID,
       siteUrl: process.env.SITE_URL,

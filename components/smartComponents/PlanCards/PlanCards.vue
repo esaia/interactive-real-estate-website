@@ -153,7 +153,7 @@ const plansData = computed(() => {
 const buyPackage = (licenseType: string, licenses: string) => {
   const conf = useRuntimeConfig();
 
-  const { fsProductId: product_id, fsPublicKey: public_key } = conf.app;
+  const { fsProductId: product_id, fsPublicKey: public_key } = conf.public;
 
   const handler = new Checkout({
     public_key,

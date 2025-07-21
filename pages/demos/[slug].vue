@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { FlatsList } from "ire-preview";
-import { pluginName } from "~/composable/constants";
+import { PLUGIN_NAME } from "~/composable/constants";
 import type { DemoType } from "~/types/general";
 
 const demos = useState<DemoType[]>("demos");
@@ -22,7 +22,7 @@ onMounted(() => {
 });
 
 useSeoMeta({
-  title: activeDemo.value?.title + " | " + pluginName,
+  title: activeDemo.value?.title + " | " + PLUGIN_NAME,
   description: activeDemo.value?.desc,
 });
 </script>
