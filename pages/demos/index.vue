@@ -22,7 +22,7 @@ useSeoMeta({
         <img
           :src="demo.img"
           alt="Create Project"
-          class="absolute left-0 top-0 h-full w-full transition-all group-hover:scale-105 group-hover:opacity-85"
+          class="absolute left-0 top-0 h-full w-full object-cover transition-all group-hover:scale-105 group-hover:opacity-85"
         />
 
         <div

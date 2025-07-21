@@ -5,4 +5,5 @@ export interface DemoType {
   desc: string;
   img: any;
   shortcodeData: any;
+  isFlatsShortcode?: boolean;
 }

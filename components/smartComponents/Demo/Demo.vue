@@ -27,7 +27,8 @@ const constants = ref({
     getMeta("sold_color")?.meta_value || "rgba(219, 64, 64, 0.45)",
   PREVIEW_STROKE_COLOR:
     getMeta("stroke_color")?.meta_value || "rgba(0, 0, 0,  1)",
-  PREVIEW_PRIMARY_COLOR: getMeta("primary_color") || "rgba(45, 45, 46,  1)",
+  PREVIEW_PRIMARY_COLOR:
+    getMeta("primary_color")?.meta_value || "rgba(45, 45, 46,  1)",
   PREVIEW_STROKE_WIDTH: +getMeta("stroke_width")?.meta_value || 1,
   PREVIEW_BORDER_RADIUS: +getMeta("border_radius")?.meta_value || 0,
 });

@@ -385,6 +385,14 @@ const cotages = {
       created_at: "2025-03-19 17:08:25",
       updated_at: "2025-03-20 16:35:26",
     },
+    {
+      id: "1319",
+      project_id: "166",
+      meta_key: "border_radius",
+      meta_value: "20",
+      created_at: "2025-07-20 20:57:26",
+      updated_at: "2025-07-20 20:57:26",
+    },
 
     {
       id: "1031",
@@ -7997,7 +8005,7 @@ const blocks = {
       id: "1030",
       project_id: "141",
       meta_key: "primary_color",
-      meta_value: "rgba(36, 166, 127, 1)",
+      meta_value: "rgba(48, 116, 194, 1)",
       created_at: "2025-03-19 17:08:25",
       updated_at: "2025-03-20 16:35:26",
     },
@@ -8072,6 +8080,15 @@ demos.value = [
     desc,
     img: "/assets/demo/blocks.webp",
     shortcodeData: blocks,
+  },
+  {
+    id: 6,
+    title: "Flats",
+    slug: "flats",
+    desc,
+    img: "/assets/demo/flats.webp",
+    shortcodeData: cotages,
+    isFlatsShortcode: true,
   },
 ];
 </script>

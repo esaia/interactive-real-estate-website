@@ -27,6 +27,18 @@ const features = [
     poster: "poster-colors",
     isPremium: true,
   },
+
+  {
+    title: "Primary color",
+    description:
+      "Easily select and apply a primary color to your designs instantly. No need for custom coding—just pick and go!",
+    badge: "Simple and Effective",
+    video: "primaryColor",
+    poster: "poster-primary-color",
+    isPremium: false,
+    isGold: true,
+  },
+
   {
     title: "Run script on click of path",
     description:

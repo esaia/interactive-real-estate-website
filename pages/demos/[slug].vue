@@ -1,8 +1,14 @@
 <script setup lang="ts">
+import { FlatsList } from "ire-preview";
 import { pluginName } from "~/composable/constants";
 import type { DemoType } from "~/types/general";
 
 const demos = useState<DemoType[]>("demos");
+
+const irePlugin = {
+  is_premium: true,
+  is_gold: true,
+};
 
 const router = useRouter();
 const route = useRoute();
@@ -23,9 +29,16 @@ useSeoMeta({
 
 <template>
   <div class="container-fluid mt-10">
-    <demo
-      v-if="activeDemo && activeDemo.shortcodeData"
-      :shortcode-data="activeDemo.shortcodeData"
-    />
+    <template v-if="activeDemo">
+      <demo
+        v-if="!activeDemo.isFlatsShortcode && activeDemo.shortcodeData"
+        :key="activeDemo?.title"
+        :shortcode-data="activeDemo.shortcodeData"
+      />
+
+      <client-only v-else>
+        <FlatsList :data="activeDemo?.shortcodeData" :irePlugin="irePlugin" />
+      </client-only>
+    </template>
   </div>
 </template>
