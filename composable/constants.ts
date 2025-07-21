@@ -8,3 +8,6 @@ export const SITE_DESC =
 
 export const KEYWORDS =
   "interactive image, interactive building, interactive maps, interactive real estate, 3d map real estate, wp plugin, WordPress real estate plugin, interactive building visualization, floor plan, SVG, property hotspots, 3D property view, building layers, interactive buildings, apartments, real estate, floor plan, SVG, hotspots, SVG floor plan plugin";
+
+export const PREMIUM_PLAN_ID = "29444";
+export const GOLD_PLAN_ID = "32987";

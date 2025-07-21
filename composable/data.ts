@@ -130,6 +130,8 @@ export const FEATURES = [
   },
 ];
 
+// DEMOS
+
 const desc =
   "Explore live demos of Interactive Real Estate's powerful WordPress plugin. See clickable floor plans, property showcases, and interactive building maps in action before you buy.";
 
@@ -6917,7 +6919,7 @@ const bigHotel = {
       id: "1312",
       project_id: "166",
       meta_key: "path_color",
-      meta_value: "rgba(255, 255, 255, 0.3)",
+      meta_value: "rgba(255, 250, 250, 0.38)",
       created_at: "2025-07-20 20:53:26",
       updated_at: "2025-07-20 20:53:26",
     },
@@ -6933,7 +6935,7 @@ const bigHotel = {
       id: "1314",
       project_id: "166",
       meta_key: "reserved_color",
-      meta_value: "rgba(255, 247, 89, 0.53)",
+      meta_value: "rgba(255, 247, 89, 0.3)",
       created_at: "2025-07-20 20:53:26",
       updated_at: "2025-07-20 20:53:26",
     },
@@ -6941,7 +6943,7 @@ const bigHotel = {
       id: "1315",
       project_id: "166",
       meta_key: "sold_color",
-      meta_value: "rgba(219, 64, 64, 0.45)",
+      meta_value: "rgba(219, 64, 64, 0.3)",
       created_at: "2025-07-20 20:53:26",
       updated_at: "2025-07-20 20:53:26",
     },
@@ -8215,5 +8217,97 @@ export const DEMOS = [
     img: "/assets/demo/flats.webp",
     shortcodeData: cotages,
     isFlatsShortcode: true,
+  },
+];
+
+// PLANS
+
+const freeFeatures = [
+  {
+    title: "Create only <b class='bg-red-600 text-gray-50 px-2'> 1 project</b>",
+  },
+  { title: "Create <b> Unlimited </b> blocks " },
+  { title: "Create <b> Unlimited </b> floors " },
+  {
+    title: " Create only <b class='bg-red-600 text-gray-50 px-2'>25 flat</b>",
+  },
+  { title: "Open <b> modal</b> on click of path" },
+  { title: "Follow <b>link</b> on click of path" },
+  { title: "Change <b>area unit</b> m²/ft²" },
+  { title: "Run <b>script</b> on click of path", hasNotFeature: true },
+  { title: "Change <b>currency</b> symbol", hasNotFeature: true },
+  { title: "project <b>import/export</b>", hasNotFeature: true },
+  { title: "Open <b>reserved/sold</b> flats", hasNotFeature: true },
+  { title: "Customize svg path colors", hasNotFeature: true },
+  { title: "24/7 Support", hasNotFeature: true },
+  { title: "Access to <b>updates</b>", hasNotFeature: true },
+  { title: "License for: <b>1 website</b>", hasNotFeature: false },
+];
+
+const premiumFeatures = [
+  { title: "Create <b> Unlimited </b> projects " },
+  { title: "Create <b> Unlimited </b> blocks " },
+  { title: "Create <b> Unlimited </b> floors " },
+  { title: "Create <b> Unlimited </b> flats " },
+  { title: "Open <b> modal</b> on click of path" },
+  { title: "Follow <b>link</b> on click of path" },
+  { title: "Change <b>area unit</b> m²/ft²" },
+  { title: "Run <b>script</b> on click of path" },
+  { title: "Change <b>currency</b> symbol" },
+  { title: "project <b>import/export</b>" },
+  { title: "Open <b>reserved/sold</b> flats" },
+  { title: "Customize svg path colors" },
+  { title: "24/7 Support" },
+  { title: "Access to <b>updates</b>" },
+];
+
+const goldFeatures = [
+  { title: "All <b>Premium</b> features" },
+  { title: "Allow clients fill  <b>request callback</b> form" },
+  { title: "Read <b>form responses</b>" },
+  { title: "Create a <b>shareable</b> flat link" },
+  { title: "<b>Flats list</b> shortcode with filteres" },
+];
+
+const freePlan = {
+  title: "Free",
+  desc: "A great starting point for individuals or small projects to try out the basic features.",
+  price: ["$0", "$0", "$0"],
+  features: freeFeatures,
+};
+
+export const ANNUAL_PLAN = [
+  freePlan,
+
+  {
+    title: "Premium",
+    desc: "Ideal for growing businesses, offering unlimited projects and advanced customization tools for enhanced flexibility",
+    price: ["$99", "$449", "$899"],
+    features: premiumFeatures,
+  },
+
+  {
+    title: "Gold",
+    desc: "Perfect for professionals and businesses, offering full access to advanced features and premium support.",
+    price: ["$199", "$899", "$1899"],
+    features: goldFeatures,
+    isPopular: true,
+  },
+];
+
+export const LIFETIME_PLAN = [
+  freePlan,
+  {
+    title: "Premium",
+    desc: "Perfect for scaling businesses, providing unlimited projects and powerful customization options with a one-time payment.",
+    price: ["$499"],
+    features: premiumFeatures,
+  },
+  {
+    title: "Gold",
+    desc: "The definitive choice for long-term users, combining all premium features with a one-time payment.",
+    price: ["$599"],
+    features: goldFeatures,
+    isPopular: true,
   },
 ];
