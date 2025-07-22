@@ -8300,13 +8300,13 @@ export const LIFETIME_PLAN = [
   {
     title: "Premium",
     desc: "Perfect for scaling businesses, providing unlimited projects and powerful customization options with a one-time payment.",
-    price: ["$499"],
+    price: ["$399"],
     features: premiumFeatures,
   },
   {
     title: "Gold",
     desc: "The definitive choice for long-term users, combining all premium features with a one-time payment.",
-    price: ["$599"],
+    price: ["$499"],
     features: goldFeatures,
     isPopular: true,
   },
