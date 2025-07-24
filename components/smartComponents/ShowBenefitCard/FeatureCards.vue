@@ -6,6 +6,7 @@ defineProps<{
     badge: string;
     video: string;
     isPremium?: boolean;
+    isGold?: boolean;
   }[];
 }>();
 </script>
@@ -32,10 +33,19 @@ defineProps<{
         v-if="item?.isPremium"
         class="w-fit rounded-full bg-black p-2 text-xs"
       >
-        <p class="gradient-text inline-block uppercase">premium feature</p>
+        <p class="gradient-text inline-block uppercase">premium license</p>
+      </div>
+
+      <div
+        v-if="item?.isGold"
+        class="w-fit rounded-full bg-gradient-to-r from-red-500 to-orange-500 p-2 text-xs font-semibold"
+      >
+        <p class="inline-block font-semibold uppercase text-white">
+          gold license
+        </p>
       </div>
     </div>
-    <div class="relative flex-1 overflow-hidden rounded-xl">
+    <div class="relative flex-1 overflow-hidden rounded-xl pt-[35%]">
       <video
         playsinline
         loop
@@ -43,6 +53,7 @@ defineProps<{
         :autoplay="!$device.isMobileOrTablet"
         :controls="$device.isMobileOrTablet"
         :poster="`/assets/videos/poster-${item?.video}.webp`"
+        class="absolute left-0 top-0 h-full w-full object-cover"
       >
         <source :src="`/assets/videos/${item?.video}.webm`" type="video/webm" />
         <source :src="`/assets/videos/${item?.video}.mp4`" type="video/mp4" />

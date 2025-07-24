@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { pluginName } from "~/composable/constants";
+import { PLUGIN_NAME } from "~/composable/constants";
 import type { DemoType } from "~/types/general";
 const demos = useState<DemoType[]>("demos");
 
 useSeoMeta({
-  title: "Demos" + " | " + pluginName,
+  title: "Demos" + " | " + PLUGIN_NAME,
   description:
     "Explore live demos of Interactive Real Estate's powerful WordPress plugin. See clickable floor plans, property showcases, and interactive building maps in action before you buy.",
 });
@@ -22,7 +22,7 @@ useSeoMeta({
         <img
           :src="demo.img"
           alt="Create Project"
-          class="absolute left-0 top-0 h-full w-full transition-all group-hover:scale-105 group-hover:opacity-85"
+          class="absolute left-0 top-0 h-full w-full object-cover transition-all group-hover:scale-105 group-hover:opacity-85"
         />
 
         <div

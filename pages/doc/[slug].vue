@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import { pluginName } from "~/composable/constants";
-import type { DemoType } from "~/types/general";
-
-const demos = useState<DemoType[]>("demos");
-
 const route = useRoute();
 const router = useRouter();
 
@@ -72,8 +67,6 @@ useSeoMeta({
         <div class="my-20">
           <video-demo />
         </div>
-
-        <!-- <demo :shortcode-data="demos[1]?.shortcodeData" /> -->
       </div>
     </div>
   </div>

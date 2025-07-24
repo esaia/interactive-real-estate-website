@@ -1,87 +1,11 @@
 <script setup lang="ts">
 import { Checkout } from "@freemius/checkout";
+import { GOLD_PLAN_ID, PREMIUM_PLAN_ID } from "~/composable/constants";
+import { ANNUAL_PLAN, LIFETIME_PLAN } from "~/composable/data";
 
 defineProps<{
   hasH1?: boolean;
 }>();
-
-const wpPricePlanData = [
-  {
-    title: "Free",
-    desc: "A great starting point for individuals or small projects to try out the basic features.",
-    price: "",
-    features: [
-      {
-        title:
-          "Create only <b class='bg-red-600 text-gray-50 px-2'> 1 project</b>",
-      },
-      { title: "Create <b> Unlimited </b> blocks " },
-      { title: "Create <b> Unlimited </b> floors " },
-      {
-        title:
-          " Create only <b class='bg-red-600 text-gray-50 px-2'>25 flat</b>",
-      },
-      { title: "Open <b> modal</b> on click of path" },
-      { title: "Follow <b>link</b> on click of path" },
-      { title: "Run <b>script</b> on click of path", hasNotFeature: true },
-      { title: "Change <b>currency</b> symbol", hasNotFeature: true },
-      { title: "project <b>import/export</b>", hasNotFeature: true },
-      { title: "Customize svg path colors", hasNotFeature: true },
-      { title: "24/7 Support", hasNotFeature: true },
-      { title: "Access to <b>updates</b>", hasNotFeature: true },
-      { title: "License for: <b>1 website</b>", hasNotFeature: false },
-    ],
-    subscrption: "",
-  },
-  {
-    title: "Annual",
-    desc: "Perfect for professionals and businesses, offering full access to advanced features and premium support.",
-    price: ["$7", "$31", "$55"],
-    cent: "99",
-    features: [
-      { title: "Create <b> Unlimited </b> projects " },
-      { title: "Create <b> Unlimited </b> blocks " },
-      { title: "Create <b> Unlimited </b> floors " },
-      { title: "Create <b> Unlimited </b> flats " },
-      { title: "Open <b> modal</b> on click of path" },
-      { title: "Follow <b>link</b> on click of path" },
-      { title: "Run <b>script</b> on click of path" },
-      { title: "Change <b>currency</b> symbol" },
-      { title: "project <b>import/export</b>" },
-      { title: "Customize svg path colors" },
-      { title: "24/7 Support" },
-      { title: "Access to <b>updates</b>" },
-    ],
-    subscrption: "/ month",
-    bottomText:
-      "<p>All sales are handled by <a href='https://freemius.com/' target='_blank'>Freemius</a> , Inc., as the Merchant of Record (MoR). Try logging in to your <a href='/account'> account</a>, where you'll also find the necessary information.</p>",
-  },
-  {
-    title: "Lifetime",
-    desc: "The ultimate plan for long-term users, providing all premium features with a one-time payment.",
-    price: ["$199", "$849"],
-
-    cent: "99",
-
-    features: [
-      { title: "Create Unlimited <b> projects </b>" },
-      { title: "Create <b> Unlimited </b> blocks " },
-      { title: "Create <b> Unlimited </b> floors " },
-      { title: "Create <b> Unlimited </b> flats" },
-      { title: "Open <b> modal</b> on click of path" },
-      { title: "Follow <b>link</b> on click of path" },
-      { title: "Run <b>script</b> on click of path" },
-      { title: "Change <b>currency</b> symbol" },
-      { title: "project <b>import/export</b>" },
-      { title: "Customize svg path colors" },
-      { title: "24/7 Support" },
-      { title: "Access to <b>updates</b>" },
-    ],
-    subscrption: "/ once",
-    bottomText:
-      "<p>All sales are handled by <a href='https://freemius.com/' target='_blank'>Freemius</a> , Inc., as the Merchant of Record (MoR). Try logging in to your <a href='/account'> account</a>, where you'll also find the necessary information.</p>",
-  },
-];
 
 // {
 //   "user": {
@@ -132,18 +56,21 @@ const wpPricePlanData = [
 // }
 
 const isServicesTab = ref(false);
+const isLifetime = ref(false);
 
-const buyPackage = (planName: string, licenses: string) => {
-  const isLifetime = planName === "Lifetime";
+const plansData = computed(() => {
+  return isLifetime.value ? LIFETIME_PLAN : ANNUAL_PLAN;
+});
 
+const buyPackage = (licenseType: string, licenses: string) => {
   const conf = useRuntimeConfig();
 
-  const { fsProductId: product_id, fsPublicKey: public_key } = conf.app;
+  const { fsProductId: product_id, fsPublicKey: public_key } = conf.public;
 
   const handler = new Checkout({
     public_key,
     product_id,
-    plan_id: "29444",
+    plan_id: licenseType === "Premium" ? PREMIUM_PLAN_ID : GOLD_PLAN_ID,
   });
 
   if (!handler) return;
@@ -151,7 +78,7 @@ const buyPackage = (planName: string, licenses: string) => {
   handler.open({
     name: "Interactive real estate",
     licenses,
-    billing_cycle: isLifetime ? "lifetime" : "annual",
+    billing_cycle: isLifetime.value ? "lifetime" : "annual",
     show_reviews: true,
 
     purchaseCompleted: (response: any) => {
@@ -226,11 +153,18 @@ const buyPackage = (planName: string, licenses: string) => {
         </p>
       </div>
 
-      <div class="mt-14 flex flex-col items-start gap-4 lg:flex-row">
-        <pricing-card
-          v-for="(item, i) in wpPricePlanData"
+      <div class="desc flex w-full items-center justify-center gap-4 py-10">
+        <p class="cursor-pointer" @click="isLifetime = false">Annual</p>
+        <switcher v-model="isLifetime" />
+        <p class="cursor-pointer" @click="isLifetime = true">Lifetime</p>
+      </div>
+
+      <div class="flex flex-col items-start gap-4 lg:grid lg:grid-cols-3">
+        <plan-card
+          v-for="(item, i) in plansData"
           :key="i"
           :item="item"
+          :license-type="isLifetime ? 'lifetime' : 'annual'"
           @handle-click-plan="buyPackage"
         />
       </div>

@@ -175,7 +175,7 @@ const circleMouseMove = (event) => {
 };
 
 const onCanvasMouseMove = throttle((event) => {
-  if (!pan.value) {
+  if (!pan.value && svgCanvas.value) {
     if (event.target.nodeName === "path" && !points.value?.length) {
       svgCanvas.value.style.cursor = "pointer";
     } else {

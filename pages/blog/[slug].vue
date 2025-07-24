@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { siteBaseUrl } from "~/composable/constants";
+import { SITE_BASE_URL } from "~/composable/constants";
 import { formatBlogDate, shareInPopup } from "~/composable/helpers";
 
 const config = useRuntimeConfig();
 
-const baseUrl = config.app.siteUrl || siteBaseUrl;
+const baseUrl = config.app.siteUrl || SITE_BASE_URL;
 
 const route = useRoute();
 const router = useRouter();
