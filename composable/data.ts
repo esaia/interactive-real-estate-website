@@ -6975,7 +6975,7 @@ const bigHotel = {
       id: "1319",
       project_id: "166",
       meta_key: "border_radius",
-      meta_value: "10",
+      meta_value: "40",
       created_at: "2025-07-20 20:57:26",
       updated_at: "2025-07-20 20:57:26",
     },
