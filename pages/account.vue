@@ -13,11 +13,11 @@ const account = ref<HTMLDivElement | null>(null);
 onMounted(() => {
   const conf = useRuntimeConfig();
 
-  const { FS_store_PUBLIC_KEY } = conf.public;
+  const { fsStorePublicKey } = conf.public;
 
   FS?.Members?.configure({
     store_id: 8007,
-    public_key: FS_store_PUBLIC_KEY,
+    public_key: fsStorePublicKey,
     left: "0",
     right: "0",
     top: "195px",
