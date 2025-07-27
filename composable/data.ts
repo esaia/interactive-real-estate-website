@@ -4440,6 +4440,7 @@ const bigHotel = {
       teaser:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s",
       project_id: "166",
+
       image_2d: [
         {
           url: "/assets/demo/floor_2d_1.webp",
@@ -4447,10 +4448,10 @@ const bigHotel = {
       ],
       image_3d: [
         {
-          url: "/assets/demo/flat_3d-2.webp",
+          url: "/assets/demo/flat_3d-1.webp",
         },
         {
-          url: "/assets/demo/floor_3d_1.webp",
+          url: "/assets/demo/flat_3d-2.webp",
         },
       ],
       gallery: null,
@@ -4484,10 +4485,10 @@ const bigHotel = {
       ],
       image_3d: [
         {
-          url: "/assets/demo/flat_3d-1.webp",
+          url: "/assets/demo/flat_3d-2.webp",
         },
         {
-          url: "/assets/demo/flat_3d-2.webp",
+          url: "/assets/demo/floor_3d_1.webp",
         },
       ],
       gallery: null,
