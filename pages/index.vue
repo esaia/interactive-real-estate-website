@@ -2,8 +2,6 @@
 import { FEATURES } from "~/composable/data";
 import type { DemoType } from "~/types/general";
 
-const features = FEATURES;
-
 const demos = useState<DemoType[]>("demos");
 </script>
 
@@ -15,7 +13,7 @@ const demos = useState<DemoType[]>("demos");
       <demo :shortcodeData="demos[2].shortcodeData" />
     </div>
 
-    <feature-cards :features="features" />
+    <feature-cards :features="FEATURES" />
 
     <review />
 

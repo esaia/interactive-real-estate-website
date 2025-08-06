@@ -45,7 +45,9 @@ defineProps<{
         </p>
       </div>
     </div>
-    <div class="relative flex-1 overflow-hidden rounded-xl pt-[35%]">
+    <div
+      class="relative w-full flex-1 overflow-hidden rounded-xl pt-[60%] lg:pt-[35%]"
+    >
       <video
         playsinline
         loop
