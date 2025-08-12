@@ -3,6 +3,8 @@ const route = useRoute();
 
 const openDropdown = ref(false);
 const scrolled = ref(false);
+const isScrollingUp = ref(true);
+const lastScrollY = ref(0);
 
 const menu = [
   { title: "Home", link: "/" },
@@ -21,7 +23,16 @@ const menu = [
 ];
 
 const handleScroll = () => {
-  scrolled.value = window.scrollY > 10;
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY.value && currentScrollY > 10) {
+    isScrollingUp.value = false;
+  } else if (currentScrollY < lastScrollY.value || currentScrollY <= 10) {
+    isScrollingUp.value = true;
+  }
+
+  scrolled.value = currentScrollY > 10;
+  lastScrollY.value = currentScrollY;
 };
 
 watch(
@@ -30,6 +41,7 @@ watch(
     openDropdown.value = false;
   },
 );
+
 onMounted(() => {
   handleScroll();
   window.addEventListener("scroll", handleScroll);
@@ -41,12 +53,18 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <header class="fixed left-0 top-0 z-30 w-full transition-colors duration-200">
+  <header
+    class="fixed left-0 top-0 z-30 w-full transition-all duration-300 ease-in-out"
+    :class="{
+      'translate-y-0': isScrollingUp || !scrolled,
+      '-translate-y-full': !isScrollingUp && scrolled,
+    }"
+  >
     <div
       class="absolute h-full w-full bg-white transition-all duration-300 ease-in-out"
       :class="{
-        'translate-y-0 shadow-sm': scrolled,
-        '-translate-y-full': !scrolled,
+        'opacity-100 shadow-sm': scrolled,
+        'opacity-0': !scrolled,
       }"
     />
     <div class="container-fluid relative flex justify-between py-2">
