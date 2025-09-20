@@ -63,7 +63,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div
+    :class="{
+      '[&_.interactive-real-estate_img]:!rounded-2xl md:[&_.interactive-real-estate_img]:!rounded-[40px]':
+        props.shortcodeData.project.id === '166',
+    }"
+  >
     <div
       v-if="!isClient"
       class="interactive-real-estate ire-relative ire-h-full ire-select-none ire-overflow-hidden pt-3"
