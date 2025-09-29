@@ -77,7 +77,7 @@ const openVideoModal = ref(false);
         </div>
 
         <div class="relative w-full max-w-screen-2xl">
-          <div class="pt-[40%]">
+          <div class="pt-[70%] lg:pt-[40%]">
             <iframe
               src="https://player.vimeo.com/video/1066104737?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
               frameborder="0"
