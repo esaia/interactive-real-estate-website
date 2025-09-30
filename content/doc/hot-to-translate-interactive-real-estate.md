@@ -46,6 +46,8 @@ Follow these steps to translate the Interactive Real Estate plugin using Loco Tr
    - Preview your site to confirm that the plugin’s text appears in the translated language.
    - If some strings are missing, revisit Loco Translate to ensure all relevant strings are translated.
 
+![create project](/assets/doc/loco-translate.webp)
+
 ## Best Practices
 
 - **Keep Translations Accurate**: Ensure translations are contextually correct and maintain the intended meaning.
