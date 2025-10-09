@@ -6477,7 +6477,7 @@ const appartments = {
       id: "1400",
       project_id: "169",
       meta_key: "remove_watermark",
-      meta_value: "false",
+      meta_value: "true",
       created_at: "2025-10-09 10:37:51",
       updated_at: "2025-10-09 10:37:51",
     },
