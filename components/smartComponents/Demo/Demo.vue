@@ -67,6 +67,9 @@ onMounted(() => {
     :class="{
       '[&_.interactive-real-estate_img]:!rounded-2xl md:[&_.interactive-real-estate_img]:!rounded-[40px]':
         props.shortcodeData.project.id === '166',
+
+      'demo-169 [&_.irep-tooltip]:rounded-lg [&_.irep-tooltip]:bg-[#40544D]':
+        props.shortcodeData.project.id === '169',
     }"
   >
     <div
@@ -95,5 +98,9 @@ onMounted(() => {
 .interactive-real-estate img {
   border-radius: var(--border-radius);
   overflow: hidden;
+}
+
+.demo-169 .irep-tooltip-2__flat-number {
+  min-width: max-content !important;
 }
 </style>

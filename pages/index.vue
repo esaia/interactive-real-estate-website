@@ -3,6 +3,8 @@ import { FEATURES } from "~/composable/data";
 import type { DemoType } from "~/types/general";
 
 const demos = useState<DemoType[]>("demos");
+
+const num = useState("num", () => [0, 2, 6][Math.floor(Math.random() * 3)]);
 </script>
 
 <template>
@@ -10,7 +12,7 @@ const demos = useState<DemoType[]>("demos");
     <main-banner />
 
     <div class="container-fluid">
-      <demo :shortcodeData="demos[2].shortcodeData" />
+      <demo :shortcodeData="demos[num].shortcodeData" />
     </div>
 
     <feature-cards :features="FEATURES" />
