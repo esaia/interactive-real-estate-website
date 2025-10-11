@@ -6,9 +6,7 @@ const openVideoModal = ref(false);
 
 <template>
   <div class="container-fluid">
-    <div
-      class="mx-auto max-w-screen-xl px-4 pb-16 pt-8 text-center lg:px-2 lg:pb-32 lg:pt-32"
-    >
+    <div class="mx-auto max-w-screen-xl px-4 py-16 text-center lg:px-2">
       <div class="mb-4 flex items-center justify-center gap-3 lg:mb-8">
         <lightning-icon class="h-14 w-14" />
       </div>
