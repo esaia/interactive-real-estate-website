@@ -5,6 +5,7 @@ import type { DemoType } from "~/types/general";
 const demos = useState<DemoType[]>("demos");
 
 const num = useState("num", () => [0, 2, 6][Math.floor(Math.random() * 3)]);
+const vimeoLoaded = useState<boolean>("vimeoLoaded");
 </script>
 
 <template>
@@ -22,7 +23,7 @@ const num = useState("num", () => [0, 2, 6][Math.floor(Math.random() * 3)]);
     <div
       class="container-fluid mx-auto flex max-w-[989px] items-center justify-center pt-20"
     >
-      <video-demo />
+      <video-demo v-if="vimeoLoaded" />
     </div>
 
     <plan-cards />

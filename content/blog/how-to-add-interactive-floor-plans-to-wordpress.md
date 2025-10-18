@@ -1,6 +1,6 @@
 ---
 metaTitle: How to Add Interactive Floor Plans to WordPress (Step-by-Step)
-metaDesc: 123123
+metaDesc: Interactive floor plans are the best option for how construction companies are showcasing properties online
 image:
   src: /assets/blog/floor-plan.png
   alt: Floor plan - wordpress plugin.

@@ -10,13 +10,12 @@ import { FAQ } from "~/composable/data";
 
 const config = useRuntimeConfig();
 const faq = useState<any>("faq");
+const vimeoLoaded = useState<boolean>("vimeoLoaded");
 
 const baseUrl = config.app.siteUrl || SITE_BASE_URL;
 const route = useRoute();
 
 faq.value = FAQ;
-
-const vimeoScriptLoaded = ref(false);
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -205,6 +204,19 @@ useHead({
       content: "index, follow, max-image-preview:large",
     },
   ],
+});
+
+const handleScroll = () => {
+  if (vimeoLoaded.value) return;
+
+  vimeoLoaded.value = true;
+};
+onMounted(() => {
+  window.addEventListener("scroll", handleScroll);
+});
+
+onBeforeUnmount(() => {
+  window.removeEventListener("scroll", handleScroll);
 });
 </script>
 
