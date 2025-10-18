@@ -70,7 +70,7 @@
         </p>
 
         <div class="flex items-center gap-2">
-          <nuxt-link
+          <!-- <nuxt-link
             to="https://www.youtube.com/@interactiverealestate"
             target="_blank"
             class="rounded-full bg-white p-2 transition-all hover:scale-105"
@@ -79,10 +79,10 @@
               class="h-6 w-6 cursor-pointer [&_path]:!fill-black"
               aria-label="youtube icon"
             />
-          </nuxt-link>
+          </nuxt-link> -->
 
           <nuxt-link
-            to="https://x.com/ireplugin"
+            to="https://x.com/esaia__"
             target="_blank"
             class="rounded-full bg-white p-2 transition-all hover:scale-105"
           >

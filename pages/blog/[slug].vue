@@ -23,12 +23,15 @@ const { data: item } = await useAsyncData(route.path, async () => {
   }
 });
 
-const { data: similarArticles } = await useAsyncData("similar-blogs", () => {
-  return queryCollection("blog")
-    .where("path", "NOT LIKE", route.path)
-    .limit(2)
-    .all();
-});
+const { data: similarArticles } = await useAsyncData(
+  `similar-blogs-${route.path}`,
+  () => {
+    return queryCollection("blog")
+      .where("path", "NOT LIKE", route.path)
+      .limit(2)
+      .all();
+  },
+);
 
 const url = ref("");
 

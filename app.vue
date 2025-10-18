@@ -6,7 +6,8 @@ import {
   SITE_DESC,
   KEYWORDS,
 } from "./composable/constants";
-import { FAQ } from "./composable/data";
+import { FAQ } from "~/composable/data";
+// import { useLazyVimeoScript } from "~/composable/useLazyVimeoScript";
 
 const config = useRuntimeConfig();
 const faq = useState<any>("faq");
@@ -15,6 +16,8 @@ const baseUrl = config.app.siteUrl || SITE_BASE_URL;
 const route = useRoute();
 
 faq.value = FAQ;
+
+const vimeoScriptLoaded = ref(false);
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -31,8 +34,7 @@ const faqSchema = {
 
 useHead({
   script: [
-    { src: "https://player.vimeo.com/api/player.js", async: true },
-
+    // { src: "https://player.vimeo.com/api/player.js", async: true },
     {
       src: "https://www.googletagmanager.com/gtag/js?id=AW-16923193829",
       async: true,
@@ -205,6 +207,22 @@ useHead({
     },
   ],
 });
+
+// const handleBodyScroll = () => {
+//   if (vimeoScriptLoaded.value) return;
+
+//   loadVimeoScript();
+
+//   vimeoScriptLoaded.value = true;
+// };
+
+// onMounted(() => {
+//   window.addEventListener("scroll", handleBodyScroll);
+// });
+
+// onUnmounted(() => {
+//   window.removeEventListener("scroll", handleBodyScroll);
+// });
 </script>
 
 <template>

@@ -87,6 +87,7 @@
   .editor {
     @apply text-gray-800 [&_a]:text-blue-800 hover:[&_a]:underline [&_li]:py-1 [&_ul]:ml-5 [&_ul]:list-disc [&_ul]:pl-4 [&_ul]:lg:pl-0;
   }
+
   .svg-canvas-container {
     @apply absolute left-0 top-0 h-full w-full cursor-crosshair [&_.first-circle]:cursor-pointer;
   }
