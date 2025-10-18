@@ -107,9 +107,9 @@ onBeforeUnmount(() => {
       </div>
 
       <div class="z-[3] flex items-center gap-5">
-        <nuxt-link to="/account" class="hidden lg:block">
+        <a href="/account" class="hidden lg:block">
           <base-button title="Account" type="2" />
-        </nuxt-link>
+        </a>
 
         <nuxt-link
           to="https://wordpress.org/plugins/interactive-real-estate/"

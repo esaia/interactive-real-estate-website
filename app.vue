@@ -7,7 +7,6 @@ import {
   KEYWORDS,
 } from "./composable/constants";
 import { FAQ } from "~/composable/data";
-// import { useLazyVimeoScript } from "~/composable/useLazyVimeoScript";
 
 const config = useRuntimeConfig();
 const faq = useState<any>("faq");
@@ -207,22 +206,6 @@ useHead({
     },
   ],
 });
-
-// const handleBodyScroll = () => {
-//   if (vimeoScriptLoaded.value) return;
-
-//   loadVimeoScript();
-
-//   vimeoScriptLoaded.value = true;
-// };
-
-// onMounted(() => {
-//   window.addEventListener("scroll", handleBodyScroll);
-// });
-
-// onUnmounted(() => {
-//   window.removeEventListener("scroll", handleBodyScroll);
-// });
 </script>
 
 <template>

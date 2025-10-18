@@ -80,8 +80,8 @@ onMounted(() => {
       </div>
     </div>
 
-    <nuxt-link to="/account" class="mt-3">
+    <a href="/account" class="mt-3">
       <base-button title="Account" type="2" />
-    </nuxt-link>
+    </a>
   </div>
 </template>
