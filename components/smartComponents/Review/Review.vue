@@ -6,17 +6,11 @@ const reviews = [
       "For the price, this is an amazing wordpress plugin. Does exactly what it promises with no issues.",
   },
 
-  {
-    name: "Emily",
-    review:
-      "It is the <span>best investment</span> i made in months. It's simple and works, exactly what i was searching to create interactive images in my wordpress website.",
-  },
-
-  {
-    name: "Steven",
-    review:
-      "This exceeded all my expectations. The <span>quality is outstanding</span> and it arrived sooner than expected.",
-  },
+  // {
+  //   name: "Emily",
+  //   review:
+  //     "It is the <span>best investment</span> i made in months. It's simple and works, exactly what i was searching to create interactive images in my wordpress website.",
+  // },
 
   // {
   //   name: "Sarah ",
@@ -35,6 +29,20 @@ const reviews = [
       "One of the biggest advantages is the <span>professional online help</span> center provided by the author, where you can get quick and comprehensive support on any topic related to the plugin. Whether you need technical assistance, documentation, or advice on advanced features - it's all there.",
     link: "https://wordpress.org/support/topic/powerful-and-user-friendly-real-estate-plugin-with-excellent-support/",
   },
+
+  {
+    name: "Steven",
+    review:
+      "This exceeded all my expectations. The <span>quality is outstanding</span> and it arrived sooner than expected.",
+  },
+
+  {
+    name: "smbldigital",
+    review:
+      "This plugin has been a great addition to our site — it’s clean, interactive, and works exactly as we needed. It made it easy to create a visual layout that users can click through intuitively, and it looks professional across all devices. What really stood out was the <span>developer support</span>. Any time we had a question or needed help, the response was quick and helpful. It’s rare to find such reliable support these days. Highly recommended!",
+    link: "https://wordpress.org/support/topic/excellent-functionality-and-support-10/",
+  },
+
   {
     name: "alexvan22",
     review:
@@ -68,11 +76,9 @@ const reviews = [
 
         <div
           v-html="review.review"
-          class="[&_span]:py-[2px ] mt-4 text-gray-600 [&_span]:inline-block [&_span]:bg-red-200 [&_span]:px-1"
+          class="mt-4 text-gray-800 [&_span]:inline-block [&_span]:rounded-full [&_span]:bg-red-400 [&_span]:px-1 [&_span]:py-[2px] [&_span]:italic [&_span]:text-white"
         />
-        <!-- <p class="mt-4 text-gray-600">
-          {{ review.review }}
-        </p> -->
+
         <nuxt-link
           v-if="review?.link"
           :to="review.link"
