@@ -76,7 +76,7 @@ const reviews = [
 
         <div
           v-html="review.review"
-          class="mt-4 text-gray-800 [&_span]:inline-block [&_span]:rounded-full [&_span]:bg-red-400 [&_span]:px-1 [&_span]:py-[2px] [&_span]:italic [&_span]:text-white"
+          class="mt-4 text-gray-800 [&_span]:inline-block [&_span]:rounded-lg [&_span]:bg-primary [&_span]:px-1 [&_span]:py-[2px] [&_span]:font-medium [&_span]:italic [&_span]:text-white"
         />
 
         <nuxt-link
