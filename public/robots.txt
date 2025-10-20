@@ -5,4 +5,4 @@ Disallow: /*.webp$
 Disallow: /*?*
 
 
-Sitemap: http://ireplugin.com/sitemap.xml
+Sitemap: https://ireplugin.com/sitemap.xml
