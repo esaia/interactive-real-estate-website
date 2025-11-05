@@ -1,4 +1,20 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const links = [
+  { title: "Demos", url: "/demos" },
+  { title: "Module", url: "/module" },
+  { title: "Affiliate Program", url: "/affiliate" },
+  {
+    title: "Change Log",
+    url: "https://wordpress.org/plugins/interactive-real-estate/#developers",
+    targetBlank: true,
+  },
+  {
+    title: "WordPress Plugin Development",
+    url: "https://wpvue.dev/",
+    targetBlank: true,
+  },
+];
+</script>
 
 <template>
   <footer class="bg-gray-50">
@@ -34,28 +50,14 @@
             Pricing
           </nuxt-link> -->
 
-          <nuxt-link to="/doc/intro" class="text-sm hover:underline">
-            Documentation
-          </nuxt-link>
-
-          <nuxt-link to="/demos" class="text-sm hover:underline">
-            Demos
-          </nuxt-link>
-
-          <nuxt-link to="/module" class="text-sm hover:underline">
-            Module
-          </nuxt-link>
-
-          <nuxt-link to="/affiliate" class="text-sm hover:underline">
-            affiliate program
-          </nuxt-link>
-
           <nuxt-link
-            to="https://wordpress.org/plugins/interactive-real-estate/#developers"
-            target="_blank"
+            v-for="item in links"
+            :key="item.url"
+            :to="item.url"
+            :target="item.targetBlank ? '_blank' : ''"
             class="text-sm hover:underline"
           >
-            Change Log
+            {{ item.title }}
           </nuxt-link>
         </div>
       </div>

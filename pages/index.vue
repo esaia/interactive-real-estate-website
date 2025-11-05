@@ -16,6 +16,8 @@ const vimeoLoaded = useState<boolean>("vimeoLoaded");
       <demo :shortcodeData="demos[num].shortcodeData" />
     </div>
 
+    <course />
+
     <feature-cards :features="FEATURES" />
 
     <review />
