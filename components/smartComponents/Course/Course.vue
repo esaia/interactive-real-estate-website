@@ -6,7 +6,7 @@
     <img
       src="/assets/images/wp-course.webp"
       alt="WordPress plugin development"
-      class="mx-auto my-8 rounded-lg md:rounded-2xl"
+      class="img-shadow mx-auto my-8 rounded-lg md:rounded-2xl"
     />
 
     <p class="text-lg [&_span]:bg-amber-100 [&_span]:underline">

@@ -91,6 +91,10 @@
   .svg-canvas-container {
     @apply absolute left-0 top-0 h-full w-full cursor-crosshair [&_.first-circle]:cursor-pointer;
   }
+
+  .img-shadow {
+    @apply rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0,0.8)];
+  }
 }
 
 .router-link-exact-active {
