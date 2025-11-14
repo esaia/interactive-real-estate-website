@@ -6608,14 +6608,14 @@ export const ANNUAL_PLAN = [
   {
     title: "Premium",
     desc: "Ideal for growing businesses, offering unlimited projects and advanced customization tools for enhanced flexibility",
-    price: ["$99", "$449", "$899"],
+    price: ["99", "449", "899"],
     features: premiumFeatures,
   },
 
   {
     title: "Gold",
     desc: "Perfect for professionals and businesses, offering full access to advanced features and premium support.",
-    price: ["$199", "$899", "$1899"],
+    price: ["199", "899", "1899"],
     features: goldFeatures,
     isPopular: true,
   },
@@ -6626,13 +6626,13 @@ export const LIFETIME_PLAN = [
   {
     title: "Premium",
     desc: "Perfect for scaling businesses, providing unlimited projects and powerful customization options with a one-time payment.",
-    price: ["$399"],
+    price: ["399"],
     features: premiumFeatures,
   },
   {
     title: "Gold",
     desc: "The definitive choice for long-term users, combining all premium features with a one-time payment.",
-    price: ["$499"],
+    price: ["499"],
     features: goldFeatures,
     isPopular: true,
   },

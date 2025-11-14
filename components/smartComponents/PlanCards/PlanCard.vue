@@ -6,7 +6,7 @@ const props = defineProps<{
 }>();
 
 defineEmits<{
-  (e: "handleClickPlan", licenseType: string, licenseCount: string): void;
+  (e: "handleClickPlan", licenseType: string, licenseCount: number): void;
 }>();
 
 const licenseCount = ref("1");
@@ -90,26 +90,79 @@ watch(
           v-else
           title="Buy now"
           :type="item?.isPopular ? '1' : '2'"
-          @click="$emit('handleClickPlan', item.title, licenseCount)"
+          @click="$emit('handleClickPlan', item.title, +licenseCount)"
         />
       </div>
 
-      <div
+      <!-- <div
         class="my-4 flex items-end justify-start gap-2"
         :class="{ '!items-center': item.cent }"
       >
         <p class="text-5xl font-medium tracking-tight text-gray-800 lg:h-12">
-          <span v-if="isAnnual || isLifetime">
-            {{ item?.price?.[priceIndex] }}
-          </span>
-          <span v-else>
-            {{ item?.price }}
+          <span>
+            ${{ item?.price?.[priceIndex] }}
           </span>
         </p>
         <span class="text-xs text-gray-600">
           <p v-if="!isFree">.99</p>
           <p>{{ isAnnual ? "/ year" : "/ once" }}</p>
         </span>
+      </div> -->
+
+      <div v-if="!isFree">
+        <div
+          class="relative my-4 flex w-fit items-end justify-start gap-2 text-gray-500"
+          :class="{ '!items-center': item.cent }"
+        >
+          <p>normally</p>
+          <p class="tracking-tight">
+            <span> {{ item?.price?.[priceIndex] }}.99 </span>
+          </p>
+
+          <span
+            class="absolute left-0 top-[12px] h-[2px] w-full rounded-full bg-red-500/40"
+          />
+        </div>
+
+        <div
+          class="my-4 flex flex-wrap items-end justify-start gap-2"
+          :class="{ '!items-center': item.cent }"
+        >
+          <p class="text-5xl font-medium tracking-tight text-gray-800 lg:h-12">
+            <span>
+              ${{ Math.round(Number(item?.price?.[priceIndex]) * 0.75) }}
+            </span>
+          </p>
+          <span class="text-md text-gray-600">
+            <p v-if="!isFree">.99</p>
+            <p>{{ isAnnual ? "/ year" : "/ once" }}</p>
+          </span>
+
+          <span class="animate-pulse bg-black px-1 text-white">
+            BLACK FRIDAY OFFER
+          </span>
+        </div>
+        <span class="bg-yellow-200 px-2">
+          SAVING: ${{
+            Number(item?.price?.[priceIndex]) -
+            Math.round(Number(item?.price?.[priceIndex]) * 0.75)
+          }}
+        </span>
+      </div>
+
+      <div v-else class="lg:h-[128px]">
+        <div class="lg:h-[22.5px]"></div>
+        <div
+          class="my-4 flex items-end justify-start gap-2"
+          :class="{ '!items-center': item.cent }"
+        >
+          <p class="text-5xl font-medium tracking-tight text-gray-800 lg:h-12">
+            <span> $0 </span>
+          </p>
+          <span class="text-xs text-gray-600">
+            <p v-if="!isFree">.99</p>
+          </span>
+        </div>
       </div>
 
       <div class="my-5 flex flex-col gap-3 text-gray-800">

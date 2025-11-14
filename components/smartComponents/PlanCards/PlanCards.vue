@@ -62,7 +62,7 @@ const plansData = computed(() => {
   return isLifetime.value ? LIFETIME_PLAN : ANNUAL_PLAN;
 });
 
-const buyPackage = (licenseType: string, licenses: string) => {
+const buyPackage = (licenseType: string, licenses: number) => {
   const conf = useRuntimeConfig();
 
   const { fsProductId: product_id, fsPublicKey: public_key } = conf.public;
@@ -71,6 +71,7 @@ const buyPackage = (licenseType: string, licenses: string) => {
     public_key,
     product_id,
     plan_id: licenseType === "Premium" ? PREMIUM_PLAN_ID : GOLD_PLAN_ID,
+    coupon: "BLACK_FRIDAY_2025",
   });
 
   if (!handler) return;
@@ -110,11 +111,7 @@ const buyPackage = (licenseType: string, licenses: string) => {
 </script>
 
 <template>
-  <div id="pricing" class="container-fluid padding-top">
-    <!-- <h2 class="title text-center">
-      Get Interactive Real Estate <span class="gradient-text"> Premium</span>
-    </h2> -->
-
+  <div id="pricing" class="container-fluid pt-12 lg:pt-16">
     <component :is="hasH1 ? 'h1' : 'h2'" class="title text-center">
       Get Interactive Real Estate <span class="gradient-text">Premium</span>
     </component>
@@ -142,6 +139,10 @@ const buyPackage = (licenseType: string, licenses: string) => {
       >
         Services
       </div>
+    </div>
+
+    <div class="mx-auto max-w-[400px]">
+      <img src="/assets/images/black-friday.webp" />
     </div>
 
     <div v-if="!isServicesTab">
@@ -263,8 +264,7 @@ const buyPackage = (licenseType: string, licenses: string) => {
           We're here to help!
         </p>
       </div>
-
-      <money-back />
     </div>
+    <money-back />
   </div>
 </template>

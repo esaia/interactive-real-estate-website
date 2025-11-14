@@ -9,7 +9,7 @@ const links = [
     targetBlank: true,
   },
   {
-    title: "WordPress Plugin Development",
+    title: "WordPress Plugin Development Course",
     url: "https://wpvue.dev/",
     targetBlank: true,
   },
@@ -33,7 +33,7 @@ const links = [
             <img
               src="/assets/images/esaia.webp"
               alt=""
-              class="aspect-square h-[60px] w-[60px] object-cover"
+              class="aspect-square h-[60px] w-[60px] rounded-md object-cover"
             />
 
             <p class="max-w-[420px] text-sm text-gray-500">
@@ -111,6 +111,17 @@ const links = [
             class="rounded-full bg-white p-2 transition-all hover:scale-105"
           >
             <product-hunt-icon
+              class="h-6 w-6 cursor-pointer"
+              aria-label="wordpress icon"
+            />
+          </nuxt-link>
+
+          <nuxt-link
+            to="https://github.com/esaia"
+            target="_blank"
+            class="rounded-full bg-white p-2 transition-all hover:scale-105"
+          >
+            <github-icon
               class="h-6 w-6 cursor-pointer"
               aria-label="wordpress icon"
             />
