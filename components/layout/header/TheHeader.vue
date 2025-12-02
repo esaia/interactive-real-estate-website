@@ -54,7 +54,7 @@ onBeforeUnmount(() => {
 
 <template>
   <header
-    class="left-0 top-0 z-30 w-full translate-y-12 transition-all duration-300 ease-in-out"
+    class="fixed left-0 top-0 z-30 w-full transition-all duration-300 ease-in-out"
     :class="{
       'translate-y-0': isScrollingUp || !scrolled,
       '-translate-y-full': !isScrollingUp && scrolled,

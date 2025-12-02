@@ -71,7 +71,7 @@ const buyPackage = (licenseType: string, licenses: number) => {
     public_key,
     product_id,
     plan_id: licenseType === "Premium" ? PREMIUM_PLAN_ID : GOLD_PLAN_ID,
-    coupon: "BLACK_FRIDAY_2025",
+    // coupon: "BLACK_FRIDAY_2025",
   });
 
   if (!handler) return;
@@ -139,10 +139,6 @@ const buyPackage = (licenseType: string, licenses: number) => {
       >
         Services
       </div>
-    </div>
-
-    <div class="mx-auto max-w-[400px]">
-      <img src="/assets/images/black-friday.webp" />
     </div>
 
     <div v-if="!isServicesTab">

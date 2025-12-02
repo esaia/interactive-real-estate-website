@@ -6598,7 +6598,7 @@ const goldFeatures = [
 const freePlan = {
   title: "Free",
   desc: "A great starting point for individuals or small projects to try out the basic features.",
-  price: ["$0", "$0", "$0"],
+  price: ["0", "0", "0"],
   features: freeFeatures,
 };
 
