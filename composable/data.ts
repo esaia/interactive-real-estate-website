@@ -559,6 +559,43 @@ const cotages = {
     },
   ],
   actions: [],
+  configs: {
+    tableFields: [
+      {
+        field: "id",
+        header: "id",
+        sortable: false,
+      },
+      {
+        field: "flat_number",
+        header: "Appartment",
+        sortable: true,
+      },
+
+      {
+        field: "price",
+        header: "price",
+        sortable: true,
+      },
+      {
+        field: "type.rooms_count",
+        header: "Rooms count",
+        sortable: true,
+      },
+      {
+        field: "type.area_m2",
+        header: "Area",
+        sortable: true,
+      },
+      {
+        field: "type.other.Gross Internal Area",
+        header: "Gross Internal Area",
+        sortable: true,
+      },
+    ],
+    tableContactUrl: "https://www.ireplugin.com/contact?flatid=",
+    hasTableOneColumn: false,
+  },
 };
 
 const hotel = {
@@ -5729,7 +5766,7 @@ const blocks = {
       id: "1030",
       project_id: "141",
       meta_key: "primary_color",
-      meta_value: "rgba(48, 116, 194, 1)",
+      meta_value: "#514747",
       created_at: "2025-03-19 17:08:25",
       updated_at: "2025-03-20 16:35:26",
     },
@@ -6592,7 +6629,18 @@ const goldFeatures = [
   { title: "Allow clients fill  <b>request callback</b> form" },
   { title: "Read <b>form responses</b>" },
   { title: "Create a <b>shareable</b> flat link" },
-  { title: "<b>Flats list</b> shortcode with filteres" },
+  {
+    title:
+      "<a href='/demos/flats' target='_blank'><b>Flats list</b></a> shortcode <b>grid</b> view",
+  },
+  {
+    title:
+      "<a href='/demos/flats' target='_blank'><b>Flats list</b></a> shortcode <b>table</b> view",
+  },
+
+  { title: "<b>Filters</b> on Flats list shortcode" },
+  { title: "Custom Flats <b>Field Builder</b>" },
+  { title: "Custom Table <b>Field Builder</b>" },
 ];
 
 const freePlan = {

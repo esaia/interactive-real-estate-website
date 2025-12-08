@@ -168,7 +168,7 @@ watch(
           <correct-icon v-else class="!h-6 !w-6" />
           <div
             v-html="feature?.title"
-            class="text-md border-b border-dashed border-black"
+            class="text-md border-b border-dashed border-black [&_a]:text-blue-800 [&_a]:underline"
           ></div>
         </div>
 

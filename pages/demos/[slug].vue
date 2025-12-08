@@ -37,7 +37,12 @@ useSeoMeta({
       />
 
       <client-only v-else>
-        <FlatsList :data="activeDemo?.shortcodeData" :irePlugin="irePlugin" />
+        <FlatsList
+          :data="activeDemo?.shortcodeData"
+          :irePlugin="irePlugin"
+          layout="mixed"
+          fromListView
+        />
       </client-only>
     </template>
   </div>
