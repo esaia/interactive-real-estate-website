@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const reviews = [
   {
-    name: "Zoe",
+    name: "Bartlome",
     review:
-      "For the price, this is an amazing wordpress plugin. Does exactly what it promises with no issues.",
+      "I use many plugins and scripts purchased all over the world and yours has the best after-sales support, you help as much as you can, your service is <span>truly top-notch,</span> much higher than other companies",
   },
 
   // {
