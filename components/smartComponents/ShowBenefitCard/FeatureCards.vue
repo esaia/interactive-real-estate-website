@@ -13,54 +13,60 @@ defineProps<{
 
 <template>
   <div
-    class="container-fluid padding-top flex flex-col items-start gap-4 rounded lg:flex-row lg:gap-28 [&:nth-child(odd)]:lg:flex-row-reverse [&_.glow]:odd:hidden"
+    class="rounded bg-gray-50 [&_.irep-feature-desc]:[&:nth-child(even)]:lg:pr-0 [&_.irep-feature-desc]:[&:nth-child(odd)]:lg:pl-0 [&_.irep-video]:[&:nth-child(even)]:lg:-order-1"
     v-for="(item, index) in features"
     :key="index"
   >
-    <div class="relative flex-1">
-      <p class="gradient-text inline-block uppercase">
-        {{ item?.badge }}
-      </p>
-
-      <h2 class="title mb-4">
-        {{ item?.title }}
-      </h2>
-
-      <p class="desc">{{ item?.description }}</p>
-      <p class="number" :data-number="index + 1">{{ index + 1 }}</p>
-
-      <div
-        v-if="item?.isPremium"
-        class="w-fit rounded-full bg-black p-2 text-xs"
-      >
-        <p class="gradient-text inline-block uppercase">premium license</p>
-      </div>
-
-      <div
-        v-if="item?.isGold"
-        class="w-fit rounded-full bg-gradient-to-r from-red-500 to-orange-500 p-2 text-xs font-semibold"
-      >
-        <p class="inline-block font-semibold uppercase text-white">
-          gold license
-        </p>
-      </div>
-    </div>
     <div
-      class="img-shadow relative w-full flex-1 overflow-hidden rounded-xl pt-[60%] lg:pt-[35%]"
+      class="container-fluid grid items-start lg:grid-cols-2 [&_.glow]:odd:hidden"
     >
-      <video
-        playsinline
-        loop
-        muted
-        :autoplay="!$device.isMobileOrTablet"
-        :controls="$device.isMobileOrTablet"
-        :poster="`/assets/videos/poster-${item?.video}.webp`"
-        class="absolute left-0 top-0 h-full w-full object-cover"
-      >
-        <source :src="`/assets/videos/${item?.video}.webm`" type="video/webm" />
-        <source :src="`/assets/videos/${item?.video}.mp4`" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      <div class="irep-feature-desc relative py-4 lg:p-10">
+        <p class="gradient-text inline-block uppercase">
+          {{ item?.badge }}
+        </p>
+
+        <h2 class="title mb-4">
+          {{ item?.title }}
+        </h2>
+
+        <p class="desc">{{ item?.description }}</p>
+        <p class="number" :data-number="index + 1">{{ index + 1 }}</p>
+
+        <div
+          v-if="item?.isPremium"
+          class="w-fit rounded-full bg-black p-2 text-xs"
+        >
+          <p class="gradient-text inline-block uppercase">premium license</p>
+        </div>
+
+        <div
+          v-if="item?.isGold"
+          class="w-fit rounded-full bg-gradient-to-r from-red-500 to-orange-500 p-2 text-xs font-semibold"
+        >
+          <p class="inline-block font-semibold uppercase text-white">
+            gold license
+          </p>
+        </div>
+      </div>
+
+      <div class="irep-video relative w-full flex-1 overflow-hidden pt-[85%]">
+        <video
+          playsinline
+          loop
+          muted
+          :autoplay="!$device.isMobileOrTablet"
+          :controls="$device.isMobileOrTablet"
+          :poster="`/assets/videos/poster-${item?.video}.webp`"
+          class="absolute left-0 top-0 h-full w-full object-cover"
+        >
+          <source
+            :src="`/assets/videos/${item?.video}.webm`"
+            type="video/webm"
+          />
+          <source :src="`/assets/videos/${item?.video}.mp4`" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
 </template>

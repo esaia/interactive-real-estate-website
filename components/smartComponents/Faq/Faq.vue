@@ -24,7 +24,7 @@ const handleQuestionClick = (index: number) => {
           <h4
             class="title-sm font-medium text-gray-800 transition-all group-hover:text-primary"
           >
-            <span :class="{ 'gradient-text font-medium': activeIndex === i }">
+            <span :class="{ 'text-primary': activeIndex === i }">
               {{ item.question }}
             </span>
           </h4>

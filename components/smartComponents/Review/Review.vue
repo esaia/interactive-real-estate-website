@@ -33,7 +33,7 @@ const reviews = [
   {
     name: "Steven",
     review:
-      "This exceeded all my expectations. The <span>quality is outstanding</span> and it arrived sooner than expected.",
+      "This exceeded all my expectations. The <span>quality is outstanding</span>. Your plugin runs incredibly smoothly, and the preview with the modal is fantastic. Keep at it, keep promoting it. It's really great!",
   },
 
   {

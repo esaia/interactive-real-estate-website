@@ -62,7 +62,11 @@ const plansData = computed(() => {
   return isLifetime.value ? LIFETIME_PLAN : ANNUAL_PLAN;
 });
 
-const buyPackage = (licenseType: string, licenses: number) => {
+const buyPackage = (
+  licenseType: string,
+  licenses: number,
+  isTrial: boolean,
+) => {
   const conf = useRuntimeConfig();
 
   const { fsProductId: product_id, fsPublicKey: public_key } = conf.public;
@@ -82,6 +86,7 @@ const buyPackage = (licenseType: string, licenses: number) => {
     billing_cycle: isLifetime.value ? "lifetime" : "annual",
     billing_cycle_selector: "responsive_list",
     show_reviews: true,
+    trial: isTrial ? "paid" : false,
 
     purchaseCompleted: (response: any) => {
       // @ts-ignore
@@ -118,10 +123,10 @@ const buyPackage = (licenseType: string, licenses: number) => {
     </component>
 
     <div
-      class="m-auto my-5 flex w-fit items-center justify-center rounded-lg border bg-gray-50/80 p-2 text-gray-600"
+      class="m-auto my-5 flex w-fit items-center justify-center rounded-full border bg-gray-50/80 p-2 text-gray-600"
     >
       <div
-        class="cursor-pointer rounded-md px-5 py-2 transition-all duration-500 md:px-10"
+        class="cursor-pointer rounded-full px-5 py-2 transition-all duration-500 md:px-10"
         :class="{
           'bg-white shadow-lg': !isServicesTab,
           'bg-white/0': isServicesTab,
@@ -131,7 +136,7 @@ const buyPackage = (licenseType: string, licenses: number) => {
         Wp plugin
       </div>
       <div
-        class="cursor-pointer rounded-md px-5 py-2 transition-all md:px-10"
+        class="cursor-pointer rounded-full px-5 py-2 transition-all md:px-10"
         :class="{
           'bg-white shadow-lg': isServicesTab,
           'bg-white/0': !isServicesTab,

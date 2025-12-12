@@ -27,7 +27,7 @@
       <a href="https://wpvue.dev/" target="_blank">
         <base-button
           title="enroll only for $15"
-          class="mt-9 !w-fit rounded-none !bg-[#FFD230] !text-black hover:rounded-md"
+          class="mt-9 !w-fit rounded-full !bg-[#FFD230] !text-black focus:ring-yellow-300"
         />
       </a>
     </div>

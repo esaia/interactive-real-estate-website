@@ -1,12 +1,16 @@
 <script setup lang="ts">
 const props = defineProps<{
   item: any;
-
   licenseType: "free" | "annual" | "lifetime";
 }>();
 
 defineEmits<{
-  (e: "handleClickPlan", licenseType: string, licenseCount: number): void;
+  (
+    e: "handleClickPlan",
+    licenseType: string,
+    licenseCount: number,
+    isTrial: boolean,
+  ): void;
 }>();
 
 const licenseCount = ref("1");
@@ -92,6 +96,16 @@ watch(
           :type="item?.isPopular ? '1' : '2'"
           @click="$emit('handleClickPlan', item.title, +licenseCount)"
         />
+
+        <!-- <div class="h-6">
+          <p
+            v-if="!isFree"
+            class="mt-2 cursor-pointer text-center text-blue-800 hover:underline"
+            @click="$emit('handleClickPlan', item.title, +licenseCount, true)"
+          >
+            Or start your 7 day FREE trial here.
+          </p>
+        </div> -->
       </div>
 
       <div

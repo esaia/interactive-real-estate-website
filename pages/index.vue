@@ -29,7 +29,9 @@ const vimeoLoaded = useState<boolean>("vimeoLoaded");
       />
     </div>
 
-    <feature-cards :features="FEATURES" />
+    <div class="padding-top">
+      <feature-cards :features="FEATURES" />
+    </div>
 
     <div class="p-10">
       <img

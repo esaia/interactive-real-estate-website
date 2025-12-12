@@ -51,7 +51,7 @@ const horizontal = computed(() => {
       </div>
 
       <h3
-        class="mb-3 line-clamp-2 text-lg font-semibold group-hover:underline lg:text-xl"
+        class="mb-3 line-clamp-2 text-lg font-medium group-hover:underline lg:text-xl"
       >
         {{ item.title }}
       </h3>

@@ -553,7 +553,7 @@ const cotages = {
       id: "1033",
       project_id: "141",
       meta_key: "area_unit",
-      meta_value: "ft",
+      meta_value: "m",
       created_at: "2025-03-19 17:08:25",
       updated_at: "2025-03-20 16:35:26",
     },
@@ -5797,6 +5797,14 @@ const blocks = {
       created_at: "2025-03-19 17:08:25",
       updated_at: "2025-03-20 16:35:26",
     },
+    {
+      id: "1033",
+      project_id: "141",
+      meta_key: "area_unit",
+      meta_value: "ft",
+      created_at: "2025-03-19 17:08:25",
+      updated_at: "2025-03-20 16:35:26",
+    },
   ],
   actions: [],
 };
@@ -6344,10 +6352,10 @@ const appartments = {
       ],
       image_3d: [
         {
-          url: "/assets/demo/flat_3d-3.webp",
+          url: "/assets/demo/flat_3d-2.webp",
         },
         {
-          url: "/assets/demo/flat_3d-2.webp",
+          url: "/assets/demo/flat_3d-3.webp",
         },
       ],
       gallery: null,
