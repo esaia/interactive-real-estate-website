@@ -6,7 +6,7 @@ const openVideoModal = ref(false);
 
 <template>
   <div class="container-fluid">
-    <div class="mx-auto max-w-screen-xl px-4 py-16 text-center lg:px-2">
+    <div class="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-2 lg:py-16">
       <div class="mb-4 flex items-center justify-center gap-3 lg:mb-8">
         <lightning-icon class="h-14 w-14" />
       </div>
@@ -79,7 +79,13 @@ const openVideoModal = ref(false);
             <iframe
               src="https://player.vimeo.com/video/1066104737?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
               frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              allow="
+                autoplay;
+                fullscreen;
+                picture-in-picture;
+                clipboard-write;
+                encrypted-media;
+              "
               style="
                 position: absolute;
                 top: 0;

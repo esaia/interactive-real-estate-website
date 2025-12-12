@@ -101,7 +101,7 @@ export const FEATURES = [
   {
     title: "Primary color",
     description:
-      "Easily select and apply a primary color to your designs instantly. No need for custom coding—just pick and go!",
+      "Easily select and apply a primary color to your designs instantly. No need for custom coding. Just pick and go!",
     badge: "Simple and Effective",
     video: "primaryColor",
     poster: "poster-primary-color",
@@ -122,7 +122,7 @@ export const FEATURES = [
   {
     title: "Dynamic Multiple Tooltips",
     description:
-      "Simply select your preferred style and it will be applied to your design instantly. No need for custom coding—just pick and go!",
+      "Simply select your preferred style and it will be applied to your design instantly. No need for custom coding. Just pick and go!",
     badge: "Simple and Effective",
     video: "tooltip",
     poster: "poster-tooltip",
@@ -363,7 +363,7 @@ const cotages = {
       area_m2: "120.00",
       rooms_count: "4",
       other: [
-        { key: "parking space", value: "8m²" },
+        { key: "parking space", value: "8 m²" },
         { key: "bathrooms", value: "2" },
         { key: "Gross Internal Area", value: "130 sqm / 1400 sqft" },
       ],
@@ -396,7 +396,7 @@ const cotages = {
       area_m2: "80.00",
       rooms_count: "3",
       other: [
-        { key: "parking space", value: "8m²" },
+        { key: "parking space", value: "8 m²" },
         { key: "bathrooms", value: "1" },
         { key: "Gross Internal Area", value: "130 sqm / 1400 sqft" },
       ],
@@ -1356,7 +1356,7 @@ const hotel = {
       area_m2: "78.30",
       rooms_count: "2",
       other: [
-        { key: "parking space", value: "8m²" },
+        { key: "parking space", value: "8 m²" },
         { key: "bathrooms", value: "2" },
         { key: "Gross Internal Area", value: "130 sqm / 1400 sqft" },
       ],
@@ -4501,7 +4501,7 @@ const bigHotel = {
       other: [
         {
           key: "parking space",
-          value: "8m²",
+          value: "8 m²",
         },
         {
           key: "bedroom",
@@ -5677,7 +5677,7 @@ const blocks = {
       rooms_count: "3",
 
       other: [
-        { key: "parking space", value: "8m²" },
+        { key: "parking space", value: "8 m²" },
         { key: "bathrooms", value: "2" },
         { key: "Gross Internal Area", value: "130 sqm / 1400 sqft" },
       ],
@@ -6368,7 +6368,7 @@ const appartments = {
       other: [
         {
           key: "parking space",
-          value: "8m²",
+          value: "8 m²",
         },
         {
           key: "bathrooms",

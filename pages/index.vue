@@ -25,7 +25,7 @@ const vimeoLoaded = useState<boolean>("vimeoLoaded");
 
       <img
         src="/assets/images/adminpanel.webp"
-        class="img-shadow w-full max-w-3xl"
+        class="img-shadow w-full max-w-5xl"
       />
     </div>
 

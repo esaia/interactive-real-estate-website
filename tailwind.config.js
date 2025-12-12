@@ -45,7 +45,7 @@ module.exports = {
         },
       },
       colors: {
-        primary: "rgb(219, 36, 36)",
+        primary: "rgb(199, 68, 68)",
       },
       boxShadow: {
         testimonial: "0px 10px 20px 0px rgba(92, 115, 160, 0.07)",
