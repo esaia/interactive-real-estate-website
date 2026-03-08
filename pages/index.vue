@@ -16,7 +16,7 @@ const vimeoLoaded = useState<boolean>("vimeoLoaded");
       <demo :shortcodeData="demos[num].shortcodeData" />
     </div>
 
-    <course />
+    <!-- <course /> -->
 
     <div
       class="container-fluid padding-top mx-auto flex w-full flex-col items-center justify-center gap-4"
