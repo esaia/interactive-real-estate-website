@@ -4,6 +4,31 @@ export default defineNuxtConfig({
 
   app: {
     pageTransition: { name: "page", mode: "out-in" },
+    head: {
+      link: [
+        {
+          rel: "preload",
+          href: "/assets/fonts/Poppins-Regular.ttf",
+          as: "font",
+          type: "font/ttf",
+          crossorigin: "anonymous",
+        },
+        {
+          rel: "preload",
+          href: "/assets/fonts/Poppins-SemiBold.ttf",
+          as: "font",
+          type: "font/ttf",
+          crossorigin: "anonymous",
+        },
+        {
+          rel: "preload",
+          href: "/assets/fonts/Poppins-Bold.ttf",
+          as: "font",
+          type: "font/ttf",
+          crossorigin: "anonymous",
+        },
+      ],
+    },
   },
 
   devServer: {
@@ -36,7 +61,12 @@ export default defineNuxtConfig({
       xxl: 1536,
     },
     // Allow external image optimization (e.g. giphy, demo CDNs)
-    domains: ["media1.giphy.com", "media2.giphy.com", "media3.giphy.com", "media4.giphy.com"],
+    domains: [
+      "media1.giphy.com",
+      "media2.giphy.com",
+      "media3.giphy.com",
+      "media4.giphy.com",
+    ],
   },
 
   runtimeConfig: {
@@ -66,6 +96,21 @@ export default defineNuxtConfig({
   routeRules: {
     "/doc": {
       redirect: "/doc/intro",
+    },
+  },
+
+  nitro: {
+    routeRules: {
+      "/public/assets/fonts/**": {
+        headers: {
+          "Cache-Control": "public, max-age=31536000, immutable",
+        },
+      },
+      "/assets/fonts/**": {
+        headers: {
+          "Cache-Control": "public, max-age=31536000, immutable",
+        },
+      },
     },
   },
 });

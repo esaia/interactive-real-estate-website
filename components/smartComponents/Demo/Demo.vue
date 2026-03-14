@@ -74,24 +74,19 @@ onMounted(() => {
   >
     <div
       v-if="!isClient"
-      class="interactive-real-estate ire-relative ire-h-full ire-select-none ire-overflow-hidden pt-3"
+      class="interactive-real-estate relative h-full select-none overflow-hidden pt-3"
       :style="cssVariables"
     >
       <img
         v-if="shortcodeData.project.project_image?.[0]?.url"
         :src="shortcodeData.project.project_image[0].url"
         alt=""
-        class="ire-left-0 ire-top-0 ire-h-full ire-w-full"
-        fit="cover"
-        width="665"
-        height="420"
-        sizes="(max-width: 768px) 100vw, 665px"
-        loading="eager"
+        class="left-0 top-0 h-full w-full"
         fetchpriority="high"
       />
       <div
         v-html="shortcodeData.project.svg"
-        class="canvas ire-absolute ire-left-0 ire-top-0 ire-h-full ire-w-full path-color pt-3"
+        class="canvas path-color absolute left-0 top-0 h-full w-full pt-3"
       ></div>
     </div>
 
