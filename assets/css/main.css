@@ -99,6 +99,7 @@
 
 .router-link-exact-active {
   color: rgb(219, 36, 36);
+  text-decoration: underline;
 }
 
 .hero-bg {

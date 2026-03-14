@@ -479,31 +479,36 @@ const onDocumentKeyUp = (event) => {
 };
 
 const applyZoom = (cursorX, cursorY) => {
-  const container = props.svgRef.parentElement;
-  const containerOffset = container.getBoundingClientRect();
-  const containerWidth = container.clientWidth;
-  const containerHeight = container.clientHeight;
+  const container = props.svgRef?.parentElement;
+  if (!container) return;
 
-  if (containerWidth === 0 || containerHeight === 0) {
-    console.error("Container dimensions are zero.");
-    return;
-  }
+  requestAnimationFrame(() => {
+    // Batch layout reads first to avoid forced reflow
+    const containerOffset = container.getBoundingClientRect();
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
 
-  // Calculate transform origin based on current zoom level
-  let transformOriginX =
-    ((cursorX - containerOffset.left) / containerWidth) * 100;
-  let transformOriginY =
-    ((cursorY - containerOffset.top - window.scrollY) / containerHeight) * 100;
+    if (containerWidth === 0 || containerHeight === 0) {
+      console.error("Container dimensions are zero.");
+      return;
+    }
 
-  // Update styles for img and svg elements
-  const imgElement = container.querySelector("img");
-  const svgElement = container.querySelector("svg");
+    const transformOriginX =
+      ((cursorX - containerOffset.left) / containerWidth) * 100;
+    const transformOriginY =
+      ((cursorY - containerOffset.top - window.scrollY) / containerHeight) * 100;
 
-  imgElement.style.transform = `scale(${zoomLevel.value})`;
-  imgElement.style.transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
+    const imgElement = container.querySelector("img");
+    const svgElement = container.querySelector("svg");
+    if (!imgElement || !svgElement) return;
 
-  svgElement.style.transform = `scale(${zoomLevel.value})`;
-  svgElement.style.transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
+    const scale = zoomLevel.value;
+    const origin = `${transformOriginX}% ${transformOriginY}%`;
+    imgElement.style.transform = `scale(${scale})`;
+    imgElement.style.transformOrigin = origin;
+    svgElement.style.transform = `scale(${scale})`;
+    svgElement.style.transformOrigin = origin;
+  });
 };
 
 const resetZoom = () => {

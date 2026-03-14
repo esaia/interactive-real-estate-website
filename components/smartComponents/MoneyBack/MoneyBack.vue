@@ -12,7 +12,7 @@
 
         <p>
           You are fully protected by our
-          <b class="bg-amber-600 px-1 text-white"> 100% Money Back Guarantee</b
+          <b class="bg-amber-700 px-1 text-white"> 100% Money Back Guarantee</b
           >. If during the next 7 days you experience an issue that makes the
           plugin unusable and we are unable to resolve it, we'll happily
           consider offering a full refund of your money.

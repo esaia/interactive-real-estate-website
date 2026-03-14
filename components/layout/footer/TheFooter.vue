@@ -70,7 +70,7 @@ const links = [
       >
         <p class="mb-4 block text-center text-sm text-slate-500 md:mb-0">
           Copyright © 2025
-          <nuxt-link href="/">Interactive Real Estate™</nuxt-link>. All Rights
+          <nuxt-link href="/" class="underline hover:underline">Interactive Real Estate™</nuxt-link>. All Rights
           Reserved.
         </p>
 

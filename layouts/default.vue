@@ -6,7 +6,9 @@
 
     <the-header />
     <div class="h-[80px]"></div>
-    <slot />
+    <main role="main">
+      <slot />
+    </main>
     <the-footer />
   </div>
 </template>
