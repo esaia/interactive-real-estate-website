@@ -77,7 +77,7 @@ onMounted(() => {
       class="interactive-real-estate ire-relative ire-h-full ire-select-none ire-overflow-hidden pt-3"
       :style="cssVariables"
     >
-      <NuxtImg
+      <img
         v-if="shortcodeData.project.project_image?.[0]?.url"
         :src="shortcodeData.project.project_image[0].url"
         alt=""

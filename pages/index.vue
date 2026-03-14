@@ -26,8 +26,9 @@ const vimeoLoaded = useState<boolean>("vimeoLoaded");
         alt="interactive real estate dashboard"
         class="img-shadow w-full max-w-5xl"
         loading="lazy"
-        width="2010"
-        height="1572"
+        width="665"
+        height="520"
+        sizes="(max-width: 768px) 100vw, 665px"
         format="webp"
       />
     </div>

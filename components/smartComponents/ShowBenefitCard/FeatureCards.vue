@@ -9,6 +9,16 @@ defineProps<{
     isGold?: boolean;
   }[];
 }>();
+
+const img = useImage();
+const getPosterUrl = (video: string) =>
+  video
+    ? img(`/assets/videos/poster-${video}.webp`, {
+        width: 800,
+        height: 565,
+        format: "webp",
+      })
+    : "";
 </script>
 
 <template>
@@ -56,7 +66,7 @@ defineProps<{
           muted
           :autoplay="!$device.isMobileOrTablet"
           :controls="$device.isMobileOrTablet"
-          :poster="`/assets/videos/poster-${item?.video}.webp`"
+          :poster="getPosterUrl(item?.video ?? '')"
           class="absolute left-0 top-0 h-full w-full object-cover"
         >
           <source
