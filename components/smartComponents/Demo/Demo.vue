@@ -78,11 +78,9 @@ onMounted(() => {
       :style="cssVariables"
     >
       <img
-        v-if="shortcodeData.project.project_image?.[0]?.url"
-        :src="shortcodeData.project.project_image[0].url"
+        :src="shortcodeData.project.project_image?.[0]?.url"
         alt=""
         class="ire-left-0 ire-top-0 ire-h-full ire-w-full"
-        fit="cover"
       />
       <div
         v-html="shortcodeData.project.svg"
