@@ -1,5 +1,11 @@
 <script setup lang="ts">
-const model = defineModel();
+const model = defineModel<boolean>();
+
+defineProps<{
+  ariaLabel?: string;
+}>();
+
+const inputId = `switcher-${Math.random().toString(36).slice(2, 9)}`;
 
 const handleCheckboxChange = () => {
   model.value = !model.value;
@@ -7,9 +13,15 @@ const handleCheckboxChange = () => {
 </script>
 
 <template>
-  <label class="flex cursor-pointer select-none items-center">
+  <label :for="inputId" class="flex cursor-pointer select-none items-center">
     <div class="relative">
-      <input type="checkbox" class="sr-only" @change="handleCheckboxChange" />
+      <input
+        :id="inputId"
+        type="checkbox"
+        class="sr-only"
+        :aria-label="ariaLabel ?? 'Toggle option'"
+        @change="handleCheckboxChange"
+      />
       <div
         class="block h-8 w-14 rounded-full bg-black"
         :class="{ '!bg-primary': model }"

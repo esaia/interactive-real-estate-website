@@ -12,13 +12,13 @@
 
         <p>
           You are fully protected by our
-          <b class="bg-amber-400 px-1 text-white"> 100% Money Back Guarantee</b
+          <b class="bg-amber-600 px-1 text-white"> 100% Money Back Guarantee</b
           >. If during the next 7 days you experience an issue that makes the
           plugin unusable and we are unable to resolve it, we'll happily
           consider offering a full refund of your money.
           <br />
           <br />
-          <b class="bg-red-500 px-1 text-white">IMPORTANT:</b> Refunds are
+          <b class="bg-red-600 px-1 text-white">IMPORTANT:</b> Refunds are
           available if the product has a bug or issue that we were unable to
           resolve.
         </p>

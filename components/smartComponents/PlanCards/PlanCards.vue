@@ -158,7 +158,10 @@ const buyPackage = (
 
       <div class="desc flex w-full items-center justify-center gap-4 py-10">
         <p class="cursor-pointer" @click="isLifetime = false">Annual</p>
-        <switcher v-model="isLifetime" />
+        <switcher
+          v-model="isLifetime"
+          aria-label="Switch between Annual and Lifetime billing"
+        />
         <p class="cursor-pointer" @click="isLifetime = true">Lifetime</p>
       </div>
 

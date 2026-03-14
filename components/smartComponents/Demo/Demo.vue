@@ -77,12 +77,10 @@ onMounted(() => {
       class="interactive-real-estate ire-relative ire-h-full ire-select-none ire-overflow-hidden pt-3"
       :style="cssVariables"
     >
-      <NuxtImg
-        v-if="shortcodeData.project.project_image?.[0]?.url"
-        :src="shortcodeData.project.project_image[0].url"
+      <img
+        :src="shortcodeData.project.project_image?.[0]?.url"
         alt=""
         class="ire-left-0 ire-top-0 ire-h-full ire-w-full"
-        fit="cover"
       />
       <div
         v-html="shortcodeData.project.svg"
