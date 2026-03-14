@@ -21,7 +21,23 @@ export default defineNuxtConfig({
     "@nuxtjs/device",
     "@nuxtjs/fontaine",
     "@nuxt/content",
+    "@nuxt/image",
   ],
+
+  image: {
+    format: ["webp", "avif"],
+    quality: 80,
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    },
+    // Allow external image optimization (e.g. giphy, demo CDNs)
+    domains: ["media1.giphy.com", "media2.giphy.com", "media3.giphy.com", "media4.giphy.com"],
+  },
 
   runtimeConfig: {
     public: {

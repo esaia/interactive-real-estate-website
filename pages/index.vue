@@ -16,29 +16,24 @@ const vimeoLoaded = useState<boolean>("vimeoLoaded");
       <demo :shortcodeData="demos[num].shortcodeData" />
     </div>
 
-    <!-- <course /> -->
-
     <div
       class="container-fluid padding-top mx-auto flex w-full flex-col items-center justify-center gap-4"
     >
       <h2 class="title mb-4 text-center">The Best Interactive Interface</h2>
 
-      <img
+      <NuxtImg
         src="/assets/images/adminpanel.webp"
+        alt="interactive real estate dashboard"
         class="img-shadow w-full max-w-5xl"
+        loading="lazy"
+        width="2010"
+        height="1572"
+        format="webp"
       />
     </div>
 
     <div class="padding-top">
       <feature-cards :features="FEATURES" />
-    </div>
-
-    <div class="p-10">
-      <img
-        src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGk3Y3FmcnY1djkwanNrMTVqODZtNzlmb2k0anF2ZG91ZWdhcTZzOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KYlvMgLN8oGUFCoEze/giphy.gif"
-        alt="interactive real estate"
-        class="img-shadow mx-auto mt-20"
-      />
     </div>
 
     <review />

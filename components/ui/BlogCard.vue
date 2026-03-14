@@ -23,11 +23,13 @@ const horizontal = computed(() => {
     }"
   >
     <div :class="horizontal ? 'w-full md:max-w-[400px]' : ''">
-      <img
-        :src="(item.meta as any)?.image?.src"
+      <NuxtImg
+        v-if="(item.meta as any)?.image?.src"
+        :src="(item.meta as any).image.src"
         :alt="(item.meta as any)?.image?.alt || ''"
         class="aspect-[4/2] object-cover"
         :class="imageSize ? imageSize : 'w-full'"
+        fit="cover"
       />
     </div>
 

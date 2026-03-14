@@ -94,7 +94,7 @@ watch(
           v-else
           title="Buy now"
           :type="item?.isPopular ? '1' : '2'"
-          @click="$emit('handleClickPlan', item.title, +licenseCount)"
+          @click="$emit('handleClickPlan', item.title, +licenseCount, false)"
         />
 
         <!-- <div class="h-6">

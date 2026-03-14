@@ -33,13 +33,14 @@ const canvasRef = ref();
 
 <template>
   <div class="relative h-full select-none overflow-hidden bg-gray-50 pt-[50%]">
-    <img
+    <NuxtImg
       :src="projectImage"
       class="absolute left-0 top-0 h-full w-full"
       :class="{
         'object-contain': isImageContain,
         'object-cover': !isImageContain,
       }"
+      :fit="isImageContain ? 'contain' : 'cover'"
     />
     <SvgCanvas
       ref="canvasRef"
