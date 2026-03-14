@@ -67,6 +67,7 @@ onMounted(() => {
     :class="{
       '[&_.interactive-real-estate_img]:!rounded-2xl md:[&_.interactive-real-estate_img]:!rounded-[40px]':
         props.shortcodeData.project.id === '166',
+
       'demo-169 [&_.irep-tooltip]:rounded-lg [&_.irep-tooltip]:bg-[#40544D]':
         props.shortcodeData.project.id === '169',
     }"
@@ -76,7 +77,7 @@ onMounted(() => {
       class="interactive-real-estate relative h-full select-none overflow-hidden pt-3"
       :style="cssVariables"
     >
-      <NuxtImg
+      <img
         v-if="shortcodeData.project.project_image?.[0]?.url"
         :src="shortcodeData.project.project_image[0].url"
         alt=""

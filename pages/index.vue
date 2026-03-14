@@ -30,7 +30,6 @@ const vimeoLoaded = useState<boolean>("vimeoLoaded");
         height="520"
         sizes="(max-width: 768px) 100vw, 665px"
         format="webp"
-        fetchpriority="low"
       />
     </div>
 
