@@ -10,15 +10,18 @@ defineProps<{
   }[];
 }>();
 
+const device = useDevice();
 const img = useImage();
-const getPosterUrl = (video: string) =>
-  video
-    ? img(`/assets/videos/poster-${video}.webp`, {
-        width: 800,
-        height: 565,
-        format: "webp",
-      })
-    : "";
+const getPosterUrl = (video: string) => {
+  if (!video) return "";
+  const w = device.isMobileOrTablet ? 480 : 800;
+  const h = device.isMobileOrTablet ? 339 : 565;
+  return img(`/assets/videos/poster-${video}.webp`, {
+    width: w,
+    height: h,
+    format: "webp",
+  });
+};
 </script>
 
 <template>
