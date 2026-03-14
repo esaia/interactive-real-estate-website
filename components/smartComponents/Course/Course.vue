@@ -4,10 +4,11 @@
     class="container-fluid padding-top flex flex-col items-center gap-8 text-center lg:flex-row"
   >
     <div class="flex-1">
-      <img
+      <NuxtImg
         src="/assets/images/wp-course.webp"
         alt="WordPress plugin development"
         class="img-shadow mx-auto my-8 rounded-lg md:rounded-2xl"
+        format="webp"
       />
     </div>
 

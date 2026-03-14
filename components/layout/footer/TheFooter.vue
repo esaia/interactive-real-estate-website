@@ -30,10 +30,13 @@ const links = [
           </div>
 
           <div class="mt-2 flex flex-col items-start gap-3 md:flex-row">
-            <img
+            <NuxtImg
               src="/assets/images/esaia.webp"
-              alt=""
+              alt="Esaia Gaprindashvili"
               class="aspect-square h-[60px] w-[60px] rounded-md object-cover"
+              width="60"
+              height="60"
+              format="webp"
             />
 
             <p class="max-w-[420px] text-sm text-gray-500">

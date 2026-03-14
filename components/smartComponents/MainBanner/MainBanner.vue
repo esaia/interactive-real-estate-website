@@ -94,6 +94,7 @@ const openVideoModal = ref(false);
                 height: 100%;
               "
               title="Interactive Real Estate (WordPress plugin)"
+              loading="lazy"
             ></iframe>
           </div>
         </div>

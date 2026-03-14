@@ -118,10 +118,12 @@ useSeoMeta({
     <h1 class="text-3xl font-bold">{{ title }}</h1>
 
     <div class="relative aspect-[4/2] w-full">
-      <img
-        :src="(item.meta as any)?.image?.src"
+      <NuxtImg
+        v-if="(item.meta as any)?.image?.src"
+        :src="(item.meta as any).image.src"
         :alt="(item.meta as any)?.image?.alt || ''"
         class="absolute left-0 top-0 h-full w-full object-cover"
+        fit="cover"
       />
     </div>
 
