@@ -6651,6 +6651,7 @@ const goldFeatures = [
   { title: "<b>Filters</b> on Flats list shortcode" },
   { title: "Custom Flats <b>Field Builder</b>" },
   { title: "Custom Table <b>Field Builder</b>" },
+  { title: "Custom <b>statuses</b> (sold, reserved, etc.)" },
 ];
 
 const freePlan = {
