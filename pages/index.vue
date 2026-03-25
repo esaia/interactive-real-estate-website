@@ -16,7 +16,7 @@ const vimeoLoaded = useState<boolean>("vimeoLoaded");
       <demo :shortcodeData="demos[num].shortcodeData" />
     </div>
 
-    <!-- <div
+    <div
       class="container-fluid padding-top mx-auto flex w-full flex-col items-center justify-center gap-4"
     >
       <h2 class="title mb-4 text-center">The Best Interactive Interface</h2>
@@ -31,11 +31,11 @@ const vimeoLoaded = useState<boolean>("vimeoLoaded");
         sizes="(max-width: 768px) 100vw, 665px"
         format="webp"
       />
-    </div> -->
+    </div>
 
-    <!-- <div class="padding-top">
+    <div class="padding-top">
       <feature-cards :features="FEATURES" />
-    </div> -->
+    </div>
 
     <review />
 
