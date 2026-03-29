@@ -8,17 +8,17 @@ const lastScrollY = ref(0);
 
 const menu = [
   { title: "Home", link: "/" },
-  { title: "Documentation", link: "/doc/intro" },
+  { title: "Docs", link: "/doc/intro" },
 
-  {
-    title: "Demos",
-    children: [
-      { title: "Front appearing", link: "/demos" },
-      { title: "Try module", link: "/module" },
-    ],
-  },
-  { title: "Blog", link: "/blog" },
+  // {
+  //   title: "Demos",
+  //   children: [],
+  // },
+
   { title: "Pricing", link: "/pricing" },
+  { title: "Demo", link: "/demos" },
+  { title: "Try the editor", link: "/module" },
+  { title: "Blog", link: "/blog" },
   { title: "Contact us", link: "/contact" },
 ];
 

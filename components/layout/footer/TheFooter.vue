@@ -8,11 +8,6 @@ const links = [
     url: "https://wordpress.org/plugins/interactive-real-estate/#developers",
     targetBlank: true,
   },
-  {
-    title: "WordPress Plugin Development Course",
-    url: "https://wpvue.dev/",
-    targetBlank: true,
-  },
 ];
 </script>
 
@@ -24,27 +19,15 @@ const links = [
       >
         <div>
           <div class="flex items-center gap-3">
+            <logo class="h-12 w-12" />
             <h5 class="text-xl font-medium text-slate-800">
-              About the developer
+              Interactive Real Estate
             </h5>
           </div>
-
-          <div class="mt-2 flex flex-col items-start gap-3 md:flex-row">
-            <NuxtImg
-              src="/assets/images/esaia.webp"
-              alt="Esaia Gaprindashvili"
-              class="aspect-square h-[60px] w-[60px] rounded-md object-cover"
-              width="60"
-              height="60"
-              format="webp"
-            />
-
-            <p class="max-w-[420px] text-sm text-gray-500">
-              I'm Esaia Gaprindashvili, web developer from Tbilisi, Georgia. I
-              love wordpress. In my free time, I’m either fixing bugs or
-              creating new ones. I'm not sure which one is more fun.
-            </p>
-          </div>
+          <p class="mt-2 max-w-[500px] text-gray-500">
+            Create clickable, customizable interactive buildings and property
+            layouts for a dynamic and engaging website experience.
+          </p>
         </div>
         <div
           class="flex min-w-max flex-col items-start gap-5 lg:flex-row lg:items-center"
@@ -70,8 +53,9 @@ const links = [
       >
         <p class="mb-4 block text-center text-sm text-slate-500 md:mb-0">
           Copyright © 2025
-          <nuxt-link href="/" class="underline hover:underline">Interactive Real Estate™</nuxt-link>. All Rights
-          Reserved.
+          <nuxt-link href="/" class="underline hover:underline"
+            >Interactive Real Estate™</nuxt-link
+          >. All Rights Reserved.
         </p>
 
         <div class="flex items-center gap-2">
