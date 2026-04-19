@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { Project } from "ire-preview";
-
+import { IRE_PLUGIN } from "~/composable/data";
 const props = defineProps<{ shortcodeData: any }>();
-
-const irePlugin = {
-  is_premium: true,
-  is_gold: true,
-};
 
 const isClient = ref(false);
 
@@ -91,7 +86,7 @@ onMounted(() => {
     </div>
 
     <ClientOnly>
-      <Project :data="shortcodeData" :irePlugin="irePlugin" />
+      <Project :data="shortcodeData" :irePlugin="IRE_PLUGIN" />
     </ClientOnly>
   </div>
 </template>

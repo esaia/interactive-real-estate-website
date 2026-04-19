@@ -92,6 +92,30 @@ export default defineNuxtConfig({
     renderer: {
       anchorLinks: { h2: false, h3: false, h4: false },
     },
+    build: {
+      markdown: {
+        highlight: {
+          theme: {
+            default: "github-light",
+            dark: "github-dark",
+          },
+          // Defaults are js/ts/vue/… — add php for ```php fences in docs.
+          langs: [
+            "json",
+            "js",
+            "ts",
+            "html",
+            "css",
+            "vue",
+            "shell",
+            "mdc",
+            "md",
+            "yaml",
+            "php",
+          ],
+        },
+      },
+    },
   },
   routeRules: {
     "/doc": {

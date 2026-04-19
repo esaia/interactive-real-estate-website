@@ -216,6 +216,14 @@ const cotages = {
       offer_price: "54343.00",
       created_at: "2024-11-05 12:39:13",
       updated_at: "2024-11-05 12:39:13",
+      price_history: [
+        { date: "2025-10-15", price: "310000.00", timestamp: 1728950400 },
+        { date: "2026-01-05", price: "322000.00", timestamp: 1736035200 },
+        { date: "2026-02-14", price: "331000.00", timestamp: 1739491200 },
+        { date: "2026-03-20", price: "345000.00", timestamp: 1742428800 },
+        { date: "2026-04-03", price: "352000.00", timestamp: 1743638400 },
+        { date: "2026-04-07", price: "358500.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "114",
@@ -229,6 +237,14 @@ const cotages = {
       offer_price: null,
       created_at: "2024-11-06 11:09:17",
       updated_at: "2024-11-06 11:09:17",
+      price_history: [
+        { date: "2025-10-15", price: "310000.00", timestamp: 1728950400 },
+        { date: "2026-01-05", price: "322000.00", timestamp: 1736035200 },
+        { date: "2026-02-14", price: "331000.00", timestamp: 1739491200 },
+        { date: "2026-03-20", price: "345000.00", timestamp: 1742428800 },
+        { date: "2026-04-03", price: "352000.00", timestamp: 1743638400 },
+        { date: "2026-04-07", price: "358500.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "115",
@@ -242,6 +258,14 @@ const cotages = {
       offer_price: null,
       created_at: "2024-11-06 11:09:26",
       updated_at: "2024-11-06 12:36:09",
+      price_history: [
+        { date: "2025-10-15", price: "310000.00", timestamp: 1728950400 },
+        { date: "2026-01-05", price: "322000.00", timestamp: 1736035200 },
+        { date: "2026-02-14", price: "331000.00", timestamp: 1739491200 },
+        { date: "2026-03-20", price: "345000.00", timestamp: 1742428800 },
+        { date: "2026-04-03", price: "352000.00", timestamp: 1743638400 },
+        { date: "2026-04-07", price: "358500.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "116",
@@ -257,6 +281,14 @@ const cotages = {
       follow_link: { link: "https://www.ireplugin.com/", target: "true" },
       created_at: "2024-11-06 11:09:34",
       updated_at: "2024-11-06 11:09:34",
+      price_history: [
+        { date: "2025-10-15", price: "310000.00", timestamp: 1728950400 },
+        { date: "2026-01-05", price: "322000.00", timestamp: 1736035200 },
+        { date: "2026-02-14", price: "331000.00", timestamp: 1739491200 },
+        { date: "2026-03-20", price: "345000.00", timestamp: 1742428800 },
+        { date: "2026-04-03", price: "352000.00", timestamp: 1743638400 },
+        { date: "2026-04-07", price: "358500.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "117",
@@ -270,6 +302,14 @@ const cotages = {
       offer_price: null,
       created_at: "2024-11-06 11:14:05",
       updated_at: "2024-11-06 11:14:11",
+      price_history: [
+        { date: "2025-10-15", price: "310000.00", timestamp: 1728950400 },
+        { date: "2026-01-05", price: "322000.00", timestamp: 1736035200 },
+        { date: "2026-02-14", price: "331000.00", timestamp: 1739491200 },
+        { date: "2026-03-20", price: "345000.00", timestamp: 1742428800 },
+        { date: "2026-04-03", price: "352000.00", timestamp: 1743638400 },
+        { date: "2026-04-07", price: "358500.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "118",
@@ -283,6 +323,14 @@ const cotages = {
       offer_price: null,
       created_at: "2024-11-06 11:14:26",
       updated_at: "2024-11-06 11:14:26",
+      price_history: [
+        { date: "2025-10-15", price: "310000.00", timestamp: 1728950400 },
+        { date: "2026-01-05", price: "322000.00", timestamp: 1736035200 },
+        { date: "2026-02-14", price: "331000.00", timestamp: 1739491200 },
+        { date: "2026-03-20", price: "345000.00", timestamp: 1742428800 },
+        { date: "2026-04-03", price: "352000.00", timestamp: 1743638400 },
+        { date: "2026-04-07", price: "358500.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "119",
@@ -296,6 +344,14 @@ const cotages = {
       offer_price: null,
       created_at: "2024-11-06 11:14:30",
       updated_at: "2024-11-06 11:14:30",
+      price_history: [
+        { date: "2025-10-15", price: "310000.00", timestamp: 1728950400 },
+        { date: "2026-01-05", price: "322000.00", timestamp: 1736035200 },
+        { date: "2026-02-14", price: "331000.00", timestamp: 1739491200 },
+        { date: "2026-03-20", price: "345000.00", timestamp: 1742428800 },
+        { date: "2026-04-03", price: "352000.00", timestamp: 1743638400 },
+        { date: "2026-04-07", price: "358500.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "120",
@@ -309,6 +365,14 @@ const cotages = {
       offer_price: null,
       created_at: "2024-11-06 11:14:42",
       updated_at: "2024-11-06 11:14:42",
+      price_history: [
+        { date: "2025-10-15", price: "310000.00", timestamp: 1728950400 },
+        { date: "2026-01-05", price: "322000.00", timestamp: 1736035200 },
+        { date: "2026-02-14", price: "331000.00", timestamp: 1739491200 },
+        { date: "2026-03-20", price: "345000.00", timestamp: 1742428800 },
+        { date: "2026-04-03", price: "352000.00", timestamp: 1743638400 },
+        { date: "2026-04-07", price: "358500.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "121",
@@ -322,6 +386,14 @@ const cotages = {
       offer_price: null,
       created_at: "2024-11-06 11:14:50",
       updated_at: "2024-11-06 11:14:50",
+      price_history: [
+        { date: "2025-10-15", price: "310000.00", timestamp: 1728950400 },
+        { date: "2026-01-05", price: "322000.00", timestamp: 1736035200 },
+        { date: "2026-02-14", price: "331000.00", timestamp: 1739491200 },
+        { date: "2026-03-20", price: "345000.00", timestamp: 1742428800 },
+        { date: "2026-04-03", price: "352000.00", timestamp: 1743638400 },
+        { date: "2026-04-07", price: "358500.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "122",
@@ -335,6 +407,14 @@ const cotages = {
       offer_price: null,
       created_at: "2024-11-06 11:14:56",
       updated_at: "2024-11-06 11:49:00",
+      price_history: [
+        { date: "2025-10-15", price: "310000.00", timestamp: 1728950400 },
+        { date: "2026-01-05", price: "322000.00", timestamp: 1736035200 },
+        { date: "2026-02-14", price: "331000.00", timestamp: 1739491200 },
+        { date: "2026-03-20", price: "345000.00", timestamp: 1742428800 },
+        { date: "2026-04-03", price: "352000.00", timestamp: 1743638400 },
+        { date: "2026-04-07", price: "358500.00", timestamp: 1743983400 },
+      ],
     },
   ],
   types: [
@@ -554,6 +634,14 @@ const cotages = {
       project_id: "141",
       meta_key: "area_unit",
       meta_value: "m",
+      created_at: "2025-03-19 17:08:25",
+      updated_at: "2025-03-20 16:35:26",
+    },
+    {
+      id: "1034",
+      project_id: "141",
+      meta_key: "flat_preview",
+      meta_value: "2",
       created_at: "2025-03-19 17:08:25",
       updated_at: "2025-03-20 16:35:26",
     },
@@ -1455,6 +1543,14 @@ const hotel = {
       id: "1033",
       project_id: "141",
       meta_key: "shareable_link",
+      meta_value: "true",
+      created_at: "2025-03-19 17:08:25",
+      updated_at: "2025-03-20 16:35:26",
+    },
+     {
+      id: "1029",
+      project_id: "141",
+      meta_key: "price_rounded",
       meta_value: "true",
       created_at: "2025-03-19 17:08:25",
       updated_at: "2025-03-20 16:35:26",
@@ -5927,6 +6023,59 @@ const appartments = {
         target: true,
       },
       request_price: false,
+
+      price_history: [
+        {
+          date: "2025-10-15",
+          price: "125400.00",
+          timestamp: 1728950400,
+        },
+        {
+          date: "2025-11-12",
+          price: "128750.50",
+          timestamp: 1731369600,
+        },
+        {
+          date: "2025-12-05",
+          price: "132100.00",
+          timestamp: 1733356800,
+        },
+        {
+          date: "2026-01-20",
+          price: "130450.25",
+          timestamp: 1737331200,
+        },
+        {
+          date: "2026-02-14",
+          price: "135800.00",
+          timestamp: 1739491200,
+        },
+        {
+          date: "2026-03-01",
+          price: "141200.75",
+          timestamp: 1740787200,
+        },
+        {
+          date: "2026-03-25",
+          price: "144900.00",
+          timestamp: 1742860800,
+        },
+        {
+          date: "2026-04-02",
+          price: "147500.50",
+          timestamp: 1743552000,
+        },
+        {
+          date: "2026-04-06",
+          price: "148300.00",
+          timestamp: 1743897600,
+        },
+        {
+          date: "2026-04-07",
+          price: "147950.00",
+          timestamp: 1743983400,
+        },
+      ],
     },
     {
       id: "660",
@@ -5956,6 +6105,15 @@ const appartments = {
         target: true,
       },
       request_price: false,
+      price_history: [
+        { date: "2025-10-15", price: "310000.00", timestamp: 1728950400 },
+        { date: "2025-11-28", price: "315500.00", timestamp: 1732752000 },
+        { date: "2026-01-05", price: "322000.00", timestamp: 1736035200 },
+        { date: "2026-02-14", price: "331000.00", timestamp: 1739491200 },
+        { date: "2026-03-20", price: "345000.00", timestamp: 1742428800 },
+        { date: "2026-04-03", price: "352000.00", timestamp: 1743638400 },
+        { date: "2026-04-07", price: "358500.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "661",
@@ -5985,6 +6143,13 @@ const appartments = {
         target: true,
       },
       request_price: false,
+      price_history: [
+        { date: "2025-10-01", price: "89000.00", timestamp: 1727740800 },
+        { date: "2025-12-10", price: "82400.00", timestamp: 1733788800 },
+        { date: "2026-02-15", price: "78000.00", timestamp: 1739577600 },
+        { date: "2026-03-25", price: "71500.00", timestamp: 1742860800 },
+        { date: "2026-04-07", price: "68900.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "662",
@@ -6014,6 +6179,11 @@ const appartments = {
         target: true,
       },
       request_price: false,
+      price_history: [
+        { date: "2025-10-20", price: "1250000.00", timestamp: 1729382400 },
+        { date: "2026-01-15", price: "1250000.00", timestamp: 1736908800 },
+        { date: "2026-04-07", price: "1245000.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "663",
@@ -6043,6 +6213,14 @@ const appartments = {
         target: true,
       },
       request_price: false,
+      price_history: [
+        { date: "2025-10-05", price: "210000.00", timestamp: 1728086400 },
+        { date: "2025-12-01", price: "185000.00", timestamp: 1733011200 },
+        { date: "2026-01-20", price: "160000.00", timestamp: 1737331200 },
+        { date: "2026-03-01", price: "195000.00", timestamp: 1740787200 },
+        { date: "2026-04-01", price: "205000.00", timestamp: 1743465600 },
+        { date: "2026-04-07", price: "212000.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "664",
@@ -6072,6 +6250,12 @@ const appartments = {
         target: true,
       },
       request_price: false,
+      price_history: [
+        { date: "2025-10-12", price: "15000.00", timestamp: 1728691200 },
+        { date: "2026-01-10", price: "15200.00", timestamp: 1736467200 },
+        { date: "2026-03-30", price: "18500.00", timestamp: 1743292800 },
+        { date: "2026-04-07", price: "22400.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "665",
@@ -6100,7 +6284,14 @@ const appartments = {
         link: "",
         target: true,
       },
+
       request_price: false,
+      price_history: [
+        { date: "2025-10-10", price: "54000.00", timestamp: 1728518400 },
+        { date: "2025-12-28", price: "56200.00", timestamp: 1735344000 },
+        { date: "2026-02-15", price: "58900.00", timestamp: 1739577600 },
+        { date: "2026-04-07", price: "61500.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "666",
@@ -6130,6 +6321,14 @@ const appartments = {
         target: true,
       },
       request_price: false,
+      price_history: [
+        { date: "2025-10-05", price: "185000.00", timestamp: 1728086400 },
+        { date: "2025-11-20", price: "172000.00", timestamp: 1732060800 },
+        { date: "2026-01-12", price: "154000.00", timestamp: 1736640000 },
+        { date: "2026-02-28", price: "141000.00", timestamp: 1740700800 },
+        { date: "2026-03-25", price: "135000.00", timestamp: 1742860800 },
+        { date: "2026-04-07", price: "132500.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "667",
@@ -6159,6 +6358,11 @@ const appartments = {
         target: true,
       },
       request_price: false,
+      price_history: [
+        { date: "2025-11-15", price: "24500.00", timestamp: 1731628800 },
+        { date: "2026-02-01", price: "24950.00", timestamp: 1738368000 },
+        { date: "2026-04-07", price: "24900.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "668",
@@ -6188,6 +6392,15 @@ const appartments = {
         target: true,
       },
       request_price: false,
+      price_history: [
+        { date: "2025-10-18", price: "410000.00", timestamp: 1729209600 },
+        { date: "2025-11-05", price: "435000.00", timestamp: 1730764800 },
+        { date: "2025-12-01", price: "468000.00", timestamp: 1733011200 },
+        { date: "2025-12-20", price: "495000.00", timestamp: 1734652800 },
+        { date: "2026-02-10", price: "495000.00", timestamp: 1739145600 },
+        { date: "2026-03-15", price: "490000.00", timestamp: 1741996800 },
+        { date: "2026-04-07", price: "492000.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "669",
@@ -6217,6 +6430,13 @@ const appartments = {
         target: true,
       },
       request_price: false,
+      price_history: [
+        { date: "2025-10-25", price: "12000.00", timestamp: 1729814400 },
+        { date: "2025-12-15", price: "15800.00", timestamp: 1734220800 },
+        { date: "2026-01-30", price: "11200.00", timestamp: 1738195200 },
+        { date: "2026-03-10", price: "14500.00", timestamp: 1741564800 },
+        { date: "2026-04-07", price: "13100.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "670",
@@ -6246,7 +6466,14 @@ const appartments = {
         target: true,
       },
       request_price: false,
+      price_history: [
+        { date: "2025-11-01", price: "2150000.00", timestamp: 1730419200 },
+        { date: "2026-01-20", price: "2200000.00", timestamp: 1737331200 },
+        { date: "2026-03-05", price: "2350000.00", timestamp: 1741132800 },
+        { date: "2026-04-07", price: "2375000.00", timestamp: 1743983400 },
+      ],
     },
+
     {
       id: "671",
       block_id: null,
@@ -6275,6 +6502,14 @@ const appartments = {
         target: true,
       },
       request_price: false,
+      price_history: [
+        { date: "2025-10-12", price: "98000.00", timestamp: 1728691200 },
+        { date: "2025-11-30", price: "97200.00", timestamp: 1732924800 },
+        { date: "2026-01-14", price: "95500.00", timestamp: 1736812800 },
+        { date: "2026-02-22", price: "93000.00", timestamp: 1740182400 },
+        { date: "2026-03-20", price: "91800.00", timestamp: 1742428800 },
+        { date: "2026-04-07", price: "91500.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "672",
@@ -6304,6 +6539,11 @@ const appartments = {
         target: true,
       },
       request_price: false,
+      price_history: [
+        { date: "2025-12-05", price: "67000.00", timestamp: 1733356800 },
+        { date: "2026-02-20", price: "72400.00", timestamp: 1740009600 },
+        { date: "2026-04-07", price: "79800.00", timestamp: 1743983400 },
+      ],
     },
     {
       id: "673",
@@ -6333,6 +6573,13 @@ const appartments = {
         target: true,
       },
       request_price: false,
+      price_history: [
+        { date: "2025-10-30", price: "145000.00", timestamp: 1730246400 },
+        { date: "2025-12-01", price: "155000.00", timestamp: 1733011200 },
+        { date: "2026-01-15", price: "165000.00", timestamp: 1736918400 },
+        { date: "2026-03-01", price: "150000.00", timestamp: 1740787200 },
+        { date: "2026-04-07", price: "148000.00", timestamp: 1743983400 },
+      ],
     },
   ],
   types: [
@@ -6526,6 +6773,113 @@ const appartments = {
       created_at: "2025-10-09 10:37:51",
       updated_at: "2025-10-09 10:37:51",
     },
+    {
+      id: "1401",
+      project_id: "169",
+      meta_key: "flat_preview",
+      meta_value: "2",
+      created_at: "2025-10-09 10:37:51",
+      updated_at: "2025-10-09 10:37:51",
+    },
+    {
+      id: "1561",
+      project_id: "173",
+      meta_key: "filter_options",
+      meta_value: {
+        price_filter_options: [
+          {
+            title: "Any price",
+            value: "0-Infinity",
+          },
+          {
+            title: "$0 - $50,000",
+            value: "0-50000",
+          },
+          {
+            title: "$50,000 - $100,000",
+            value: "50000-100000",
+          },
+          {
+            title: "$100,000 - $200,000",
+            value: "100000-200000",
+          },
+          {
+            title: "$200,000 - $500,000",
+            value: "200000-500000",
+          },
+          {
+            title: "$500,000+",
+            value: "500000-Infinity",
+          },
+          {
+            title: "$600,000+",
+            value: "600000-Infinity",
+          },
+        ],
+        area_filter_options: [
+          {
+            title: "Any area",
+            value: "0-Infinity",
+          },
+          {
+            title: "0 m² - 40 m²",
+            value: "0-40",
+          },
+          {
+            title: "40 m² - 60 m²",
+            value: "40-60",
+          },
+          {
+            title: "60 m² - 90 m²",
+            value: "60-90",
+          },
+          {
+            title: "90 m² - 120 m²",
+            value: "90-120",
+          },
+          {
+            title: "120 m² +",
+            value: "120-Infinity",
+          },
+        ],
+        rooms_filter_options: [
+          {
+            title: "Any rooms",
+            value: "0-Infinity",
+          },
+          {
+            title: "1 room",
+            value: "1-1",
+          },
+          {
+            title: "2 rooms",
+            value: "2-2",
+          },
+          {
+            title: "3 rooms",
+            value: "3-3",
+          },
+          {
+            title: "4+ rooms",
+            value: "4-Infinity",
+          },
+          {
+            title: "6+ rooms",
+            value: "6-Infinity",
+          },
+          {
+            title: "0.5 rooms",
+            value: "0.5-0.5",
+          },
+          {
+            title: "0-1",
+            value: "0.1-1",
+          },
+        ],
+      },
+      created_at: "2026-03-16 15:59:02",
+      updated_at: "2026-03-16 15:59:02",
+    },
   ],
   actions: [],
 };
@@ -6696,3 +7050,10 @@ export const LIFETIME_PLAN = [
     isPopular: true,
   },
 ];
+
+export const IRE_PLUGIN = {
+  is_premium: true,
+  is_gold: true,
+  price_history_addon: true,
+};
+

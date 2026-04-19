@@ -2,13 +2,8 @@
 import { FlatsList } from "ire-preview";
 import { PLUGIN_NAME } from "~/composable/constants";
 import type { DemoType } from "~/types/general";
-
+import { IRE_PLUGIN } from "~/composable/data";
 const demos = useState<DemoType[]>("demos");
-
-const irePlugin = {
-  is_premium: true,
-  is_gold: true,
-};
 
 const router = useRouter();
 const route = useRoute();
@@ -39,7 +34,7 @@ useSeoMeta({
       <client-only v-else>
         <FlatsList
           :data="activeDemo?.shortcodeData"
-          :irePlugin="irePlugin"
+          :irePlugin="IRE_PLUGIN"
           layout="mixed"
           fromListView
         />

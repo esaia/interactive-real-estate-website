@@ -18,12 +18,12 @@ Streamline your workflow by transferring complete interactive projects between W
 
 1. Navigate to **Interactive Real Estate > All Projects**
 2. Hover over your project and click **Export**
-3. Save the `.ire-project` file to your device
+3. Save the file to your device
 
 ### Import Projects:
 
 1. Go to **Interactive Real Estate > import**
-2. Upload your `.ire-project` file
+2. Upload your file
 3. Click **import project**
 
 ## Key Benefits
@@ -45,7 +45,7 @@ Streamline your workflow by transferring complete interactive projects between W
 
 ❌ **Invalid file error?**
 
-- Verify you’re using `.ire-project` files
+- Verify you’re using .json extention what you are exported
 - Update to the latest plugin version
 
 [Contact Support](/contact) for help with large-scale migrations.

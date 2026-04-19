@@ -271,5 +271,51 @@ const buyPackage = (
       </div>
     </div>
     <money-back />
+
+    <div class="mt-12 flex flex-col items-center justify-center gap-4">
+      <h3 class="title-md">Addons</h3>
+
+      <NuxtLink
+        to="/doc/price-history-addon"
+        class="group relative w-full max-w-sm overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all duration-300 ease-out hover:border-gray-300/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/35 focus-visible:ring-offset-2"
+      >
+        <div class="relative overflow-hidden bg-slate-50">
+          <img
+            src="/assets/plugin/price-history-addon.webp"
+            alt=""
+            class="h-28 w-full object-cover object-center transition-[transform,filter] duration-500 ease-out group-hover:scale-[1.04] group-hover:brightness-[1.02]"
+          />
+        </div>
+
+        <div class="relative flex items-start justify-between gap-3 p-4">
+          <div class="min-w-0 flex-1">
+            <p
+              class="text-lg font-medium text-gray-900 transition-colors duration-200 group-hover:text-primary"
+            >
+              Price history
+            </p>
+            <p class="mt-1 line-clamp-2 text-sm leading-snug text-gray-500">
+              See how apartment prices change over time.
+            </p>
+          </div>
+
+          <span
+            class="mt-0.5 inline-flex shrink-0 items-center gap-1 rounded-full bg-gradient-to-r from-rose-500 to-orange-400 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-white shadow-md transition-all duration-300 group-hover:gap-1.5 group-hover:shadow-lg"
+          >
+            Details
+            <span
+              aria-hidden="true"
+              class="inline-block transition-transform duration-300 ease-out group-hover:translate-x-0.5"
+            >
+              →
+            </span>
+          </span>
+        </div>
+
+        <span
+          class="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/25 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        />
+      </NuxtLink>
+    </div>
   </div>
 </template>
