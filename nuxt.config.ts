@@ -121,9 +121,6 @@ export default defineNuxtConfig({
     "/doc": {
       redirect: "/doc/intro",
     },
-    "/*": {
-      swr: 3600,
-    },
   },
 
   nitro: {
