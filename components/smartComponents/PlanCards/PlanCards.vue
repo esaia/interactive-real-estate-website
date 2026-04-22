@@ -3,8 +3,9 @@ import { Checkout } from "@freemius/checkout";
 import { GOLD_PLAN_ID, PREMIUM_PLAN_ID } from "~/composable/constants";
 import { ANNUAL_PLAN, LIFETIME_PLAN } from "~/composable/data";
 
-defineProps<{
+const props = defineProps<{
   hasH1?: boolean;
+  isTrial?: boolean;
 }>();
 
 // {
@@ -62,11 +63,7 @@ const plansData = computed(() => {
   return isLifetime.value ? LIFETIME_PLAN : ANNUAL_PLAN;
 });
 
-const buyPackage = (
-  licenseType: string,
-  licenses: number,
-  isTrial: boolean,
-) => {
+const buyPackage = (licenseType: string, licenses: number) => {
   const conf = useRuntimeConfig();
 
   const { fsProductId: product_id, fsPublicKey: public_key } = conf.public;
@@ -86,7 +83,7 @@ const buyPackage = (
     billing_cycle: isLifetime.value ? "lifetime" : "annual",
     billing_cycle_selector: "responsive_list",
     show_reviews: true,
-    trial: isTrial ? "paid" : false,
+    trial: props.isTrial ? "paid" : false,
 
     purchaseCompleted: (response: any) => {
       // @ts-ignore

@@ -5,12 +5,7 @@ const props = defineProps<{
 }>();
 
 defineEmits<{
-  (
-    e: "handleClickPlan",
-    licenseType: string,
-    licenseCount: number,
-    isTrial: boolean,
-  ): void;
+  (e: "handleClickPlan", licenseType: string, licenseCount: number): void;
 }>();
 
 const licenseCount = ref("1");
@@ -94,7 +89,7 @@ watch(
           v-else
           title="Buy now"
           :type="item?.isPopular ? '1' : '2'"
-          @click="$emit('handleClickPlan', item.title, +licenseCount, false)"
+          @click="$emit('handleClickPlan', item.title, +licenseCount)"
         />
 
         <!-- <div class="h-6">
